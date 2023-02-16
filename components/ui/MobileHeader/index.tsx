@@ -1,5 +1,5 @@
-import Logo from "../ui/Logo";
-import MenuButton from "../ui/MenuButton";
+import Logo from "../Logo";
+import MenuButton from "../MenuButton";
 import { HeaderContainer, LogoContainer } from "./styles";
 
 const MobileHeader = () => {
