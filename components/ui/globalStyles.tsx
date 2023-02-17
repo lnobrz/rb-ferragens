@@ -82,7 +82,6 @@ export const GlobalStyle = createGlobalStyle`
   mark,
   audio,
   video {
-    margin: 0;
     padding: 0;
     border: 0;
     font-size: 100%;
@@ -125,7 +124,8 @@ export const GlobalStyle = createGlobalStyle`
     border-collapse: collapse;
     border-spacing: 0;
   }
-  * {
+  body {
     background-color: #1B1A18;
+    margin: 0;
   }
 `;
