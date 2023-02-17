@@ -26,8 +26,19 @@ export default class MyDocument extends Document {
 
   render() {
     return (
-      <Html>
-        <Head></Head>
+      <Html lang="pt-br">
+        <Head>
+          <meta charSet="UTF-8" />
+          <meta
+            name="description"
+            content="A RB Ferragens é uma loja de ferragens especializada na venda vergalhões, treliças, arames, malhas pop, etc. de ferro e aço. Oferecemos corte e dobra."
+          />
+          <meta
+            name="keywords"
+            content="barra de ferro, ferro e aço, malha pop, loja de ferragens, rb ferragens, vergalhão, corte e dobra de chapas, arames, treliça, ferragens, barra de ferro, chapas de ferro, malha de ferro"
+          ></meta>
+          <meta name="author" content="Lucas Nobre" />
+        </Head>
         <body>
           <Main />
           <NextScript />
