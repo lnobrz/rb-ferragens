@@ -6,11 +6,6 @@ export const CoverContainer = styled.section`
   background-repeat: no-repeat;
   height: 100% !important;
   background-attachment: fixed;
-
-  .highlitedText {
-    color: #cdaf18;
-    margin-left: 10px;
-  }
 `;
 
 export const ParagraphContainer = styled.div`
