@@ -17,3 +17,8 @@ export const TitleContainer = styled.div`
   background: transparent !important;
   margin: 50px 20px 70px 20px;
 `;
+
+export const HighlightedText = styled.bdi`
+  color: #cdaf18;
+  margin-left: 10px;
+`;

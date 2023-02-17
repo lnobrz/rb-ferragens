@@ -1,13 +1,13 @@
-import { TitleContainer, Title } from "./styles";
+import { TitleContainer, Title, HighlightedText } from "./styles";
 
 const MainTitle = () => {
   return (
     <TitleContainer>
       <Title>
         A loja de ferragens que está do seu lado desde a
-        <span className="highlitedText">venda </span>
-        até o<span className="highlitedText">corte e dobra </span>de
-        <span className="highlitedText">ferro e aço</span>.
+        <HighlightedText>venda </HighlightedText>
+        até o<HighlightedText>corte e dobra </HighlightedText>de
+        <HighlightedText>ferro e aço</HighlightedText>.
       </Title>
     </TitleContainer>
   );
