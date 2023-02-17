@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { workSans } from "@/public/images/fonts";
+import { workSans } from "@/public/fonts";
 
 export const ParagraphContainer = styled.p`
   font-family: ${workSans.style.fontFamily}, Arial, Helvetica, sans-serif;

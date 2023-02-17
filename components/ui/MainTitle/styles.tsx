@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { forum } from "@/public/images/fonts";
+import { forum } from "@/public/fonts";
 
 export const Title = styled.h1`
   font-family: ${forum.style.fontFamily}, "Times New Roman", Times, Serif;
