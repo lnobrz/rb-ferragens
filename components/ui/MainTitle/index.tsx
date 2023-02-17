@@ -6,8 +6,8 @@ const MainTitle = () => {
       <Title>
         A loja de ferragens que está do seu lado desde a
         <span className="highlitedText">venda </span>
-        até o<span className="highlitedText">corte e dobra de ferro e aço</span>
-        .
+        até o<span className="highlitedText">corte e dobra </span>de
+        <span className="highlitedText">ferro e aço</span>.
       </Title>
     </TitleContainer>
   );
