@@ -4,10 +4,8 @@ const MainTitle = () => {
   return (
     <TitleContainer>
       <Title>
-        A loja de ferragens que está do seu lado desde a
-        <HighlightedText>venda </HighlightedText>
-        até o<HighlightedText>corte e dobra </HighlightedText>de
-        <HighlightedText>ferro e aço</HighlightedText>.
+        Bem-vindos à <HighlightedText>RB Ferragens</HighlightedText>,
+        especialista na venda, corte e dobra de ferro e aço.
       </Title>
     </TitleContainer>
   );
