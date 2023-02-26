@@ -1,5 +1,5 @@
 export const coverParagraph =
-  "Aqui na RB, moldamos as ferragens de acordo com o seu projeto, lhe dando total liberdade para a execução deles.";
+  "Atendendo Fortaleza - CE e região metropolitana, vendemos desde colunas até vigas de ferro e aço com as medidas ideais para o seu projeto.";
 
 export const companyMetrics = [
   {
