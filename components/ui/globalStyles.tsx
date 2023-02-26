@@ -128,4 +128,28 @@ export const GlobalStyle = createGlobalStyle`
     background-color: #1B1A18;
     margin: 0;
   }
+
+    .secondaryTitleLeft {
+    align-items: center;
+    justify-content: flex-start;
+    &:before {
+    content: url("/images/secondary-title-decoration.svg");
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-bottom: 18px;
+  }
+  }
+
+  .secondaryTitleRight {
+    align-items: center;
+    justify-content: flex-end;
+    &:after {
+    content: url("/images/secondary-title-decoration.svg");
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-bottom: 20px;
+  }
+  }
 `;
