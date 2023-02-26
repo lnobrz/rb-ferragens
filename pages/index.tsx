@@ -6,7 +6,11 @@ const Home = () => {
   return (
     <>
       <Head>
-        <title>RB Ferragens | Loja de Ferragens - Venda de Ferro e Aço</title>
+        <meta
+          name="description"
+          content="A RB Ferragens, localizada em Fortaleza - CE, é especialista na venda, corte e dobra de ferragens voltadas para a área da construção civil."
+        />
+        <title>Loja de Ferragens | Ferro | Aço - RB Ferragens</title>
       </Head>
       <Cover />
       <CompanyMetrics />
