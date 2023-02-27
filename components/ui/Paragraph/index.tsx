@@ -1,11 +1,16 @@
 import { ParagraphContainer } from "./styles";
 
 type Paragraph = {
-  text: string;
+  content: string;
+  className?: string;
 };
 
-const Paragraph = ({ text }: Paragraph) => {
-  return <ParagraphContainer>{text}</ParagraphContainer>;
+const Paragraph = ({ content, className }: Paragraph) => {
+  return (
+    <ParagraphContainer className={className ? className : ""}>
+      {content}
+    </ParagraphContainer>
+  );
 };
 
 export default Paragraph;
