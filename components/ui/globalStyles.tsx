@@ -137,6 +137,7 @@ export const GlobalStyle = createGlobalStyle`
     display: inline-block;
     width: 15px;
     height: 15px;
+    margin-right: 16px;
     margin-bottom: 18px;
   }
   }
@@ -149,6 +150,7 @@ export const GlobalStyle = createGlobalStyle`
     display: inline-block;
     width: 15px;
     height: 15px;
+    margin-left: 16px;
     margin-bottom: 20px;
   }
   }
@@ -160,7 +162,7 @@ export const GlobalStyle = createGlobalStyle`
     display: inline-block;
     width: 1px;
     height: 58px;
-    margin-right: 25px;
+    margin-right: 24px;
     background: #cdaf18;
     border-radius: 1px;
     }
@@ -173,9 +175,15 @@ export const GlobalStyle = createGlobalStyle`
     display: inline-block;
     width: 1px;
     height: 58px;
-    margin-left: 25px;
+    margin-left: 24px;
     background: #cdaf18;
     border-radius: 1px;
     }
+  }
+
+  .indexSectionParagraph {
+    text-align: right;
+    margin-top: 28px;
+    margin-bottom: 50px;
   }
 `;

@@ -12,4 +12,5 @@ export const TertiaryTitleContainer = styled.h4`
   display: flex;
   justify-items: center;
   align-items: center;
+  margin: 0px 0px 20px 0px;
 `;

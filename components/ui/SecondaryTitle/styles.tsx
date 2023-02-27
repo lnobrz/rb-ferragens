@@ -11,5 +11,5 @@ export const TitleContainer = styled.h3`
   text-transform: uppercase;
   color: #f3f2e7;
   display: flex;
-  margin: 0px 20px;
+  margin: 0;
 `;
