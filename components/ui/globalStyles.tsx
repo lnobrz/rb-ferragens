@@ -180,7 +180,6 @@ export const GlobalStyle = createGlobalStyle`
     border-radius: 1px;
     }
   }
-
   .indexSectionParagraph {
     text-align: right;
     margin-top: 28px;
