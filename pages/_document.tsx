@@ -1,5 +1,5 @@
 import Document, { Head, Html, Main, NextScript } from "next/document";
-import { metaKeywords } from "@/storage/strings";
+import { metaKeywords } from "@/storage/data";
 import { ServerStyleSheet } from "styled-components";
 import { DocumentContext } from "next/document";
 
