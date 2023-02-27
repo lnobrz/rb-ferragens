@@ -1,4 +1,5 @@
 import Document, { Head, Html, Main, NextScript } from "next/document";
+import { metaKeywords } from "@/storage/strings";
 import { ServerStyleSheet } from "styled-components";
 import { DocumentContext } from "next/document";
 
@@ -29,10 +30,7 @@ export default class MyDocument extends Document {
       <Html lang="pt-br">
         <Head>
           <meta charSet="UTF-8" />
-          <meta
-            name="keywords"
-            content="barra de ferro, ferro e aço, malha pop, loja de ferragens, rb ferragens, vergalhão, corte e dobra de chapas, arames, treliça, ferragens, barra de ferro, chapas de ferro, malha de ferro"
-          ></meta>
+          <meta name="keywords" content={metaKeywords}></meta>
           <meta name="author" content="Lucas Nobre" />
         </Head>
         <body>
