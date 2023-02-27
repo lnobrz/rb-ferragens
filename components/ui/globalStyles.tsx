@@ -152,4 +152,30 @@ export const GlobalStyle = createGlobalStyle`
     margin-bottom: 20px;
   }
   }
+
+  .tertiaryTitleLeft {
+    margin-left: 20px;
+    &:before {
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 58px;
+    margin-right: 25px;
+    background: #cdaf18;
+    border-radius: 1px;
+    }
+  }
+
+    .tertiaryTitleRight {
+    margin-right: 20px;
+    &:after {
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 58px;
+    margin-left: 25px;
+    background: #cdaf18;
+    border-radius: 1px;
+    }
+  }
 `;
