@@ -1,10 +1,10 @@
 import { MetricsContainer } from "./styles";
 import NumData from "../ui/NumData";
-import { companyMetrics } from "@/storage/strings";
+import { metrics } from "@/storage/data";
 const CompanyMetrics = () => {
   return (
     <MetricsContainer>
-      {companyMetrics.map((metric) => {
+      {metrics.map((metric) => {
         return (
           <NumData key={metric.id} title={metric.data} data={metric.amount} />
         );

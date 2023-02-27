@@ -1,5 +1,5 @@
 import MobileHeader from "../ui/MobileHeader";
-import { coverParagraph } from "@/storage/strings";
+import { paragraphs } from "@/storage/data";
 import { CoverContainer, ParagraphContainer } from "./styles";
 import Paragraph from "../ui/Paragraph";
 import BudgetButton from "../ui/BudgetButton";
@@ -11,7 +11,7 @@ const Cover = () => {
       <MobileHeader />
       <MainTitle />
       <ParagraphContainer>
-        <Paragraph text={coverParagraph} />
+        <Paragraph content={paragraphs.indexCover} />
         <BudgetButton />
       </ParagraphContainer>
     </CoverContainer>
