@@ -1,11 +1,15 @@
 import Head from "next/head";
 import Cover from "@/components/Cover";
-import { metaDescriptions } from "@/storage/data";
-import { metaTitles } from "@/storage/data";
 import CompanyMetrics from "@/components/CompanyMetrics";
 import IndexSection from "@/components/ui/IndexSection";
-import { paragraphs } from "@/storage/data";
-import { products } from "@/storage/data";
+import {
+  metaDescriptions,
+  metaTitles,
+  paragraphs,
+  products,
+  advantages,
+  advertisements,
+} from "@/storage/data";
 
 const Home = () => {
   return (
@@ -21,6 +25,13 @@ const Home = () => {
         sectionTitle="produtos"
         sectionParagraph={paragraphs.indexProductSession}
         sectionArr={products}
+      />
+      <IndexSection
+        titleDecorationAlign="left"
+        sectionTitle="vantagens"
+        sectionParagraph={paragraphs.indexAdvantagesSection}
+        sectionArr={advantages}
+        advertisementContent={advertisements.index}
       />
     </>
   );
