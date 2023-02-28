@@ -15,6 +15,8 @@ export const paragraphs = {
     "Atendendo Fortaleza - CE e região metropolitana, vendemos desde colunas até vigas de ferro e aço com as medidas ideais para o seu projeto.",
   indexProductSession:
     "Todos os produtos com a melhor qualidade existente no mercado e preço que cabe no seu bolso.",
+  indexAdvantagesSection:
+    "Oferecemos benefícios exclusivos aos nossos clientes, garantindo a satisfação dos mesmos.",
 };
 
 export const metrics = [
@@ -65,3 +67,22 @@ export const products = [
     name: "vigas",
   },
 ];
+
+export const advantages = [
+  {
+    id: 1,
+    name: "frete grátis",
+  },
+  {
+    id: 2,
+    name: "corte e dobra de acordo com o seu projeto",
+  },
+  {
+    id: 3,
+    name: "aceitamos cartões de crédito e débito",
+  },
+];
+
+export const advertisements = {
+  index: "** consultar condições de frete grátis",
+};
