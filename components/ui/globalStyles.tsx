@@ -207,4 +207,21 @@ export const GlobalStyle = createGlobalStyle`
     font-size: 8px;
     line-height: 20px;
   }
+
+  .smallText {
+    font-size: 16px;
+    margin: 0;
+  }
+
+  .mediumText {
+    font-size: 24px; 
+  }
+
+  .largeText {
+    font-size: 36px;
+  }
+
+  .aboutButton {
+    margin: 0px 0px 28px 20px;
+  }
 `;
