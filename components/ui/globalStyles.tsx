@@ -129,9 +129,11 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0;
   }
 
-    .secondaryTitleLeft {
+  .secondaryTitleLeft {
     align-items: center;
     justify-content: flex-start;
+    margin: 0;
+    text-align: left;
     &:before {
     content: url("/images/secondary-title-decoration.svg");
     display: inline-block;
@@ -145,6 +147,7 @@ export const GlobalStyle = createGlobalStyle`
   .secondaryTitleRight {
     align-items: center;
     justify-content: flex-end;
+    text-align: right;
     &:after {
     content: url("/images/secondary-title-decoration.svg");
     display: inline-block;
@@ -156,7 +159,9 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   .tertiaryTitleLeft {
-    margin-left: 20px;
+    display: flex;
+    justify-content: flex-start;
+    text-align: left;
     &:before {
     content: "";
     display: inline-block;
@@ -168,8 +173,10 @@ export const GlobalStyle = createGlobalStyle`
     }
   }
 
-    .tertiaryTitleRight {
-    margin-right: 20px;
+  .tertiaryTitleRight {
+    display: flex;
+    justify-content: flex-end;
+    text-align: right;
     &:after {
     content: "";
     display: inline-block;
@@ -184,5 +191,20 @@ export const GlobalStyle = createGlobalStyle`
     text-align: right;
     margin-top: 28px;
     margin-bottom: 50px;
+  }
+
+  .textStart {
+    text-align: left;
+  }
+
+  .textEnd {
+    text-align: right;
+  }
+
+  .advertisement {
+    color: #949186;
+    font-weight: 300;
+    font-size: 8px;
+    line-height: 20px;
   }
 `;
