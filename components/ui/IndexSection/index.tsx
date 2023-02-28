@@ -7,7 +7,7 @@ type IndexSectionTypes = {
   titleDecorationAlign: "left" | "right";
   sectionTitle: string;
   sectionParagraph: string;
-  sectionArr: {
+  sectionArr?: {
     id: number;
     name: string;
   }[];
@@ -39,15 +39,18 @@ const IndexSection = ({
           titleDecorationAlign === "left" ? "textStart" : "textEnd"
         }`}
       />
-      {sectionArr.map((arrItem) => {
-        return (
-          <TertiaryTitle
-            key={arrItem.id}
-            decorationAlign={titleDecorationAlign === "left" ? "right" : "left"}
-            content={arrItem.name}
-          />
-        );
-      })}
+      {sectionArr &&
+        sectionArr.map((arrItem) => {
+          return (
+            <TertiaryTitle
+              key={arrItem.id}
+              decorationAlign={
+                titleDecorationAlign === "left" ? "right" : "left"
+              }
+              content={arrItem.name}
+            />
+          );
+        })}
       {advertisementContent && (
         <Paragraph
           content={advertisementContent}
