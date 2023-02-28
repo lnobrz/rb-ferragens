@@ -9,7 +9,7 @@ export const CoverContainer = styled.section`
 `;
 
 export const ParagraphContainer = styled.div`
-  max-width: 60%;
+  max-width: 70%;
   margin: 0px 75px 60px 75px;
   display: flex;
   flex-flow: column nowrap;
