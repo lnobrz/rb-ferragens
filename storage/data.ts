@@ -17,6 +17,8 @@ export const paragraphs = {
     "Todos os produtos com a melhor qualidade existente no mercado e preço que cabe no seu bolso.",
   indexAdvantagesSection:
     "Oferecemos benefícios exclusivos aos nossos clientes, garantindo a satisfação dos mesmos.",
+  indexAboutSection:
+    "Nascida em 2019 com o objetivo de trazer preços acessíveis à Fortaleza e suas metrópoles, a RB Ferragens vem conquistando centenas de clientes...Nascida em 2019 com o objetivo de trazer preços acessíveis à Fortaleza e suas metrópoles, a RB Ferragens vem conquistando centenas de clientes...",
 };
 
 export const metrics = [
