@@ -7,7 +7,6 @@ export const TitleContainer = styled.h3`
   font-weight: 400;
   font-size: 36px;
   line-height: 40px;
-  text-align: right;
   text-transform: uppercase;
   color: #f3f2e7;
   display: flex;
