@@ -1,8 +1,17 @@
 import Image from "next/image";
 
-const Logo = () => {
+type LogoTypes = {
+  logoDirection: "left" | "right";
+};
+
+const Logo = ({ logoDirection }: LogoTypes) => {
   return (
-    <Image src="/images/logo.svg" fill={true} alt="logo" className="logo" />
+    <Image
+      src={`/images/logo-${logoDirection === "left" ? "left" : "right"}.svg`}
+      fill={true}
+      alt="logo"
+      className="logo"
+    />
   );
 };
 
