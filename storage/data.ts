@@ -88,3 +88,14 @@ export const advantages = [
 export const advertisements = {
   index: "** consultar condições de frete grátis",
 };
+
+export const footerRights = {
+  author: "Feito por lucasnobre37@outlook.com",
+  copyrights: "RB Ferragens ®️, 2023",
+};
+
+export const buttonsTexts = {
+  cover: "Fazer Orçamento",
+  aboutSection: "Saiba Mais",
+  budgetSection: "PEDIR ORÇAMENTO",
+};
