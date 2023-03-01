@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { workSans } from "@/public/fonts";
+import { workSans, forum } from "@/public/fonts";
 
 export const ButtonContainer = styled.button`
   display: flex;
@@ -8,11 +8,32 @@ export const ButtonContainer = styled.button`
   gap: 10px;
   background: transparent;
   border: none;
+  padding: 0;
+  width: 100%;
 
   .buttonArrow {
     max-width: 25px;
     max-height: 18px;
     position: static !important;
+  }
+
+  .smallText {
+    font-size: 16px;
+    margin: 0;
+  }
+
+  .mediumText {
+    font-size: 24px;
+  }
+
+  .largeText {
+    font-size: 36px;
+    text-transform: uppercase;
+    margin: 35px 0;
+    font-family: ${forum.style.fontFamily};
+    width: 100%;
+    text-align: right;
+    margin-right: 20px;
   }
 `;
 
@@ -23,4 +44,5 @@ export const ButtonTitle = styled.h6`
   font-size: 1.5em;
   line-height: 25px;
   color: #eceadf;
+  width: auto !important;
 `;
