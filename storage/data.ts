@@ -90,7 +90,6 @@ export const advertisements = {
 };
 
 export const footerRights = {
-  author: "Feito por lucasnobre37@outlook.com",
   copyrights: "RB Ferragens ®️, 2023",
 };
 
@@ -102,7 +101,8 @@ export const buttonsTexts = {
 
 export const address = {
   street: "Travessa Precabura, 79",
-  neighborhoodCityState: "Lagoa Redonda, Fortaleza - CE, CEP: 60831-372",
+  neighborhoodCityState: "Lagoa Redonda, Fortaleza - CE",
+  zipCode: "CEP: 60831-372",
 };
 
 export const contacts = [
