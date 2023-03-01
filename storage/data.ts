@@ -99,3 +99,8 @@ export const buttonsTexts = {
   aboutSection: "Saiba Mais",
   budgetSection: "PEDIR ORÇAMENTO",
 };
+
+export const address = {
+  street: "Travessa Precabura, 79",
+  neighborhoodCityState: "Lagoa Redonda, Fortaleza - CE, CEP: 60831-372",
+};
