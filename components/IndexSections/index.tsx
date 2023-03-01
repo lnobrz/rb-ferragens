@@ -6,6 +6,7 @@ import {
   advantages,
   advertisements,
 } from "@/storage/data";
+import BudgetSection from "../ui/BudgetSection";
 
 const IndexSections = () => {
   return (
@@ -24,6 +25,7 @@ const IndexSections = () => {
         advertisementContent={advertisements.index}
       />
       <IndexAboutSection />
+      <BudgetSection />
     </>
   );
 };
