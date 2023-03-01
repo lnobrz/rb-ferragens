@@ -12,10 +12,10 @@ const IndexAboutSection = () => {
         sectionParagraph={paragraphs.indexAboutSection}
       />
       <ArrowButton
-        content="saiba mais"
+        content="Saiba Mais"
         arrowDirection="right"
         textSize="small"
-        aboutButton="true"
+        additionalClasses="aboutButton"
       />
     </AboutSectionContainer>
   );
