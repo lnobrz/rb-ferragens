@@ -5,38 +5,58 @@ type arrowButtonTypes = {
   content: string;
   arrowDirection: "left" | "right";
   textSize: "small" | "medium" | "large";
-  aboutButton?: "true";
+  additionalClasses?: string;
 };
 
 const ArrowButton = ({
   content,
   arrowDirection,
   textSize,
-  aboutButton,
+  additionalClasses,
 }: arrowButtonTypes) => {
   return (
-    <ButtonContainer className={aboutButton === "true" ? "aboutButton" : ""}>
-      <ButtonTitle
-        className={`${
-          textSize === "small"
-            ? "smallText"
-            : textSize === "medium"
-            ? "mediumText"
-            : "largeText"
-        }`}
-      >
-        {content}
-      </ButtonTitle>
-      <Image
-        src={`/images/${
-          arrowDirection === "left" ? "left" : "right"
-        }-arrow.svg`}
-        alt={`arrow pointing to the ${
-          arrowDirection === "left" ? "left" : "right"
-        }`}
-        fill={true}
-        className="buttonArrow"
-      />
+    <ButtonContainer className={additionalClasses}>
+      {arrowDirection === "left" ? (
+        <>
+          <Image
+            src="/images/left-arrow.svg"
+            alt="arrow pointing to the left"
+            fill={true}
+            className="buttonArrow"
+          />
+          <ButtonTitle
+            className={`${
+              textSize === "small"
+                ? "smallText"
+                : textSize === "medium"
+                ? "mediumText"
+                : "largeText"
+            }`}
+          >
+            {content}
+          </ButtonTitle>
+        </>
+      ) : (
+        <>
+          <ButtonTitle
+            className={`${
+              textSize === "small"
+                ? "smallText"
+                : textSize === "medium"
+                ? "mediumText"
+                : "largeText"
+            }`}
+          >
+            {content}
+          </ButtonTitle>
+          <Image
+            src="/images/right-arrow.svg"
+            alt="arrow pointing to the right"
+            fill={true}
+            className="buttonArrow"
+          />
+        </>
+      )}
     </ButtonContainer>
   );
 };
