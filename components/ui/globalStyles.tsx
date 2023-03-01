@@ -135,7 +135,7 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0;
     text-align: left;
     &:before {
-    content: url("/images/secondary-title-decoration.svg");
+    content: url("/images/vertical-decoration.svg");
     display: inline-block;
     width: 15px;
     height: 15px;
@@ -149,7 +149,7 @@ export const GlobalStyle = createGlobalStyle`
     justify-content: flex-end;
     text-align: right;
     &:after {
-    content: url("/images/secondary-title-decoration.svg");
+    content: url("/images/vertical-decoration.svg");
     display: inline-block;
     width: 15px;
     height: 15px;
@@ -206,19 +206,6 @@ export const GlobalStyle = createGlobalStyle`
     font-weight: 300;
     font-size: 8px;
     line-height: 20px;
-  }
-
-  .smallText {
-    font-size: 16px;
-    margin: 0;
-  }
-
-  .mediumText {
-    font-size: 24px; 
-  }
-
-  .largeText {
-    font-size: 36px;
   }
 
   .aboutButton {
