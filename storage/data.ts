@@ -104,3 +104,21 @@ export const address = {
   street: "Travessa Precabura, 79",
   neighborhoodCityState: "Lagoa Redonda, Fortaleza - CE, CEP: 60831-372",
 };
+
+export const contacts = [
+  {
+    id: 1,
+    name: "Email",
+    info: "rbferragens01@gmail.com",
+  },
+  {
+    id: 2,
+    name: "Telefone",
+    info: "99 9999-9999",
+  },
+  {
+    id: 3,
+    name: "Whatsapp",
+    info: "85 99727-1762",
+  },
+];
