@@ -6,7 +6,7 @@ const MobileHeader = () => {
   return (
     <HeaderContainer>
       <LogoContainer>
-        <Logo />
+        <Logo logoDirection="left" />
       </LogoContainer>
       <MenuButton />
     </HeaderContainer>
