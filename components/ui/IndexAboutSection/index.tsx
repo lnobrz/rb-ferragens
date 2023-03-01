@@ -2,6 +2,7 @@ import { AboutSectionContainer } from "./styles";
 import IndexSection from "../IndexSection";
 import { paragraphs } from "@/storage/data";
 import ArrowButton from "../ArrowButton";
+import { buttonsTexts } from "@/storage/data";
 
 const IndexAboutSection = () => {
   return (
@@ -12,7 +13,7 @@ const IndexAboutSection = () => {
         sectionParagraph={paragraphs.indexAboutSection}
       />
       <ArrowButton
-        content="Saiba Mais"
+        content={buttonsTexts.aboutSection}
         arrowDirection="right"
         textSize="small"
         additionalClasses="aboutButton"
