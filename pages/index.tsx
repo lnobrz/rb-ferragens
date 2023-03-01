@@ -3,7 +3,7 @@ import Cover from "@/components/Cover";
 import CompanyMetrics from "@/components/CompanyMetrics";
 import { metaDescriptions, metaTitles } from "@/storage/data";
 import IndexSections from "@/components/IndexSections";
-
+import Footer from "@/components/Footer";
 const Home = () => {
   return (
     <>
@@ -14,6 +14,7 @@ const Home = () => {
       <Cover />
       <CompanyMetrics />
       <IndexSections />
+      <Footer />
     </>
   );
 };
