@@ -10,6 +10,7 @@ const FooterAddresses = () => {
         content={address.neighborhoodCityState}
         className="footerAddress"
       />
+      <Paragraph content={address.zipCode} className="footerAddress" />
     </AddressesContainer>
   );
 };
