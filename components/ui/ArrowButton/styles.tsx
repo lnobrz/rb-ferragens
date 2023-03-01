@@ -9,7 +9,6 @@ export const ButtonContainer = styled.button`
   background: transparent;
   border: none;
   padding: 0;
-  width: 100%;
 
   .buttonArrow {
     max-width: 25px;

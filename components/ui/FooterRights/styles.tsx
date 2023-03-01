@@ -4,8 +4,10 @@ export const RightsContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  justify-self: center;
   align-items: center;
-  padding: 20px;
+  padding: 20px 0;
+  width: 100%;
 
   .footerRight {
     margin: 5px 0;

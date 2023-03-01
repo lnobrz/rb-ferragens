@@ -4,9 +4,8 @@ export const BudgetSectionContainer = styled.section`
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  width: 100%;
   padding: 0;
-  margin-left: 20px;
+  margin: 68px 0 0 20px;
 
   &:before {
     content: url("/images/horizontal-decoration.svg");
@@ -19,5 +18,6 @@ export const BudgetSectionContainer = styled.section`
 
   .justifyEnd {
     justify-content: flex-end;
+    width: 100%;
   }
 `;

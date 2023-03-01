@@ -4,7 +4,7 @@ export const ContactContainer = styled.li`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 20px;
+  margin: 0;
   border-bottom: 1px solid #949186;
 
   .footerContactTitle {
