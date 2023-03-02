@@ -1,14 +1,24 @@
 import Logo from "../Logo";
 import MenuButton from "../MenuButton";
 import { HeaderContainer, LogoContainer } from "./styles";
-
+import { useState } from "react";
+import MobileMenu from "../MobileMenu";
 const MobileHeader = () => {
+  const [showMobileMenu, setShowMobileMenu] = useState(false);
+  const showMenuHandler = () => {
+    setShowMobileMenu((previousValue) => !previousValue);
+  };
+
   return (
     <HeaderContainer>
       <LogoContainer>
         <Logo logoDirection="left" className="logo" />
       </LogoContainer>
-      <MenuButton />
+      <MenuButton
+        handleClickFunction={showMenuHandler}
+        showMenuState={showMobileMenu}
+      />
+      {showMobileMenu && <MobileMenu />}
     </HeaderContainer>
   );
 };

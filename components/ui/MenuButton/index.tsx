@@ -1,11 +1,21 @@
 import Image from "next/image";
 import { MenuButtonContainer } from "./styles";
 
-const MenuButton = () => {
+type MenuButtonTypes = {
+  showMenuState: boolean;
+  handleClickFunction(): void;
+};
+
+const MenuButton = ({
+  showMenuState,
+  handleClickFunction,
+}: MenuButtonTypes) => {
   return (
-    <MenuButtonContainer>
+    <MenuButtonContainer onClick={handleClickFunction}>
       <Image
-        src="/images/menu-button.svg"
+        src={`/images/${
+          showMenuState ? "close-button.svg" : "menu-button.svg"
+        }`}
         alt="menu button"
         fill={true}
         className="menuButton"
