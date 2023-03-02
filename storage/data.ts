@@ -122,3 +122,31 @@ export const contacts = [
     info: "85 99727-1762",
   },
 ];
+
+export const MenuLinks = [
+  {
+    id: 1,
+    name: "Home",
+    url: "/",
+  },
+  {
+    id: 2,
+    name: "Produtos",
+    url: "/produtos",
+  },
+  {
+    id: 3,
+    name: "Serviços",
+    url: "/servicos",
+  },
+  {
+    id: 4,
+    name: "Sobre Nós",
+    url: "/sobre-nos",
+  },
+  {
+    id: 5,
+    name: "Fale Conosco",
+    url: "/fale-conosco",
+  },
+];
