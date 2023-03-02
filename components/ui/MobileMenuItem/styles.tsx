@@ -5,7 +5,8 @@ export const MenuItem = styled.li`
   font-family: ${workSans.style.fontFamily};
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 16px;
   color: #f3f2e7;
+  margin-bottom: 20px;
 `;
