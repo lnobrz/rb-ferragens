@@ -7,8 +7,11 @@ export const MobileMenuContainer = styled.nav`
   justify-content: center;
   width: fit-content;
   padding: 0 20px;
-  background: rgba(27, 26, 24, 0.9);
-  border-radius: 5px;
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    #1b1b18 0%,
+    #0a0800 100%
+  ) !important;
   position: absolute;
   top: 60px;
   right: 20px;

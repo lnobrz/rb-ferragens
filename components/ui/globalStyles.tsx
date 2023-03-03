@@ -125,7 +125,7 @@ export const GlobalStyle = createGlobalStyle`
     border-spacing: 0;
   }
   body {
-    background-color: #1B1A18;
+    background: radial-gradient(50% 50% at 50% 50%, #1B1B18 0%, #0A0800 100%) !important;
     margin: 0;
   }
 
@@ -169,7 +169,6 @@ export const GlobalStyle = createGlobalStyle`
     height: 58px;
     margin-right: 24px;
     background: #cdaf18;
-    border-radius: 1px;
     }
   }
 
@@ -184,7 +183,6 @@ export const GlobalStyle = createGlobalStyle`
     height: 58px;
     margin-left: 24px;
     background: #cdaf18;
-    border-radius: 1px;
     }
   }
   .indexSectionParagraph {
@@ -199,13 +197,6 @@ export const GlobalStyle = createGlobalStyle`
 
   .textEnd {
     text-align: right;
-  }
-
-  .advertisement {
-    color: #949186;
-    font-weight: 300;
-    font-size: 8px;
-    line-height: 20px;
   }
 
   .aboutButton {

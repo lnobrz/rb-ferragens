@@ -8,6 +8,5 @@ export const AddressesContainer = styled.address`
 
   .footerAddress {
     margin: 0;
-    color: #949186;
   }
 `;

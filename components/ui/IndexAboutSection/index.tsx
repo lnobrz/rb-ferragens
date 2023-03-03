@@ -16,7 +16,7 @@ const IndexAboutSection = () => {
         content={buttonsTexts.aboutSection}
         arrowDirection="right"
         textSize="small"
-        additionalClasses="aboutButton"
+        className="aboutButton"
       />
     </AboutSectionContainer>
   );

@@ -6,6 +6,10 @@ export const CoverContainer = styled.section`
   background-repeat: no-repeat;
   height: 100% !important;
   background-attachment: fixed;
+
+  .coverButton {
+    margin: 24px 0 68px 0;
+  }
 `;
 
 export const ParagraphContainer = styled.div`

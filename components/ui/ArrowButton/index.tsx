@@ -5,17 +5,17 @@ type arrowButtonTypes = {
   content: string;
   arrowDirection: "left" | "right";
   textSize: "small" | "medium" | "large";
-  additionalClasses?: string;
+  className?: string;
 };
 
 const ArrowButton = ({
   content,
   arrowDirection,
   textSize,
-  additionalClasses,
+  className,
 }: arrowButtonTypes) => {
   return (
-    <ButtonContainer className={additionalClasses}>
+    <ButtonContainer className={className}>
       {arrowDirection === "left" ? (
         <>
           <Image

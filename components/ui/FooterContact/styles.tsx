@@ -5,15 +5,13 @@ export const ContactContainer = styled.li`
   justify-content: space-between;
   align-items: center;
   margin: 0;
-  border-bottom: 1px solid #949186;
+  border-bottom: 1px solid #75715d;
 
   .footerContactTitle {
     font-size: 1.25em;
-    color: #949186;
   }
 
   .footerContactInfo {
     font-size: 1.25em;
-    color: #949186;
   }
 `;

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { workSans, forum } from "@/public/fonts";
+import { kanit } from "@/public/fonts";
 
 export const ButtonContainer = styled.button`
   display: flex;
@@ -9,6 +9,7 @@ export const ButtonContainer = styled.button`
   background: transparent;
   border: none;
   padding: 0;
+  margin: 0;
 
   .buttonArrow {
     max-width: 25px;
@@ -29,7 +30,6 @@ export const ButtonContainer = styled.button`
     font-size: 36px;
     text-transform: uppercase;
     margin: 35px 0;
-    font-family: ${forum.style.fontFamily};
     width: 100%;
     text-align: right;
     margin-right: 20px;
@@ -37,11 +37,12 @@ export const ButtonContainer = styled.button`
 `;
 
 export const ButtonTitle = styled.h6`
-  font-family: ${workSans.style.fontFamily}, Arial, Helvetica, sans-serif;
+  font-family: ${kanit.style.fontFamily}, Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 1.5em;
   line-height: 25px;
-  color: #eceadf;
+  color: #ffdd00;
   width: auto !important;
+  margin: 0;
 `;

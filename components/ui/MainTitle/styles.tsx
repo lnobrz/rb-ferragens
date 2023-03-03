@@ -1,15 +1,15 @@
 import styled from "styled-components";
-import { forum } from "@/public/fonts";
+import { tomorrow } from "@/public/fonts";
 
 export const Title = styled.h1`
-  font-family: ${forum.style.fontFamily}, "Times New Roman", Times, Serif;
+  font-family: ${tomorrow.style.fontFamily}, Arial, Helvetica, sans-serif;
   font-size: 2em;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 32px;
   line-height: 39px;
   text-transform: uppercase;
-  color: #f3f2e7;
+  color: #f9f3d7;
 `;
 
 export const TitleContainer = styled.div`
@@ -19,5 +19,5 @@ export const TitleContainer = styled.div`
 `;
 
 export const HighlightedText = styled.bdi`
-  color: #cdaf18;
+  color: #ffdd00;
 `;

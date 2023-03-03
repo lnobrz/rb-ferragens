@@ -14,6 +14,6 @@ export const RightsContainer = styled.div`
     font-weight: 300;
     font-size: 12px;
     line-height: 10px;
-    color: #f3f2e7;
+    color: #f9f3d7;
   }
 `;

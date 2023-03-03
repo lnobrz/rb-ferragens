@@ -8,7 +8,7 @@ const BudgetSection = () => {
         content={buttonsTexts.budgetSection}
         arrowDirection="left"
         textSize="large"
-        additionalClasses="justifyEnd"
+        className="justifyEnd"
       />
     </BudgetSectionContainer>
   );

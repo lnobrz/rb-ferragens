@@ -17,6 +17,7 @@ const Cover = () => {
           content={buttonsTexts.cover}
           arrowDirection="right"
           textSize="medium"
+          className="coverButton"
         />
       </ParagraphContainer>
     </CoverContainer>
