@@ -86,7 +86,7 @@ export const advantages = [
 ];
 
 export const advertisements = {
-  index: "** consultar condições de frete grátis",
+  index: "consultar condições de frete grátis **",
 };
 
 export const footerRights = {
