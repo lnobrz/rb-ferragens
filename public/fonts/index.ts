@@ -1,11 +1,11 @@
-import { Forum, Work_Sans } from "@next/font/google";
+import { Tomorrow, Kanit } from "@next/font/google";
 
-export const forum = Forum({
-  weight: ["400"],
+export const tomorrow = Tomorrow({
+  weight: ["400", "500"],
   subsets: ["latin"],
 });
 
-export const workSans = Work_Sans({
-  weight: ["300", "400", "700"],
+export const kanit = Kanit({
+  weight: ["300", "400"],
   subsets: ["latin"],
 });
