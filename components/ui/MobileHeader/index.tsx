@@ -3,6 +3,8 @@ import MenuButton from "../MenuButton";
 import { HeaderContainer, LogoContainer } from "./styles";
 import { useState } from "react";
 import MobileMenu from "../MobileMenu";
+import { motion, AnimatePresence } from "framer-motion";
+
 const MobileHeader = () => {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
   const showMenuHandler = () => {
@@ -18,7 +20,17 @@ const MobileHeader = () => {
         handleClickFunction={showMenuHandler}
         showMenuState={showMobileMenu}
       />
-      {showMobileMenu && <MobileMenu />}
+      <AnimatePresence>
+        {showMobileMenu && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+          >
+            <MobileMenu />
+          </motion.div>
+        )}
+      </AnimatePresence>
     </HeaderContainer>
   );
 };
