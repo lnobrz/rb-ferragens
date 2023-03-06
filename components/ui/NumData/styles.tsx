@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { tomorrow, kanit } from "@/public/fonts";
+import { motion } from "framer-motion";
 
 export const NumDataContainer = styled.li`
   display: flex;
@@ -14,12 +15,12 @@ export const NumDataContainer = styled.li`
 
 export const NumContainer = styled.div`
   display: flex;
-  flex-flow: row wrap;
+  flex-direction: row !important;
   justify-content: center;
   align-items: center;
 `;
 
-export const DataNum = styled.div`
+export const DataNum = styled(motion.div)`
   font-family: ${tomorrow.style.fontFamily}, Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -29,7 +30,13 @@ export const DataNum = styled.div`
   color: #f9f3d7;
 `;
 
-export const HighlightedCaracter = styled.bdi`
+export const HighlightedCaracter = styled(motion.bdi)`
+  font-family: ${tomorrow.style.fontFamily}, Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 38px;
+  text-transform: uppercase;
   color: #ffdd00;
 `;
 
