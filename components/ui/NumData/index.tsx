@@ -13,29 +13,41 @@ type Data = {
   title: string;
 };
 
+const dataNumVariants = {
+  hidden: {
+    scale: 0,
+  },
+  visible: {
+    scale: 1,
+    transition: {
+      type: "spring",
+      duration: 0.5,
+      bounce: 0,
+      mass: 1,
+      stiffness: 70,
+    },
+  },
+};
+
 const NumData = ({ data, title }: Data) => {
   const count = useMotionValue(0);
   const rounded = useTransform(count, (latest) => Math.round(latest));
 
   useEffect(() => {
     setTimeout(() => {
-      const controls = animate(count, data);
+      const controls = animate(count, data, {
+        duration: 3,
+      });
 
       return controls.stop;
-    }, 250);
+    }, 800);
   }, [count, data]);
 
   return (
     <NumDataContainer>
       <NumContainer>
         <DataNum>
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ type: "spring", duration: 0.5 }}
-          >
-            {rounded}
-          </motion.div>
+          <motion.div variants={dataNumVariants}>{rounded}</motion.div>
         </DataNum>
         <HighlightedCaracter>+</HighlightedCaracter>
       </NumContainer>

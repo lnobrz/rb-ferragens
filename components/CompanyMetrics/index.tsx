@@ -4,16 +4,19 @@ import { metrics } from "@/storage/data";
 
 const metricsVariants = {
   hidden: {
-    opacity: 0,
-    y: "-5vh",
+    scale: 0,
+    y: -20,
   },
   visible: {
-    opacity: 1,
+    scale: 1,
     y: 0,
     transition: {
       type: "spring",
       duration: 1,
-      when: "beforeChildren",
+      bounce: 0,
+      mass: 0.4,
+      stiffness: 70,
+      delayChildren: 0.1,
     },
   },
 };
