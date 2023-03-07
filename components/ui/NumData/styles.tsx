@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { tomorrow, kanit } from "@/public/fonts";
-import { motion } from "framer-motion";
 
 export const NumDataContainer = styled.li`
   display: flex;
@@ -30,7 +29,7 @@ export const DataNum = styled.div`
   color: #f9f3d7;
 `;
 
-export const HighlightedCaracter = styled(motion.bdi)`
+export const HighlightedCaracter = styled.bdi`
   font-family: ${tomorrow.style.fontFamily}, Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 400;
