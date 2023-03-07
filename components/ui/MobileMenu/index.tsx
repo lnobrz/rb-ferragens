@@ -2,6 +2,7 @@ import { MobileMenuContainer, MenuItemsContainer } from "./styles";
 import MobileMenuItem from "../MobileMenuItem";
 import { MenuLinks } from "@/storage/data";
 import Link from "next/link";
+import { AnimatePresence } from "framer-motion";
 
 const mobileMenuVariants = {
   hidden: {

@@ -1,9 +1,5 @@
+import { MenuButtonContainer } from "../ui/MenuButton/styles";
 import Image from "next/image";
-import { MenuButtonContainer } from "./styles";
-
-type MenuButtonTypes = {
-  handleClickFunction(): void;
-};
 
 const mobileHeaderVariants = {
   hidden: {
@@ -21,7 +17,11 @@ const mobileHeaderVariants = {
   },
 };
 
-const MenuButton = ({ handleClickFunction }: MenuButtonTypes) => {
+type MenuButtonTypes = {
+  handleClickFunction(): void;
+};
+
+const CloseMenuButton = ({ handleClickFunction }: MenuButtonTypes) => {
   return (
     <MenuButtonContainer
       variants={mobileHeaderVariants}
@@ -30,7 +30,7 @@ const MenuButton = ({ handleClickFunction }: MenuButtonTypes) => {
       onClick={handleClickFunction}
     >
       <Image
-        src="/images/menu-button.svg"
+        src="/images/close-button.svg"
         alt="menu button"
         fill={true}
         className="menuButton"
@@ -39,4 +39,4 @@ const MenuButton = ({ handleClickFunction }: MenuButtonTypes) => {
   );
 };
 
-export default MenuButton;
+export default CloseMenuButton;

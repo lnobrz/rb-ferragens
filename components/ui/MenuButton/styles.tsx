@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
-export const MenuButtonContainer = styled.button`
+export const MenuButtonContainer = styled(motion.button)`
   border: none;
   background: transparent;
 
