@@ -20,7 +20,7 @@ export const NumContainer = styled.div`
   align-items: center;
 `;
 
-export const DataNum = styled(motion.div)`
+export const DataNum = styled.div`
   font-family: ${tomorrow.style.fontFamily}, Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 400;
