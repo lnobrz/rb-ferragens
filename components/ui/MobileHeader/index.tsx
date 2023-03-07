@@ -20,17 +20,7 @@ const MobileHeader = () => {
         handleClickFunction={showMenuHandler}
         showMenuState={showMobileMenu}
       />
-      <AnimatePresence>
-        {showMobileMenu && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-          >
-            <MobileMenu />
-          </motion.div>
-        )}
-      </AnimatePresence>
+      {showMobileMenu && <MobileMenu />}
     </HeaderContainer>
   );
 };

@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import { kanit } from "@/public/fonts";
+import { motion } from "framer-motion";
 
-export const MenuItem = styled.li`
+export const MenuItem = styled(motion.li)`
   font-family: ${kanit.style.fontFamily};
   font-style: normal;
   font-weight: 400;

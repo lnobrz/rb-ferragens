@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
-export const MobileMenuContainer = styled.nav`
+export const MobileMenuContainer = styled(motion.nav)`
   display: flex;
   flex-direction: column;
   align-items: center;

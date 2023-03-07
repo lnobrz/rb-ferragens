@@ -3,9 +3,32 @@ import MobileMenuItem from "../MobileMenuItem";
 import { MenuLinks } from "@/storage/data";
 import Link from "next/link";
 
+const mobileMenuVariants = {
+  hidden: {
+    scale: 0,
+  },
+  visible: {
+    scale: 1,
+    transition: {
+      type: "spring",
+      bounce: 0,
+      mass: 0.4,
+      stiffness: 70,
+      duration: 0.6,
+      delayChildren: 0.2,
+      staggerChildren: 0.1,
+    },
+  },
+};
+
 const MobileMenu = () => {
   return (
-    <MobileMenuContainer>
+    <MobileMenuContainer
+      variants={mobileMenuVariants}
+      initial="hidden"
+      animate="visible"
+      exit="hidden"
+    >
       <MenuItemsContainer>
         {MenuLinks.map((menuLink) => {
           return (
