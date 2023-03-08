@@ -4,10 +4,11 @@ import CompanyMetrics from "@/components/CompanyMetrics";
 import { metaDescriptions, metaTitles } from "@/storage/data";
 import IndexSections from "@/components/IndexSections";
 import Footer from "@/components/Footer";
+import Layout from "@/components/ui/Layout";
 
 const Home = () => {
   return (
-    <>
+    <Layout>
       <Head>
         <meta name="description" content={metaDescriptions.index} />
         <title>{metaTitles.index}</title>
@@ -16,7 +17,7 @@ const Home = () => {
       <CompanyMetrics />
       <IndexSections />
       <Footer />
-    </>
+    </Layout>
   );
 };
 
