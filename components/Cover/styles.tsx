@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
 export const CoverContainer = styled.section`
   background: url("/images/cover.png");
@@ -12,7 +13,7 @@ export const CoverContainer = styled.section`
   }
 `;
 
-export const ParagraphContainer = styled.div`
+export const ParagraphContainer = styled(motion.div)`
   max-width: 70%;
   margin: 0px 75px 60px 75px;
   display: flex;

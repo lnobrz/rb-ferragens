@@ -11,7 +11,18 @@ const Cover = () => {
     <CoverContainer>
       <MobileHeader />
       <MainTitle />
-      <ParagraphContainer>
+      <ParagraphContainer
+        initial={{ opacity: 0, x: "-5vh" }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{
+          type: "spring",
+          duration: 1,
+          bounce: 0,
+          mass: 0.1,
+          stiffness: 50,
+          delay: 0.5,
+        }}
+      >
         <Paragraph content={paragraphs.indexCover} />
         <ArrowButton
           content={buttonsTexts.cover}
