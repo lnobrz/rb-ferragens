@@ -28,7 +28,7 @@ const MobileMenu = () => {
       variants={mobileMenuVariants}
       initial="hidden"
       animate="visible"
-      exit="hidden"
+      exit={{ scale: 0 }}
     >
       <MenuItemsContainer>
         {MenuLinks.map((menuLink) => {

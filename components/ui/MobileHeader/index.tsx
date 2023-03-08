@@ -4,7 +4,7 @@ import { HeaderContainer, LogoContainer } from "./styles";
 import { useState } from "react";
 import MobileMenu from "../MobileMenu";
 import CloseMenuButton from "@/components/CloseMenuButton";
-
+import { AnimatePresence } from "framer-motion";
 const MobileHeader = () => {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
   const showMenuHandler = () => {
@@ -16,15 +16,12 @@ const MobileHeader = () => {
       <LogoContainer>
         <Logo logoDirection="left" className="logo" />
       </LogoContainer>
-
       {showMobileMenu ? (
-        <>
-          <CloseMenuButton handleClickFunction={showMenuHandler} />
-          <MobileMenu />
-        </>
+        <CloseMenuButton handleClickFunction={showMenuHandler} />
       ) : (
         <MenuButton handleClickFunction={showMenuHandler} />
       )}
+      <AnimatePresence>{showMobileMenu && <MobileMenu />}</AnimatePresence>
     </HeaderContainer>
   );
 };
