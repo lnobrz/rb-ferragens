@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { tomorrow } from "@/public/fonts";
+import { motion } from "framer-motion";
 
 export const Title = styled.h1`
   font-family: ${tomorrow.style.fontFamily}, Arial, Helvetica, sans-serif;
@@ -12,12 +13,10 @@ export const Title = styled.h1`
   color: #f9f3d7;
 `;
 
-export const TitleContainer = styled.div`
+export const TitleContainer = styled(motion.div)`
   max-width: 70%;
   background: transparent !important;
   margin: 50px 20px 70px 20px;
 `;
 
-export const HighlightedText = styled.bdi`
-  color: #ffdd00;
-`;
+export const HighlightedText = styled(motion.bdi)``;
