@@ -21,7 +21,6 @@ const indexSectionVariants = {
   },
   show: {
     opacity: 1,
-    x: 0,
     transition: {
       type: "spring",
       duration: 0.5,
