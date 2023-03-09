@@ -6,19 +6,28 @@ import { ReactNode } from "react";
 type LayoutType = {
   children: ReactNode;
 };
+
+const layoutVariants = {
+  hidden: {
+    opacity: 0,
+  },
+  show: {
+    opacity: 1,
+    transition: {
+      type: "string",
+      mass: 100,
+      stiffness: 1,
+      duration: 0.5,
+      delayChildren: 0.5,
+    },
+  },
+};
 const Layout = ({ children }: LayoutType) => (
   <motion.div
-    initial={{ opacity: 0 }}
-    animate={{ opacity: 1 }}
+    variants={layoutVariants}
+    initial="hidden"
+    animate="show"
     exit={{ opacity: 0 }}
-    transition={{
-      type: "spring",
-      duration: 1,
-      bounce: 0,
-      mass: 0.4,
-      stiffness: 70,
-      delayChildren: 0.1,
-    }}
   >
     {children}
   </motion.div>
