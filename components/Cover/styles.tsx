@@ -5,7 +5,6 @@ export const CoverContainer = styled.section`
   background: url("/images/cover.png");
   background-size: cover;
   background-repeat: no-repeat;
-  height: 100% !important;
   background-attachment: fixed;
 
   .coverButton {
