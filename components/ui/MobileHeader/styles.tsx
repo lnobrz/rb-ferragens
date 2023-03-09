@@ -4,7 +4,7 @@ export const HeaderContainer = styled.header`
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  background: inherit;
+  background: transparent;
 `;
 
 export const LogoContainer = styled.div`
