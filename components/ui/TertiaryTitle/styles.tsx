@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import { kanit } from "@/public/fonts";
+import { motion } from "framer-motion";
 
-export const TertiaryTitleContainer = styled.h4`
+export const TertiaryTitleContainer = styled(motion.h4)`
   font-family: ${kanit.style.fontFamily}, Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 400;
