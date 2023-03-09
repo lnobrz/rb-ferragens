@@ -14,6 +14,24 @@ type IndexSectionTypes = {
   advertisementContent?: string;
 };
 
+const indexSectionVariants = {
+  hidden: {
+    opacity: 0,
+  },
+  show: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      type: "spring",
+      duration: 0.5,
+      bounce: 0,
+      mass: 0.1,
+      stiffness: 50,
+      staggerChildren: 0.2,
+    },
+  },
+};
+
 const IndexSection = ({
   titleDecorationAlign,
   sectionTitle,
@@ -23,6 +41,10 @@ const IndexSection = ({
 }: IndexSectionTypes) => {
   return (
     <IndexSectionContainer
+      variants={indexSectionVariants}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true }}
       className={
         titleDecorationAlign === "left"
           ? "leftSectionContainer"

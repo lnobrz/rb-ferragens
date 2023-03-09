@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
-export const IndexSectionContainer = styled.section`
+export const IndexSectionContainer = styled(motion.section)`
   display: flex;
   flex-flow: column wrap;
   margin: 0 20px;

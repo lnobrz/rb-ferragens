@@ -4,9 +4,33 @@ import { paragraphs } from "@/storage/data";
 import ArrowButton from "../ArrowButton";
 import { buttonsTexts } from "@/storage/data";
 
+const indexSectionVariants = {
+  hidden: {
+    opacity: 0,
+  },
+  show: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      type: "spring",
+      duration: 0.5,
+      bounce: 0,
+      mass: 0.1,
+      stiffness: 50,
+      delayChildren: 0.4,
+      staggerChildren: 0.2,
+    },
+  },
+};
+
 const IndexAboutSection = () => {
   return (
-    <AboutSectionContainer>
+    <AboutSectionContainer
+      variants={indexSectionVariants}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true }}
+    >
       <IndexSection
         titleDecorationAlign="left"
         sectionTitle="sobre a rb"
