@@ -6,23 +6,29 @@ import ArrowButton from "../ui/ArrowButton";
 import MainTitle from "../ui/MainTitle";
 import { buttonsTexts } from "@/storage/data";
 
+const paragraphContainerVariants = {
+  hidden: {
+    opacity: 0,
+  },
+  show: {
+    opacity: 1,
+    transition: {
+      type: "spring",
+      duration: 1,
+      bounce: 0,
+      stiffness: 50,
+      delay: 1,
+      staggerChildren: 1,
+    },
+  },
+};
+
 const Cover = () => {
   return (
     <CoverContainer>
       <MobileHeader />
       <MainTitle />
-      <ParagraphContainer
-        initial={{ opacity: 0, x: "-5vh" }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{
-          type: "spring",
-          duration: 1,
-          bounce: 0,
-          mass: 0.1,
-          stiffness: 50,
-          delay: 0.5,
-        }}
-      >
+      <ParagraphContainer variants={paragraphContainerVariants}>
         <Paragraph content={paragraphs.indexCover} />
         <ArrowButton
           content={buttonsTexts.cover}
