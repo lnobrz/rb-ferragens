@@ -35,7 +35,7 @@ const TertiaryTitle = ({
       className={
         decorationAlign === "left" ? "tertiaryTitleLeft" : "tertiaryTitleRight"
       }
-      whileTap={isLink ? { scale: 1.1 } : ""}
+      whileTap={isLink ? { scale: 1.1 } : { scale: 1 }}
     >
       {content}
     </TertiaryTitleContainer>
