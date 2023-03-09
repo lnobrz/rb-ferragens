@@ -8,6 +8,22 @@ type arrowButtonTypes = {
   className?: string;
 };
 
+const arrowButtonVariants = {
+  hidden: {
+    opacity: 0,
+    x: "-5vh",
+  },
+  show: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      type: "spring",
+      bounce: 0,
+      stiffness: 50,
+    },
+  },
+};
+
 const ArrowButton = ({
   content,
   arrowDirection,
@@ -15,7 +31,7 @@ const ArrowButton = ({
   className,
 }: arrowButtonTypes) => {
   return (
-    <ButtonContainer className={className}>
+    <ButtonContainer variants={arrowButtonVariants} className={className}>
       {arrowDirection === "left" ? (
         <>
           <Image

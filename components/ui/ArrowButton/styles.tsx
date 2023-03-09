@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import { kanit } from "@/public/fonts";
+import { motion } from "framer-motion";
 
-export const ButtonContainer = styled.button`
+export const ButtonContainer = styled(motion.button)`
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
