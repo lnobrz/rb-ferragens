@@ -16,6 +16,7 @@ export const MobileMenuContainer = styled(motion.nav)`
   position: absolute;
   top: 60px;
   right: 20px;
+  z-index: 100;
 `;
 
 export const MenuItemsContainer = styled.ul`
