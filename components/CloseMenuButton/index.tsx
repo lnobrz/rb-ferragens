@@ -28,6 +28,7 @@ const CloseMenuButton = ({ handleClickFunction }: MenuButtonTypes) => {
       initial="hidden"
       animate="visible"
       onClick={handleClickFunction}
+      whileTap={{ scale: 1.3 }}
     >
       <Image
         src="/images/close-button.svg"

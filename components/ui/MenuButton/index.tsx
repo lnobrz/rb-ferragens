@@ -28,6 +28,7 @@ const MenuButton = ({ handleClickFunction }: MenuButtonTypes) => {
       initial="hidden"
       animate="visible"
       onClick={handleClickFunction}
+      whileTap={{ scale: 1.1 }}
     >
       <Image
         src="/images/menu-button.svg"

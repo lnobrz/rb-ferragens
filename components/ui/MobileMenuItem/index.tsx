@@ -19,7 +19,11 @@ const mobileMenuItemVariants = {
 
 const MobileMenuItem = ({ itemName }: MenuItemTypes) => {
   return (
-    <MenuItem layout variants={mobileMenuItemVariants}>
+    <MenuItem
+      layout
+      variants={mobileMenuItemVariants}
+      whileTap={{ scale: 1.1 }}
+    >
       {itemName}
     </MenuItem>
   );

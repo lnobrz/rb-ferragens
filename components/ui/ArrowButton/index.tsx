@@ -31,7 +31,11 @@ const ArrowButton = ({
   className,
 }: arrowButtonTypes) => {
   return (
-    <ButtonContainer variants={arrowButtonVariants} className={className}>
+    <ButtonContainer
+      variants={arrowButtonVariants}
+      whileTap={{ scale: 1.1 }}
+      className={className}
+    >
       {arrowDirection === "left" ? (
         <>
           <Image
