@@ -3,6 +3,7 @@ import { TertiaryTitleContainer } from "./styles";
 type TertiaryTitleTypes = {
   decorationAlign: "left" | "right";
   content: string;
+  isLink: boolean;
 };
 
 const tertiaryTitleVariants = {
@@ -23,13 +24,18 @@ const tertiaryTitleVariants = {
   },
 };
 
-const TertiaryTitle = ({ decorationAlign, content }: TertiaryTitleTypes) => {
+const TertiaryTitle = ({
+  decorationAlign,
+  content,
+  isLink,
+}: TertiaryTitleTypes) => {
   return (
     <TertiaryTitleContainer
       variants={tertiaryTitleVariants}
       className={
         decorationAlign === "left" ? "tertiaryTitleLeft" : "tertiaryTitleRight"
       }
+      whileTap={isLink ? { scale: 1.1 } : ""}
     >
       {content}
     </TertiaryTitleContainer>

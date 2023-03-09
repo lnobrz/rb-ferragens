@@ -12,6 +12,7 @@ type IndexSectionTypes = {
     name: string;
   }[];
   advertisementContent?: string;
+  hasLinks: boolean;
 };
 
 const indexSectionVariants = {
@@ -38,6 +39,7 @@ const IndexSection = ({
   sectionParagraph,
   sectionArr,
   advertisementContent,
+  hasLinks,
 }: IndexSectionTypes) => {
   return (
     <IndexSectionContainer
@@ -70,6 +72,7 @@ const IndexSection = ({
                 titleDecorationAlign === "left" ? "right" : "left"
               }
               content={arrItem.name}
+              isLink={hasLinks}
             />
           );
         })}
