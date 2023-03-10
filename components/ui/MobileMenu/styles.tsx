@@ -17,6 +17,31 @@ export const MobileMenuContainer = styled(motion.nav)`
   top: 60px;
   right: 20px;
   z-index: 100;
+
+  @media (min-width: 600px) {
+    top: 60px;
+    right: 60px;
+  }
+
+  @media (min-width: 800px) {
+    top: 70px;
+    right: 70px;
+  }
+
+  @media (min-width: 900px) {
+    top: 80px;
+    right: 80px;
+  }
+
+  @media (min-width: 1200px) {
+    top: 90px;
+    right: 110px;
+  }
+
+  @media (min-width: 1350px) {
+    top: 100px;
+    right: 120px;
+  }
 `;
 
 export const MenuItemsContainer = styled.ul`
