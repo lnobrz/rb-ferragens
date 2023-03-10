@@ -35,6 +35,7 @@ const IndexAboutSection = () => {
         titleDecorationAlign="left"
         sectionTitle="sobre a rb"
         sectionParagraph={paragraphs.indexAboutSection}
+        hasLinks={false}
       />
       <ArrowButton
         content={buttonsTexts.aboutSection}
