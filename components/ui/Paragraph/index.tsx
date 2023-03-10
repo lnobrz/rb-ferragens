@@ -26,6 +26,9 @@ const Paragraph = ({ content, className }: Paragraph) => {
   return (
     <ParagraphContainer
       variants={paragraphVariants}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true }}
       className={className ? className : ""}
     >
       {content}
