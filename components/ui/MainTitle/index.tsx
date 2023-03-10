@@ -26,17 +26,24 @@ const highlightedTextVariants = {
     color: "#ffdd00",
     transition: {
       type: "spring",
-      delay: 2,
-      duration: 2,
+      delay: 2.5,
+      duration: 1.5,
     },
   },
 };
 const MainTitle = () => {
   return (
-    <TitleContainer variants={mainTitleVariants}>
+    <TitleContainer
+      variants={mainTitleVariants}
+      initial="hidden"
+      whileInView="show"
+    >
       <Title>
         Bem-vindos a{" "}
-        <HighlightedText variants={highlightedTextVariants}>
+        <HighlightedText
+          variants={highlightedTextVariants}
+          viewport={{ once: true }}
+        >
           RB Ferragens
         </HighlightedText>
         , especialista na venda, corte e dobra de ferro e aço.
