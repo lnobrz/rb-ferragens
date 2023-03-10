@@ -9,4 +9,17 @@ export const ParagraphContainer = styled(motion.p)`
   font-size: 1em;
   line-height: 20px;
   color: #e5dfc3;
+
+  @media (min-width: 500px) {
+    font-size: 1.1em;
+    line-height: 25px;
+  }
+
+  @media (min-width: 700px) {
+    font-size: 1.3em;
+  }
+
+  @media (min-width: 1800px) {
+    font-size: 1.5em;
+  }
 `;
