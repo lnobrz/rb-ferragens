@@ -7,7 +7,7 @@ const metricsVariants = {
     scale: 0,
     y: -20,
   },
-  visible: {
+  show: {
     scale: 1,
     y: 0,
     transition: {
@@ -16,8 +16,9 @@ const metricsVariants = {
       bounce: 0,
       mass: 0.4,
       stiffness: 70,
-      delay: 1.7,
-      delayChildren: 0.1,
+      delay: 1.5,
+      delayChildren: 0.5,
+      staggerChildren: 0.3,
     },
   },
 };
@@ -26,7 +27,8 @@ const CompanyMetrics = () => {
     <MetricsContainer
       variants={metricsVariants}
       initial="hidden"
-      animate="visible"
+      whileInView="show"
+      viewport={{ once: true }}
     >
       {metrics.map((metric) => {
         return (
