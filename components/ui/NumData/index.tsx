@@ -17,7 +17,7 @@ const dataNumVariants = {
   hidden: {
     scale: 0,
   },
-  visible: {
+  show: {
     scale: 1,
     transition: {
       type: "spring",
@@ -40,7 +40,7 @@ const NumData = ({ data, title }: Data) => {
       });
 
       return controls.stop;
-    }, 800);
+    }, 2500);
   }, [count, data]);
 
   return (

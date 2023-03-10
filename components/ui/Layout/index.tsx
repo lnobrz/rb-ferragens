@@ -19,6 +19,7 @@ const layoutVariants = {
       stiffness: 1,
       duration: 0.5,
       delayChildren: 0.5,
+      staggerChildren: 0.5,
     },
   },
 };
