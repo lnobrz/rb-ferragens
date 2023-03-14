@@ -186,6 +186,7 @@ export const GlobalStyle = createGlobalStyle`
     background: #cdaf18;
     }
   }
+
   .indexSectionParagraph {
     text-align: right;
     margin-top: 28px;
@@ -194,10 +195,28 @@ export const GlobalStyle = createGlobalStyle`
 
   .textStart {
     text-align: left;
+
+    @media (min-width: 700px) {
+      text-align: right;
+      max-width: 50%
+    }
   }
 
   .textEnd {
     text-align: right;
+
+    @media (min-width: 700px) {
+      text-align: left;
+      max-width: 40%
+    }
+
+    @media (min-width: 700px) {
+      max-width: 30%
+    }
+
+    @media (min-width: 1000px) {
+      max-width: 20%
+    }
   }
 
   .aboutButton {

@@ -12,5 +12,23 @@ export const IndexSectionContainer = styled(motion.section)`
     font-weight: 300;
     font-size: 12px;
     line-height: 20px;
+    max-width: 100%;
+    text-align: end;
+  }
+
+  .productsHeader {
+    @media (min-width: 700px) {
+      flex-direction: row-reverse;
+    }
+  }
+`;
+
+export const SectionHeader = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: 700px) {
+    flex-direction: row;
+    justify-content: space-between;
   }
 `;

@@ -37,13 +37,11 @@ const MainTitle = () => {
       variants={mainTitleVariants}
       initial="hidden"
       whileInView="show"
+      viewport={{ once: true }}
     >
       <Title>
         Bem-vindos a{" "}
-        <HighlightedText
-          variants={highlightedTextVariants}
-          viewport={{ once: true }}
-        >
+        <HighlightedText variants={highlightedTextVariants}>
           RB Ferragens
         </HighlightedText>
         , especialista na venda, corte e dobra de ferro e aço.

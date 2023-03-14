@@ -1,4 +1,4 @@
-import { IndexSectionContainer } from "./styles";
+import { IndexSectionContainer, SectionHeader } from "./styles";
 import SecondaryTitle from "../SecondaryTitle";
 import Paragraph from "../Paragraph";
 import TertiaryTitle from "../TertiaryTitle";
@@ -52,16 +52,20 @@ const IndexSection = ({
           : "rightSectionContainer"
       }
     >
-      <SecondaryTitle
-        decorationAlign={titleDecorationAlign}
-        content={sectionTitle}
-      />
-      <Paragraph
-        content={sectionParagraph}
-        className={`indexSectionParagraph ${
-          titleDecorationAlign === "left" ? "textStart" : "textEnd"
-        }`}
-      />
+      <SectionHeader
+        className={sectionTitle === "produtos" ? "productsHeader" : ""}
+      >
+        <SecondaryTitle
+          decorationAlign={titleDecorationAlign}
+          content={sectionTitle}
+        />
+        <Paragraph
+          content={sectionParagraph}
+          className={`indexSectionParagraph ${
+            titleDecorationAlign === "left" ? "textStart" : "textEnd"
+          }`}
+        />
+      </SectionHeader>
       {sectionArr &&
         sectionArr.map((arrItem) => {
           return (
