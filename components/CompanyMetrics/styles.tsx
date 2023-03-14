@@ -6,4 +6,5 @@ export const MetricsContainer = styled(motion.ul)`
   flex-flow: row nowrap;
   align-items: center;
   justify-content: center;
+  margin: 0 20px;
 `;
