@@ -7,6 +7,26 @@ export const IndexSectionContainer = styled(motion.section)`
   margin: 0 20px;
   margin-top: 68px;
 
+  @media (min-width: 600px) {
+    margin: 0 40px;
+  }
+
+  @media (min-width: 800px) {
+    margin: 0 60px;
+  }
+
+  @media (min-width: 900px) {
+    margin: 0 80px;
+  }
+
+  @media (min-width: 1200px) {
+    margin: 0 100px;
+  }
+
+  @media (min-width: 1350px) {
+    margin: 0 120px;
+  }
+
   .advertisement {
     color: #c2bb99;
     font-weight: 300;
@@ -21,6 +41,10 @@ export const IndexSectionContainer = styled(motion.section)`
       flex-direction: row-reverse;
     }
   }
+
+  .aboutSection {
+    flex-direction: column;
+  }
 `;
 
 export const SectionHeader = styled.div`
@@ -30,5 +54,24 @@ export const SectionHeader = styled.div`
   @media (min-width: 700px) {
     flex-direction: row;
     justify-content: space-between;
+  }
+
+  .aboutSectionParagraph {
+    @media (min-width: 400px) {
+      max-width: 70%;
+    }
+
+    @media (min-width: 500px) {
+      max-width: 70%;
+    }
+
+    @media (min-width: 700px) {
+      max-width: 40%;
+      text-align: left;
+    }
+
+    @media (min-width: 1000px) {
+      max-width: 30%;
+    }
   }
 `;

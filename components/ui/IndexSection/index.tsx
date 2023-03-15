@@ -13,6 +13,7 @@ type IndexSectionTypes = {
   }[];
   advertisementContent?: string;
   hasLinks: boolean;
+  className?: string;
 };
 
 const indexSectionVariants = {
@@ -39,6 +40,7 @@ const IndexSection = ({
   sectionArr,
   advertisementContent,
   hasLinks,
+  className,
 }: IndexSectionTypes) => {
   return (
     <IndexSectionContainer
@@ -46,14 +48,16 @@ const IndexSection = ({
       initial="hidden"
       whileInView="show"
       viewport={{ once: true }}
-      className={
+      className={`${
         titleDecorationAlign === "left"
           ? "leftSectionContainer"
           : "rightSectionContainer"
-      }
+      }`}
     >
       <SectionHeader
-        className={sectionTitle === "produtos" ? "productsHeader" : ""}
+        className={`${sectionTitle === "produtos" && "productsHeader"} ${
+          className && className
+        }`}
       >
         <SecondaryTitle
           decorationAlign={titleDecorationAlign}
@@ -63,7 +67,7 @@ const IndexSection = ({
           content={sectionParagraph}
           className={`indexSectionParagraph ${
             titleDecorationAlign === "left" ? "textStart" : "textEnd"
-          }`}
+          } ${sectionTitle === "sobre a rb" && "aboutSectionParagraph"}`}
         />
       </SectionHeader>
       {sectionArr &&
