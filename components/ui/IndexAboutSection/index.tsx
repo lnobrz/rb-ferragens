@@ -36,6 +36,7 @@ const IndexAboutSection = () => {
         sectionTitle="sobre a rb"
         sectionParagraph={paragraphs.indexAboutSection}
         hasLinks={false}
+        className="aboutSection"
       />
       <ArrowButton
         content={buttonsTexts.aboutSection}
