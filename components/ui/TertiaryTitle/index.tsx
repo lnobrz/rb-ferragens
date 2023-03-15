@@ -1,4 +1,4 @@
-import { TertiaryTitleContainer } from "./styles";
+import { TitleDiv, TertiaryTitleContainer } from "./styles";
 
 type TertiaryTitleTypes = {
   decorationAlign: "left" | "right";
@@ -30,15 +30,21 @@ const TertiaryTitle = ({
   isLink,
 }: TertiaryTitleTypes) => {
   return (
-    <TertiaryTitleContainer
+    <TitleDiv
       variants={tertiaryTitleVariants}
       className={
         decorationAlign === "left" ? "tertiaryTitleLeft" : "tertiaryTitleRight"
       }
-      whileTap={isLink ? { scale: 1.1 } : { scale: 1 }}
     >
-      {content}
-    </TertiaryTitleContainer>
+      <TertiaryTitleContainer
+        whileTap={isLink ? { scale: 1.2 } : { scale: 1 }}
+        whileHover={
+          isLink ? { scale: 1.1, color: "#ffdd00", cursor: "pointer" } : ""
+        }
+      >
+        {content}
+      </TertiaryTitleContainer>
+    </TitleDiv>
   );
 };
 
