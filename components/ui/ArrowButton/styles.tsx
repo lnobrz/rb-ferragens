@@ -11,6 +11,7 @@ export const ButtonContainer = styled(motion.button)`
   border: none;
   padding: 0;
   margin: 0;
+  max-width: fit-content;
 
   .buttonArrow {
     max-width: 25px;
@@ -42,7 +43,7 @@ export const ButtonTitle = styled.h6`
   font-style: normal;
   font-weight: 400;
   font-size: 1.5em;
-  line-height: 25px;
+  line-height: 35px;
   color: #ffdd00;
   width: auto !important;
   margin: 0;

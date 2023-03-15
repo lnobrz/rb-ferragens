@@ -33,7 +33,8 @@ const ArrowButton = ({
   return (
     <ButtonContainer
       variants={arrowButtonVariants}
-      whileTap={{ scale: 1.1 }}
+      whileHover={{ scale: 1.1, cursor: "pointer" }}
+      whileTap={{ scale: 1.2 }}
       className={className}
     >
       {arrowDirection === "left" ? (
@@ -41,7 +42,8 @@ const ArrowButton = ({
           <Image
             src="/images/left-arrow.svg"
             alt="arrow pointing to the left"
-            fill={true}
+            width={100}
+            height={60}
             className="buttonArrow"
           />
           <ButtonTitle
