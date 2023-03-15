@@ -169,7 +169,7 @@ export const GlobalStyle = createGlobalStyle`
     width: 1px;
     height: 58px;
     margin-right: 24px;
-    background: #cdaf18;
+    background: #ffdd00;
     }
   }
 
@@ -183,7 +183,7 @@ export const GlobalStyle = createGlobalStyle`
     width: 1px;
     height: 58px;
     margin-left: 24px;
-    background: #cdaf18;
+    background: #ffdd00;
     }
   }
 
@@ -200,6 +200,10 @@ export const GlobalStyle = createGlobalStyle`
       text-align: right;
       max-width: 50%
     }
+
+    @media (min-width: 900px) {
+      max-width: 30%
+    }
   }
 
   .textEnd {
@@ -207,19 +211,11 @@ export const GlobalStyle = createGlobalStyle`
 
     @media (min-width: 700px) {
       text-align: left;
-      max-width: 40%
+      max-width: 50%
     }
 
-    @media (min-width: 700px) {
+    @media (min-width: 900px) {
       max-width: 30%
     }
-
-    @media (min-width: 1000px) {
-      max-width: 20%
-    }
-  }
-
-  .aboutButton {
-    margin: 0px 0px 28px 20px;
   }
 `;
