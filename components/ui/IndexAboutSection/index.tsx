@@ -37,12 +37,10 @@ const IndexAboutSection = () => {
         sectionParagraph={paragraphs.indexAboutSection}
         hasLinks={false}
         className="aboutSection"
-      />
-      <ArrowButton
-        content={buttonsTexts.aboutSection}
-        arrowDirection="right"
-        textSize="small"
-        className="aboutButton"
+        headerClassName="aboutSectionHeader"
+        illustrationUrl="/images/about-illustration.png"
+        illustrationDescription="Bruno Fernandes"
+        disableParagraphAnimation={true}
       />
     </AboutSectionContainer>
   );
