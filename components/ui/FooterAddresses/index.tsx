@@ -5,12 +5,21 @@ import { address } from "@/storage/data";
 const FooterAddresses = () => {
   return (
     <AddressesContainer>
-      <Paragraph content={address.street} className="footerAddress" />
       <Paragraph
+        disableAnimations={true}
+        content={address.street}
+        className="footerAddress"
+      />
+      <Paragraph
+        disableAnimations={true}
         content={address.neighborhoodCityState}
         className="footerAddress"
       />
-      <Paragraph content={address.zipCode} className="footerAddress" />
+      <Paragraph
+        disableAnimations={true}
+        content={address.zipCode}
+        className="footerAddress"
+      />
     </AddressesContainer>
   );
 };

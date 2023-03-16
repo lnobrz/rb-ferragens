@@ -1,8 +1,9 @@
-import { ParagraphContainer } from "./styles";
+import { ParagraphContainer, MotionParagraphContainer } from "./styles";
 
 type Paragraph = {
   content: string;
   className?: string;
+  disableAnimations?: true | false;
 };
 
 const paragraphVariants = {
@@ -22,17 +23,25 @@ const paragraphVariants = {
   },
 };
 
-const Paragraph = ({ content, className }: Paragraph) => {
+const Paragraph = ({ content, className, disableAnimations }: Paragraph) => {
   return (
-    <ParagraphContainer
-      variants={paragraphVariants}
-      initial="hidden"
-      whileInView="show"
-      viewport={{ once: true }}
-      className={className ? className : ""}
-    >
-      {content}
-    </ParagraphContainer>
+    <>
+      {disableAnimations ? (
+        <ParagraphContainer className={className ? className : ""}>
+          {content}
+        </ParagraphContainer>
+      ) : (
+        <MotionParagraphContainer
+          variants={paragraphVariants}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+          className={className ? className : ""}
+        >
+          {content}
+        </MotionParagraphContainer>
+      )}
+    </>
   );
 };
 

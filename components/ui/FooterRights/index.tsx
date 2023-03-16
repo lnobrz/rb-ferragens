@@ -5,7 +5,11 @@ import { footerRights } from "@/storage/data";
 const FooterRights = () => {
   return (
     <RightsContainer>
-      <Paragraph content={footerRights.copyrights} className="footerRight" />
+      <Paragraph
+        disableAnimations={true}
+        content={footerRights.copyrights}
+        className="footerRight"
+      />
     </RightsContainer>
   );
 };

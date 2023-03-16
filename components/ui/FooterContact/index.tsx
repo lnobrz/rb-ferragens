@@ -9,8 +9,16 @@ type FooterContactTypes = {
 const FooterContact = ({ contactType, contact }: FooterContactTypes) => {
   return (
     <ContactContainer>
-      <Paragraph content={contactType} className="footerContactTitle" />
-      <Paragraph content={contact} className="footerContactInfo" />
+      <Paragraph
+        content={contactType}
+        disableAnimations={true}
+        className="footerContactTitle"
+      />
+      <Paragraph
+        content={contact}
+        disableAnimations={true}
+        className="footerContactInfo"
+      />
     </ContactContainer>
   );
 };
