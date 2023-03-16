@@ -17,6 +17,8 @@ const IndexSections = () => {
         sectionParagraph={paragraphs.indexProductSession}
         sectionArr={products}
         hasLinks={true}
+        illustrationUrl="/images/products-illustration.png"
+        illustrationDescription="ferragens"
       />
       <IndexSection
         titleDecorationAlign="left"
@@ -25,6 +27,8 @@ const IndexSections = () => {
         sectionArr={advantages}
         advertisementContent={advertisements.index}
         hasLinks={false}
+        illustrationUrl="/images/advantages-illustration.png"
+        illustrationDescription="tubos de ferro"
       />
       <IndexAboutSection />
       <BudgetSection />
