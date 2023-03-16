@@ -8,23 +8,23 @@ export const IndexSectionContainer = styled(motion.section)`
   margin-top: 68px;
 
   @media (min-width: 600px) {
-    margin: 0 40px;
+    margin: 20px 40px;
   }
 
   @media (min-width: 800px) {
-    margin: 0 60px;
+    margin: 40px 60px;
   }
 
   @media (min-width: 900px) {
-    margin: 0 80px;
+    margin: 60px 80px;
   }
 
   @media (min-width: 1200px) {
-    margin: 0 100px;
+    margin: 80px 100px;
   }
 
   @media (min-width: 1350px) {
-    margin: 0 120px;
+    margin: 100px 120px;
   }
 
   .advertisement {
@@ -42,12 +42,16 @@ export const IndexSectionContainer = styled(motion.section)`
     }
   }
 
-  .aboutSection {
-    flex-direction: column;
+  .aboutSectionHeader {
+    flex-flow: column nowrap !important;
+  }
+
+  .advantagesMain {
+    flex-direction: row-reverse;
   }
 `;
 
-export const SectionHeader = styled.div`
+export const SectionHeader = styled(motion.div)`
   display: flex;
   flex-direction: column;
 
@@ -61,17 +65,43 @@ export const SectionHeader = styled.div`
       max-width: 70%;
     }
 
-    @media (min-width: 500px) {
-      max-width: 70%;
-    }
-
     @media (min-width: 700px) {
-      max-width: 40%;
       text-align: left;
     }
 
     @media (min-width: 1000px) {
-      max-width: 30%;
+      max-width: 80%;
+    }
+
+    @media (min-width: 1200px) {
+      max-width: 60%;
+    }
+
+    @media (min-width: 1200px) {
+      max-width: 50%;
+    }
+
+    @media (min-width: 1600px) {
+      max-width: 40%;
+    }
+  }
+`;
+
+export const TitlesContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+export const MainContent = styled(motion.main)`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .sectionIllustration {
+    display: none;
+
+    @media (min-width: 1000px) {
+      display: flex;
     }
   }
 `;
