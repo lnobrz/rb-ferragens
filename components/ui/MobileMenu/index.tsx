@@ -2,7 +2,10 @@ import { MobileMenuContainer, MenuItemsContainer } from "./styles";
 import MobileMenuItem from "../MobileMenuItem";
 import { MenuLinks } from "@/storage/data";
 import Link from "next/link";
-import { AnimatePresence } from "framer-motion";
+
+type MobileMenuTypes = {
+  disableAnimations: boolean;
+};
 
 const mobileMenuVariants = {
   hidden: {
@@ -22,10 +25,10 @@ const mobileMenuVariants = {
   },
 };
 
-const MobileMenu = () => {
+const MobileMenu = ({ disableAnimations }: MobileMenuTypes) => {
   return (
     <MobileMenuContainer
-      variants={mobileMenuVariants}
+      variants={disableAnimations ? undefined : mobileMenuVariants}
       initial="hidden"
       animate="visible"
       exit={{ scale: 0 }}
