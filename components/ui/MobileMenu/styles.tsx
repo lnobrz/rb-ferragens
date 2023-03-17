@@ -5,7 +5,7 @@ export const MobileMenuContainer = styled(motion.nav)`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   width: fit-content;
   padding: 0 20px;
   background: radial-gradient(
@@ -33,6 +33,13 @@ export const MobileMenuContainer = styled(motion.nav)`
     right: 80px;
   }
 
+  @media (min-width: 1000px) {
+    justify-content: center;
+    position: static;
+    background: transparent !important;
+    flex-direction: row;
+  }
+
   @media (min-width: 1200px) {
     top: 90px;
     right: 110px;
@@ -51,7 +58,15 @@ export const MenuItemsContainer = styled.ul`
   justify-content: center;
   padding: 40px;
 
+  @media (min-width: 1000px) {
+    flex-direction: row;
+  }
+
   .mobileMenuLink {
     text-decoration: none;
+
+    @media (min-width: 1000px) {
+      padding-right: 20px;
+    }
   }
 `;

@@ -10,4 +10,12 @@ export const MenuItem = styled(motion.li)`
   line-height: 16px;
   color: #f9f3d7;
   margin-bottom: 20px;
+
+  @media (min-width: 1000px) {
+    margin-right: 20px;
+
+    &:lastchild {
+      margin-right: 0;
+    }
+  }
 `;

@@ -5,6 +5,10 @@ export const HeaderContainer = styled.header`
   justify-content: flex-end;
   align-items: center;
   background: transparent;
+
+  @media (min-width: 1000px) {
+    justify-content: space-between;
+  }
 `;
 
 export const LogoContainer = styled.div`
