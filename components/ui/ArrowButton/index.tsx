@@ -33,8 +33,8 @@ const ArrowButton = ({
   return (
     <ButtonContainer
       variants={arrowButtonVariants}
-      whileHover={{ scale: 1.1, cursor: "pointer" }}
-      whileTap={{ scale: 1.2 }}
+      whileHover={{ scale: 1.05, cursor: "pointer" }}
+      whileTap={{ scale: 1.1 }}
       className={className}
     >
       {arrowDirection === "left" ? (
