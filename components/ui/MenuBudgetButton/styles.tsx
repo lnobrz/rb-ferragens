@@ -23,5 +23,10 @@ export const ButtonContainer = styled(motion.button)`
 
   @media (min-width: 1000px) {
     width: auto;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: 1500px) {
+    margin-top: 20px;
   }
 `;
