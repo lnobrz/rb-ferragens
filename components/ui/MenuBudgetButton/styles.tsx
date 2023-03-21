@@ -6,7 +6,7 @@ export const ButtonContainer = styled(motion.button)`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 90%;
   height: 35px;
   background: #ffdd00;
   border-radius: 5px;

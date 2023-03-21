@@ -56,7 +56,7 @@ export const MenuItemsContainer = styled.ul`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 40px;
+  padding: 10px 40px;
 
   @media (min-width: 1000px) {
     flex-direction: row;
