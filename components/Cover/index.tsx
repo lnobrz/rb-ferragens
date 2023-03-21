@@ -1,4 +1,4 @@
-import MobileHeader from "../ui/MobileHeader";
+import Header from "../ui/Header";
 import { paragraphs } from "@/storage/data";
 import { CoverContainer, ParagraphContainer } from "./styles";
 import Paragraph from "../ui/Paragraph";
@@ -25,7 +25,7 @@ const paragraphContainerVariants = {
 const Cover = () => {
   return (
     <CoverContainer>
-      <MobileHeader />
+      <Header />
       <MainTitle />
       <ParagraphContainer variants={paragraphContainerVariants}>
         <Paragraph content={paragraphs.indexCover} />
