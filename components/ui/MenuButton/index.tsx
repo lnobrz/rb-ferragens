@@ -3,6 +3,7 @@ import { MenuButtonContainer } from "./styles";
 
 type MenuButtonTypes = {
   handleClickFunction(): void;
+  menuIsOpened: boolean;
 };
 
 const mobileHeaderVariants = {
@@ -21,7 +22,7 @@ const mobileHeaderVariants = {
   },
 };
 
-const MenuButton = ({ handleClickFunction }: MenuButtonTypes) => {
+const MenuButton = ({ handleClickFunction, menuIsOpened }: MenuButtonTypes) => {
   return (
     <MenuButtonContainer
       variants={mobileHeaderVariants}
@@ -31,7 +32,9 @@ const MenuButton = ({ handleClickFunction }: MenuButtonTypes) => {
       whileTap={{ scale: 1.1 }}
     >
       <Image
-        src="/images/menu-button.svg"
+        src={
+          menuIsOpened ? "/images/close-button.svg" : "/images/menu-button.svg"
+        }
         alt="menu button"
         fill={true}
         className="menuButton"
