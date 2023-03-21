@@ -6,6 +6,6 @@ export const tomorrow = Tomorrow({
 });
 
 export const kanit = Kanit({
-  weight: ["300", "400"],
+  weight: ["300", "400", "500"],
   subsets: ["latin"],
 });
