@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import { tomorrow, kanit } from "@/public/fonts";
+import { motion } from "framer-motion";
 
-export const NumDataContainer = styled.li`
+export const NumDataContainer = styled(motion.li)`
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
@@ -51,7 +52,7 @@ export const NumContainer = styled.div`
   align-items: center;
 `;
 
-export const DataNum = styled.div`
+export const DataNum = styled(motion.div)`
   font-family: ${tomorrow.style.fontFamily}, Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 400;

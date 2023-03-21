@@ -34,21 +34,17 @@ const NumData = ({ data, title }: Data) => {
   const rounded = useTransform(count, (latest) => Math.round(latest));
 
   useEffect(() => {
-    setTimeout(() => {
-      const controls = animate(count, data, {
-        duration: 3,
-      });
+    const animation = animate(count, data, {
+      duration: 3,
+    });
 
-      return controls.stop;
-    }, 2500);
+    return animation.stop;
   }, [count, data]);
 
   return (
-    <NumDataContainer>
+    <NumDataContainer variants={dataNumVariants}>
       <NumContainer>
-        <DataNum>
-          <motion.div variants={dataNumVariants}>{rounded}</motion.div>
-        </DataNum>
+        <DataNum>{rounded}</DataNum>
         <HighlightedCaracter>+</HighlightedCaracter>
       </NumContainer>
       <DataName>{title}</DataName>

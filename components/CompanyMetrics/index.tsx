@@ -16,9 +16,7 @@ const metricsVariants = {
       bounce: 0,
       mass: 0.4,
       stiffness: 70,
-      delay: 1.5,
-      delayChildren: 0.5,
-      staggerChildren: 0.3,
+      staggerChildren: 0.1,
     },
   },
 };
