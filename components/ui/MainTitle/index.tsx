@@ -26,8 +26,8 @@ const highlightedTextVariants = {
     color: "#ffdd00",
     transition: {
       type: "spring",
-      delay: 2.5,
-      duration: 1.5,
+      delay: 1.2,
+      duration: 1,
     },
   },
 };
