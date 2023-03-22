@@ -10,6 +10,7 @@ import MenuBudgetButton from "../MenuBudgetButton";
 const MobileHeader = () => {
   const device = useDeviceInfo();
   const [showMobileMenu, setShowMobileMenu] = useState(false);
+
   const showMenuHandler = () => {
     setShowMobileMenu((previousValue) => !previousValue);
   };
@@ -26,7 +27,12 @@ const MobileHeader = () => {
             menuIsOpened={showMobileMenu}
           />
           <AnimatePresence>
-            {showMobileMenu && <Menu disableAnimations={false} />}
+            {showMobileMenu && (
+              <Menu
+                disableAnimations={false}
+                showMenuSetter={setShowMobileMenu}
+              />
+            )}
           </AnimatePresence>
         </>
       )}

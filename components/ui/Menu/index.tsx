@@ -4,9 +4,11 @@ import { MenuLinks } from "@/storage/data";
 import Link from "next/link";
 import useDeviceInfo from "@/hooks/useDeviceInfo";
 import MenuBudgetButton from "../MenuBudgetButton";
+import { useCallback, useEffect, useRef } from "react";
 
 type MenuTypes = {
   disableAnimations?: boolean;
+  showMenuSetter?: (arg0: boolean) => void;
 };
 
 const mobileMenuVariants = {
@@ -27,34 +29,54 @@ const mobileMenuVariants = {
   },
 };
 
-const Menu = ({ disableAnimations = false }: MenuTypes) => {
+const Menu = ({ disableAnimations = false, showMenuSetter }: MenuTypes) => {
   const device = useDeviceInfo();
+  const menuRef = useRef<HTMLDivElement>(null);
+
+  const handleOutsideMenuClick = useCallback(
+    (event: Event) => {
+      if (
+        menuRef.current &&
+        !menuRef.current.contains(event.target as Node) &&
+        showMenuSetter
+      ) {
+        showMenuSetter(false);
+      }
+    },
+    [showMenuSetter]
+  );
+
+  useEffect(() => {
+    document.addEventListener("mousedown", handleOutsideMenuClick);
+  }, [handleOutsideMenuClick]);
 
   return (
-    <MenuContainer
-      variants={disableAnimations ? undefined : mobileMenuVariants}
-      initial={disableAnimations ? undefined : "hidden"}
-      animate={disableAnimations ? undefined : "visible"}
-      exit={disableAnimations ? undefined : { scale: 0 }}
-    >
-      <MenuItemsContainer>
-        {MenuLinks.map((menuLink) => {
-          return (
-            <Link
-              key={menuLink.id}
-              href={menuLink.url}
-              className="mobileMenuLink"
-            >
-              <MenuItem
-                itemName={menuLink.name}
-                disableAnimations={disableAnimations}
-              />
-            </Link>
-          );
-        })}
-      </MenuItemsContainer>
-      {device === "mobile" && <MenuBudgetButton />}
-    </MenuContainer>
+    <div ref={menuRef}>
+      <MenuContainer
+        variants={disableAnimations ? undefined : mobileMenuVariants}
+        initial={disableAnimations ? undefined : "hidden"}
+        animate={disableAnimations ? undefined : "visible"}
+        exit={disableAnimations ? undefined : { scale: 0 }}
+      >
+        <MenuItemsContainer>
+          {MenuLinks.map((menuLink) => {
+            return (
+              <Link
+                key={menuLink.id}
+                href={menuLink.url}
+                className="mobileMenuLink"
+              >
+                <MenuItem
+                  itemName={menuLink.name}
+                  disableAnimations={disableAnimations}
+                />
+              </Link>
+            );
+          })}
+        </MenuItemsContainer>
+        {device === "mobile" && <MenuBudgetButton />}
+      </MenuContainer>
+    </div>
   );
 };
 
