@@ -2,7 +2,7 @@ import Image from "next/image";
 import { MenuButtonContainer } from "./styles";
 
 type MenuButtonTypes = {
-  handleClickFunction(): void;
+  handleClickFunction: () => void;
   menuIsOpened: boolean;
 };
 
