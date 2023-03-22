@@ -5,6 +5,7 @@ import Paragraph from "../ui/Paragraph";
 import ArrowButton from "../ui/ArrowButton";
 import MainTitle from "../ui/MainTitle";
 import { buttonsTexts } from "@/storage/data";
+import useDeviceInfo from "@/hooks/useDeviceInfo";
 
 const paragraphContainerVariants = {
   hidden: {
@@ -23,8 +24,10 @@ const paragraphContainerVariants = {
 };
 
 const Cover = () => {
+  const device = useDeviceInfo();
+
   return (
-    <CoverContainer>
+    <CoverContainer device={device}>
       <Header />
       <MainTitle />
       <ParagraphContainer variants={paragraphContainerVariants}>

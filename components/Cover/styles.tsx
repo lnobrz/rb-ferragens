@@ -1,8 +1,12 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
+import { url } from "inspector";
 
-export const CoverContainer = styled.section`
-  background: url("/images/cover.png");
+export const CoverContainer = styled.section<{ device: "desktop" | "mobile" }>`
+  background: url(${(props) =>
+    props.device === "desktop"
+      ? "/images/cover.png"
+      : "/images/cover-mobile.png"});
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
