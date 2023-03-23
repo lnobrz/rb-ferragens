@@ -2,9 +2,11 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 import { url } from "inspector";
 
-export const CoverContainer = styled.section<{ device: "desktop" | "mobile" }>`
+export const CoverContainer = styled.section<{
+  device: "desktop" | "mobile" | undefined;
+}>`
   background: url(${(props) =>
-    props.device === "desktop"
+    props.device === "desktop" || props.device === undefined
       ? "/images/cover.png"
       : "/images/cover-mobile.png"});
   background-size: cover;
