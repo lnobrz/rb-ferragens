@@ -1,7 +1,7 @@
 import { TitleDiv, TertiaryTitleContainer } from "./styles";
 
 type TertiaryTitleTypes = {
-  decorationAlign: "left" | "right";
+  decorationAlign: "left" | "right" | "noDecoration";
   content: string;
   isLink: boolean;
 };
@@ -33,7 +33,11 @@ const TertiaryTitle = ({
     <TitleDiv
       variants={tertiaryTitleVariants}
       className={
-        decorationAlign === "left" ? "tertiaryTitleLeft" : "tertiaryTitleRight"
+        decorationAlign === "noDecoration"
+          ? ""
+          : decorationAlign === "left"
+          ? "tertiaryTitleLeft"
+          : "tertiaryTitleRight"
       }
     >
       <TertiaryTitleContainer
