@@ -7,7 +7,7 @@ import { AnimatePresence } from "framer-motion";
 import useDeviceInfo from "@/hooks/useDeviceInfo";
 import MenuBudgetButton from "../MenuBudgetButton";
 
-const MobileHeader = () => {
+const Header = () => {
   const device = useDeviceInfo();
   const [showMobileMenu, setShowMobileMenu] = useState(false);
 
@@ -30,7 +30,7 @@ const MobileHeader = () => {
             {showMobileMenu && (
               <Menu
                 disableAnimations={false}
-                showMenuSetter={setShowMobileMenu}
+                menuHandlerFunction={showMenuHandler}
               />
             )}
           </AnimatePresence>
@@ -46,4 +46,4 @@ const MobileHeader = () => {
   );
 };
 
-export default MobileHeader;
+export default Header;

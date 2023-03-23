@@ -8,7 +8,7 @@ import { useCallback, useEffect, useRef } from "react";
 
 type MenuTypes = {
   disableAnimations?: boolean;
-  showMenuSetter?: (arg0: boolean) => void;
+  menuHandlerFunction?: () => void;
 };
 
 const mobileMenuVariants = {
@@ -29,7 +29,10 @@ const mobileMenuVariants = {
   },
 };
 
-const Menu = ({ disableAnimations = false, showMenuSetter }: MenuTypes) => {
+const Menu = ({
+  disableAnimations = false,
+  menuHandlerFunction,
+}: MenuTypes) => {
   const device = useDeviceInfo();
   const menuRef = useRef<HTMLDivElement>(null);
 
@@ -38,16 +41,18 @@ const Menu = ({ disableAnimations = false, showMenuSetter }: MenuTypes) => {
       if (
         menuRef.current &&
         !menuRef.current.contains(event.target as Node) &&
-        showMenuSetter
+        menuHandlerFunction
       ) {
-        showMenuSetter(false);
+        menuHandlerFunction();
       }
     },
-    [showMenuSetter]
+    [menuHandlerFunction]
   );
 
   useEffect(() => {
     document.addEventListener("mousedown", handleOutsideMenuClick);
+
+    return document.removeEventListener("mousedown", handleOutsideMenuClick);
   }, [handleOutsideMenuClick]);
 
   return (
