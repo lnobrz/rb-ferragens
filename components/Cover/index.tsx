@@ -18,7 +18,7 @@ const paragraphContainerVariants = {
       duration: 1,
       bounce: 0,
       stiffness: 50,
-      delayChildren: 0.5,
+      delayChildren: 0.3,
     },
   },
 };
