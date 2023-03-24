@@ -1,5 +1,20 @@
+import Head from "next/head";
+import { metaDescriptions, metaTitles } from "@/storage/data";
+import Layout from "@/components/ui/Layout";
+import Header from "@/components/ui/Header";
+import ProductsSection from "@/components/ProductsSection";
+
 const Products = () => {
-  return <h1>Produtos</h1>;
+  return (
+    <Layout>
+      <Head>
+        <meta name="description" content={metaDescriptions.products} />
+        <title>{metaTitles.products}</title>
+      </Head>
+      <Header />
+      <ProductsSection />
+    </Layout>
+  );
 };
 
 export default Products;
