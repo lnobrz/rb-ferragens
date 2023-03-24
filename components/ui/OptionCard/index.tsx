@@ -35,11 +35,17 @@ const OptionCard = ({ title, description, imageUrl }: OptionCardTypes) => {
       whileHover={{
         scale: 1.05,
         cursor: "pointer",
+        borderBottom: "1px solid #ffdd00",
         transition: { mass: 10, duration: 0.3 },
       }}
     >
       <ImageContainer>
-        <Image src={imageUrl} fill={true} alt={title} />
+        <Image
+          src={imageUrl}
+          fill={true}
+          alt={title}
+          className="optionCardImage"
+        />
       </ImageContainer>
       <TertiaryTitle
         disableAnimations={true}

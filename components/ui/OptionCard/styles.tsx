@@ -8,9 +8,13 @@ export const CardContainer = styled(motion.li)`
   align-items: flex-start;
   width: 280px;
   height: 400px;
-  background: #24231e;
+  background: linear-gradient(180deg, #292923 0%, #1f1f1d 100%);
   box-shadow: 0px 4px 20px 10px rgba(0, 0, 0, 0.14);
   border-radius: 5px;
+
+  .optionCardImage {
+    border-radius: 5px 5px 0 0;
+  }
 
   .optionCardTitle {
     margin: 15px 0 0 15px !important;
@@ -34,5 +38,6 @@ export const CardContainer = styled(motion.li)`
 export const ImageContainer = styled.div`
   position: relative;
   width: 100%;
-  min-height: 200px;
+  height: 200px;
+  border-radius: 5px;
 `;
