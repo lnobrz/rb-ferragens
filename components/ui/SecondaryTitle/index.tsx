@@ -3,6 +3,8 @@ import { TitleContainer } from "./styles";
 type SecondaryTitleTypes = {
   decorationAlign: "left" | "right";
   content: string;
+  className?: string;
+  disableAnimations?: boolean;
 };
 
 const secondaryTitleVariants = {
@@ -23,15 +25,20 @@ const secondaryTitleVariants = {
   },
 };
 
-const SecondaryTitle = ({ decorationAlign, content }: SecondaryTitleTypes) => {
+const SecondaryTitle = ({
+  decorationAlign,
+  content,
+  className,
+  disableAnimations = false,
+}: SecondaryTitleTypes) => {
   return (
     <TitleContainer
-      variants={secondaryTitleVariants}
-      className={
+      variants={disableAnimations ? undefined : secondaryTitleVariants}
+      className={`${
         decorationAlign === "left"
           ? "secondaryTitleLeft"
           : "secondaryTitleRight"
-      }
+      } ${className && className}`}
     >
       {content}
     </TitleContainer>
