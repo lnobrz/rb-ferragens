@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
-import { url } from "inspector";
 
 export const CoverContainer = styled.section<{
   device: "desktop" | "mobile" | undefined;
