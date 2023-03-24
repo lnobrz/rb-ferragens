@@ -1,10 +1,13 @@
 export const metaTitles = {
   index: "Loja de Ferragens | Ferro | Aço - RB Ferragens",
+  products: "Produtos | RB Ferragens",
 };
 
 export const metaDescriptions = {
   index:
     "A RB Ferragens, localizada em Fortaleza - CE, é especialista na venda, corte e dobra de ferragens voltadas para a área da construção civil.",
+  products:
+    "Do vergalhão à malha pop: confira a variedade de produtos que encontram-se disponíveis na RB Ferragens",
 };
 
 export const metaKeywords =
@@ -43,30 +46,51 @@ export const products = [
   {
     id: 1,
     name: "arames",
+    description:
+      "Versáteis e de grande durabilidade, são úteis desde a construção civil até a jardinagem.",
+    imageUrl: "/images/arame.png",
   },
   {
     id: 2,
     name: "colunas",
+    description:
+      "Essenciais na construção civil, servem para sustentar estruturas - como muros e paredes.",
+    imageUrl: "/images/coluna.png",
   },
   {
     id: 3,
     name: "malhas",
+    description:
+      "Fundamentais na construção de estruturas pré-moldadas e lajes, facilitam e garantem agilidade em sua obra.",
+    imageUrl: "/images/malha.png",
   },
   {
     id: 4,
     name: "radiers",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    imageUrl: "/images/radier.png",
   },
   {
     id: 5,
     name: "treliças",
+    description:
+      "Usadas para fornecer mais resistência e segurança nas estruturas presentes na construção civil.",
+    imageUrl: "/images/trelica.png",
   },
   {
     id: 6,
     name: "vergalhões",
+    description:
+      "Aplicadas na criação de diversas outras ferragens, como, por exemplo, vigas e fundações. ",
+    imageUrl: "/images/vergalhao.png",
   },
   {
     id: 7,
     name: "vigas",
+    description:
+      "Utilizadas como sustentação para o equilibrio dos pesos, já que são estruturas bastante resistentes.",
+    imageUrl: "/images/viga.png",
   },
 ];
 
