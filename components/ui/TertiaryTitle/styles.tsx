@@ -3,9 +3,9 @@ import { kanit } from "@/public/fonts";
 import { motion } from "framer-motion";
 
 export const TitleDiv = styled(motion.div)`
+  display: flex;
   justify-items: center;
   align-items: center;
-  margin: 0px 0px 20px 0px;
 `;
 
 export const TertiaryTitleContainer = styled(motion.h4)`
@@ -13,8 +13,6 @@ export const TertiaryTitleContainer = styled(motion.h4)`
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
-  line-height: 23px;
   text-transform: uppercase;
   color: #f9f3d7;
-  display: flex;
 `;

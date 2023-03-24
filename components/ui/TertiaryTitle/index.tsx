@@ -3,7 +3,9 @@ import { TitleDiv, TertiaryTitleContainer } from "./styles";
 type TertiaryTitleTypes = {
   decorationAlign: "left" | "right" | "noDecoration";
   content: string;
-  isLink: boolean;
+  isLink?: boolean;
+  className?: string;
+  disableAnimations?: boolean;
 };
 
 const tertiaryTitleVariants = {
@@ -27,24 +29,27 @@ const tertiaryTitleVariants = {
 const TertiaryTitle = ({
   decorationAlign,
   content,
-  isLink,
+  isLink = false,
+  className,
+  disableAnimations = false,
 }: TertiaryTitleTypes) => {
   return (
     <TitleDiv
-      variants={tertiaryTitleVariants}
-      className={
+      variants={disableAnimations ? undefined : tertiaryTitleVariants}
+      className={`${
         decorationAlign === "noDecoration"
           ? ""
           : decorationAlign === "left"
           ? "tertiaryTitleLeft"
           : "tertiaryTitleRight"
-      }
+      } `}
     >
       <TertiaryTitleContainer
         whileTap={isLink ? { scale: 1.2 } : { scale: 1 }}
         whileHover={
           isLink ? { scale: 1.1, color: "#ffdd00", cursor: "pointer" } : ""
         }
+        className={`${className && className}`}
       >
         {content}
       </TertiaryTitleContainer>
