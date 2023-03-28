@@ -77,7 +77,7 @@ export const HighlightedCaracter = styled.bdi`
   font-size: 2em;
   line-height: 37px;
   text-transform: uppercase;
-  color: #ffdd00;
+  color: #efdf64;
 
   @media (min-width: 600px) {
     font-size: 2.25em;

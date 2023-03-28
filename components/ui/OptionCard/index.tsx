@@ -35,7 +35,7 @@ const OptionCard = ({ title, description, imageUrl }: OptionCardTypes) => {
       whileHover={{
         scale: 1.05,
         cursor: "pointer",
-        borderBottom: "1px solid #ffdd00",
+        borderBottom: "1px solid #EFDF64",
         transition: { mass: 10, duration: 0.3 },
       }}
     >

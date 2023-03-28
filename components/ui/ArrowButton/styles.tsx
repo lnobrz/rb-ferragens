@@ -44,7 +44,7 @@ export const ButtonTitle = styled.h6`
   font-weight: 400;
   font-size: 1.5em;
   line-height: 35px;
-  color: #ffdd00;
+  color: #efdf64;
   width: auto !important;
   margin: 0;
 `;

@@ -169,7 +169,7 @@ export const GlobalStyle = createGlobalStyle`
     width: 1px;
     height: 58px;
     margin-right: 24px;
-    background: #ffdd00;
+    background: #EFDF64;
     }
   }
 
@@ -183,7 +183,7 @@ export const GlobalStyle = createGlobalStyle`
     width: 1px;
     height: 58px;
     margin-left: 24px;
-    background: #ffdd00;
+    background: #EFDF64;
     }
   }
 

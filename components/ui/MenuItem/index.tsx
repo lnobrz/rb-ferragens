@@ -23,7 +23,7 @@ const MenuItem = ({ itemName, disableAnimations = false }: MenuItemTypes) => {
     <MenuItemContainer
       variants={disableAnimations ? undefined : mobileMenuItemVariants}
       whileTap={{ scale: 1.2 }}
-      whileHover={{ scale: 1.1, color: "#ffdd00" }}
+      whileHover={{ scale: 1.1, color: "#EFDF64" }}
     >
       {itemName}
     </MenuItemContainer>

@@ -47,7 +47,7 @@ const TertiaryTitle = ({
       <TertiaryTitleContainer
         whileTap={isLink ? { scale: 1.2 } : { scale: 1 }}
         whileHover={
-          isLink ? { scale: 1.1, color: "#ffdd00", cursor: "pointer" } : ""
+          isLink ? { scale: 1.1, color: "#EFDF64", cursor: "pointer" } : ""
         }
         className={`${className && className}`}
       >

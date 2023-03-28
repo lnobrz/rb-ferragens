@@ -23,7 +23,7 @@ const highlightedTextVariants = {
     color: "#f9f3d7",
   },
   show: {
-    color: "#ffdd00",
+    color: "#EFDF64",
     transition: {
       type: "spring",
       delay: 0.5,

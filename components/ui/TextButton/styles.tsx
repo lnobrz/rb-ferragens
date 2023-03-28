@@ -10,7 +10,7 @@ export const TextButtonContainer = styled(motion.div)`
     font-size: 12px;
     line-height: 6px;
     text-decoration-line: underline;
-    color: #ffdd00;
+    color: #efdf64;
     text-transform: uppercase;
   }
 `;

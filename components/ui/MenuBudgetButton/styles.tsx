@@ -8,7 +8,7 @@ export const ButtonContainer = styled(motion.button)`
   align-items: center;
   width: 90%;
   height: 35px;
-  background: #ffdd00;
+  background: #efdf64;
   border-radius: 5px;
   padding: 5px 25px;
   margin-bottom: 20px;
