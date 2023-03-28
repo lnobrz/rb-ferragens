@@ -18,7 +18,7 @@ const Header = () => {
   return (
     <HeaderContainer>
       <LogoContainer>
-        <Logo logoDirection="left" className="logo" />
+        <Logo className="logo" />
       </LogoContainer>
       {device === "mobile" && (
         <>

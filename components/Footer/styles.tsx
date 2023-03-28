@@ -29,13 +29,13 @@ export const FooterContainer = styled.footer`
 `;
 
 export const FooterLogoContainer = styled.div`
-  width: 140px;
-  height: 70px;
+  width: 160px;
+  height: 160px;
   margin: 20px 0 30px 0;
 
   .footerLogo {
-    max-width: 140px;
-    max-height: 70px;
+    max-width: 160px;
+    max-height: 160px;
     position: static !important;
   }
 `;

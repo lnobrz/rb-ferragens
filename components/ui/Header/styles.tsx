@@ -21,12 +21,12 @@ export const HeaderContainer = styled.header`
 `;
 
 export const LogoContainer = styled.div`
-  width: 50px;
-  height: 29px;
+  width: 80px;
+  height: 80px;
 
   .logo {
-    max-width: 50px;
-    max-height: 40px;
+    max-width: 80px;
+    max-height: 80px;
     margin: 20px;
     position: static;
   }

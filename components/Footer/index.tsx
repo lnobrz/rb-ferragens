@@ -8,7 +8,7 @@ const Footer = () => {
   return (
     <FooterContainer>
       <FooterLogoContainer>
-        <Logo logoDirection="right" className="footerLogo" />
+        <Logo className="footerLogo" />
       </FooterLogoContainer>
       <FooterAddresses />
       <FooterContacts />
