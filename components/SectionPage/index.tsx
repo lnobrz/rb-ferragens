@@ -5,7 +5,7 @@ import useDeviceInfo from "@/hooks/useDeviceInfo";
 
 type SectionPageTypes = {
   pageTitle: string;
-  pageContents: {
+  pageContent: {
     id: number;
     name: string;
     description: string;
@@ -46,7 +46,7 @@ const desktopSectionPageVariants = {
   },
 };
 
-const SectionPage = ({ pageTitle, pageContents }: SectionPageTypes) => {
+const SectionPage = ({ pageTitle, pageContent }: SectionPageTypes) => {
   const device = useDeviceInfo();
 
   return (
@@ -66,7 +66,7 @@ const SectionPage = ({ pageTitle, pageContents }: SectionPageTypes) => {
         whileInView="show"
         viewport={{ once: true }}
       >
-        {pageContents.map((content) => {
+        {pageContent.map((content) => {
           return (
             <OptionCard
               key={content.id}
