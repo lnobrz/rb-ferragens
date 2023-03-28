@@ -38,6 +38,7 @@ export const MenuContainer = styled(motion.nav)`
     position: static;
     background: transparent !important;
     flex-direction: row;
+    padding: 0;
   }
 
   @media (min-width: 1200px) {
@@ -60,22 +61,28 @@ export const MenuItemsContainer = styled.ul`
 
   @media (min-width: 1000px) {
     flex-direction: row;
-    margin-top: 40px;
+    /* margin-top: 40px; */
+    padding: 0;
+    margin: 0;
   }
 
   @media (min-width: 1200px) {
-    margin-top: 50px;
+    /* margin-top: 50px; */
   }
 
   @media (min-width: 1350px) {
-    margin-top: 60px;
+    /* margin-top: 60px; */
   }
 
   .mobileMenuLink {
     text-decoration: none;
 
     @media (min-width: 1000px) {
-      padding-right: 20px;
+      padding-right: 50px;
+
+      &:last-child {
+        padding-right: 0;
+      }
     }
   }
 `;

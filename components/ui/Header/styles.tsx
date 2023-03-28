@@ -5,18 +5,19 @@ export const HeaderContainer = styled.header`
   justify-content: flex-end;
   align-items: center;
   background: transparent;
+  padding: 25px 0;
 
   @media (min-width: 1000px) {
     justify-content: space-between;
-    margin: 0 80px;
+    padding: 25px 80px;
   }
 
   @media (min-width: 1200px) {
-    margin: 0 100px;
+    padding: 25px 100px;
   }
 
   @media (min-width: 1350px) {
-    margin: 0 120px;
+    padding: 25px 120px;
   }
 `;
 
@@ -27,37 +28,44 @@ export const LogoContainer = styled.div`
   .logo {
     max-width: 80px;
     max-height: 80px;
-    margin: 20px;
+    margin-left: 20px;
     position: static;
+    margin: 25px 20px;
   }
 
   @media (min-width: 600px) {
     .logo {
-      margin: 20px 40px;
+      margin: 25px 40px;
     }
   }
 
   @media (min-width: 800px) {
     .logo {
-      margin: 30px 60px;
+      margin: 25px 60px;
     }
   }
 
   @media (min-width: 900px) {
     .logo {
-      margin: 40px 80px;
+      margin: 25px 80px;
+    }
+  }
+
+  @media (min-width: 1000px) {
+    .logo {
+      margin: 25px 80px;
     }
   }
 
   @media (min-width: 1200px) {
     .logo {
-      margin: 50px 100px;
+      margin: 25px 100px;
     }
   }
 
   @media (min-width: 1350px) {
     .logo {
-      margin: 60px 120px;
+      margin: 25px 120px;
     }
   }
 `;

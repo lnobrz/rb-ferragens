@@ -39,27 +39,28 @@ export const SectionContainer = styled.section`
 
 export const CardsContainer = styled(motion.div)`
   display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  align-items: center;
+  flex-flow: row wrap;
+  align-items: flex-start;
   margin: 50px 20px 100px 20px;
   gap: 30px;
 
-  @media (min-width: 850px) {
-    flex-flow: row wrap;
-    justify-content: flex-start;
-    margin: 50px 60px 100px 60px;
+  @media (min-width: 600px) {
+    margin: 50px 40px 100px 40px !important;
+  }
+
+  @media (min-width: 800px) {
+    margin: 50px 60px 100px 60px !important;
   }
 
   @media (min-width: 900px) {
-    margin: 50px 80px 100px 80px;
+    margin: 50px 80px 100px 80px !important;
   }
 
   @media (min-width: 1200px) {
-    margin: 50px 100px 100px 100px;
+    margin: 50px 100px 100px 100px !important;
   }
 
   @media (min-width: 1350px) {
-    margin: 50px 120px 100px 120px;
+    margin: 50px 120px 100px 120px !important;
   }
 `;

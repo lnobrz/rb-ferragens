@@ -12,10 +12,7 @@ export const MenuItemContainer = styled(motion.li)`
   margin-bottom: 20px;
 
   @media (min-width: 1000px) {
-    margin-right: 20px;
-
-    &:lastchild {
-      margin-right: 0;
-    }
+    display: flex;
+    margin: 0;
   }
 `;

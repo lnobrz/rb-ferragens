@@ -27,6 +27,6 @@ export const ButtonContainer = styled(motion.button)`
   }
 
   @media (min-width: 1500px) {
-    margin-top: 20px;
+    /* margin-top: 20px; */
   }
 `;
