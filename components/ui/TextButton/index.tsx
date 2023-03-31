@@ -1,8 +1,8 @@
 import { TextButtonContainer } from "./styles";
-import Link from "next/link";
 
 type TextButtonTypes = {
   className?: string;
+  url: string;
 };
 
 const TextButton = ({ className }: TextButtonTypes) => {
@@ -12,9 +12,7 @@ const TextButton = ({ className }: TextButtonTypes) => {
       whileHover={{ scale: 1.05, cursor: "pointer" }}
       whileTap={{ scale: 1.1 }}
     >
-      <Link href="" className="textButton">
-        saiba mais
-      </Link>
+      <span className="textButton">saiba mais</span>
     </TextButtonContainer>
   );
 };
