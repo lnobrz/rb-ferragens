@@ -3,11 +3,13 @@ import Image from "next/image";
 import TertiaryTitle from "../TertiaryTitle";
 import Paragraph from "../Paragraph";
 import TextButton from "../TextButton";
+import Link from "next/link";
 
 type OptionCardTypes = {
   title: string;
   description: string;
   imageUrl: string;
+  optionLink: string;
 };
 
 const optionCardVariants = {
@@ -28,7 +30,12 @@ const optionCardVariants = {
   },
 };
 
-const OptionCard = ({ title, description, imageUrl }: OptionCardTypes) => {
+const OptionCard = ({
+  title,
+  description,
+  imageUrl,
+  optionLink,
+}: OptionCardTypes) => {
   return (
     <CardContainer
       variants={optionCardVariants}
@@ -39,27 +46,33 @@ const OptionCard = ({ title, description, imageUrl }: OptionCardTypes) => {
         transition: { mass: 10, duration: 0.3 },
       }}
     >
-      <ImageContainer>
-        <Image
-          src={imageUrl}
-          fill={true}
-          alt={title}
-          className="optionCardImage"
+      <Link
+        href={optionLink}
+        className="optionLink"
+        style={{ textDecoration: "none" }}
+      >
+        <ImageContainer>
+          <Image
+            src={imageUrl}
+            fill={true}
+            alt={title}
+            className="optionCardImage"
+          />
+        </ImageContainer>
+        <TertiaryTitle
+          disableAnimations={true}
+          content={title}
+          decorationAlign="noDecoration"
+          isLink={false}
+          className="optionCardTitle"
         />
-      </ImageContainer>
-      <TertiaryTitle
-        disableAnimations={true}
-        content={title}
-        decorationAlign="noDecoration"
-        isLink={false}
-        className="optionCardTitle"
-      />
-      <Paragraph
-        disableAnimations={true}
-        className="optionCardParagraph"
-        content={description}
-      />
-      <TextButton className="optionCardButton" />
+        <Paragraph
+          disableAnimations={true}
+          className="optionCardParagraph"
+          content={description}
+        />
+        <TextButton url={optionLink} className="optionCardButton" />
+      </Link>
     </CardContainer>
   );
 };
