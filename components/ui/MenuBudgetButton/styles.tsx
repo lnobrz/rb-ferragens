@@ -25,8 +25,4 @@ export const ButtonContainer = styled(motion.button)`
     width: auto;
     margin-bottom: 0;
   }
-
-  @media (min-width: 1500px) {
-    /* margin-top: 20px; */
-  }
 `;
