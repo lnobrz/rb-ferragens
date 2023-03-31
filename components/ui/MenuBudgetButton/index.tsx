@@ -25,6 +25,8 @@ const MenuBudgetButton = ({
       variants={
         disableAnimations === true ? undefined : MenuBudgetButtonVariants
       }
+      initial="hidden"
+      whileInView="visible"
       whileTap={{ scale: 1.2 }}
       whileHover={{
         scale: 1.1,
