@@ -10,6 +10,7 @@ type SectionPageTypes = {
     name: string;
     description: string;
     imageUrl: string;
+    optionLink: string;
   }[];
 };
 
@@ -73,6 +74,7 @@ const SectionPage = ({ pageTitle, pageContent }: SectionPageTypes) => {
               title={content.name}
               description={content.description}
               imageUrl={content.imageUrl}
+              optionLink={content.optionLink}
             />
           );
         })}
