@@ -5,7 +5,7 @@ import Paragraph from "../ui/Paragraph";
 import ArrowButton from "../ui/ArrowButton";
 import MainTitle from "../ui/MainTitle";
 import { buttonsTexts } from "@/storage/data";
-import useDeviceInfo from "@/hooks/useDeviceInfo";
+import useDeviceInfo from "@/helpers/useDeviceInfo";
 
 const paragraphContainerVariants = {
   hidden: {

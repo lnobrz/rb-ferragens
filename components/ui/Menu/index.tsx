@@ -2,7 +2,7 @@ import { MenuContainer, MenuItemsContainer } from "./styles";
 import MenuItem from "../MenuItem";
 import { MenuLinks } from "@/storage/data";
 import Link from "next/link";
-import useDeviceInfo from "@/hooks/useDeviceInfo";
+import useDeviceInfo from "@/helpers/useDeviceInfo";
 import MenuBudgetButton from "../MenuBudgetButton";
 import { useCallback, useEffect, useRef } from "react";
 

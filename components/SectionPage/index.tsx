@@ -1,7 +1,7 @@
 import { SectionContainer, CardsContainer } from "./styles";
 import OptionCard from "../ui/OptionCard";
 import SecondaryTitle from "../ui/SecondaryTitle";
-import useDeviceInfo from "@/hooks/useDeviceInfo";
+import useDeviceInfo from "@/helpers/useDeviceInfo";
 
 type SectionPageTypes = {
   pageTitle: string;
