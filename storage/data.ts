@@ -51,6 +51,7 @@ export const products = [
     description:
       "Versáteis e de grande durabilidade, são úteis desde a construção civil até a jardinagem.",
     imageUrl: "/images/arame.png",
+    optionLink: "/produtos/arames/",
   },
   {
     id: 2,
@@ -58,6 +59,7 @@ export const products = [
     description:
       "Essenciais na construção civil, servem para sustentar estruturas - como muros e paredes.",
     imageUrl: "/images/coluna.png",
+    optionLink: "/produtos/colunas/",
   },
   {
     id: 3,
@@ -65,6 +67,7 @@ export const products = [
     description:
       "Fundamentais na construção de estruturas pré-moldadas e lajes, facilitam e garantem agilidade em sua obra.",
     imageUrl: "/images/malha.png",
+    optionLink: "/produtos/malhas/",
   },
   {
     id: 4,
@@ -72,6 +75,7 @@ export const products = [
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
     imageUrl: "/images/radier.png",
+    optionLink: "/produtos/radiers/",
   },
   {
     id: 5,
@@ -79,6 +83,7 @@ export const products = [
     description:
       "Usadas para fornecer mais resistência e segurança nas estruturas presentes na construção civil.",
     imageUrl: "/images/trelica.png",
+    optionLink: "/produtos/trelicas/",
   },
   {
     id: 6,
@@ -86,6 +91,7 @@ export const products = [
     description:
       "Aplicadas na criação de diversas outras ferragens, como, por exemplo, vigas e fundações. ",
     imageUrl: "/images/vergalhao.png",
+    optionLink: "/produtos/vergalhoes/",
   },
   {
     id: 7,
@@ -93,6 +99,7 @@ export const products = [
     description:
       "Utilizadas como sustentação para o equilibrio dos pesos, já que são estruturas bastante resistentes.",
     imageUrl: "/images/viga.png",
+    optionLink: "/produtos/vigas/",
   },
 ];
 
@@ -103,6 +110,7 @@ export const services = [
     description:
       "Moldamos a sua ferragem da maneira que desejar, garantindo a precisão necessária para sua obra.",
     imageUrl: "/images/corte-e-dobra.png",
+    optionLink: "/servicos/corte-e-dobra/",
   },
 ];
 
