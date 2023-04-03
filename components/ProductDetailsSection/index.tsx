@@ -2,8 +2,8 @@ import SecondaryTitle from "../ui/SecondaryTitle";
 import DecoratedImage from "../ui/DecoratedImage";
 import TertiaryTitle from "../ui/TertiaryTitle";
 import Paragraph from "../ui/Paragraph";
-import { SectionContainer, TextGroup } from "./styles";
-import MenuBudgetButton from "../ui/MenuBudgetButton";
+import { SectionContainer, TextGroup, ButtonsContainer } from "./styles";
+import FilledButton from "../ui/FilledButton";
 
 type ProductDetailsSection = {
   productName: string;
@@ -40,7 +40,18 @@ const ProductDetailsSection = ({
           <DecoratedImage />
         </TextGroup>
       )}
-      <MenuBudgetButton />
+      <ButtonsContainer>
+        <FilledButton
+          size="large"
+          background="yellow"
+          content="Compre Conosco"
+        />
+        <FilledButton
+          size="large"
+          background="transparent"
+          content="Outros Produtos"
+        />
+      </ButtonsContainer>
     </SectionContainer>
   );
 };
