@@ -5,7 +5,7 @@ import { useState } from "react";
 import Menu from "../Menu";
 import { AnimatePresence } from "framer-motion";
 import useDeviceInfo from "@/helpers/useDeviceInfo";
-import MenuBudgetButton from "../MenuBudgetButton";
+import FilledButton from "../FilledButton";
 
 const Header = () => {
   const device = useDeviceInfo();
@@ -39,7 +39,12 @@ const Header = () => {
       {device === "desktop" && (
         <>
           <Menu disableAnimations={true} />
-          <MenuBudgetButton disableAnimations={true} />
+          <FilledButton
+            content="Orçamento"
+            size="small"
+            background="yellow"
+            disableAnimations={true}
+          />
         </>
       )}
     </HeaderContainer>

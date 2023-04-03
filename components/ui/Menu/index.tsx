@@ -3,7 +3,7 @@ import MenuItem from "../MenuItem";
 import { MenuLinks } from "@/storage/data";
 import Link from "next/link";
 import useDeviceInfo from "@/helpers/useDeviceInfo";
-import MenuBudgetButton from "../MenuBudgetButton";
+import FilledButton from "../FilledButton";
 import { useCallback, useEffect, useRef } from "react";
 
 type MenuTypes = {
@@ -79,7 +79,9 @@ const Menu = ({
             );
           })}
         </MenuItemsContainer>
-        {device === "mobile" && <MenuBudgetButton />}
+        {device === "mobile" && (
+          <FilledButton content="Orçamento" size="small" background="yellow" />
+        )}
       </MenuContainer>
     </div>
   );

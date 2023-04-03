@@ -14,22 +14,20 @@ export const MenuContainer = styled(motion.nav)`
     #0a0800 100%
   ) !important;
   position: absolute;
-  top: 60px;
+  top: 80px;
   right: 20px;
   z-index: 100;
 
   @media (min-width: 600px) {
-    top: 60px;
-    right: 60px;
+    right: 30px;
   }
 
   @media (min-width: 800px) {
-    top: 70px;
-    right: 70px;
+    top: 90px;
+    right: 60px;
   }
 
   @media (min-width: 900px) {
-    top: 80px;
     right: 80px;
   }
 
