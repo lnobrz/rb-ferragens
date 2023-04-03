@@ -1,10 +1,13 @@
 import { ButtonContainer } from "./styles";
 
-type MenuBudgetButtonTypes = {
+type FilledButtonTypes = {
   disableAnimations?: boolean;
+  content: string;
+  background: "yellow" | "transparent";
+  size: "small" | "large";
 };
 
-const MenuBudgetButtonVariants = {
+const FilledButtonVariants = {
   hidden: {
     opacity: 0,
     y: 20,
@@ -17,14 +20,15 @@ const MenuBudgetButtonVariants = {
   },
 };
 
-const MenuBudgetButton = ({
+const FilledButton = ({
   disableAnimations = false,
-}: MenuBudgetButtonTypes) => {
+  content,
+  background,
+  size,
+}: FilledButtonTypes) => {
   return (
     <ButtonContainer
-      variants={
-        disableAnimations === true ? undefined : MenuBudgetButtonVariants
-      }
+      variants={disableAnimations === true ? undefined : FilledButtonVariants}
       initial="hidden"
       whileInView="visible"
       whileTap={{ scale: 1.2 }}
@@ -32,10 +36,12 @@ const MenuBudgetButton = ({
         scale: 1.1,
         cursor: "pointer",
       }}
+      background={background}
+      size={size}
     >
-      Orçamento
+      {content}
     </ButtonContainer>
   );
 };
 
-export default MenuBudgetButton;
+export default FilledButton;
