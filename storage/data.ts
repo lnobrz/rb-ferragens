@@ -92,6 +92,20 @@ export const products = [
       "Aplicadas na criação de diversas outras ferragens, como, por exemplo, vigas e fundações. ",
     imageUrl: "/images/vergalhao.png",
     optionLink: "/produtos/vergalhoes/",
+    measurements: {
+      bitola: {
+        title: "bitola",
+        pol: ["1/4", "5/16", "3/8"],
+        mm: ["6,30", "8,00", "10,00"],
+      },
+      barWeight: {
+        title: "peso barra",
+        measures: ["2,940", "4,740", "7,404"],
+    },
+      kiloWeight: {
+        title: "peso kg",
+        measures: ["0,245", "0,395", "0,617"]},
+    }
   },
   {
     id: 7,
@@ -101,6 +115,13 @@ export const products = [
     imageUrl: "/images/viga.png",
     optionLink: "/produtos/vigas/",
   },
+  {
+    id: 8,
+    name: "tubos galvanizados",
+    description: "Mais resistentes a corrosão, os tubos galvanizados são de uso obrigatório em diversos setores industriais.",
+    imageUrl: "/images/tubo-galvanizado.jpg",
+    optionLink: "/produtos/tubos-galvanizados/"
+  }
 ];
 
 export const services = [
