@@ -68,6 +68,32 @@ export const products = [
       "Fundamentais na construção de estruturas pré-moldadas e lajes, facilitam e garantem agilidade em sua obra.",
     imageUrl: "/images/malha.png",
     optionLink: "/produtos/malhas/",
+  //   measurements: [
+  //     {
+  //     designation: "leve",
+  //     malhaCentimeters: "20x20",
+  //     bitolaMilimeters: 3.40,
+  //     pieceWeight: 4.300,
+  //   },
+  //   {
+  //     designation: "médio",
+  //     malhaCentimeters: "15x15",
+  //     bitolaMilimeters: 3.40,
+  //     pieceWeight: 6.000,
+  //   },
+  //   {
+  //     designation: "reforçado",
+  //     malhaCentimeters: "15x15",
+  //     bitolaMilimeters: 4.20,
+  //     pieceWeight: 9.000,
+  //   },
+  //   {
+  //     designation: "pesado",
+  //     malhaCentimeters: "10x10",
+  //     bitolaMilimeters: 4.20,
+  //     pieceWeight: 13.200,
+  //   },
+  // ],
   },
   {
     id: 4,
@@ -93,19 +119,55 @@ export const products = [
     imageUrl: "/images/vergalhao.png",
     optionLink: "/produtos/vergalhoes/",
     measurements: {
-      bitola: {
-        title: "bitola",
-        pol: ["1/4", "5/16", "3/8"],
-        mm: ["6,30", "8,00", "10,00"],
+      ca50: [
+      {
+        bitolaInches: 1/4,
+        bitolaMilimeters: 6.30,
+        barWeight: 2.940,
+        weightPerMeter: 0.245,
       },
-      barWeight: {
-        title: "peso barra",
-        measures: ["2,940", "4,740", "7,404"],
-    },
-      kiloWeight: {
-        title: "peso kg",
-        measures: ["0,245", "0,395", "0,617"]},
-    }
+      {
+        bitolaInches: 5/16,
+        bitolaMilimeters: 8.00,
+        barWeight: 4.740,
+        weightPerMeter: 0.395,
+      },
+      {
+        bitolaInches: 3/8,
+        bitolaMilimeters: 10.00,
+        barWeight: 7.404,
+        weightPerMeter: 0.617,
+      },
+      {
+        bitolaInches: 1/4,
+        bitolaMilimeters: 6.30,
+        barWeight: 2.940,
+        weightPerMeter: 0.245,
+      }
+    ],
+    ca60: [
+      {
+        bitolaMilimeters: 3.40,
+        barWeight: 0.840,
+        weightPerMeter: 0.070
+      },
+      {
+        bitolaMilimeters: 4.20,
+        barWeight: 1.308,
+        weightPerMeter: 0.109,
+      },
+      {
+        bitolaMilimeters: 5.00,
+        barWeight: 1.848,
+        weightPerMeter: 0.154,
+      },
+      {
+        bitolaMilimeters: 6.00,
+        barWeight: 2.664,
+        weightPerMeter: 0.222,
+      }
+    ]
+  }
   },
   {
     id: 7,
