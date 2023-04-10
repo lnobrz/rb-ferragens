@@ -1,5 +1,5 @@
 import { TableContainer } from "../styles";
-import { products } from "@/storage/data";
+import { productsMeasurements } from "@/storage/data";
 
 const VergalhaoCA50Table = () => {
     return(<TableContainer>
@@ -15,7 +15,7 @@ const VergalhaoCA50Table = () => {
             </tr>
         </thead>
         <tbody>
-            {products.filter((product) => product.name === "vergalhões").map((vergalhoes) => vergalhoes.measurements?.ca50.map((measure) => (
+            {productsMeasurements.vergalhaoCA50.map((measure) => (
                 <>
                     <tr>
                         <td key={measure.barWeight}>{measure.barWeight}</td>
@@ -24,7 +24,7 @@ const VergalhaoCA50Table = () => {
                         <td key={measure.weightPerMeter}>{measure.weightPerMeter}</td>
                     </tr>
                 </>
-            )))}
+            ))}
         </tbody>
     </TableContainer>)
 }

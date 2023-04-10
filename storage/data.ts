@@ -68,32 +68,6 @@ export const products = [
       "Fundamentais na construção de estruturas pré-moldadas e lajes, facilitam e garantem agilidade em sua obra.",
     imageUrl: "/images/malha.png",
     optionLink: "/produtos/malhas/",
-  //   measurements: [
-  //     {
-  //     designation: "leve",
-  //     malhaCentimeters: "20x20",
-  //     bitolaMilimeters: 3.40,
-  //     pieceWeight: 4.300,
-  //   },
-  //   {
-  //     designation: "médio",
-  //     malhaCentimeters: "15x15",
-  //     bitolaMilimeters: 3.40,
-  //     pieceWeight: 6.000,
-  //   },
-  //   {
-  //     designation: "reforçado",
-  //     malhaCentimeters: "15x15",
-  //     bitolaMilimeters: 4.20,
-  //     pieceWeight: 9.000,
-  //   },
-  //   {
-  //     designation: "pesado",
-  //     malhaCentimeters: "10x10",
-  //     bitolaMilimeters: 4.20,
-  //     pieceWeight: 13.200,
-  //   },
-  // ],
   },
   {
     id: 4,
@@ -118,56 +92,6 @@ export const products = [
       "Aplicadas na criação de diversas outras ferragens, como, por exemplo, vigas e fundações. ",
     imageUrl: "/images/vergalhao.png",
     optionLink: "/produtos/vergalhoes/",
-    measurements: {
-      ca50: [
-      {
-        bitolaInches: 1/4,
-        bitolaMilimeters: 6.30,
-        barWeight: 2.940,
-        weightPerMeter: 0.245,
-      },
-      {
-        bitolaInches: 5/16,
-        bitolaMilimeters: 8.00,
-        barWeight: 4.740,
-        weightPerMeter: 0.395,
-      },
-      {
-        bitolaInches: 3/8,
-        bitolaMilimeters: 10.00,
-        barWeight: 7.404,
-        weightPerMeter: 0.617,
-      },
-      {
-        bitolaInches: 1/4,
-        bitolaMilimeters: 6.30,
-        barWeight: 2.940,
-        weightPerMeter: 0.245,
-      }
-    ],
-    ca60: [
-      {
-        bitolaMilimeters: 3.40,
-        barWeight: 0.840,
-        weightPerMeter: 0.070
-      },
-      {
-        bitolaMilimeters: 4.20,
-        barWeight: 1.308,
-        weightPerMeter: 0.109,
-      },
-      {
-        bitolaMilimeters: 5.00,
-        barWeight: 1.848,
-        weightPerMeter: 0.154,
-      },
-      {
-        bitolaMilimeters: 6.00,
-        barWeight: 2.664,
-        weightPerMeter: 0.222,
-      }
-    ]
-  }
   },
   {
     id: 7,
@@ -185,6 +109,110 @@ export const products = [
     optionLink: "/produtos/tubos-galvanizados/"
   }
 ];
+
+export const productsMeasurements = [
+  {
+    productName: "vergalhões",
+    measurements: {
+      ca50: [
+      {
+        id: 1,
+        productId: 6,
+        bitolaInches: 1/4,
+        bitolaMilimeters: 6.30,
+        barWeight: 2.940,
+        weightPerMeter: 0.245,
+      },
+      {
+        id: 2,
+        productId: 6,
+        bitolaInches: 5/16,
+        bitolaMilimeters: 8.00,
+        barWeight: 4.740,
+        weightPerMeter: 0.395,
+      },
+      {
+        id: 3,
+        productId: 6,
+        bitolaInches: 3/8,
+        bitolaMilimeters: 10.00,
+        barWeight: 7.404,
+        weightPerMeter: 0.617,
+      },
+      {
+        id: 4,
+        productId: 6,
+        bitolaInches: 1/4,
+        bitolaMilimeters: 6.30,
+        barWeight: 2.940,
+        weightPerMeter: 0.245,
+      }
+    ],
+    ca60: [
+      {
+        id: 1,
+        productId: 6,
+        bitolaMilimeters: 3.40,
+        barWeight: 0.840,
+        weightPerMeter: 0.070
+      },
+      {
+        id: 2,
+        productId: 6,
+        bitolaMilimeters: 4.20,
+        barWeight: 1.308,
+        weightPerMeter: 0.109,
+      },
+      {
+        id: 3,
+        productId: 6,
+        bitolaMilimeters: 5.00,
+        barWeight: 1.848,
+        weightPerMeter: 0.154,
+      },
+      {
+        id: 4,
+        productId: 6,
+        bitolaMilimeters: 6.00,
+        barWeight: 2.664,
+        weightPerMeter: 0.222,
+      }
+    ],
+    malha: [
+    {
+      id: 1,
+      productId: 3,
+      designation: "leve",
+      malhaCentimeters: "20x20",
+      bitolaMilimeters: 3.40,
+      pieceWeight: 4.300,
+    },
+    {
+      id: 2,
+      productId: 3,
+      designation: "médio",
+      malhaCentimeters: "15x15",
+      bitolaMilimeters: 3.40,
+      pieceWeight: 6.000,
+    },
+    {
+      id: 3,
+      productId: 3,
+      designation: "reforçado",
+      malhaCentimeters: "15x15",
+      bitolaMilimeters: 4.20,
+      pieceWeight: 9.000,
+    },
+    {
+      id: 4,
+      productId: 3,
+      designation: "pesado",
+      malhaCentimeters: "10x10",
+      bitolaMilimeters: 4.20,
+      pieceWeight: 13.200,
+    },
+    ]
+  }}]
 
 export const services = [
   {
