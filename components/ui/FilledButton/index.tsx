@@ -5,6 +5,7 @@ type FilledButtonTypes = {
   content: string;
   background: "yellow" | "transparent";
   size: "small" | "large";
+  className?: string;
 };
 
 const FilledButtonVariants = {
@@ -25,6 +26,7 @@ const FilledButton = ({
   content,
   background,
   size,
+  className
 }: FilledButtonTypes) => {
   return (
     <ButtonContainer
@@ -38,6 +40,7 @@ const FilledButton = ({
       }}
       background={background}
       size={size}
+      className={className}
     >
       {content}
     </ButtonContainer>
