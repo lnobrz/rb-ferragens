@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 export const CoverContainer = styled.section<{
   device: "desktop" | "mobile" | undefined;
 }>`
-  background: url(${props => props.device === "desktop" ? "/images/cover.png" : "/images/cover-mobile.png"});
+  background: url(${props => props.device === "desktop" ? "/images/cover.png" || undefined : "/images/cover-mobile.png"});
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
