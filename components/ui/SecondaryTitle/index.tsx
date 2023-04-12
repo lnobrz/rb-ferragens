@@ -1,7 +1,7 @@
 import { TitleContainer } from "./styles";
 
 type SecondaryTitleTypes = {
-  decorationAlign: "left" | "right";
+  decorationAlign: "left" | "right" | "none";
   content: string;
   className?: string;
   disableAnimations?: boolean;
@@ -34,11 +34,10 @@ const SecondaryTitle = ({
   return (
     <TitleContainer
       variants={disableAnimations ? undefined : secondaryTitleVariants}
-      className={`${
-        decorationAlign === "left"
-          ? "secondaryTitleLeft"
-          : "secondaryTitleRight"
-      } ${className && className}`}
+      className={`${decorationAlign === "left"
+        ? "secondaryTitleLeft"
+        : decorationAlign === "right" ? "secondaryTitleRight" : ""
+        } ${className && className}`}
     >
       {content}
     </TitleContainer>
