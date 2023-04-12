@@ -30,6 +30,9 @@ const Product = () => {
             productName={productDetails.name}
             productDescription={productDetails.description}
             productRecomendations={productDetails.description}
+            haveCorteEDobra={productDetails.measurements ? true : false}
+            measurements={productDetails.measurements}
+            measurements2={productDetails.measurements2}
           />
         </Layout>
       )}
