@@ -28,11 +28,11 @@ export const SectionContainer = styled.div`
     }
 
     @media (min-width: 1200px) {
-      margin: 0 0 80px 100px !important;
+      margin: 0 0 80px 200px !important;
     }
 
     @media (min-width: 1350px) {
-      margin: 0 0 80px 120px !important;
+      margin: 0 0 80px 300px !important;
     }
   }
 `;
@@ -57,10 +57,10 @@ export const CardsContainer = styled(motion.div)`
   }
 
   @media (min-width: 1200px) {
-    margin: 50px 100px 100px 100px !important;
+    margin: 50px 200px 100px 200px !important;
   }
 
   @media (min-width: 1350px) {
-    margin: 50px 120px 100px 120px !important;
+    margin: 50px 300px 100px 300px !important;
   }
 `;

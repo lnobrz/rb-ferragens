@@ -20,11 +20,11 @@ export const IndexSectionContainer = styled(motion.section)`
   }
 
   @media (min-width: 1200px) {
-    margin: 80px 100px;
+    margin: 80px 200px;
   }
 
   @media (min-width: 1350px) {
-    margin: 100px 120px;
+    margin: 100px 300px;
   }
 
   .advertisement {

@@ -67,12 +67,12 @@ export const TitleContainer = styled(motion.div)`
 
   @media (min-width: 1200px) {
     max-width: 40%;
-    margin: 50px 100px 70px 100px;
+    margin: 50px 200px 70px 200px;
   }
 
   @media (min-width: 1350px) {
     max-width: 35%;
-    margin: 50px 120px 70px 120px;
+    margin: 50px 300px 70px 300px;
   }
 
   @media (min-width: 1800px) {

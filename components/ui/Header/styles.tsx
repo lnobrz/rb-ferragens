@@ -13,11 +13,11 @@ export const HeaderContainer = styled.header`
   }
 
   @media (min-width: 1200px) {
-    padding: 25px 100px;
+    padding: 25px 200px;
   }
 
   @media (min-width: 1350px) {
-    padding: 25px 120px;
+    padding: 25px 300px;
   }
 `;
 
@@ -59,13 +59,13 @@ export const LogoContainer = styled.div`
 
   @media (min-width: 1200px) {
     .logo {
-      margin: 25px 100px;
+      margin: 25px 200px;
     }
   }
 
   @media (min-width: 1350px) {
     .logo {
-      margin: 25px 120px;
+      margin: 25px 300px;
     }
   }
 `;

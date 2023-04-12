@@ -29,11 +29,11 @@ export const BudgetSectionContainer = styled.section`
   }
 
   @media (min-width: 1200px) {
-    margin: 0 100px;
+    margin: 0 200px;
   }
 
   @media (min-width: 1350px) {
-    margin: 0 120px;
+    margin: 0 300px;
   }
 
   .justifyEnd {
