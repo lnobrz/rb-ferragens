@@ -4,10 +4,7 @@ import { motion } from "framer-motion";
 export const CoverContainer = styled.section<{
   device: "desktop" | "mobile" | undefined;
 }>`
-  background: url(${(props) =>
-    props.device === "desktop" || props.device === undefined
-      ? "/images/cover.png"
-      : "/images/cover-mobile.png"});
+  background: url(${props => props.device === "desktop" ? "/images/cover.png" : "/images/cover-mobile.png"});
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -52,11 +49,11 @@ export const ParagraphContainer = styled(motion.div)`
   }
 
   @media (min-width: 1200px) {
-    margin: 0 0 60px 180px;
+    margin: 0 0 60px 300px;
   }
 
   @media (min-width: 1350px) {
-    margin: 0 0 60px 200px;
+    margin: 0 0 60px 400px;
   }
 
   @media (min-width: 1500px) {
