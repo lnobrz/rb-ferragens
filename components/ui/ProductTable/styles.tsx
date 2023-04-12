@@ -3,6 +3,7 @@ import { kanit } from "@/public/fonts";
 
 export const TableContainer = styled.table`
   width: 100%;
+  table-layout: fixed;
   color: #e5dfc3;
   font-family: ${kanit.style.fontFamily};
   font-size: 16px;
