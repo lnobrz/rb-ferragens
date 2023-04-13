@@ -116,7 +116,7 @@ export const products = [
     description:
       "Usadas para fornecer mais resistência e segurança nas estruturas presentes na construção civil.",
     imageUrl: "/images/trelica.png",
-    optionLink: "/produtos/trelicas/",
+    optionLink: "/produtos/treliças/",
   },
   {
     id: 6,
