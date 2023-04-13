@@ -2,7 +2,7 @@ import Header from "../ui/Header";
 import { paragraphs } from "@/storage/data";
 import { CoverContainer, ParagraphContainer } from "./styles";
 import Paragraph from "../ui/Paragraph";
-import ArrowButton from "../ServicesSection/ArrowButton";
+import ArrowButton from "../ui/ArrowButton";
 import MainTitle from "../ui/MainTitle";
 import { buttonsTexts } from "@/storage/data";
 import useDeviceInfo from "@/helpers/useDeviceInfo";

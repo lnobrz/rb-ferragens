@@ -8,7 +8,7 @@ import SecondaryTitle from "../SecondaryTitle";
 import Paragraph from "../Paragraph";
 import TertiaryTitle from "../TertiaryTitle";
 import Image from "next/image";
-import ArrowButton from "../../ServicesSection/ArrowButton";
+import ArrowButton from "../ArrowButton";
 import { buttonsTexts } from "@/storage/data";
 type IndexSectionTypes = {
   titleDecorationAlign: "left" | "right";
