@@ -12,6 +12,7 @@ import ProductTable from "../ui/ProductTable";
 
 type ProductDetailsSection = {
   productName: string;
+  productImage: string;
   productDescription: string;
   productRecomendations: string;
   haveCorteEDobra?: boolean;
@@ -50,8 +51,9 @@ type ProductDetailsSection = {
   };
 };
 
-const ProductDetailsSection = ({
+const MobileProductDetails = ({
   productName,
+  productImage,
   productDescription,
   productRecomendations,
   haveCorteEDobra,
@@ -65,10 +67,10 @@ const ProductDetailsSection = ({
         content={productName}
         className="productDetailsSecondaryTitle"
       />
-      <DecoratedImage className="productDetailsImage" />
+      <DecoratedImage imageUrl={productImage} imageDescription={productName} className="productDetailsImage" />
       <InformationContainer>
-        <Paragraph content={productDescription} />
-        <Paragraph content={productRecomendations} />
+        <Paragraph textHierarchy="secondary" content={productDescription} />
+        <Paragraph textHierarchy="secondary" content={productRecomendations} />
       </InformationContainer>
       {haveCorteEDobra && measurements && (
         <InformationContainer>
@@ -103,4 +105,4 @@ const ProductDetailsSection = ({
   );
 };
 
-export default ProductDetailsSection;
+export default MobileProductDetails;
