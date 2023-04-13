@@ -2,8 +2,7 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 import { kanit } from "@/public/fonts";
 
-export const TextButtonContainer = styled(motion.div)`
-  .textButton {
+export const TextButtonContainer = styled(motion.a)`
     font-family: ${kanit.style.fontFamily};
     font-style: normal;
     font-weight: 400;
@@ -12,5 +11,8 @@ export const TextButtonContainer = styled(motion.div)`
     text-decoration-line: underline;
     color: #efdf64;
     text-transform: uppercase;
-  }
+    text-decoration: none;
+    &:visited {
+      color: #efdf64;
+    }
 `;
