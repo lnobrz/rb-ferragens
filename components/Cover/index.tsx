@@ -2,7 +2,7 @@ import Header from "../ui/Header";
 import { paragraphs } from "@/storage/data";
 import { CoverContainer, ParagraphContainer } from "./styles";
 import Paragraph from "../ui/Paragraph";
-import ArrowButton from "../ui/ArrowButton";
+import ArrowButton from "../ServicesSection/ArrowButton";
 import MainTitle from "../ui/MainTitle";
 import { buttonsTexts } from "@/storage/data";
 import useDeviceInfo from "@/helpers/useDeviceInfo";
@@ -31,7 +31,7 @@ const Cover = () => {
       <Header />
       <MainTitle />
       <ParagraphContainer variants={paragraphContainerVariants}>
-        <Paragraph content={paragraphs.indexCover} />
+        <Paragraph textHierarchy="main" content={paragraphs.indexCover} />
         <ArrowButton
           content={buttonsTexts.cover}
           arrowDirection="right"

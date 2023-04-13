@@ -11,11 +11,13 @@ const FooterContact = ({ contactType, contact }: FooterContactTypes) => {
     <ContactContainer>
       <Paragraph
         content={contactType}
+        textHierarchy="secondary"
         disableAnimations={true}
         className="footerContactTitle"
       />
       <Paragraph
         content={contact}
+        textHierarchy="secondary"
         disableAnimations={true}
         className="footerContactInfo"
       />

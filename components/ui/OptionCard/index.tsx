@@ -2,7 +2,7 @@ import { CardContainer, ImageContainer } from "./styles";
 import Image from "next/image";
 import TertiaryTitle from "../TertiaryTitle";
 import Paragraph from "../Paragraph";
-import TextButton from "../TextButton";
+import HighlightedText from "../HighlightedText";
 import Link from "next/link";
 
 type OptionCardTypes = {
@@ -68,10 +68,11 @@ const OptionCard = ({
         />
         <Paragraph
           disableAnimations={true}
+          textHierarchy="secondary"
           className="optionCardParagraph"
           content={description}
         />
-        <TextButton url={optionLink} className="optionCardButton" />
+        <HighlightedText url={optionLink} className="optionCardButton" />
       </Link>
     </CardContainer>
   );

@@ -8,7 +8,7 @@ import SecondaryTitle from "../SecondaryTitle";
 import Paragraph from "../Paragraph";
 import TertiaryTitle from "../TertiaryTitle";
 import Image from "next/image";
-import ArrowButton from "../ArrowButton";
+import ArrowButton from "../../ServicesSection/ArrowButton";
 import { buttonsTexts } from "@/storage/data";
 type IndexSectionTypes = {
   titleDecorationAlign: "left" | "right";
@@ -64,20 +64,18 @@ const IndexSection = ({
       initial="hidden"
       whileInView="show"
       viewport={{ once: true }}
-      className={`${
-        titleDecorationAlign === "left"
-          ? "leftSectionContainer"
-          : "rightSectionContainer"
-      } ${className}`}
+      className={`${titleDecorationAlign === "left"
+        ? "leftSectionContainer"
+        : "rightSectionContainer"
+        } ${className}`}
     >
       <SectionHeader
         variants={indexSectionVariants}
         initial="hidden"
         whileInView="show"
         viewport={{ once: true }}
-        className={`${sectionTitle === "produtos" && "productsHeader"} ${
-          headerClassName && headerClassName
-        }`}
+        className={`${sectionTitle === "produtos" && "productsHeader"} ${headerClassName && headerClassName
+          }`}
       >
         <SecondaryTitle
           decorationAlign={titleDecorationAlign}
@@ -85,10 +83,10 @@ const IndexSection = ({
         />
         <Paragraph
           content={sectionParagraph}
+          textHierarchy="main"
           disableAnimations={disableParagraphAnimation}
-          className={`indexSectionParagraph ${
-            titleDecorationAlign === "left" ? "textStart" : "textEnd"
-          } ${sectionTitle === "sobre a rb" && "aboutSectionParagraph"}`}
+          className={`indexSectionParagraph ${titleDecorationAlign === "left" ? "textStart" : "textEnd"
+            } ${sectionTitle === "sobre a rb" && "aboutSectionParagraph"}`}
         />
         {sectionTitle === "sobre a rb" && (
           <ArrowButton
@@ -132,9 +130,9 @@ const IndexSection = ({
       {advertisementContent && (
         <Paragraph
           content={advertisementContent}
-          className={`advertisement ${
-            titleDecorationAlign === "left" ? "textEnd" : "textStart"
-          }`}
+          textHierarchy="secondary"
+          className={`advertisement ${titleDecorationAlign === "left" ? "textEnd" : "textStart"
+            }`}
         />
       )}
     </IndexSectionContainer>

@@ -6,6 +6,7 @@ const FooterRights = () => {
   return (
     <RightsContainer>
       <Paragraph
+        textHierarchy="secondary"
         disableAnimations={true}
         content={footerRights.copyrights}
         className="footerRight"
