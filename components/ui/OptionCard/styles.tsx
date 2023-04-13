@@ -25,7 +25,6 @@ export const CardContainer = styled(motion.div)`
     margin: 10px 15px 15px 15px;
     font-size: 16px;
     line-height: 22px;
-    color: #c3bea7;
     height: 100px;
     overflow: hidden;
   }
