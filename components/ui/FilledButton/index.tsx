@@ -33,9 +33,9 @@ const FilledButton = ({
       variants={disableAnimations === true ? undefined : FilledButtonVariants}
       initial="hidden"
       whileInView="visible"
-      whileTap={{ scale: 1.2 }}
+      whileTap={{ scale: 1.04 }}
       whileHover={{
-        scale: 1.1,
+        scale: 1.02,
         cursor: "pointer",
       }}
       background={background}
