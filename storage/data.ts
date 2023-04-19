@@ -10,6 +10,8 @@ export const metaDescriptions = {
   products:
     "Do vergalhão à malha pop: confira a variedade de produtos que encontram-se disponíveis na RB Ferragens",
   services: "Corte e dobra de ferro e aço é na RB Ferragens",
+  contact:
+    "Entre em contato com a RB Ferragens através de e-mail, telefone e whatsapp",
 };
 
 export const metaKeywords =
@@ -294,6 +296,6 @@ export const MenuLinks = [
   {
     id: 5,
     name: "Fale Conosco",
-    url: "/fale-conosco",
+    url: "/contatos",
   },
 ];
