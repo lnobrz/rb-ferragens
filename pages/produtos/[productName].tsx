@@ -1,7 +1,6 @@
 import { useRouter } from "next/router";
 import Head from "next/head";
 import { metaDescriptions } from "@/storage/data";
-import Layout from "@/components/ui/Layout";
 import Header from "@/components/ui/Header";
 import getPageTitle from "@/helpers/getPageTitle";
 import MobileProductDetails from "@/components/MobileProductDetails";
@@ -23,33 +22,34 @@ const Product = () => {
   return (
     <>
       {productDetails && (
-        <Layout>
+        <>
           <Head>
             <meta name="description" content={metaDescriptions.products} />
             <title>{pageTitle}</title>
           </Head>
           <Header />
-          {device === "mobile" ?
-            (<MobileProductDetails
+          {device === "mobile" ? (
+            <MobileProductDetails
               productName={productDetails.name}
               productImage={productDetails.imageUrl}
               productDescription={productDetails.description}
               productRecomendations={productDetails.description}
               haveCorteEDobra={productDetails.measurements ? true : false}
               measurements={productDetails.measurements}
-              measurements2={productDetails.measurements2} />) : (
-              <DesktopProductDetails
-                productName={productDetails.name}
-                productImage={productDetails.imageUrl}
-                productDescription={productDetails.description}
-                productRecomendations={productDetails.description}
-                haveCorteEDobra={productDetails.measurements ? true : false}
-                measurements={productDetails.measurements}
-                measurements2={productDetails.measurements2}
-              />
-            )}
-
-        </Layout>
+              measurements2={productDetails.measurements2}
+            />
+          ) : (
+            <DesktopProductDetails
+              productName={productDetails.name}
+              productImage={productDetails.imageUrl}
+              productDescription={productDetails.description}
+              productRecomendations={productDetails.description}
+              haveCorteEDobra={productDetails.measurements ? true : false}
+              measurements={productDetails.measurements}
+              measurements2={productDetails.measurements2}
+            />
+          )}
+        </>
       )}
     </>
   );
