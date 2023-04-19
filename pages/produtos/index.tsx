@@ -10,7 +10,6 @@ const Products = () => {
         <meta name="description" content={metaDescriptions.products} />
         <title>{metaTitles.products}</title>
       </Head>
-      <Header />
       <ProductsSection />
     </>
   );

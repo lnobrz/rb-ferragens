@@ -27,7 +27,6 @@ const Product = () => {
             <meta name="description" content={metaDescriptions.products} />
             <title>{pageTitle}</title>
           </Head>
-          <Header />
           {device === "mobile" ? (
             <MobileProductDetails
               productName={productDetails.name}

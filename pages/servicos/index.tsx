@@ -10,7 +10,6 @@ const Services = () => {
         <meta name="description" content={metaDescriptions.services} />
         <title>{metaTitles.services}</title>
       </Head>
-      <Header />
       <ServicesSection />
     </>
   );
