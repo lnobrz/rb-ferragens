@@ -25,7 +25,6 @@ export const ButtonContainer = styled(motion.button)<{
   line-height: 16px;
   text-align: center;
   color: ${(props) => (props.background === "yellow" ? "#1b1a18" : "#f9f3d7")};
-
   @media (min-width: 1000px) {
     width: auto;
     margin-bottom: 0;
