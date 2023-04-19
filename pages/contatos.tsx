@@ -1,5 +1,20 @@
+import Head from "next/head";
+import { metaDescriptions } from "@/storage/data";
+import Header from "@/components/ui/Header";
+import SecondaryTitle from "@/components/ui/SecondaryTitle";
+import ContactSection from "@/components/ContactSection";
+
 const Contacts = () => {
-  return <h1>Contatos</h1>;
+  return (
+    <>
+      <Head>
+        <meta name="description" content={metaDescriptions.contact} />
+        <title>Fale Conosco</title>
+      </Head>
+      <SecondaryTitle decorationAlign="left" content="Fale Conosco" />
+      <ContactSection />
+    </>
+  );
 };
 
 export default Contacts;
