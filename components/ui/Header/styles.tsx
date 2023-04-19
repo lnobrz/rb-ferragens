@@ -9,15 +9,6 @@ export const HeaderContainer = styled.header`
 
   @media (min-width: 1000px) {
     justify-content: space-between;
-    padding: 25px 80px;
-  }
-
-  @media (min-width: 1200px) {
-    padding: 25px 200px;
-  }
-
-  @media (min-width: 1350px) {
-    padding: 25px 300px;
   }
 `;
 
@@ -30,7 +21,7 @@ export const LogoContainer = styled.div`
     max-height: 80px;
     margin-left: 20px;
     position: static;
-    margin: 25px 20px;
+    margin: 25px 0;
   }
 
   @media (min-width: 600px) {

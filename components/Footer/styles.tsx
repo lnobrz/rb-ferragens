@@ -5,27 +5,6 @@ export const FooterContainer = styled.footer`
   flex-direction: column;
   align-items: flex-end;
   border-top: 1px solid #efdf64;
-  margin: 0 20px;
-
-  @media (min-width: 600px) {
-    margin: 0 40px;
-  }
-
-  @media (min-width: 800px) {
-    margin: 0 60px;
-  }
-
-  @media (min-width: 900px) {
-    margin: 0 80px;
-  }
-
-  @media (min-width: 1200px) {
-    margin: 0 200px;
-  }
-
-  @media (min-width: 1350px) {
-    margin: 0 300px;
-  }
 `;
 
 export const FooterLogoContainer = styled.div`

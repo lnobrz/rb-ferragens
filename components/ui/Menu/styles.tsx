@@ -59,17 +59,8 @@ export const MenuItemsContainer = styled.ul`
 
   @media (min-width: 1000px) {
     flex-direction: row;
-    /* margin-top: 40px; */
     padding: 0;
     margin: 0;
-  }
-
-  @media (min-width: 1200px) {
-    /* margin-top: 50px; */
-  }
-
-  @media (min-width: 1350px) {
-    /* margin-top: 60px; */
   }
 
   .mobileMenuLink {

@@ -1,14 +1,7 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
 
-export const CoverContainer = styled.section<{
-  device: "desktop" | "mobile" | undefined;
-}>`
-  background: url(${props => props.device === "desktop" ? "/images/cover.png" || undefined : "/images/cover-mobile.png"});
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-
+export const CoverContainer = styled.section`
   .coverButton {
     margin: 10px 0 68px 0;
   }
@@ -16,44 +9,42 @@ export const CoverContainer = styled.section<{
 
 export const ParagraphContainer = styled(motion.div)`
   max-width: 80%;
-  margin: 0 40px 60px 40px;
+  margin: 0 0 60px 30px;
   display: flex;
   flex-flow: column nowrap;
 
   @media (min-width: 400px) {
     max-width: 70%;
-    margin: 0 80px 60px 80px;
+    margin: 0 40px 60px 40px;
   }
 
   @media (min-width: 500px) {
     max-width: 55%;
-    margin: 0 0 60px 80px;
   }
 
   @media (min-width: 600px) {
     max-width: 45%;
-    margin: 0 0 60px 120px;
+    margin: 0 0 60px 50px;
   }
 
   @media (min-width: 800px) {
     max-width: 40%;
-    margin: 0 0 60px 140px;
   }
 
   @media (min-width: 900px) {
-    margin: 0 0 60px 160px;
+    margin: 0 0 60px 60px;
   }
 
   @media (min-width: 900px) {
-    margin: 0 0 60px 160px;
+    margin: 0 0 60px 60px;
   }
 
   @media (min-width: 1200px) {
-    margin: 0 0 60px 300px;
+    margin: 0 0 60px 70px;
   }
 
   @media (min-width: 1350px) {
-    margin: 0 0 60px 400px;
+    margin: 0 0 60px 100px;
   }
 
   @media (min-width: 1500px) {

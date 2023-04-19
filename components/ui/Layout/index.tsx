@@ -1,7 +1,5 @@
-// components/Layout/index.js
-
-import { motion } from "framer-motion";
 import { ReactNode } from "react";
+import { LayoutContainer } from "./styles";
 
 type LayoutType = {
   children: ReactNode;
@@ -21,13 +19,13 @@ const layoutVariants = {
   },
 };
 const Layout = ({ children }: LayoutType) => (
-  <motion.div
+  <LayoutContainer
     variants={layoutVariants}
     initial="hidden"
     animate="show"
     exit={{ opacity: 0 }}
   >
     {children}
-  </motion.div>
+  </LayoutContainer>
 );
 export default Layout;

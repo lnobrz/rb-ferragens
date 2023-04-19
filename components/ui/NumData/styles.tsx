@@ -11,38 +11,6 @@ export const NumDataContainer = styled(motion.li)`
   &:last-child {
     margin-right: 0;
   }
-
-  @media (min-width: 600px) {
-    margin-right: 40px;
-  }
-
-  @media (min-width: 800px) {
-    margin-right: 50px;
-  }
-
-  @media (min-width: 1000px) {
-    margin-right: 60px;
-  }
-
-  @media (min-width: 1200px) {
-    margin-right: 70px;
-  }
-
-  @media (min-width: 1400px) {
-    margin-right: 80px;
-  }
-
-  @media (min-width: 1600px) {
-    margin-right: 100px;
-  }
-
-  @media (min-width: 1800px) {
-    margin-right: 120px;
-  }
-
-  @media (min-width: 2000px) {
-    margin-right: 140px;
-  }
 `;
 
 export const NumContainer = styled.div`

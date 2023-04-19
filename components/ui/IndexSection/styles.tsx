@@ -8,23 +8,23 @@ export const IndexSectionContainer = styled(motion.section)`
   margin-top: 68px;
 
   @media (min-width: 600px) {
-    margin: 20px 40px;
+    margin: 20px 0;
   }
 
   @media (min-width: 800px) {
-    margin: 40px 60px;
+    margin: 40px0;
   }
 
   @media (min-width: 900px) {
-    margin: 60px 80px;
+    margin: 60px 0;
   }
 
   @media (min-width: 1200px) {
-    margin: 80px 200px;
+    margin: 80px0;
   }
 
   @media (min-width: 1350px) {
-    margin: 100px 300px;
+    margin: 100px 0;
   }
 
   .advertisement {

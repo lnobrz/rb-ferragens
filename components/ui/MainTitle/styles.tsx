@@ -40,39 +40,14 @@ export const Title = styled.h1`
 export const TitleContainer = styled(motion.div)`
   max-width: 100%;
   background: transparent !important;
-  margin: 50px 20px 70px 20px;
+  margin: 50px 0 70px 0;
 
   @media (min-width: 400px) {
     max-width: 70%;
   }
 
-  @media (min-width: 600px) {
-    max-width: 65%;
-    margin: 50px 40px 70px 40px;
-  }
-
   @media (min-width: 700px) {
     max-width: 60%;
-  }
-
-  @media (min-width: 800px) {
-    max-width: 55%;
-    margin: 50px 60px 70px 60px;
-  }
-
-  @media (min-width: 900px) {
-    max-width: 45%;
-    margin: 50px 80px 70px 80px;
-  }
-
-  @media (min-width: 1200px) {
-    max-width: 40%;
-    margin: 50px 200px 70px 200px;
-  }
-
-  @media (min-width: 1350px) {
-    max-width: 35%;
-    margin: 50px 300px 70px 300px;
   }
 
   @media (min-width: 1800px) {

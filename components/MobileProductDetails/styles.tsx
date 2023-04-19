@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const SectionContainer = styled.section`
   display: flex;
   flex-direction: column;
-  margin: 0 20px 100px 20px;
+  margin-bottom: 100px;
 
   .productDetailsSecondaryTitle {
     margin: 40px 0 50px 0;
@@ -11,26 +11,6 @@ export const SectionContainer = styled.section`
 
   .productDetailsImage {
     margin-bottom: 50px;
-  }
-
-  @media (min-width: 600px) {
-      margin: 0 40px 100px 40px;
-  }
-
-  @media (min-width: 800px) {
-      margin: 0 60px 100px 60px;
-  }
-
-  @media (min-width: 900px) {
-      margin: 0 80px 100px 80px;
-  }
-
-  @media (min-width: 1200px) {
-      margin: 0 200px 100px 200px;
-  }
-
-  @media (min-width: 1350px) {
-      margin: 0 300px 100px 300px;
   }
 `;
 
@@ -52,10 +32,9 @@ export const ButtonsContainer = styled.div`
   }
 
   .detailsButton {
-    @media (min-width: 1000px){
+    @media (min-width: 1000px) {
       width: 50%;
     }
-    
   }
 `;
 

@@ -16,26 +16,6 @@ export const BudgetSectionContainer = styled.section`
     justify-content: flex-end;
   }
 
-  @media (min-width: 600px) {
-    margin: 0 40px;
-  }
-
-  @media (min-width: 800px) {
-    margin: 0 60px;
-  }
-
-  @media (min-width: 900px) {
-    margin: 0 80px;
-  }
-
-  @media (min-width: 1200px) {
-    margin: 0 200px;
-  }
-
-  @media (min-width: 1350px) {
-    margin: 0 300px;
-  }
-
   .justifyEnd {
     justify-content: flex-end;
     width: 100%;
