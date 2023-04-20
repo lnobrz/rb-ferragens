@@ -16,12 +16,14 @@ const FormField = ({ inputName, inputType }: FormFieldTypes) => {
       <InputLabel htmlFor={inputName}>{inputName}</InputLabel>
       {inputType === "textarea" ? (
         <TextareaContainer
+          required={true}
           id={inputName}
           name={inputName}
           rows={10}
         ></TextareaContainer>
       ) : (
         <InputContainer
+          required={true}
           type={inputType}
           id={inputName}
           name={inputName}
