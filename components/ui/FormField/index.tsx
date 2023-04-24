@@ -4,13 +4,15 @@ import {
   TextareaContainer,
   InputLabel,
 } from "./styles";
+import { Dispatch, SetStateAction, useRef } from "react";
 
 type FormFieldTypes = {
   inputName: string;
   inputType: "email" | "text" | "tel" | "textarea";
+  textSetter: Dispatch<SetStateAction<string>>;
 };
 
-const FormField = ({ inputName, inputType }: FormFieldTypes) => {
+const FormField = ({ inputName, inputType, textSetter }: FormFieldTypes) => {
   return (
     <FieldContainer>
       <InputLabel htmlFor={inputName}>{inputName}</InputLabel>
@@ -20,6 +22,7 @@ const FormField = ({ inputName, inputType }: FormFieldTypes) => {
           id={inputName}
           name={inputName}
           rows={10}
+          onChange={(event) => textSetter(event.target.value)}
         ></TextareaContainer>
       ) : (
         <InputContainer
@@ -27,6 +30,7 @@ const FormField = ({ inputName, inputType }: FormFieldTypes) => {
           type={inputType}
           id={inputName}
           name={inputName}
+          onChange={(event) => textSetter(event.target.value)}
         ></InputContainer>
       )}
     </FieldContainer>

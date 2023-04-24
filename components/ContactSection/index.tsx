@@ -1,24 +1,37 @@
-import { ContactSectionContainer, ButtonsContainer, Teste } from "./styles";
+import {
+  ContactSectionContainer,
+  ButtonsContainer,
+  MainContent,
+} from "./styles";
+import SecondaryTitle from "../ui/SecondaryTitle";
 import FormSection from "../ui/FormSection";
 import Paragraph from "../ui/Paragraph";
 import FilledButton from "../ui/FilledButton";
+import sendMessage from "@/helpers/sendMessage";
+import { useState } from "react";
 
 const ContactSection = () => {
+  const [clientName, setClientName] = useState("");
+  const [message, setMessage] = useState("");
+
   return (
     <ContactSectionContainer>
-      <FormSection
-        fieldName={["Nome", "Mensagem"]}
-        fieldType={["text", "textarea"]}
-        submitButtonText="Enviar"
-        submitAction={() => console.log("oi")}
-      />
-      <Teste>
-        <Paragraph
-          content="Ou"
-          textHierarchy="secondary"
-          className="contactSectionParagraph"
+      <SecondaryTitle decorationAlign="left" content="Fale Conosco" />
+      <MainContent>
+        <FormSection
+          fieldName={["Nome", "Mensagem"]}
+          fieldType={["text", "textarea"]}
+          submitButtonText="Enviar"
+          submitAction={sendMessage}
+          fieldValue={[clientName, message]}
+          fieldSetter={[setClientName, setMessage]}
         />
         <ButtonsContainer>
+          <Paragraph
+            content="Ou"
+            textHierarchy="secondary"
+            className="contactSectionParagraph"
+          />
           <FilledButton
             content="Whatsapp"
             background="transparent"
@@ -38,7 +51,7 @@ const ContactSection = () => {
             className="contactButton"
           />
         </ButtonsContainer>
-      </Teste>
+      </MainContent>
     </ContactSectionContainer>
   );
 };
