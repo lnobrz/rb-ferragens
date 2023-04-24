@@ -11,7 +11,6 @@ const Contacts = () => {
         <meta name="description" content={metaDescriptions.contact} />
         <title>Fale Conosco</title>
       </Head>
-      <SecondaryTitle decorationAlign="left" content="Fale Conosco" />
       <ContactSection />
     </>
   );
