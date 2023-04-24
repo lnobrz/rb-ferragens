@@ -8,13 +8,26 @@ export const FooterContainer = styled.footer`
 `;
 
 export const FooterLogoContainer = styled.div`
-  width: 160px;
-  height: 160px;
+  width: 100px;
+  height: 100px;
   margin: 20px 0 30px 0;
 
   .footerLogo {
-    max-width: 160px;
-    max-height: 160px;
+    max-width: 100px;
+    max-height: 100px;
     position: static !important;
+  }
+`;
+
+export const Teste = styled.div`
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-end;
+  width: 100%;
+
+  @media (min-width: 1000px) {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
   }
 `;

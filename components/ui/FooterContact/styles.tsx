@@ -8,10 +8,10 @@ export const ContactContainer = styled.li`
   border-bottom: 1px solid #75715d;
 
   .footerContactTitle {
-    font-size: 1.25em;
+    font-size: 16px;
   }
 
   .footerContactInfo {
-    font-size: 1.25em;
+    font-size: 16px;
   }
 `;

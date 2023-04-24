@@ -1,4 +1,4 @@
-import { FooterContainer, FooterLogoContainer } from "./styles";
+import { FooterContainer, FooterLogoContainer, Teste } from "./styles";
 import Logo from "../ui/Logo";
 import FooterAddresses from "../ui/FooterAddresses";
 import FooterContacts from "../ui/FooterContacts";
@@ -7,10 +7,13 @@ import FooterRights from "../ui/FooterRights";
 const Footer = () => {
   return (
     <FooterContainer>
-      <FooterLogoContainer>
-        <Logo className="footerLogo" />
-      </FooterLogoContainer>
-      <FooterAddresses />
+      <Teste>
+        <FooterAddresses />
+        <FooterLogoContainer>
+          <Logo className="footerLogo" />
+        </FooterLogoContainer>
+      </Teste>
+
       <FooterContacts />
       <FooterRights />
     </FooterContainer>
