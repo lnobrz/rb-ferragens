@@ -263,12 +263,12 @@ export const contacts = [
   {
     id: 2,
     name: "Telefone",
-    info: "99 9999-9999",
+    info: "+55 85 4141-6030",
   },
   {
     id: 3,
     name: "Whatsapp",
-    info: "85 99727-1762",
+    info: "+55 85 99727-1762",
   },
 ];
 
@@ -299,3 +299,5 @@ export const MenuLinks = [
     url: "/contatos",
   },
 ];
+
+export const budgetText = "Olá,\u0020gostaria de solicitar um orçamento.";
