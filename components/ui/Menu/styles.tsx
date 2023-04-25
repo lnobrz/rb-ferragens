@@ -48,6 +48,10 @@ export const MenuContainer = styled(motion.nav)`
     top: 100px;
     right: 120px;
   }
+
+  .menuButton {
+    width: 70%;
+  }
 `;
 
 export const MenuItemsContainer = styled.ul`

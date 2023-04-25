@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { kanit } from "@/public/fonts";
 import { motion } from "framer-motion";
 
-export const ButtonContainer = styled(motion.button)<{
+export const ButtonContainer = styled(motion.a)<{
   background: "yellow" | "transparent";
   size: "small" | "large";
 }>`
@@ -25,6 +25,8 @@ export const ButtonContainer = styled(motion.button)<{
   line-height: 16px;
   text-align: center;
   color: ${(props) => (props.background === "yellow" ? "#1b1a18" : "#f9f3d7")};
+  text-decoration: none;
+
   @media (min-width: 1000px) {
     width: auto;
     margin-bottom: 0;

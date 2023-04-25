@@ -35,7 +35,6 @@ export const MainContent = styled.div`
 export const ButtonsContainer = styled.div`
   display: flex;
   flex-direction: column;
-  width: 100%;
   align-items: center;
   margin: 25px 0 100px 0;
 
@@ -46,6 +45,7 @@ export const ButtonsContainer = styled.div`
 
   .contactButton {
     width: 100%;
+    max-width: -webkit-fill-available;
 
     @media (min-width: 1000px) {
       margin-top: 20px;
