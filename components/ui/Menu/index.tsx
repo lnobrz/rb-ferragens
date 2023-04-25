@@ -5,6 +5,7 @@ import Link from "next/link";
 import useDeviceInfo from "@/helpers/useDeviceInfo";
 import FilledButton from "../FilledButton";
 import { useCallback, useEffect, useRef } from "react";
+import { budgetText } from "@/storage/data";
 
 type MenuTypes = {
   disableAnimations?: boolean;
@@ -80,7 +81,13 @@ const Menu = ({
           })}
         </MenuItemsContainer>
         {device === "mobile" && (
-          <FilledButton content="Orçamento" size="small" background="yellow" />
+          <FilledButton
+            content="Orçamento"
+            size="small"
+            background="yellow"
+            buttonLink={`https://api.whatsapp.com/send?phone=5585997271762&text=${budgetText}`}
+            className="menuButton"
+          />
         )}
       </MenuContainer>
     </div>
