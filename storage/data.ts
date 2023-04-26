@@ -291,7 +291,7 @@ export const MenuLinks = [
   {
     id: 4,
     name: "Sobre Nós",
-    url: "/sobre-nos",
+    url: "/sobre",
   },
   {
     id: 5,
@@ -300,4 +300,11 @@ export const MenuLinks = [
   },
 ];
 
-export const budgetText = "Olá,\u0020gostaria de solicitar um orçamento.";
+export const buttonsLinks = {
+  budget:
+    "https://api.whatsapp.com/send?phone=5585997271762&text=Olá,\u0020gostaria de solicitar um orçamento.",
+  email: "mailto:rbferragens01@gmail.com",
+  phone: "tel:5585997271762",
+  about: "/sobre",
+  products: "/produtos",
+};
