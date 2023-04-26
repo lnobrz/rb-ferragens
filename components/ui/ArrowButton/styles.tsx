@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { kanit } from "@/public/fonts";
 import { motion } from "framer-motion";
 
-export const ButtonContainer = styled(motion.button)`
+export const ButtonContainer = styled(motion.a)`
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
@@ -12,6 +12,7 @@ export const ButtonContainer = styled(motion.button)`
   padding: 0;
   margin: 0;
   max-width: fit-content;
+  text-decoration: none;
 
   .buttonArrow {
     max-width: 25px;

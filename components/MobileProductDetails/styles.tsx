@@ -32,6 +32,7 @@ export const ButtonsContainer = styled.div`
   }
 
   .detailsButton {
+    max-width: -webkit-fill-available;
     @media (min-width: 1000px) {
       width: 50%;
     }
