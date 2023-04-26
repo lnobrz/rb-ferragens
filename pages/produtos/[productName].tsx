@@ -11,10 +11,8 @@ import useDeviceInfo from "@/helpers/useDeviceInfo";
 const Product = () => {
   const router = useRouter();
   const device = useDeviceInfo();
-  const productName = router.query.productName?.toString();
-  const pageTitle = getPageTitle(
-    router.query.productName ? router.query.productName : undefined
-  );
+  const productName = router.query.productName?.toString().replace("-", " ");
+  const pageTitle = getPageTitle(productName);
   const productDetails = products.filter((product) => {
     return product.name === productName;
   })[0];
