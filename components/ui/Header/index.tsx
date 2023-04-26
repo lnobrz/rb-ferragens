@@ -6,6 +6,7 @@ import Menu from "../Menu";
 import { AnimatePresence } from "framer-motion";
 import useDeviceInfo from "@/helpers/useDeviceInfo";
 import FilledButton from "../FilledButton";
+import { buttonsLinks } from "@/storage/data";
 
 const Header = () => {
   const device = useDeviceInfo();
@@ -43,6 +44,7 @@ const Header = () => {
             content="Orçamento"
             size="small"
             background="yellow"
+            url={buttonsLinks.budget}
             disableAnimations={true}
           />
         </>

@@ -5,6 +5,7 @@ type arrowButtonTypes = {
   content: string;
   arrowDirection: "left" | "right";
   textSize: "small" | "medium" | "large";
+  url: string;
   className?: string;
 };
 
@@ -28,6 +29,7 @@ const ArrowButton = ({
   content,
   arrowDirection,
   textSize,
+  url,
   className,
 }: arrowButtonTypes) => {
   return (
@@ -35,6 +37,7 @@ const ArrowButton = ({
       variants={arrowButtonVariants}
       whileHover={{ scale: 1.05, cursor: "pointer" }}
       whileTap={{ scale: 1.1 }}
+      href={url}
       className={className}
     >
       {arrowDirection === "left" ? (

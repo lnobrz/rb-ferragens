@@ -9,7 +9,7 @@ import Paragraph from "../ui/Paragraph";
 import FilledButton from "../ui/FilledButton";
 import sendMessage from "@/helpers/sendMessage";
 import { useState } from "react";
-import { budgetText } from "@/storage/data";
+import { buttonsLinks } from "@/storage/data";
 
 const ContactSection = () => {
   const [clientName, setClientName] = useState("");
@@ -37,21 +37,21 @@ const ContactSection = () => {
             content="Whatsapp"
             background="transparent"
             size="large"
-            buttonLink={`https://api.whatsapp.com/send?phone=5585997271762&text=${budgetText}`}
+            url={buttonsLinks.budget}
             className="contactButton"
           />
           <FilledButton
             content="Email"
             background="transparent"
             size="large"
-            buttonLink="mailto:rbferragens01@gmail.com"
+            url={buttonsLinks.email}
             className="contactButton"
           />
           <FilledButton
             content="Telefone"
             background="transparent"
             size="large"
-            buttonLink="tel:5585997271762"
+            url={buttonsLinks.phone}
             className="contactButton"
           />
         </ButtonsContainer>

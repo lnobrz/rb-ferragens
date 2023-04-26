@@ -6,7 +6,7 @@ type FilledButtonTypes = {
   background: "yellow" | "transparent";
   size: "small" | "large";
   className?: string;
-  buttonLink: string;
+  url: string;
 };
 
 const FilledButtonVariants = {
@@ -28,7 +28,7 @@ const FilledButton = ({
   background,
   size,
   className,
-  buttonLink,
+  url,
 }: FilledButtonTypes) => {
   return (
     <ButtonContainer
@@ -43,7 +43,7 @@ const FilledButton = ({
       background={background}
       size={size}
       className={className}
-      href={buttonLink}
+      href={url}
     >
       {content}
     </ButtonContainer>

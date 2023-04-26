@@ -5,6 +5,7 @@ import Paragraph from "../ui/Paragraph";
 import ArrowButton from "../ui/ArrowButton";
 import MainTitle from "../ui/MainTitle";
 import { buttonsTexts } from "@/storage/data";
+import { buttonsLinks } from "@/storage/data";
 
 const paragraphContainerVariants = {
   hidden: {
@@ -32,6 +33,7 @@ const Cover = () => {
           content={buttonsTexts.cover}
           arrowDirection="right"
           textSize="medium"
+          url={buttonsLinks.budget}
           className="coverButton"
         />
       </ParagraphContainer>

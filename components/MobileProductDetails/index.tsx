@@ -9,6 +9,7 @@ import {
 } from "./styles";
 import FilledButton from "../ui/FilledButton";
 import ProductTable from "../ui/ProductTable";
+import { buttonsLinks } from "@/storage/data";
 
 type ProductDetailsSection = {
   productName: string;
@@ -19,26 +20,26 @@ type ProductDetailsSection = {
   measurements?: {
     tableHeaders: string[];
     tableData:
-    | {
-      id: number;
-      designation: string;
-      malhaCentimeters: string;
-      bitolaMilimeters: string;
-      pieceWeight: string;
-    }[]
-    | {
-      id: number;
-      bitolaInches: string;
-      bitolaMilimeters: string;
-      barWeight: string;
-      weightPerMeter: string;
-    }[]
-    | {
-      id: number;
-      bitolaMilimeters: string;
-      barWeight: string;
-      weightPerMeter: string;
-    }[];
+      | {
+          id: number;
+          designation: string;
+          malhaCentimeters: string;
+          bitolaMilimeters: string;
+          pieceWeight: string;
+        }[]
+      | {
+          id: number;
+          bitolaInches: string;
+          bitolaMilimeters: string;
+          barWeight: string;
+          weightPerMeter: string;
+        }[]
+      | {
+          id: number;
+          bitolaMilimeters: string;
+          barWeight: string;
+          weightPerMeter: string;
+        }[];
   };
   measurements2?: {
     tableHeaders: string[];
@@ -67,7 +68,11 @@ const MobileProductDetails = ({
         content={productName}
         className="productDetailsSecondaryTitle"
       />
-      <DecoratedImage imageUrl={productImage} imageDescription={productName} className="productDetailsImage" />
+      <DecoratedImage
+        imageUrl={productImage}
+        imageDescription={productName}
+        className="productDetailsImage"
+      />
       <InformationContainer>
         <Paragraph textHierarchy="secondary" content={productDescription} />
         <Paragraph textHierarchy="secondary" content={productRecomendations} />
@@ -92,12 +97,14 @@ const MobileProductDetails = ({
           size="large"
           background="yellow"
           content="Compre Conosco"
+          url={buttonsLinks.budget}
           className="detailsButton"
         />
         <FilledButton
           size="large"
           background="transparent"
           content="Outros Produtos"
+          url={buttonsLinks.products}
           className="detailsButton"
         />
       </ButtonsContainer>

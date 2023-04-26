@@ -9,7 +9,8 @@ import Paragraph from "../Paragraph";
 import TertiaryTitle from "../TertiaryTitle";
 import Image from "next/image";
 import ArrowButton from "../ArrowButton";
-import { buttonsTexts } from "@/storage/data";
+import { buttonsLinks, buttonsTexts } from "@/storage/data";
+import IndexLink from "../IndexLink";
 type IndexSectionTypes = {
   titleDecorationAlign: "left" | "right";
   sectionTitle: string;
@@ -17,6 +18,7 @@ type IndexSectionTypes = {
   sectionArr?: {
     id: number;
     name: string;
+    optionLink?: string;
   }[];
   advertisementContent?: string;
   hasLinks: boolean;
@@ -64,18 +66,20 @@ const IndexSection = ({
       initial="hidden"
       whileInView="show"
       viewport={{ once: true }}
-      className={`${titleDecorationAlign === "left"
-        ? "leftSectionContainer"
-        : "rightSectionContainer"
-        } ${className}`}
+      className={`${
+        titleDecorationAlign === "left"
+          ? "leftSectionContainer"
+          : "rightSectionContainer"
+      } ${className}`}
     >
       <SectionHeader
         variants={indexSectionVariants}
         initial="hidden"
         whileInView="show"
         viewport={{ once: true }}
-        className={`${sectionTitle === "produtos" && "productsHeader"} ${headerClassName && headerClassName
-          }`}
+        className={`${sectionTitle === "produtos" && "productsHeader"} ${
+          headerClassName && headerClassName
+        }`}
       >
         <SecondaryTitle
           decorationAlign={titleDecorationAlign}
@@ -85,12 +89,14 @@ const IndexSection = ({
           content={sectionParagraph}
           textHierarchy="main"
           disableAnimations={disableParagraphAnimation}
-          className={`indexSectionParagraph ${titleDecorationAlign === "left" ? "textStart" : "textEnd"
-            } ${sectionTitle === "sobre a rb" && "aboutSectionParagraph"}`}
+          className={`indexSectionParagraph ${
+            titleDecorationAlign === "left" ? "textStart" : "textEnd"
+          } ${sectionTitle === "sobre a rb" && "aboutSectionParagraph"}`}
         />
         {sectionTitle === "sobre a rb" && (
           <ArrowButton
             content={buttonsTexts.aboutSection}
+            url={buttonsLinks.about}
             arrowDirection="right"
             textSize="small"
             className="aboutButton"
@@ -107,14 +113,22 @@ const IndexSection = ({
         <TitlesContainer>
           {sectionArr &&
             sectionArr.map((arrItem) => {
-              return (
+              return hasLinks && arrItem.optionLink ? (
+                <IndexLink
+                  key={arrItem.id}
+                  decorationAlign={
+                    titleDecorationAlign === "left" ? "right" : "left"
+                  }
+                  content={arrItem.name}
+                  url={arrItem.optionLink}
+                />
+              ) : (
                 <TertiaryTitle
                   key={arrItem.id}
                   decorationAlign={
                     titleDecorationAlign === "left" ? "right" : "left"
                   }
                   content={arrItem.name}
-                  isLink={hasLinks}
                 />
               );
             })}
@@ -131,8 +145,9 @@ const IndexSection = ({
         <Paragraph
           content={advertisementContent}
           textHierarchy="secondary"
-          className={`advertisement ${titleDecorationAlign === "left" ? "textEnd" : "textStart"
-            }`}
+          className={`advertisement ${
+            titleDecorationAlign === "left" ? "textEnd" : "textStart"
+          }`}
         />
       )}
     </IndexSectionContainer>

@@ -1,6 +1,7 @@
 import { BudgetSectionContainer } from "./styles";
 import ArrowButton from "../ArrowButton";
-import { buttonsTexts } from "@/storage/data";
+import { buttonsTexts, buttonsLinks } from "@/storage/data";
+
 const BudgetSection = () => {
   return (
     <BudgetSectionContainer>
@@ -8,6 +9,7 @@ const BudgetSection = () => {
         content={buttonsTexts.budgetSection}
         arrowDirection="left"
         textSize="large"
+        url={buttonsLinks.budget}
         className="justifyEnd budgetButton"
       />
     </BudgetSectionContainer>

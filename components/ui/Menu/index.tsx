@@ -5,7 +5,7 @@ import Link from "next/link";
 import useDeviceInfo from "@/helpers/useDeviceInfo";
 import FilledButton from "../FilledButton";
 import { useCallback, useEffect, useRef } from "react";
-import { budgetText } from "@/storage/data";
+import { buttonsLinks } from "@/storage/data";
 
 type MenuTypes = {
   disableAnimations?: boolean;
@@ -85,7 +85,7 @@ const Menu = ({
             content="Orçamento"
             size="small"
             background="yellow"
-            buttonLink={`https://api.whatsapp.com/send?phone=5585997271762&text=${budgetText}`}
+            url={buttonsLinks.budget}
             className="menuButton"
           />
         )}
