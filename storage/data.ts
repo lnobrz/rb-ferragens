@@ -2,6 +2,8 @@ export const metaTitles = {
   index: "Loja de Ferragens | Ferro | Aço - RB Ferragens",
   products: "Produtos | RB Ferragens",
   services: "Serviços | RB Ferragens",
+  contact: "Fale Conosco | RB Ferragens",
+  about: "Sobre | RB Ferragens",
 };
 
 export const metaDescriptions = {
@@ -12,6 +14,7 @@ export const metaDescriptions = {
   services: "Corte e dobra de ferro e aço é na RB Ferragens",
   contact:
     "Entre em contato com a RB Ferragens através de e-mail, telefone e whatsapp",
+  about: "Entenda nossa origem, missão, visão e valores",
 };
 
 export const metaKeywords =
