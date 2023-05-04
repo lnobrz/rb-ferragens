@@ -311,3 +311,20 @@ export const buttonsLinks = {
   about: "/sobre",
   products: "/produtos",
 };
+
+export const aboutStrings = [
+  "Por acaso você já pensou que comprar ferragens de qualidade, feitas por profissionais que entendem do assunto, com preço acessível, corte e dobra de acordo com seu projeto e entrega rápida e facilitada era um sonho distante? A RB Ferragens veio para mudar isso!",
+  "Somos uma empresa localizada em Fortaleza- CE e atendemos Fortaleza e suas metrópoles, levando ferragens de extrema qualidade direto para sua obra.Com profissionais prontos para atender as suas demandas, trabalhamos com a venda de diversos tipos de ferro, aço e até mesmo corte e dobra de acordo com o seu projeto, garantindo com que sua obra seja executada de acordo com o planejado.",
+  "Hoje, a RB Ferragens encontra - se em constante expansão, havendo fechado mais de 2000 pedidos com mais de 1000 clientes diferentes, com mais de 98 % de satisfação de nossos clientes, o que é resultado de nosso contínuo esforço para trazer cada vez mais excelência aos nossos produtos.",
+  "A RB Ferragens vem mudando a maneira como diversos profissionais da construção civil e clientes finais executam suas obrar através da facilitação desde o processo de compra até a entrega do produto final, levando o produto final ao cliente com a maior rapidez possível, sempre garantindo a qualidade e o preço baixo do produto.",
+  "Está interessado em ferragens de qualidade, preço baixo e rapidez na entrega ? Solicite um orçamento hoje mesmo e surpreenda - se!",
+];
+
+export const missionString =
+  "Levar ferragens de qualidade, com preço acessível e rápida entrega para a maior quantidade de clientes possíveis, em Fortaleza e região metropolitana.";
+
+export const visionString =
+  "Nos tornarmos referência na venda de ferragens em todo o Brasil, sempre sendo reconhecidos pela excelência de ponta a ponta que entregamos em todos os nossos processos.";
+
+export const valuesStrings =
+  "Ética, excelência e comprometimento são os 3 principais valores que a RB Ferragens segue rigidamente desde a sua fundação até os dias de hoje.";
