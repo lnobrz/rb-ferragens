@@ -1,5 +1,4 @@
 import IndexSection from "../ui/IndexSection";
-import IndexAboutSection from "../ui/IndexAboutSection";
 import {
   paragraphs,
   products,
@@ -30,7 +29,6 @@ const IndexSections = () => {
         illustrationUrl="/images/advantages-illustration.png"
         illustrationDescription="tubos de ferro"
       />
-      <IndexAboutSection />
       <BudgetSection />
     </>
   );
