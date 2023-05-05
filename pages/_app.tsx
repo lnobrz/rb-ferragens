@@ -4,14 +4,21 @@ import { AnimatePresence } from "framer-motion";
 import Header from "@/components/ui/Header";
 import Footer from "@/components/Footer";
 import Layout from "@/components/ui/Layout";
+import { useRouter } from "next/router";
 
 export default function App({ Component, pageProps }: AppProps) {
+  const currentPage = useRouter().pathname;
+
   return (
     <AnimatePresence>
+      <GlobalStyle />
+      {currentPage !== "/" && (
+        <Layout>
+          <Header />
+        </Layout>
+      )}
+      <Component {...pageProps} />
       <Layout>
-        <GlobalStyle />
-        <Header />
-        <Component {...pageProps} />
         <Footer />
       </Layout>
     </AnimatePresence>

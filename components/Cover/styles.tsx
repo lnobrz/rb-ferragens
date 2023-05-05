@@ -2,6 +2,9 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 
 export const CoverContainer = styled.section`
+  background: url("/images/cover.png");
+  background-size: cover;
+
   .coverButton {
     margin: 10px 0 68px 0;
   }

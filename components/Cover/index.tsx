@@ -6,6 +6,11 @@ import ArrowButton from "../ui/ArrowButton";
 import MainTitle from "../ui/MainTitle";
 import { buttonsTexts } from "@/storage/data";
 import { buttonsLinks } from "@/storage/data";
+import Layout from "../ui/Layout";
+
+type CoverProps = {
+  className?: string;
+};
 
 const paragraphContainerVariants = {
   hidden: {
@@ -23,20 +28,23 @@ const paragraphContainerVariants = {
   },
 };
 
-const Cover = () => {
+const Cover = ({ className = "" }: CoverProps) => {
   return (
-    <CoverContainer>
-      <MainTitle />
-      <ParagraphContainer variants={paragraphContainerVariants}>
-        <Paragraph textHierarchy="main" content={paragraphs.indexCover} />
-        <ArrowButton
-          content={buttonsTexts.cover}
-          arrowDirection="right"
-          textSize="medium"
-          url={buttonsLinks.budget}
-          className="coverButton"
-        />
-      </ParagraphContainer>
+    <CoverContainer className={className}>
+      <Layout>
+        <Header />
+        <MainTitle />
+        <ParagraphContainer variants={paragraphContainerVariants}>
+          <Paragraph textHierarchy="main" content={paragraphs.indexCover} />
+          <ArrowButton
+            content={buttonsTexts.cover}
+            arrowDirection="right"
+            textSize="medium"
+            url={buttonsLinks.budget}
+            className="coverButton"
+          />
+        </ParagraphContainer>
+      </Layout>
     </CoverContainer>
   );
 };

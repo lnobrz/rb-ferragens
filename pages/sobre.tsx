@@ -1,6 +1,7 @@
 import Head from "next/head";
 import AboutSection from "@/components/AboutSection";
 import { metaTitles, metaDescriptions } from "@/storage/data";
+import Layout from "@/components/ui/Layout";
 
 const About = () => {
   return (
@@ -9,7 +10,9 @@ const About = () => {
         <meta name="description" content={metaDescriptions.about} />
         <title>{metaTitles.about}</title>
       </Head>
-      <AboutSection />
+      <Layout>
+        <AboutSection />
+      </Layout>
     </>
   );
 };

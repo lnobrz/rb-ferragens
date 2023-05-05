@@ -7,6 +7,7 @@ import MobileProductDetails from "@/components/MobileProductDetails";
 import { products } from "@/storage/data";
 import DesktopProductDetails from "@/components/DesktopProductDetails";
 import useDeviceInfo from "@/helpers/useDeviceInfo";
+import Layout from "@/components/ui/Layout";
 
 const Product = () => {
   const router = useRouter();
@@ -25,27 +26,29 @@ const Product = () => {
             <meta name="description" content={metaDescriptions.products} />
             <title>{pageTitle}</title>
           </Head>
-          {device === "mobile" ? (
-            <MobileProductDetails
-              productName={productDetails.name}
-              productImage={productDetails.imageUrl}
-              productDescription={productDetails.description}
-              productRecomendations={productDetails.description}
-              haveCorteEDobra={productDetails.measurements ? true : false}
-              measurements={productDetails.measurements}
-              measurements2={productDetails.measurements2}
-            />
-          ) : (
-            <DesktopProductDetails
-              productName={productDetails.name}
-              productImage={productDetails.imageUrl}
-              productDescription={productDetails.description}
-              productRecomendations={productDetails.description}
-              haveCorteEDobra={productDetails.measurements ? true : false}
-              measurements={productDetails.measurements}
-              measurements2={productDetails.measurements2}
-            />
-          )}
+          <Layout>
+            {device === "mobile" ? (
+              <MobileProductDetails
+                productName={productDetails.name}
+                productImage={productDetails.imageUrl}
+                productDescription={productDetails.description}
+                productRecomendations={productDetails.description}
+                haveCorteEDobra={productDetails.measurements ? true : false}
+                measurements={productDetails.measurements}
+                measurements2={productDetails.measurements2}
+              />
+            ) : (
+              <DesktopProductDetails
+                productName={productDetails.name}
+                productImage={productDetails.imageUrl}
+                productDescription={productDetails.description}
+                productRecomendations={productDetails.description}
+                haveCorteEDobra={productDetails.measurements ? true : false}
+                measurements={productDetails.measurements}
+                measurements2={productDetails.measurements2}
+              />
+            )}
+          </Layout>
         </>
       )}
     </>

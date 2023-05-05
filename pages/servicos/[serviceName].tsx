@@ -6,6 +6,7 @@ import MobileProductDetails from "@/components/MobileProductDetails";
 import { services } from "@/storage/data";
 import DesktopProductDetails from "@/components/DesktopProductDetails";
 import useDeviceInfo from "@/helpers/useDeviceInfo";
+import Layout from "@/components/ui/Layout";
 
 const Service = () => {
   const router = useRouter();
@@ -24,19 +25,21 @@ const Service = () => {
             <meta name="description" content={metaDescriptions.services} />
             <title>{pageTitle}</title>
           </Head>
-          {device === "mobile" ? (
-            <MobileProductDetails
-              productName={serviceDetails.name}
-              productImage={serviceDetails.imageUrl}
-              productDescription={serviceDetails.description}
-            />
-          ) : (
-            <DesktopProductDetails
-              productName={serviceDetails.name}
-              productImage={serviceDetails.imageUrl}
-              productDescription={serviceDetails.description}
-            />
-          )}
+          <Layout>
+            {device === "mobile" ? (
+              <MobileProductDetails
+                productName={serviceDetails.name}
+                productImage={serviceDetails.imageUrl}
+                productDescription={serviceDetails.description}
+              />
+            ) : (
+              <DesktopProductDetails
+                productName={serviceDetails.name}
+                productImage={serviceDetails.imageUrl}
+                productDescription={serviceDetails.description}
+              />
+            )}
+          </Layout>
         </>
       )}
     </>
