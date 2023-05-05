@@ -44,20 +44,20 @@ export const ProductInfoContainer = styled.div`
   align-items: start;
 `;
 
-export const Teste = styled.div`
+export const MainProductDetails = styled.div`
   display: flex;
   flex-direction: row;
   gap: 50px;
   margin-bottom: 50px;
 `;
 
-export const Teste2 = styled.div`
+export const MainInformationContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 `;
 
-export const Teste3 = styled.div`
+export const DescriptionContainer = styled.div`
   display: flex;
   flex-direction: column;
 `;

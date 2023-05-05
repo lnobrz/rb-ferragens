@@ -5,9 +5,9 @@ import Paragraph from "../ui/Paragraph";
 import {
   SectionContainer,
   InformationContainer,
-  Teste,
-  Teste2,
-  Teste3,
+  MainProductDetails,
+  DescriptionContainer,
+  MainInformationContainer,
 } from "./styles";
 import FilledButton from "../ui/FilledButton";
 import ProductTable from "../ui/ProductTable";
@@ -66,21 +66,21 @@ const DesktopProductDetails = ({
 }: ProductDetailsSection) => {
   return (
     <SectionContainer>
-      <Teste>
+      <MainProductDetails>
         <DecoratedImage
           imageUrl={productImage}
           imageDescription={productName}
           className="productDetailsImage"
         />
-        <Teste2>
-          <Teste3>
+        <MainInformationContainer>
+          <DescriptionContainer>
             <SecondaryTitle
               decorationAlign="none"
               content={productName}
               className="productDetailsSecondaryTitle"
             />
             <Paragraph textHierarchy="secondary" content={productDescription} />
-          </Teste3>
+          </DescriptionContainer>
           <FilledButton
             size="large"
             background="yellow"
@@ -88,8 +88,8 @@ const DesktopProductDetails = ({
             url={buttonsLinks.budget}
             className="detailsButton"
           />
-        </Teste2>
-      </Teste>
+        </MainInformationContainer>
+      </MainProductDetails>
       {productRecomendations && (
         <Paragraph textHierarchy="secondary" content={productRecomendations} />
       )}

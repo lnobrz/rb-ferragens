@@ -19,7 +19,7 @@ export const FooterLogoContainer = styled.div`
   }
 `;
 
-export const Teste = styled.div`
+export const AdressesContainer = styled.div`
   display: flex;
   flex-direction: column-reverse;
   align-items: flex-end;
