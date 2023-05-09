@@ -63,7 +63,6 @@ const OptionCard = ({
           disableAnimations={true}
           content={title}
           decorationAlign="noDecoration"
-          isLink={false}
           className="optionCardTitle"
         />
         <Paragraph
