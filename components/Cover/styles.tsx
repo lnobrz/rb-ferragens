@@ -1,8 +1,8 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
 
-export const CoverContainer = styled.section`
-  background: url("/images/cover.png");
+export const CoverContainer = styled.section<{device: "mobile" | "desktop";}>`
+  background:  ${(props) => (props.device === "mobile" ? "url('/images/cover-mobile.png')" : "url('/images/cover.png')")};
   background-size: cover;
 
   .coverButton {

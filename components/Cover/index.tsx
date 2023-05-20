@@ -7,9 +7,11 @@ import MainTitle from "../ui/MainTitle";
 import { buttonsTexts } from "@/storage/data";
 import { buttonsLinks } from "@/storage/data";
 import Layout from "../ui/Layout";
+import useDeviceInfo from "@/helpers/useDeviceInfo";
 
 type CoverProps = {
   className?: string;
+  device?: "desktop" | "mobile";
 };
 
 const paragraphContainerVariants = {
@@ -28,9 +30,9 @@ const paragraphContainerVariants = {
   },
 };
 
-const Cover = ({ className = "" }: CoverProps) => {
+const Cover = ({ className = "", device = "mobile" }: CoverProps) => {
   return (
-    <CoverContainer className={className}>
+    <CoverContainer device={device} className={className}>
       <Layout>
         <Header />
         <MainTitle />
