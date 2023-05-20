@@ -44,6 +44,7 @@ const FilledButton = ({
       size={size}
       className={className}
       href={url}
+      viewport={{once: true}}
     >
       {content}
     </ButtonContainer>
