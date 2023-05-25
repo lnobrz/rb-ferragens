@@ -7,7 +7,11 @@ type DecoratedImageTypes = {
   className?: string;
 };
 
-const DecoratedImage = ({ imageUrl, imageDescription, className }: DecoratedImageTypes) => {
+const DecoratedImage = ({
+  imageUrl,
+  imageDescription,
+  className,
+}: DecoratedImageTypes) => {
   return (
     <ImageContainer className={className && className}>
       <Image
@@ -15,6 +19,7 @@ const DecoratedImage = ({ imageUrl, imageDescription, className }: DecoratedImag
         alt={imageDescription}
         fill={true}
         style={{ position: "absolute" }}
+        loading="lazy"
       />
     </ImageContainer>
   );

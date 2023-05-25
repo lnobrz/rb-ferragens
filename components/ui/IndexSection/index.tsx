@@ -139,6 +139,7 @@ const IndexSection = ({
           width={400}
           height={500}
           className="sectionIllustration"
+          loading="lazy"
         />
       </MainContent>
       {advertisementContent && (
