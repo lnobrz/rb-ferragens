@@ -55,7 +55,7 @@ type ProductDetailsSection = {
   };
 };
 
-const DesktopProductDetails = ({
+const DesktopItemDetails = ({
   productName,
   productImage,
   productDescription,
@@ -113,4 +113,4 @@ const DesktopProductDetails = ({
   );
 };
 
-export default DesktopProductDetails;
+export default DesktopItemDetails;

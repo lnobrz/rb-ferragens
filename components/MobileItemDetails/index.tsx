@@ -52,7 +52,7 @@ type ProductDetailsSection = {
   };
 };
 
-const MobileProductDetails = ({
+const MobileItemDetails = ({
   productName,
   productImage,
   productDescription,
@@ -117,4 +117,4 @@ const MobileProductDetails = ({
   );
 };
 
-export default MobileProductDetails;
+export default MobileItemDetails;

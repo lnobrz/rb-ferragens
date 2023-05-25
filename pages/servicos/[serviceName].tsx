@@ -2,9 +2,9 @@ import { useRouter } from "next/router";
 import Head from "next/head";
 import { metaDescriptions } from "@/storage/data";
 import getPageTitle from "@/helpers/getPageTitle";
-import MobileProductDetails from "@/components/MobileProductDetails";
+import MobileProductDetails from "@/components/MobileItemDetails";
 import { services } from "@/storage/data";
-import DesktopProductDetails from "@/components/DesktopProductDetails";
+import DesktopProductDetails from "@/components/DesktopItemDetails";
 import useDeviceInfo from "@/helpers/useDeviceInfo";
 import Layout from "@/components/ui/Layout";
 
