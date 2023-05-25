@@ -2,9 +2,9 @@ import { useRouter } from "next/router";
 import Head from "next/head";
 import { metaDescriptions } from "@/storage/data";
 import getPageTitle from "@/helpers/getPageTitle";
-import MobileProductDetails from "@/components/MobileItemDetails";
+import DesktopItemDetails from "@/components/DesktopItemDetails";
+import MobileItemDetails from "@/components/MobileItemDetails";
 import { services } from "@/storage/data";
-import DesktopProductDetails from "@/components/DesktopItemDetails";
 import useDeviceInfo from "@/helpers/useDeviceInfo";
 import Layout from "@/components/ui/Layout";
 
@@ -27,16 +27,18 @@ const Service = () => {
           </Head>
           <Layout>
             {device === "mobile" ? (
-              <MobileProductDetails
-                productName={serviceDetails.name}
-                productImage={serviceDetails.imageUrl}
-                productDescription={serviceDetails.description}
+              <MobileItemDetails
+                sectionName="services"
+                itemName={serviceDetails.name}
+                itemImage={serviceDetails.imageUrl}
+                itemDescription={serviceDetails.description}
               />
             ) : (
-              <DesktopProductDetails
-                productName={serviceDetails.name}
-                productImage={serviceDetails.imageUrl}
-                productDescription={serviceDetails.description}
+              <DesktopItemDetails
+                sectionName="services"
+                itemName={serviceDetails.name}
+                itemImage={serviceDetails.imageUrl}
+                itemDescription={serviceDetails.description}
               />
             )}
           </Layout>

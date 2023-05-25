@@ -3,9 +3,9 @@ import Head from "next/head";
 import { metaDescriptions } from "@/storage/data";
 import Header from "@/components/ui/Header";
 import getPageTitle from "@/helpers/getPageTitle";
-import MobileProductDetails from "@/components/MobileItemDetails";
+import MobileItemDetails from "@/components/MobileItemDetails";
 import { products } from "@/storage/data";
-import DesktopProductDetails from "@/components/DesktopItemDetails";
+import DesktopItemDetails from "@/components/DesktopItemDetails";
 import useDeviceInfo from "@/helpers/useDeviceInfo";
 import Layout from "@/components/ui/Layout";
 
@@ -28,21 +28,23 @@ const Product = () => {
           </Head>
           <Layout>
             {device === "mobile" ? (
-              <MobileProductDetails
-                productName={productDetails.name}
-                productImage={productDetails.imageUrl}
-                productDescription={productDetails.description}
-                productRecomendations={productDetails.description}
+              <MobileItemDetails
+                sectionName="products"
+                itemName={productDetails.name}
+                itemImage={productDetails.imageUrl}
+                itemDescription={productDetails.description}
+                itemRecomendations={productDetails.description}
                 haveCorteEDobra={productDetails.measurements ? true : false}
                 measurements={productDetails.measurements}
                 measurements2={productDetails.measurements2}
               />
             ) : (
-              <DesktopProductDetails
-                productName={productDetails.name}
-                productImage={productDetails.imageUrl}
-                productDescription={productDetails.description}
-                productRecomendations={productDetails.description}
+              <DesktopItemDetails
+                sectionName="products"
+                itemName={productDetails.name}
+                itemImage={productDetails.imageUrl}
+                itemDescription={productDetails.description}
+                itemRecomendations={productDetails.description}
                 haveCorteEDobra={productDetails.measurements ? true : false}
                 measurements={productDetails.measurements}
                 measurements2={productDetails.measurements2}

@@ -12,10 +12,11 @@ import ProductTable from "../ui/ProductTable";
 import { buttonsLinks } from "@/storage/data";
 
 type ProductDetailsSection = {
-  productName: string;
-  productImage: string;
-  productDescription: string;
-  productRecomendations?: string;
+  sectionName: "products" | "services";
+  itemName: string;
+  itemImage: string;
+  itemDescription: string;
+  itemRecomendations?: string;
   haveCorteEDobra?: boolean;
   measurements?: {
     tableHeaders: string[];
@@ -53,10 +54,11 @@ type ProductDetailsSection = {
 };
 
 const MobileItemDetails = ({
-  productName,
-  productImage,
-  productDescription,
-  productRecomendations,
+  sectionName,
+  itemName,
+  itemImage,
+  itemDescription,
+  itemRecomendations,
   haveCorteEDobra,
   measurements,
   measurements2,
@@ -65,21 +67,18 @@ const MobileItemDetails = ({
     <SectionContainer>
       <SecondaryTitle
         decorationAlign="none"
-        content={productName}
+        content={itemName}
         className="productDetailsSecondaryTitle"
       />
       <DecoratedImage
-        imageUrl={productImage}
-        imageDescription={productName}
+        imageUrl={itemImage}
+        imageDescription={itemName}
         className="productDetailsImage"
       />
       <InformationContainer>
-        <Paragraph textHierarchy="secondary" content={productDescription} />
-        {productRecomendations && (
-          <Paragraph
-            textHierarchy="secondary"
-            content={productRecomendations}
-          />
+        <Paragraph textHierarchy="secondary" content={itemDescription} />
+        {itemRecomendations && (
+          <Paragraph textHierarchy="secondary" content={itemRecomendations} />
         )}
       </InformationContainer>
       {haveCorteEDobra && measurements && (
@@ -108,8 +107,10 @@ const MobileItemDetails = ({
         <FilledButton
           size="large"
           background="transparent"
-          content="Outros Produtos"
-          url={buttonsLinks.products}
+          content={
+            sectionName === "products" ? "Outros Produtos" : "Outros Serviços"
+          }
+          url={sectionName === "products" ? "/produtos" : "/servicos"}
           className="detailsButton"
         />
       </ButtonsContainer>

@@ -15,10 +15,11 @@ import TextButton from "../ui/TextButton";
 import { buttonsLinks } from "@/storage/data";
 
 type ProductDetailsSection = {
-  productName: string;
-  productImage: string;
-  productDescription: string;
-  productRecomendations?: string;
+  sectionName: "products" | "services";
+  itemName: string;
+  itemImage: string;
+  itemDescription: string;
+  itemRecomendations?: string;
   haveCorteEDobra?: boolean;
   measurements?: {
     tableHeaders: string[];
@@ -56,10 +57,11 @@ type ProductDetailsSection = {
 };
 
 const DesktopItemDetails = ({
-  productName,
-  productImage,
-  productDescription,
-  productRecomendations,
+  sectionName,
+  itemName,
+  itemImage,
+  itemDescription,
+  itemRecomendations,
   haveCorteEDobra,
   measurements,
   measurements2,
@@ -68,18 +70,18 @@ const DesktopItemDetails = ({
     <SectionContainer>
       <MainProductDetails>
         <DecoratedImage
-          imageUrl={productImage}
-          imageDescription={productName}
+          imageUrl={itemImage}
+          imageDescription={itemName}
           className="productDetailsImage"
         />
         <MainInformationContainer>
           <DescriptionContainer>
             <SecondaryTitle
               decorationAlign="none"
-              content={productName}
+              content={itemName}
               className="productDetailsSecondaryTitle"
             />
-            <Paragraph textHierarchy="secondary" content={productDescription} />
+            <Paragraph textHierarchy="secondary" content={itemDescription} />
           </DescriptionContainer>
           <FilledButton
             size="large"
@@ -90,8 +92,8 @@ const DesktopItemDetails = ({
           />
         </MainInformationContainer>
       </MainProductDetails>
-      {productRecomendations && (
-        <Paragraph textHierarchy="secondary" content={productRecomendations} />
+      {itemRecomendations && (
+        <Paragraph textHierarchy="secondary" content={itemRecomendations} />
       )}
       {haveCorteEDobra && measurements && (
         <InformationContainer>
@@ -108,7 +110,12 @@ const DesktopItemDetails = ({
           )}
         </InformationContainer>
       )}
-      <TextButton text="Outros Produtos" url="/produtos" />
+      <TextButton
+        text={
+          sectionName === "products" ? "Outros Produtos" : "Outros Serviços"
+        }
+        url={sectionName === "products" ? "/produtos" : "/servicos"}
+      />
     </SectionContainer>
   );
 };
