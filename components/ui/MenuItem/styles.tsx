@@ -3,7 +3,7 @@ import { kanit } from "@/public/fonts";
 import { motion } from "framer-motion";
 
 export const MenuItemContainer = styled(motion.li)`
-  font-family: ${kanit.style.fontFamily};
+  font-family: ${kanit.style.fontFamily}, Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;

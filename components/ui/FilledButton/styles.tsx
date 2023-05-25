@@ -18,7 +18,7 @@ export const ButtonContainer = styled(motion.a)<{
   margin-bottom: 20px;
   border: ${(props) =>
     props.background === "yellow" ? "none" : "1px solid #EFDF64"};
-  font-family: ${kanit.style.fontFamily};
+  font-family: ${kanit.style.fontFamily}, Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: ${(props) => (props.size === "small" ? "12px" : "18px")};

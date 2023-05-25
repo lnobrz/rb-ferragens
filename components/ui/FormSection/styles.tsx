@@ -19,7 +19,7 @@ export const SubmitButton = styled(motion.input)`
   border-radius: 5px;
   padding: 5px 25px;
   margin-bottom: 20px;
-  font-family: ${kanit.style.fontFamily};
+  font-family: ${kanit.style.fontFamily}, Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;

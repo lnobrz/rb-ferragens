@@ -5,7 +5,7 @@ export const TableContainer = styled.table`
   width: 100%;
   table-layout: fixed;
   color: #e5dfc3;
-  font-family: ${kanit.style.fontFamily};
+  font-family: ${kanit.style.fontFamily}, Arial, Helvetica, sans-serif;
   font-size: 16px;
   text-transform: uppercase;
   text-align: center;
