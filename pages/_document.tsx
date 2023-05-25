@@ -29,6 +29,7 @@ export default class MyDocument extends Document {
     return (
       <Html lang="pt-br">
         <Head>
+          <link rel="icon" type="image/x-icon" href="/favicon.ico" />
           <meta charSet="UTF-8" />
           <meta name="keywords" content={metaKeywords}></meta>
           <meta name="author" content="Lucas Nobre" />
