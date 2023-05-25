@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 import Layout from "@/components/ui/Layout";
 import { useRouter } from "next/router";
 
-export default function App({ Component, pageProps }: AppProps) {
+const App = ({ Component, pageProps }: AppProps) => {
   const currentPage = useRouter().pathname;
 
   return (
@@ -23,4 +23,6 @@ export default function App({ Component, pageProps }: AppProps) {
       </Layout>
     </AnimatePresence>
   );
-}
+};
+
+export default App;
