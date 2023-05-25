@@ -1,25 +1,3 @@
-export const metaTitles = {
-  index: "Loja de Ferragens | Ferro | Aço - RB Ferragens",
-  products: "Produtos | RB Ferragens",
-  services: "Serviços | RB Ferragens",
-  contact: "Fale Conosco | RB Ferragens",
-  about: "Sobre | RB Ferragens",
-};
-
-export const metaDescriptions = {
-  index:
-    "A RB Ferragens, localizada em Fortaleza - CE, é especialista na venda, corte e dobra de ferragens voltadas para a área da construção civil.",
-  products:
-    "Do vergalhão à malha pop: confira a variedade de produtos que encontram-se disponíveis na RB Ferragens",
-  services: "Corte e dobra de ferro e aço é na RB Ferragens",
-  contact:
-    "Entre em contato com a RB Ferragens através de e-mail, telefone e whatsapp",
-  about: "Entenda nossa origem, missão, visão e valores",
-};
-
-export const metaKeywords =
-  "barra de ferro, ferro e aço, malha pop, loja de ferragens, rb ferragens, vergalhão, corte e dobra de chapas, arames, treliça, ferragens, barra de ferro, chapas de ferro, malha de ferro";
-
 export const paragraphs = {
   indexCover:
     "Atendendo Fortaleza - CE e região metropolitana, vendemos desde colunas até vigas de ferro e aço com as medidas ideais para o seu projeto.",

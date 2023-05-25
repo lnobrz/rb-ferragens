@@ -1,6 +1,4 @@
 import Head from "next/head";
-import { metaDescriptions, metaTitles } from "@/storage/data";
-import Header from "@/components/ui/Header";
 import ProductsSection from "@/components/ProductsSection";
 import Layout from "@/components/ui/Layout";
 
@@ -8,8 +6,11 @@ const Products = () => {
   return (
     <>
       <Head>
-        <meta name="description" content={metaDescriptions.products} />
-        <title>{metaTitles.products}</title>
+        <meta
+          name="description"
+          content="Do vergalhão à malha pop: confira a variedade de produtos que encontram-se disponíveis na RB Ferragens"
+        />
+        <title>Produtos | RB Ferragens</title>
       </Head>
       <Layout>
         <ProductsSection />

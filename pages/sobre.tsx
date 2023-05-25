@@ -1,14 +1,16 @@
 import Head from "next/head";
 import AboutSection from "@/components/AboutSection";
-import { metaTitles, metaDescriptions } from "@/storage/data";
 import Layout from "@/components/ui/Layout";
 
 const About = () => {
   return (
     <>
       <Head>
-        <meta name="description" content={metaDescriptions.about} />
-        <title>{metaTitles.about}</title>
+        <meta
+          name="description"
+          content="Entenda nossa origem, missão, visão e valores"
+        />
+        <title>Sobre | RB Ferragens</title>
       </Head>
       <Layout>
         <AboutSection />

@@ -1,6 +1,5 @@
 import { useRouter } from "next/router";
 import Head from "next/head";
-import { metaDescriptions } from "@/storage/data";
 import getPageTitle from "@/helpers/getPageTitle";
 import DesktopItemDetails from "@/components/DesktopItemDetails";
 import MobileItemDetails from "@/components/MobileItemDetails";
@@ -22,7 +21,10 @@ const Service = () => {
       {serviceDetails && (
         <>
           <Head>
-            <meta name="description" content={metaDescriptions.services} />
+            <meta
+              name="description"
+              content="Corte e dobra de ferro e aço é na RB Ferragens"
+            />
             <title>{pageTitle}</title>
           </Head>
           <Layout>

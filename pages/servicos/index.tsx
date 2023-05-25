@@ -8,8 +8,11 @@ const Services = () => {
   return (
     <>
       <Head>
-        <meta name="description" content={metaDescriptions.services} />
-        <title>{metaTitles.services}</title>
+        <meta
+          name="description"
+          content="Corte e dobra de ferro e aço é na RB Ferragens"
+        />
+        <title>Serviços | RB Ferragens</title>
       </Head>
       <Layout>
         <ServicesSection />

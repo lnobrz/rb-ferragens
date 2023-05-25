@@ -1,5 +1,4 @@
 import Head from "next/head";
-import { metaDescriptions, metaTitles } from "@/storage/data";
 import ContactSection from "@/components/ContactSection";
 import Layout from "@/components/ui/Layout";
 
@@ -7,8 +6,11 @@ const Contacts = () => {
   return (
     <>
       <Head>
-        <meta name="description" content={metaDescriptions.contact} />
-        <title>{metaTitles.contact}</title>
+        <meta
+          name="description"
+          content="Entre em contato com a RB Ferragens através de e-mail, telefone e whatsapp"
+        />
+        <title>Fale Conosco | RB Ferragens</title>
       </Head>
       <Layout>
         <ContactSection />

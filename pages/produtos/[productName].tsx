@@ -1,7 +1,5 @@
 import { useRouter } from "next/router";
 import Head from "next/head";
-import { metaDescriptions } from "@/storage/data";
-import Header from "@/components/ui/Header";
 import getPageTitle from "@/helpers/getPageTitle";
 import MobileItemDetails from "@/components/MobileItemDetails";
 import { products } from "@/storage/data";
@@ -23,7 +21,10 @@ const Product = () => {
       {productDetails && (
         <>
           <Head>
-            <meta name="description" content={metaDescriptions.products} />
+            <meta
+              name="description"
+              content="Do vergalhão à malha pop: confira a variedade de produtos que encontram-se disponíveis na RB Ferragens"
+            />
             <title>{pageTitle}</title>
           </Head>
           <Layout>
