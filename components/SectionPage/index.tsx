@@ -2,13 +2,16 @@ import { SectionContainer, CardsContainer } from "./styles";
 import OptionCard from "../ui/OptionCard";
 import SecondaryTitle from "../ui/SecondaryTitle";
 import useDeviceInfo from "@/helpers/useDeviceInfo";
+import { useEffect } from "react";
 
 type SectionPageTypes = {
   pageTitle: string;
   pageContent: {
     id: number;
     name: string;
-    description: string;
+    shortDescription: string;
+    fullDescription: string;
+    recomendations: string;
     imageUrl: string;
     optionLink: string;
   }[];
@@ -72,7 +75,7 @@ const SectionPage = ({ pageTitle, pageContent }: SectionPageTypes) => {
             <OptionCard
               key={content.id}
               title={content.name}
-              description={content.description}
+              description={content.shortDescription}
               imageUrl={content.imageUrl}
               optionLink={content.optionLink}
             />
