@@ -16,7 +16,6 @@ type ProductDetailsSection = {
   itemName: string;
   itemImage: string;
   itemDescription: string;
-  itemRecomendations?: string;
   haveCorteEDobra?: boolean;
   measurements?: {
     tableHeaders: string[];
@@ -58,7 +57,6 @@ const MobileItemDetails = ({
   itemName,
   itemImage,
   itemDescription,
-  itemRecomendations,
   haveCorteEDobra,
   measurements,
   measurements2,
@@ -76,10 +74,7 @@ const MobileItemDetails = ({
         className="productDetailsImage"
       />
       <InformationContainer>
-        <Paragraph textHierarchy="secondary" content={itemDescription} />
-        {itemRecomendations && (
-          <Paragraph textHierarchy="secondary" content={itemRecomendations} />
-        )}
+        <Paragraph textrole="secondary" content={itemDescription} />
       </InformationContainer>
       {haveCorteEDobra && measurements && (
         <InformationContainer>

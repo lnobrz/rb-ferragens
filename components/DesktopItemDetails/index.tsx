@@ -19,7 +19,6 @@ type ProductDetailsSection = {
   itemName: string;
   itemImage: string;
   itemDescription: string;
-  itemRecomendations?: string;
   haveCorteEDobra?: boolean;
   measurements?: {
     tableHeaders: string[];
@@ -61,7 +60,6 @@ const DesktopItemDetails = ({
   itemName,
   itemImage,
   itemDescription,
-  itemRecomendations,
   haveCorteEDobra,
   measurements,
   measurements2,
@@ -81,7 +79,7 @@ const DesktopItemDetails = ({
               content={itemName}
               className="productDetailsSecondaryTitle"
             />
-            <Paragraph textHierarchy="secondary" content={itemDescription} />
+            <Paragraph textrole="secondary" content={itemDescription} />
           </DescriptionContainer>
           <FilledButton
             size="large"
@@ -92,9 +90,6 @@ const DesktopItemDetails = ({
           />
         </MainInformationContainer>
       </MainProductDetails>
-      {itemRecomendations && (
-        <Paragraph textHierarchy="secondary" content={itemRecomendations} />
-      )}
       {haveCorteEDobra && measurements && (
         <InformationContainer>
           <TertiaryTitle decorationAlign="left" content="corte e dobra" />
