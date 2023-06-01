@@ -7,6 +7,7 @@ import { AnimatePresence } from "framer-motion";
 import useDeviceInfo from "@/helpers/useDeviceInfo";
 import FilledButton from "../FilledButton";
 import { buttonsLinks } from "@/storage/data";
+import { MenuContainer } from "./styles";
 
 const Header = () => {
   const device = useDeviceInfo();
@@ -22,7 +23,7 @@ const Header = () => {
         <Logo className="logo" />
       </LogoContainer>
       {device === "mobile" && (
-        <>
+        <MenuContainer>
           <MenuButton
             handleClickFunction={showMenuHandler}
             menuIsOpened={showMobileMenu}
@@ -35,7 +36,7 @@ const Header = () => {
               />
             )}
           </AnimatePresence>
-        </>
+        </MenuContainer>
       )}
       {device === "desktop" && (
         <>

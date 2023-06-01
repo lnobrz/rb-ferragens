@@ -7,7 +7,7 @@ export const CardContainer = styled(motion.div)`
   justify-content: flex-start;
   align-items: flex-start;
   width: 280px;
-  height: 400px;
+  height: 420px;
   background: linear-gradient(180deg, #292923 0%, #1f1f1d 100%);
   box-shadow: 0px 4px 20px 10px rgba(0, 0, 0, 0.14);
   border-radius: 5px;
@@ -25,7 +25,7 @@ export const CardContainer = styled(motion.div)`
     margin: 10px 15px 15px 15px;
     font-size: 16px;
     line-height: 22px;
-    height: 100px;
+    height: 120px;
     overflow: hidden;
   }
 

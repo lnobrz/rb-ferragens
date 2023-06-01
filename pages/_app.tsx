@@ -10,18 +10,20 @@ const App = ({ Component, pageProps }: AppProps) => {
   const currentPage = useRouter().pathname;
 
   return (
-    <AnimatePresence>
+    <>
       <GlobalStyle />
       {currentPage !== "/" && (
         <Layout>
           <Header />
         </Layout>
       )}
-      <Component {...pageProps} />
+      <AnimatePresence>
+        <Component {...pageProps} />
+      </AnimatePresence>
       <Layout>
         <Footer />
       </Layout>
-    </AnimatePresence>
+    </>
   );
 };
 
