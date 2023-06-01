@@ -67,7 +67,7 @@ const OptionCard = ({
         />
         <Paragraph
           disableAnimations={true}
-          textHierarchy="secondary"
+          textrole="secondary"
           className="optionCardParagraph"
           content={description}
         />

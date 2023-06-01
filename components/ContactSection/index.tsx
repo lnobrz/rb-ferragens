@@ -30,7 +30,7 @@ const ContactSection = () => {
         <ButtonsContainer>
           <Paragraph
             content="Ou"
-            textHierarchy="secondary"
+            textrole="secondary"
             className="contactSectionParagraph"
           />
           <FilledButton

@@ -6,7 +6,7 @@ const inputTypes = ["email", "text", "tel", "textarea"] as const;
 
 type FormSectionTypes = {
   fieldName: string[];
-  fieldType: typeof inputTypes[number][];
+  fieldType: (typeof inputTypes)[number][];
   submitButtonText: string;
   fieldValue: string[];
   fieldSetter: Dispatch<SetStateAction<string>>[];

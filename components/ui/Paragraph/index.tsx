@@ -4,7 +4,7 @@ type Paragraph = {
   content: string;
   className?: string;
   disableAnimations?: true | false;
-  textHierarchy: "main" | "secondary";
+  textrole: "main" | "secondary";
 };
 
 const paragraphVariants = {
@@ -24,7 +24,12 @@ const paragraphVariants = {
   },
 };
 
-const Paragraph = ({ content, className, textHierarchy, disableAnimations }: Paragraph) => {
+const Paragraph = ({
+  content,
+  className,
+  textrole,
+  disableAnimations,
+}: Paragraph) => {
   return (
     <ParagraphContainer
       variants={disableAnimations ? undefined : paragraphVariants}
@@ -32,7 +37,7 @@ const Paragraph = ({ content, className, textHierarchy, disableAnimations }: Par
       whileInView="show"
       viewport={{ once: true }}
       className={className && className}
-      textHierarchy={textHierarchy}
+      textrole={textrole}
     >
       {content}
     </ParagraphContainer>

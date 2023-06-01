@@ -87,7 +87,7 @@ const IndexSection = ({
         />
         <Paragraph
           content={sectionParagraph}
-          textHierarchy="main"
+          textrole="main"
           disableAnimations={disableParagraphAnimation}
           className={`indexSectionParagraph ${
             titleDecorationAlign === "left" ? "textStart" : "textEnd"
@@ -145,7 +145,7 @@ const IndexSection = ({
       {advertisementContent && (
         <Paragraph
           content={advertisementContent}
-          textHierarchy="secondary"
+          textrole="secondary"
           className={`advertisement ${
             titleDecorationAlign === "left" ? "textEnd" : "textStart"
           }`}

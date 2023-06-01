@@ -25,7 +25,7 @@ const AboutSection = () => {
             <Paragraph
               key={aboutText}
               content={aboutText}
-              textHierarchy="secondary"
+              textrole="secondary"
               className="introParagraph"
             />
           );
@@ -33,15 +33,15 @@ const AboutSection = () => {
       </ContentContainer>
       <ContentContainer>
         <TertiaryTitle decorationAlign="left" content="Missão" />
-        <Paragraph content={missionString} textHierarchy="secondary" />
+        <Paragraph content={missionString} textrole="secondary" />
       </ContentContainer>
       <ContentContainer>
         <TertiaryTitle decorationAlign="left" content="Visão" />
-        <Paragraph content={visionString} textHierarchy="secondary" />
+        <Paragraph content={visionString} textrole="secondary" />
       </ContentContainer>
       <ContentContainer>
         <TertiaryTitle decorationAlign="left" content="Valores" />
-        <Paragraph content={valuesStrings} textHierarchy="secondary" />
+        <Paragraph content={valuesStrings} textrole="secondary" />
       </ContentContainer>
       <ContentContainer>
         <TertiaryTitle decorationAlign="left" content="RB Em Números" />

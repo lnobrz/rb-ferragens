@@ -6,19 +6,19 @@ const FooterAddresses = () => {
   return (
     <AddressesContainer>
       <Paragraph
-        textHierarchy="secondary"
+        textrole="secondary"
         disableAnimations={true}
         content={address.street}
         className="footerAddress"
       />
       <Paragraph
-        textHierarchy="secondary"
+        textrole="secondary"
         disableAnimations={true}
         content={address.neighborhoodCityState}
         className="footerAddress"
       />
       <Paragraph
-        textHierarchy="secondary"
+        textrole="secondary"
         disableAnimations={true}
         content={address.zipCode}
         className="footerAddress"

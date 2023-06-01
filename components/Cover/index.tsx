@@ -37,7 +37,7 @@ const Cover = ({ className = "", device = "mobile" }: CoverProps) => {
         <Header />
         <MainTitle />
         <ParagraphContainer variants={paragraphContainerVariants}>
-          <Paragraph textHierarchy="main" content={paragraphs.indexCover} />
+          <Paragraph textrole="main" content={paragraphs.indexCover} />
           <ArrowButton
             content={buttonsTexts.cover}
             arrowDirection="right"
