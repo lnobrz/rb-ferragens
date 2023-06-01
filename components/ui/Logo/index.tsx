@@ -8,7 +8,9 @@ const Logo = ({ className }: LogoTypes) => {
   return (
     <Image
       src={`/images/logo.png`}
-      fill={true}
+      width={100}
+      height={100}
+      sizes="100%"
       alt="logo"
       className={className}
     />
