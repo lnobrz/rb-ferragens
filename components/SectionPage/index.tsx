@@ -2,7 +2,6 @@ import { SectionContainer, CardsContainer } from "./styles";
 import OptionCard from "../ui/OptionCard";
 import SecondaryTitle from "../ui/SecondaryTitle";
 import useDeviceInfo from "@/helpers/useDeviceInfo";
-import { useEffect } from "react";
 
 type SectionPageTypes = {
   pageTitle: string;
