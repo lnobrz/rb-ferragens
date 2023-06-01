@@ -33,14 +33,14 @@ const Service = () => {
                 sectionName="services"
                 itemName={serviceDetails.name}
                 itemImage={serviceDetails.imageUrl}
-                itemDescription={serviceDetails.description}
+                itemDescription={serviceDetails.fullDescription}
               />
             ) : (
               <DesktopItemDetails
                 sectionName="services"
                 itemName={serviceDetails.name}
                 itemImage={serviceDetails.imageUrl}
-                itemDescription={serviceDetails.description}
+                itemDescription={serviceDetails.fullDescription}
               />
             )}
           </Layout>

@@ -6,11 +6,12 @@ import { products } from "@/storage/data";
 import DesktopItemDetails from "@/components/DesktopItemDetails";
 import useDeviceInfo from "@/helpers/useDeviceInfo";
 import Layout from "@/components/ui/Layout";
+import { useEffect } from "react";
 
 const Product = () => {
   const router = useRouter();
   const device = useDeviceInfo();
-  const productName = router.query.productName?.toString().replace("-", " ");
+  const productName = router.query.productName?.toString().replaceAll("-", " ");
   const pageTitle = getPageTitle(productName);
   const productDetails = products.filter((product) => {
     return product.name === productName;
@@ -33,8 +34,7 @@ const Product = () => {
                 sectionName="products"
                 itemName={productDetails.name}
                 itemImage={productDetails.imageUrl}
-                itemDescription={productDetails.description}
-                itemRecomendations={productDetails.description}
+                itemDescription={productDetails.fullDescription}
                 haveCorteEDobra={productDetails.measurements ? true : false}
                 measurements={productDetails.measurements}
                 measurements2={productDetails.measurements2}
@@ -44,8 +44,7 @@ const Product = () => {
                 sectionName="products"
                 itemName={productDetails.name}
                 itemImage={productDetails.imageUrl}
-                itemDescription={productDetails.description}
-                itemRecomendations={productDetails.description}
+                itemDescription={productDetails.fullDescription}
                 haveCorteEDobra={productDetails.measurements ? true : false}
                 measurements={productDetails.measurements}
                 measurements2={productDetails.measurements2}
