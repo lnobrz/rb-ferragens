@@ -39,7 +39,7 @@ export const ButtonContainer = styled(motion.a)`
   }
 `;
 
-export const ButtonTitle = styled.h6`
+export const ButtonTitle = styled.p`
   font-family: ${kanit.style.fontFamily}, Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 400;
