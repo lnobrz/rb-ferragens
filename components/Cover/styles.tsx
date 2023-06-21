@@ -5,7 +5,7 @@ export const CoverContainer = styled.section<{ device: "mobile" | "desktop" }>`
   background: ${(props) =>
     props.device === "mobile"
       ? "url('/images/cover-mobile.webp')"
-      : "url('/images/cover.png')"};
+      : "url('/images/cover.webp')"};
   background-size: cover;
 
   .coverButton {
