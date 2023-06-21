@@ -219,15 +219,15 @@ export const products = [
   },
   {
     id: 9,
-    name: "pregos e parafusos",
+    name: "pregos",
     shortDescription:
       "Fixação precisa e segura para diversos materiais. Ideais para construções, marcenaria e projetos de montagem.",
     fullDescription:
-      "Pregos e parafusos são elementos de fixação essenciais na construção e em projetos de montagem. Os pregos são peças de metal com uma ponta afiada em uma extremidade e uma cabeça na outra, enquanto os parafusos possuem um corpo rosqueado e uma cabeça. Ambos são fabricados com materiais de alta qualidade, como aço, e são conhecidos por sua resistência e capacidade de fixação. Com sua funcionalidade simples e eficaz, pregos e parafusos são amplamente utilizados em uma variedade de aplicações na construção, carpintaria e montagem de móveis.",
+      "Pregos são elementos de fixação essenciais na construção e em projetos de montagem. Os pregos são peças de metal com uma ponta afiada em uma extremidade e uma cabeça na outra. São fabricados com materiais de alta qualidade, como aço, e são conhecidos por sua resistência e capacidade de fixação. Com sua funcionalidade simples e eficaz, pregos são amplamente utilizados em uma variedade de aplicações na construção, carpintaria e montagem de móveis.",
     recomendations:
-      "Pregos e parafusos encontram aplicações diversas em diferentes tipos de projetos. Os pregos são frequentemente utilizados na fixação de estruturas de madeira, como construção de casas, montagem de móveis e criação de cercas. Sua simplicidade e facilidade de uso os tornam uma escolha popular para projetos de carpintaria. Já os parafusos, com seu corpo rosqueado, são ideais para fixar materiais de forma segura e resistente. Eles são amplamente empregados na montagem de móveis, na instalação de prateleiras, na fixação de placas e na construção de estruturas metálicas. Com uma variedade de tamanhos e tipos disponíveis, pregos e parafusos oferecem soluções de fixação confiáveis e duradouras. Invista em pregos e parafusos de alta qualidade e garanta a segurança e a estabilidade em suas construções e projetos de montagem.",
+      "Pregos encontram aplicações diversas em diferentes tipos de projetos. Os pregos são frequentemente utilizados na fixação de estruturas de madeira, como construção de casas, montagem de móveis e criação de cercas. Sua simplicidade e facilidade de uso os tornam uma escolha popular para projetos de carpintaria. Eles são amplamente empregados na montagem de móveis, na instalação de prateleiras, na fixação de placas e na construção de estruturas metálicas. Com uma variedade de tamanhos e tipos disponíveis, pregos oferecem soluções de fixação confiáveis e duradouras. Invista em pregos de alta qualidade e garanta a segurança e a estabilidade em suas construções e projetos de montagem.",
     imageUrl: "/images/prego.png",
-    optionLink: "/produtos/pregos-e-parafusos/",
+    optionLink: "/produtos/pregos/",
   },
 ];
 
@@ -337,14 +337,14 @@ export const buttonsLinks = {
 };
 
 export const aboutStrings = [
-  "A RB Ferragens é uma micro empresa de ferragens com quase 20 anos de experiência no ramo metalúrgico. Fundada em 2019, nosso objetivo é oferecer ferragens de alta qualidade a preços acessíveis, juntamente com uma entrega rápida, para atender às necessidades dos nossos clientes em Fortaleza e região metropolitana. Desde o início, já conquistamos a confiança de mais de 1000 clientes e processamos mais de 2000 pedidos, o que demonstra nosso compromisso em fornecer produtos excelentes e um serviço excepcional.",
+  "A RB Ferragens é uma micro empresa de ferragens com quase 5 anos de experiência no ramo metalúrgico. Fundada em 2019, nosso objetivo é oferecer ferragens de alta qualidade a preços acessíveis, juntamente com uma entrega rápida, para atender às necessidades dos nossos clientes em Fortaleza e região metropolitana. Desde o início, já conquistamos a confiança de mais de 1000 clientes e processamos mais de 2000 pedidos, o que demonstra nosso compromisso em fornecer produtos excelentes e um serviço excepcional.",
   "Nosso diferencial está em oferecer uma ampla variedade de ferragens criteriosamente selecionadas, que atendem aos mais altos padrões de resistência, durabilidade e desempenho.Além disso, priorizamos a agilidade na entrega, para que nossos clientes possam contar com os materiais necessários no momento certo, mantendo seus projetos dentro do prazo.",
   "Na RB Ferragens, buscamos construir relacionamentos duradouros com nossos clientes, baseados na confiança, transparência e compromisso mútuo.Estamos sempre atentos às necessidades e feedback dos nossos clientes, buscando melhorar continuamente nossos produtos e serviços.",
   "Se você está em busca de ferragens de qualidade, com preços acessíveis e uma entrega rápida e confiável, conte com a RB Ferragens. Estamos prontos para ser seu parceiro confiável, fornecendo as soluções de ferragens que você precisa para o sucesso dos seus projetos.",
 ];
 
 export const missionString =
-  "Na RB Ferragens, nossa missão é levar ferragens de qualidade com preços acessíveis e entrega rápida para Fortaleza e região metropolitana. Nosso compromisso é fornecer soluções confiáveis e eficientes, garantindo a satisfação dos nossos clientes. Buscamos ser a referência no mercado, oferecendo produtos de qualidade, atendimento excepcional e construindo relações duradouras. Estamos determinados a superar as expectativas, contribuindo para o sucesso e a excelência das construções em nossa região. Conte conosco para fornecer as ferragens que você precisa, com preços acessíveis, entrega rápida e um serviço excepcional.";
+  "Na RB Ferragens, nossa missão é levar ferragens de qualidade com preços acessíveis e entrega rápida para Fortaleza e Região Metropolitana. Nosso compromisso é fornecer soluções confiáveis e eficientes, garantindo a satisfação dos nossos clientes. Buscamos ser a referência no mercado, oferecendo produtos de qualidade, atendimento excepcional e construindo relações duradouras. Estamos determinados a superar as expectativas, contribuindo para o sucesso e a excelência das construções em nossa região. Conte conosco para fornecer as ferragens que você precisa, com preços acessíveis, entrega rápida e um serviço excepcional.";
 
 export const visionString =
   "Nossa visão é sermos reconhecidos como líderes no fornecimento de ferragens em Fortaleza e região metropolitana, sendo a primeira escolha dos clientes. Buscamos alcançar esse reconhecimento através de um serviço diferenciado, oferecendo produtos de qualidade e um atendimento excepcional. Nosso objetivo é construir relações duradouras com os clientes, baseadas na confiança, transparência e compromisso mútuo. Trabalhamos constantemente para melhorar nossos produtos e serviços, ouvindo atentamente as necessidades dos clientes e superando suas expectativas. Estamos determinados a ser seu parceiro confiável em todas as etapas do projeto, contribuindo para o sucesso e a excelência das construções em nossa região.";
