@@ -9,7 +9,7 @@ export const LinkContainer = styled(motion.a)`
   text-decoration: none;
 `;
 
-export const LinkTitle = styled(motion.h4)`
+export const LinkTitle = styled(motion.h2)`
   font-family: ${kanit.style.fontFamily}, Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 400;
