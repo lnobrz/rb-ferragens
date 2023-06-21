@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { tomorrow } from "@/public/fonts";
 import { motion } from "framer-motion";
 
-export const TitleContainer = styled(motion.h3)`
+export const TitleContainer = styled(motion.h1)`
   font-family: ${tomorrow.style.fontFamily}, Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 400;
