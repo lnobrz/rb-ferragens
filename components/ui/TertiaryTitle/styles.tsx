@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { kanit } from "@/public/fonts";
 import { motion } from "framer-motion";
 
-export const TitleDiv = styled(motion.div)`
+export const TitleDiv = styled(motion.span)`
   display: flex;
   justify-items: center;
   align-items: center;
