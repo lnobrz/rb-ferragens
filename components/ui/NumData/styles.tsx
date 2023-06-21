@@ -56,7 +56,7 @@ export const HighlightedCaracter = styled.bdi`
   }
 `;
 
-export const DataName = styled.h6`
+export const DataName = styled.p`
   font-family: ${kanit.style.fontFamily}, Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 400;
