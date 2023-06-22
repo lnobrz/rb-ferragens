@@ -4,7 +4,7 @@ import { HeaderContainer, LogoContainer } from "./styles";
 import { useState } from "react";
 import Menu from "../Menu";
 import { AnimatePresence } from "framer-motion";
-import useDeviceInfo from "@/helpers/useDeviceInfo";
+import useDeviceInfo from "@/utils/useDeviceInfo";
 import FilledButton from "../FilledButton";
 import { buttonsLinks } from "@/storage/data";
 import { MenuContainer } from "./styles";

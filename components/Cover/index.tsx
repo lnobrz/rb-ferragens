@@ -7,7 +7,6 @@ import MainTitle from "../ui/MainTitle";
 import { buttonsTexts } from "@/storage/data";
 import { buttonsLinks } from "@/storage/data";
 import Layout from "../ui/Layout";
-import useDeviceInfo from "@/helpers/useDeviceInfo";
 
 type CoverProps = {
   className?: string;

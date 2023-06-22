@@ -1,10 +1,10 @@
 import { useRouter } from "next/router";
 import Head from "next/head";
-import getPageTitle from "@/helpers/getPageTitle";
+import getPageTitle from "@/utils/getPageTitle";
 import DesktopItemDetails from "@/components/DesktopItemDetails";
 import MobileItemDetails from "@/components/MobileItemDetails";
 import { services } from "@/storage/data";
-import useDeviceInfo from "@/helpers/useDeviceInfo";
+import useDeviceInfo from "@/utils/useDeviceInfo";
 import Layout from "@/components/ui/Layout";
 
 const Service = () => {
