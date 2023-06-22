@@ -35,7 +35,7 @@ export const products = [
       "Os arames de aço são soluções versáteis e confiáveis para diversas necessidades de cercamento, amarração e segurança. Fabricados com materiais de alta resistência, eles oferecem durabilidade excepcional e resistência ao desgaste. Com sua capacidade de resistir a condições climáticas adversas, os arames de aço são ideais para aplicações tanto em projetos comerciais e industriais quanto em projetos residenciais.",
     recomendations:
       "Os arames de aço possuem uma ampla variedade de aplicações. Eles são frequentemente utilizados para cercamento de terrenos, construção de viveiros, amarração de cargas e até mesmo para projetos artísticos e criativos. Além disso, sua flexibilidade permite a criação de diferentes formas e contornos, adaptando-se perfeitamente às necessidades específicas de cada projeto. Seja você um profissional da construção civil, um paisagista, um artista ou alguém em busca de uma solução confiável para suas necessidades de amarração e segurança, os arames de aço oferecem a solução perfeita. Invista na qualidade e na eficiência dos arames de aço e desfrute de soluções duradouras e confiáveis em sua construção ou projeto.",
-    imageUrl: "/images/arame.png",
+    imageUrl: "/images/arame.webp",
     optionLink: "/produtos/arames/",
   },
   {
@@ -47,7 +47,7 @@ export const products = [
       "As colunas de aço são uma solução robusta e versátil para estruturas verticais de alta qualidade. Fabricadas com materiais de alta resistência, elas oferecem durabilidade e resistência excepcionais. Com sua capacidade de suportar cargas pesadas e resistir a forças externas, as colunas de aço são amplamente utilizadas em projetos comerciais, industriais e residenciais, proporcionando uma base sólida e flexível para construções de vários andares.",
     recomendations:
       "As colunas de aço encontram aplicações diversas em projetos arquitetônicos e de engenharia. Elas são frequentemente utilizadas em edifícios comerciais, industriais e residenciais, proporcionando espaços amplos e flexíveis. Além disso, as colunas de aço são empregadas em projetos especiais, como pontes e viadutos, onde a resistência e a durabilidade são fundamentais. Sua versatilidade também permite a realização de reformas e remodelações, otimizando espaços existentes. Em resumo, as colunas de aço são a escolha ideal para quem busca estruturas confiáveis e duradouras em uma ampla variedade de projetos de construção.",
-    imageUrl: "/images/coluna.png",
+    imageUrl: "/images/coluna.webp",
     optionLink: "/produtos/colunas/",
   },
   {
@@ -59,7 +59,7 @@ export const products = [
       "As malhas de aço são soluções versáteis e duráveis para diversas aplicações, oferecendo resistência e segurança em diferentes projetos. Fabricadas com fios de aço de alta qualidade, as malhas são conhecidas por sua durabilidade excepcional e capacidade de suportar cargas pesadas. Com sua estrutura aberta e flexível, as malhas de aço são ideais para uso em construções comerciais, residenciais e industriais.",
     recomendations:
       "As malhas de aço encontram aplicações variadas em diferentes setores da construção. Elas são amplamente utilizadas em projetos de cercamento e contenção, proporcionando segurança e delimitando áreas. Além disso, as malhas de aço são frequentemente empregadas na construção de estruturas de concreto armado, oferecendo suporte e resistência ao material. Outras aplicações comuns incluem proteção contra pequenos animais e insetos, reforço de pisos e paredes, e criação de elementos decorativos em projetos arquitetônicos. Com sua versatilidade e durabilidade, as malhas de aço são uma escolha confiável para uma ampla gama de necessidades de construção. Invista em malhas de aço de alta qualidade e garanta resultados duradouros e seguros em seus projetos de construção.",
-    imageUrl: "/images/malha.png",
+    imageUrl: "/images/malha.webp",
     optionLink: "/produtos/malhas/",
     measurements: {
       tableHeaders: ["designação", "malha cm", "bitola mm", "peso peça"],
@@ -104,7 +104,7 @@ export const products = [
       "Os radiers de aço são soluções eficientes e confiáveis para a construção de fundações robustas. Feitos com aço de alta resistência, os radiers oferecem estabilidade e durabilidade excepcionais. Com sua capacidade de distribuir cargas uniformemente, os radiers de aço são ideais para construções comerciais, industriais e residenciais que exigem uma base sólida e segura.",
     recomendations:
       "Os radiers de aço têm uma variedade de aplicações em diferentes tipos de construção. Eles são amplamente utilizados em projetos de edifícios comerciais e industriais, fornecendo uma base estável para suportar a carga da estrutura. Além disso, os radiers de aço são frequentemente empregados em projetos residenciais, especialmente em áreas com solos problemáticos ou instáveis, garantindo uma base segura para a construção de casas e edifícios. Sua capacidade de distribuir as cargas uniformemente também os torna ideais para estruturas de grande porte, como pontes e viadutos. Com sua resistência e eficiência, os radiers de aço proporcionam uma base sólida para qualquer tipo de construção. Invista em radiers de aço de alta qualidade e garanta a estabilidade e a durabilidade de suas construções.",
-    imageUrl: "/images/radier.png",
+    imageUrl: "/images/radier.webp",
     optionLink: "/produtos/radiers/",
   },
   {
@@ -116,7 +116,7 @@ export const products = [
       "As treliças de aço são estruturas versáteis e eficientes que oferecem suporte e estabilidade em uma variedade de projetos de construção. Fabricadas com barras de aço resistentes, as treliças são conhecidas por sua durabilidade excepcional e capacidade de suportar cargas pesadas. Com sua estrutura de malha aberta e leve, as treliças de aço são ideais para uso em construções comerciais, industriais e residenciais.",
     recomendations:
       "As treliças de aço encontram aplicações diversas em diferentes tipos de projetos de construção. Elas são frequentemente utilizadas em coberturas de grandes espaços, como galpões industriais, estádios e ginásios esportivos, proporcionando suporte estrutural e permitindo vãos amplos e livres de pilares. Além disso, as treliças de aço são empregadas em pontes, viadutos e passarelas, oferecendo resistência e estabilidade para atravessar grandes vãos. Outras aplicações incluem a criação de mezaninos e plataformas, reforço de estruturas existentes e até mesmo elementos decorativos em projetos arquitetônicos. Com sua versatilidade e resistência, as treliças de aço são uma escolha confiável para uma ampla gama de necessidades de construção. Invista em treliças de aço de alta qualidade e garanta estruturas seguras e duradouras em seus projetos de construção.",
-    imageUrl: "/images/trelica.png",
+    imageUrl: "/images/trelica.webp",
     optionLink: "/produtos/treliças/",
   },
   {
@@ -128,7 +128,7 @@ export const products = [
       "Os vergalhões de aço são elementos fundamentais na construção civil, oferecendo resistência e estabilidade para estruturas de concreto armado. Fabricados com aço de alta qualidade, os vergalhões são conhecidos por sua durabilidade excepcional e capacidade de suportar cargas pesadas. Com sua resistência à tração e compressão, os vergalhões de aço são amplamente utilizados na construção de pilares, vigas, lajes e outros elementos estruturais.",
     recomendations:
       "Os vergalhões de aço são aplicados em uma variedade de projetos de construção. Eles são utilizados na fundação e estrutura de edifícios comerciais, residenciais e industriais, proporcionando uma base sólida e resistente. Além disso, os vergalhões de aço são essenciais na construção de pontes, viadutos e outras estruturas de grande porte que exigem alta resistência. Eles também são empregados em lajes de concreto armado, oferecendo suporte e reforço para torná-las mais duráveis e seguras. Com sua versatilidade e resistência, os vergalhões de aço são cruciais para a construção de estruturas robustas e confiáveis. Invista em vergalhões de aço de alta qualidade e garanta a solidez e a durabilidade de suas construções.",
-    imageUrl: "/images/vergalhao.png",
+    imageUrl: "/images/vergalhao.webp",
     optionLink: "/produtos/vergalhões/",
     measurements: {
       tableHeaders: ["bitola pol", "bitola mm", "peso barra", "peso kg/m"],
@@ -202,7 +202,7 @@ export const products = [
       "As vigas de aço são elementos estruturais essenciais na construção civil, fornecendo suporte e resistência para as estruturas de um edifício. Fabricadas com aço de alta qualidade, as vigas são conhecidas por sua durabilidade excepcional e capacidade de suportar cargas pesadas. Com sua resistência à flexão e compressão, as vigas de aço desempenham um papel crucial na construção de pisos, tetos, telhados e outros elementos estruturais.",
     recomendations:
       "As vigas de aço encontram aplicações diversas em diferentes tipos de projetos de construção. Elas são amplamente utilizadas em edifícios comerciais, residenciais e industriais, proporcionando suporte e resistência para pisos, coberturas e estruturas de suporte. Além disso, as vigas de aço são fundamentais em projetos de pontes, viadutos e passarelas, onde a resistência e a estabilidade são primordiais. Sua versatilidade também permite o uso em projetos arquitetônicos, como a criação de vãos amplos e livres de pilares. Com sua capacidade de suportar cargas pesadas e resistir a forças externas, as vigas de aço garantem a segurança e a solidez das estruturas. Invista em vigas de aço de alta qualidade e tenha a confiança de uma construção robusta e duradoura.",
-    imageUrl: "/images/viga.png",
+    imageUrl: "/images/viga.webp",
     optionLink: "/produtos/vigas/",
   },
   {
@@ -214,7 +214,7 @@ export const products = [
       "Os tubos galvanizados têm uma variedade de aplicações em diferentes setores. Eles são comumente utilizados em sistemas de encanamento, tanto em projetos residenciais como comerciais, devido à sua resistência à corrosão e longevidade. Além disso, os tubos galvanizados são frequentemente empregados em estruturas de suporte, como corrimãos, cercas e guarda-corpos, oferecendo resistência e estabilidade. Sua resistência à corrosão também os torna ideais para uso em projetos ao ar livre, como sistemas de irrigação agrícola e postes de iluminação. Com sua versatilidade e durabilidade, os tubos galvanizados são uma escolha confiável para diversas necessidades de tubulação e estruturas metálicas. Invista em tubos galvanizados de alta qualidade e tenha a garantia de um desempenho confiável e duradouro em suas aplicações.",
     recomendations:
       "Os tubos galvanizados têm uma variedade de aplicações em diferentes setores. Eles são comumente utilizados em sistemas de encanamento, tanto em projetos residenciais como comerciais, devido à sua resistência à corrosão e longevidade. Além disso, os tubos galvanizados são frequentemente empregados em estruturas de suporte, como corrimãos, cercas e guarda-corpos, oferecendo resistência e estabilidade. Sua resistência à corrosão também os torna ideais para uso em projetos ao ar livre, como sistemas de irrigação agrícola e postes de iluminação. Com sua versatilidade e durabilidade, os tubos galvanizados são uma escolha confiável para diversas necessidades de tubulação e estruturas metálicas. Invista em tubos galvanizados de alta qualidade e tenha a garantia de um desempenho confiável e duradouro em suas aplicações.",
-    imageUrl: "/images/tubo-galvanizado.jpg",
+    imageUrl: "/images/tubo-galvanizado.webp",
     optionLink: "/produtos/tubos-galvanizados/",
   },
   {
@@ -226,7 +226,7 @@ export const products = [
       "Pregos são elementos de fixação essenciais na construção e em projetos de montagem. Os pregos são peças de metal com uma ponta afiada em uma extremidade e uma cabeça na outra. São fabricados com materiais de alta qualidade, como aço, e são conhecidos por sua resistência e capacidade de fixação. Com sua funcionalidade simples e eficaz, pregos são amplamente utilizados em uma variedade de aplicações na construção, carpintaria e montagem de móveis.",
     recomendations:
       "Pregos encontram aplicações diversas em diferentes tipos de projetos. Os pregos são frequentemente utilizados na fixação de estruturas de madeira, como construção de casas, montagem de móveis e criação de cercas. Sua simplicidade e facilidade de uso os tornam uma escolha popular para projetos de carpintaria. Eles são amplamente empregados na montagem de móveis, na instalação de prateleiras, na fixação de placas e na construção de estruturas metálicas. Com uma variedade de tamanhos e tipos disponíveis, pregos oferecem soluções de fixação confiáveis e duradouras. Invista em pregos de alta qualidade e garanta a segurança e a estabilidade em suas construções e projetos de montagem.",
-    imageUrl: "/images/prego.png",
+    imageUrl: "/images/prego.webp",
     optionLink: "/produtos/pregos/",
   },
 ];
@@ -241,7 +241,7 @@ export const services = [
       "O serviço de corte e dobra de ferro e aço é essencial para adaptar os materiais metálicos às necessidades específicas de cada projeto. Com equipamentos modernos e técnicas especializadas, esse serviço oferece precisão e eficiência na manipulação de ferro e aço. Através do corte, é possível obter peças com dimensões personalizadas, enquanto a dobra permite moldar os materiais de acordo com as especificações desejadas. Com o serviço de corte e dobra, é possível criar peças sob medida, otimizar o tempo de instalação e garantir a qualidade e o acabamento perfeitos.",
     recomendations:
       "O serviço de corte e dobra de ferro e aço encontra amplas aplicações em diferentes setores da construção e indústria. Na construção civil, esse serviço é utilizado na fabricação de estruturas metálicas, como vigas, pilares, escadas, grades e portões, permitindo uma instalação precisa e eficiente. Além disso, é essencial em projetos de serralheria, onde é necessário moldar o ferro e o aço para criar peças personalizadas, como corrimãos, guarda-corpos e portas. Na indústria, o corte e a dobra de ferro e aço são aplicados na fabricação de componentes e peças para equipamentos e maquinários. Com esse serviço especializado, é possível adaptar os materiais metálicos de acordo com as necessidades de cada projeto, garantindo precisão, qualidade e durabilidade. Invista no serviço de corte e dobra de ferro e aço e desfrute dos benefícios de materiais personalizados e perfeitamente adaptados às suas necessidades de construção e produção industrial.",
-    imageUrl: "/images/corte-e-dobra.png",
+    imageUrl: "/images/corte-e-dobra.webp",
     optionLink: "/servicos/corte-e-dobra/",
   },
 ];

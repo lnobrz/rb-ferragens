@@ -16,7 +16,7 @@ const IndexSections = () => {
         sectionParagraph={paragraphs.indexProductSession}
         sectionArr={products}
         hasLinks={true}
-        illustrationUrl="/images/products-illustration.png"
+        illustrationUrl="/images/products-illustration.webp"
         illustrationDescription="ferragens"
       />
       <IndexSection
@@ -26,7 +26,7 @@ const IndexSections = () => {
         sectionArr={advantages}
         advertisementContent={advertisements.index}
         hasLinks={false}
-        illustrationUrl="/images/advantages-illustration.png"
+        illustrationUrl="/images/advantages-illustration.webp"
         illustrationDescription="tubos de ferro"
       />
       <BudgetSection />

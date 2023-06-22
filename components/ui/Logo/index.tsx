@@ -7,7 +7,7 @@ type LogoTypes = {
 const Logo = ({ className }: LogoTypes) => {
   return (
     <Image
-      src={`/images/logo.png`}
+      src={`/images/logo.webp`}
       width={100}
       height={100}
       sizes="100%"
