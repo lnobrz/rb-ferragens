@@ -36,11 +36,11 @@ export default class MyDocument extends Document {
             content="barra de ferro, ferro e aço, malha pop, loja de ferragens, rb ferragens, vergalhão, corte e dobra de chapas, arames, treliça, ferragens, barra de ferro, chapas de ferro, malha de ferro"
           ></meta>
           <meta name="author" content="Lucas Nobre" />
-          <Analytics />
         </Head>
         <body>
           <Main />
           <NextScript />
+          <Analytics />
         </body>
       </Html>
     );
