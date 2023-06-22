@@ -38,10 +38,9 @@ export default class MyDocument extends Document {
           <meta name="author" content="Lucas Nobre" />
         </Head>
         <body>
-          {/* <Main />
+          <Main />
           <NextScript />
-          <Analytics /> */}
-          <h1>Hello</h1>
+          <Analytics />
         </body>
       </Html>
     );
