@@ -29,7 +29,6 @@ export default class MyDocument extends Document {
     return (
       <Html lang="pt-br">
         <Head>
-          {/* Google tag (gtag.js) */}
           <Script
             async
             src="https://www.googletagmanager.com/gtag/js?id=G-QBQEF2MB65"
