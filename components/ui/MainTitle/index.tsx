@@ -40,7 +40,7 @@ const MainTitle = () => {
       viewport={{ once: true }}
     >
       <Title>
-        Bem-vindos a{" "}
+        Bem-vindos à{" "}
         <HighlightedText variants={highlightedTextVariants}>
           RB Ferragens
         </HighlightedText>
