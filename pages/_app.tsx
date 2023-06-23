@@ -5,6 +5,7 @@ import Header from "@/components/ui/Header";
 import Footer from "@/components/Footer";
 import Layout from "@/components/ui/Layout";
 import { useRouter } from "next/router";
+import { Analytics } from "@vercel/analytics/react";
 
 const App = ({ Component, pageProps }: AppProps) => {
   const currentPage = useRouter().pathname;
@@ -19,6 +20,7 @@ const App = ({ Component, pageProps }: AppProps) => {
       )}
       <AnimatePresence>
         <Component {...pageProps} />
+        <Analytics />
       </AnimatePresence>
       <Layout>
         <Footer />
