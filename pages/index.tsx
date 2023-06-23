@@ -4,16 +4,9 @@ import CompanyMetrics from "@/components/CompanyMetrics";
 import IndexSections from "@/components/IndexSections";
 import Layout from "@/components/ui/Layout";
 import useDeviceInfo from "@/utils/useDeviceInfo";
-import { useEffect } from "react";
-import { initGA, logPageView } from "../utils/analytics";
 
 const Home = () => {
   const device = useDeviceInfo();
-
-  useEffect(() => {
-    initGA();
-    logPageView();
-  }, []);
 
   return (
     <>
