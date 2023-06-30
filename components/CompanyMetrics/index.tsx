@@ -1,30 +1,10 @@
 import { MetricsContainer } from "./styles";
 import NumData from "../ui/NumData";
 import { metrics } from "@/storage/data";
+import { metricsVariants } from "./animationVariants";
+import { props } from "./types";
 
-type CompanyMetricsTypes = {
-  className?: string;
-};
-
-const metricsVariants = {
-  hidden: {
-    scale: 0,
-    y: -20,
-  },
-  show: {
-    scale: 1,
-    y: 0,
-    transition: {
-      type: "spring",
-      duration: 1,
-      bounce: 0,
-      mass: 0.4,
-      stiffness: 70,
-      staggerChildren: 0.1,
-    },
-  },
-};
-const CompanyMetrics = ({ className = "" }: CompanyMetricsTypes) => {
+const CompanyMetrics = ({ className = "" }: props) => {
   return (
     <MetricsContainer
       variants={metricsVariants}
