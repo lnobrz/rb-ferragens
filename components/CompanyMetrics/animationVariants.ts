@@ -1,4 +1,4 @@
-export const metricsVariants = {
+export const animationVariants = {
   hidden: {
     scale: 0,
     y: -20,

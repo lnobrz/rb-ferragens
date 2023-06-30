@@ -1,13 +1,13 @@
 import { MetricsContainer } from "./styles";
 import NumData from "../ui/NumData";
 import { metrics } from "@/storage/data";
-import { metricsVariants } from "./animationVariants";
+import { animationVariants } from "./animationVariants";
 import { props } from "./types";
 
 const CompanyMetrics = ({ className = "" }: props) => {
   return (
     <MetricsContainer
-      variants={metricsVariants}
+      variants={animationVariants}
       initial="hidden"
       whileInView="show"
       viewport={{ once: true }}
