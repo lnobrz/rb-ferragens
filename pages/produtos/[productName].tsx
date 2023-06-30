@@ -1,10 +1,10 @@
 import { useRouter } from "next/router";
 import Head from "next/head";
-import getPageTitle from "@/utils/getPageTitle";
+import getPageTitle from "@/helpers/getPageTitle";
 import MobileItemDetails from "@/components/MobileItemDetails";
 import { products } from "@/storage/data";
 import DesktopItemDetails from "@/components/DesktopItemDetails";
-import useDeviceInfo from "@/utils/useDeviceInfo";
+import useDeviceInfo from "@/hooks/useDeviceInfo";
 import Layout from "@/components/ui/Layout";
 const Product = () => {
   const router = useRouter();
