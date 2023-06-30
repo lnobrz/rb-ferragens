@@ -336,6 +336,24 @@ export const buttonsLinks = {
   products: "/produtos",
 };
 
+export const contactButtons = [
+  {
+    id: 1,
+    name: "Whatsapp",
+    link: buttonsLinks.budget,
+  },
+  {
+    id: 2,
+    name: "Email",
+    link: buttonsLinks.email,
+  },
+  {
+    id: 1,
+    name: "Telefone",
+    link: buttonsLinks.phone,
+  },
+];
+
 export const aboutStrings = [
   "A RB Ferragens é uma micro empresa de ferragens com quase 5 anos de experiência no ramo metalúrgico. Fundada em 2019, nosso objetivo é oferecer ferragens de alta qualidade a preços acessíveis, juntamente com uma entrega rápida, para atender às necessidades dos nossos clientes em Fortaleza e região metropolitana. Desde o início, já conquistamos a confiança de mais de 4000 clientes e processamos mais de 20000 pedidos, o que demonstra nosso compromisso em fornecer produtos excelentes e um serviço excepcional.",
   "Nosso diferencial está em oferecer uma ampla variedade de ferragens criteriosamente selecionadas, que atendem aos mais altos padrões de resistência, durabilidade e desempenho.Além disso, priorizamos a agilidade na entrega, para que nossos clientes possam contar com os materiais necessários no momento certo, mantendo seus projetos dentro do prazo.",
