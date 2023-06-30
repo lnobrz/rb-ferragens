@@ -2,7 +2,7 @@ import { MenuContainer, MenuItemsContainer } from "./styles";
 import MenuItem from "../MenuItem";
 import { MenuLinks } from "@/storage/data";
 import Link from "next/link";
-import useDeviceInfo from "@/utils/useDeviceInfo";
+import useDeviceInfo from "@/hooks/useDeviceInfo";
 import FilledButton from "../FilledButton";
 import { useCallback, useEffect, useRef } from "react";
 import { buttonsLinks } from "@/storage/data";
