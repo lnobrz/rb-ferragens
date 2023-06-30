@@ -7,7 +7,7 @@ import SecondaryTitle from "../ui/SecondaryTitle";
 import FormSection from "../ui/FormSection";
 import Paragraph from "../ui/Paragraph";
 import FilledButton from "../ui/FilledButton";
-import sendMessage from "@/utils/sendMessage";
+import sendMessage from "@/helpers/sendMessage";
 import { useState } from "react";
 import { buttonsLinks } from "@/storage/data";
 
