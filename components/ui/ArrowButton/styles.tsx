@@ -14,12 +14,6 @@ export const ButtonContainer = styled(motion.a)`
   max-width: fit-content;
   text-decoration: none;
 
-  .buttonArrow {
-    max-width: 25px;
-    max-height: 18px;
-    position: static !important;
-  }
-
   .smallText {
     font-size: 16px;
     margin: 0;
@@ -39,7 +33,7 @@ export const ButtonContainer = styled(motion.a)`
   }
 `;
 
-export const ButtonTitle = styled.p`
+export const ButtonTitle = styled.p<{ arrowDirection: "left" | "right" }>`
   font-family: ${kanit.style.fontFamily}, Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -48,4 +42,28 @@ export const ButtonTitle = styled.p`
   color: #efdf64;
   width: auto !important;
   margin: 0;
+  position: relative;
+
+  &::before {
+    width: 25px;
+    height: 18px;
+    position: absolute;
+    top: 25%;
+    left: -50px;
+    content: "";
+    background-image: ${(props) =>
+      props.arrowDirection === "left" && "url('images/left-arrow.svg')"};
+    background-size: 25px 18px;
+  }
+
+  &::after {
+    width: 25px;
+    height: 18px;
+    position: absolute;
+    top: 25%;
+    right: -50px;
+    content: "";
+    background-image: ${(props) =>
+      props.arrowDirection === "right" && "url('images/right-arrow.svg')"};
+  }
 `;
