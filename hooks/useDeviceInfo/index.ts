@@ -1,9 +1,8 @@
 import { useEffect, useState } from "react";
+import { devices } from "./types";
 
 const useDeviceInfo = () => {
-  const [currentDevice, setCurrentDevice] = useState<
-    "desktop" | "mobile" | undefined
-  >(undefined);
+  const [currentDevice, setCurrentDevice] = useState<devices>(undefined);
 
   useEffect(() => {
     window.innerWidth > 1000
