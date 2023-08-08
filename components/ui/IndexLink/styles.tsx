@@ -7,6 +7,7 @@ export const LinkContainer = styled(motion.a)`
   justify-items: center;
   align-items: center;
   text-decoration: none;
+  margin-bottom: 20px;
 `;
 
 export const LinkTitle = styled(motion.h2)`
