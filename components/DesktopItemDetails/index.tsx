@@ -13,47 +13,7 @@ import FilledButton from "../ui/FilledButton";
 import ProductTable from "../ui/ProductTable";
 import TextButton from "../ui/TextButton";
 import { buttonsLinks } from "@/storage/data";
-
-type ProductDetailsSection = {
-  sectionName: "products" | "services";
-  itemName: string;
-  itemImage: string;
-  itemDescription: string;
-  haveCorteEDobra?: boolean;
-  measurements?: {
-    tableHeaders: string[];
-    tableData:
-      | {
-          id: number;
-          designation: string;
-          malhaCentimeters: string;
-          bitolaMilimeters: string;
-          pieceWeight: string;
-        }[]
-      | {
-          id: number;
-          bitolaInches: string;
-          bitolaMilimeters: string;
-          barWeight: string;
-          weightPerMeter: string;
-        }[]
-      | {
-          id: number;
-          bitolaMilimeters: string;
-          barWeight: string;
-          weightPerMeter: string;
-        }[];
-  };
-  measurements2?: {
-    tableHeaders: string[];
-    tableData: {
-      id: number;
-      bitolaMilimeters: string;
-      barWeight: string;
-      weightPerMeter: string;
-    }[];
-  };
-};
+import { props } from "./types";
 
 const DesktopItemDetails = ({
   sectionName,
@@ -63,7 +23,7 @@ const DesktopItemDetails = ({
   haveCorteEDobra,
   measurements,
   measurements2,
-}: ProductDetailsSection) => {
+}: props) => {
   return (
     <SectionContainer>
       <MainProductDetails>

@@ -3,13 +3,13 @@ import Paragraph from "../ui/Paragraph";
 import TertiaryTitle from "../ui/TertiaryTitle";
 import CompanyMetrics from "../CompanyMetrics";
 import FilledButton from "../ui/FilledButton";
-import { buttonsLinks, valuesStrings, visionString } from "@/storage/data";
+import { buttonsLinks } from "@/storage/data";
 import {
   AboutSectionContainer,
   ContentContainer,
   MetricsContainer,
 } from "./styles";
-import { aboutStrings, missionString } from "@/storage/data";
+import { topics, aboutStrings } from "@/storage/data";
 
 const AboutSection = () => {
   return (
@@ -31,18 +31,14 @@ const AboutSection = () => {
           );
         })}
       </ContentContainer>
-      <ContentContainer>
-        <TertiaryTitle decorationAlign="left" content="Missão" />
-        <Paragraph content={missionString} textrole="secondary" />
-      </ContentContainer>
-      <ContentContainer>
-        <TertiaryTitle decorationAlign="left" content="Visão" />
-        <Paragraph content={visionString} textrole="secondary" />
-      </ContentContainer>
-      <ContentContainer>
-        <TertiaryTitle decorationAlign="left" content="Valores" />
-        <Paragraph content={valuesStrings} textrole="secondary" />
-      </ContentContainer>
+      {topics.map((topic) => {
+        return (
+          <ContentContainer key={topic.id}>
+            <TertiaryTitle decorationAlign="left" content={topic.name} />
+            <Paragraph content={topic.content} textrole="secondary" />
+          </ContentContainer>
+        );
+      })}
       <ContentContainer>
         <TertiaryTitle decorationAlign="left" content="RB Em Números" />
         <MetricsContainer>

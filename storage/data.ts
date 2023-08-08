@@ -336,6 +336,24 @@ export const buttonsLinks = {
   products: "/produtos",
 };
 
+export const contactButtons = [
+  {
+    id: 1,
+    name: "Whatsapp",
+    link: buttonsLinks.budget,
+  },
+  {
+    id: 2,
+    name: "Email",
+    link: buttonsLinks.email,
+  },
+  {
+    id: 1,
+    name: "Telefone",
+    link: buttonsLinks.phone,
+  },
+];
+
 export const aboutStrings = [
   "A RB Ferragens é uma micro empresa de ferragens com quase 5 anos de experiência no ramo metalúrgico. Fundada em 2019, nosso objetivo é oferecer ferragens de alta qualidade a preços acessíveis, juntamente com uma entrega rápida, para atender às necessidades dos nossos clientes em Fortaleza e região metropolitana. Desde o início, já conquistamos a confiança de mais de 4000 clientes e processamos mais de 20000 pedidos, o que demonstra nosso compromisso em fornecer produtos excelentes e um serviço excepcional.",
   "Nosso diferencial está em oferecer uma ampla variedade de ferragens criteriosamente selecionadas, que atendem aos mais altos padrões de resistência, durabilidade e desempenho.Além disso, priorizamos a agilidade na entrega, para que nossos clientes possam contar com os materiais necessários no momento certo, mantendo seus projetos dentro do prazo.",
@@ -343,11 +361,23 @@ export const aboutStrings = [
   "Se você está em busca de ferragens de qualidade, com preços acessíveis e uma entrega rápida e confiável, conte com a RB Ferragens. Estamos prontos para ser seu parceiro confiável, fornecendo as soluções de ferragens que você precisa para o sucesso dos seus projetos.",
 ];
 
-export const missionString =
-  "Nossa missão é levar ferragens de qualidade com preços acessíveis e entrega rápida para Fortaleza e Região Metropolitana. Nosso compromisso é fornecer soluções confiáveis e eficientes, garantindo a satisfação dos nossos clientes. Buscamos ser a referência no mercado, oferecendo produtos de qualidade, atendimento excepcional e construindo relações duradouras. Estamos determinados a superar as expectativas, contribuindo para o sucesso e a excelência das construções em nossa região. Conte conosco para fornecer as ferragens que você precisa, com preços acessíveis, entrega rápida e um serviço excepcional.";
-
-export const visionString =
-  "Nossa visão é sermos reconhecidos como líderes no fornecimento de ferragens em Fortaleza e região metropolitana, sendo a primeira escolha dos clientes. Buscamos alcançar esse reconhecimento através de um serviço diferenciado, oferecendo produtos de qualidade e um atendimento excepcional. Nosso objetivo é construir relações duradouras com os clientes, baseadas na confiança, transparência e compromisso mútuo. Trabalhamos constantemente para melhorar nossos produtos e serviços, ouvindo atentamente as necessidades dos clientes e superando suas expectativas. Estamos determinados a ser seu parceiro confiável em todas as etapas do projeto, contribuindo para o sucesso e a excelência das construções em nossa região.";
-
-export const valuesStrings =
-  "Os valores que norteiam a nossa empresa são:\n\n1. Qualidade: Comprometemo-nos em oferecer produtos e serviços de alta qualidade, buscando a excelência em tudo o que fazemos.\n\n2. Atendimento ao cliente: Valorizamos a satisfação do cliente acima de tudo. Nosso objetivo é entender e atender às necessidades de cada cliente, oferecendo um atendimento personalizado, ágil e eficiente.\n\n3. Integridade: Agimos com ética, honestidade e transparência em todas as nossas relações comerciais.\n\n4. Inovação: Buscamos constantemente aprimorar nossos processos, produtos e serviços através da inovação.\n\n5. Responsabilidade social e ambiental: Comprometemo-nos em conduzir nossos negócios de forma responsável e sustentável.";
+export const topics = [
+  {
+    id: 1,
+    name: "Missão",
+    content:
+      "Nossa missão é levar ferragens de qualidade com preços acessíveis e entrega rápida para Fortaleza e Região Metropolitana. Nosso compromisso é fornecer soluções confiáveis e eficientes, garantindo a satisfação dos nossos clientes. Buscamos ser a referência no mercado, oferecendo produtos de qualidade, atendimento excepcional e construindo relações duradouras. Estamos determinados a superar as expectativas, contribuindo para o sucesso e a excelência das construções em nossa região. Conte conosco para fornecer as ferragens que você precisa, com preços acessíveis, entrega rápida e um serviço excepcional.",
+  },
+  {
+    id: 2,
+    name: "Visão",
+    content:
+      "Nossa visão é sermos reconhecidos como líderes no fornecimento de ferragens em Fortaleza e região metropolitana, sendo a primeira escolha dos clientes. Buscamos alcançar esse reconhecimento através de um serviço diferenciado, oferecendo produtos de qualidade e um atendimento excepcional. Nosso objetivo é construir relações duradouras com os clientes, baseadas na confiança, transparência e compromisso mútuo. Trabalhamos constantemente para melhorar nossos produtos e serviços, ouvindo atentamente as necessidades dos clientes e superando suas expectativas. Estamos determinados a ser seu parceiro confiável em todas as etapas do projeto, contribuindo para o sucesso e a excelência das construções em nossa região.",
+  },
+  {
+    id: 3,
+    name: "Valores",
+    content:
+      "Os valores que norteiam a nossa empresa são:\n\n1. Qualidade: Comprometemo-nos em oferecer produtos e serviços de alta qualidade, buscando a excelência em tudo o que fazemos.\n\n2. Atendimento ao cliente: Valorizamos a satisfação do cliente acima de tudo. Nosso objetivo é entender e atender às necessidades de cada cliente, oferecendo um atendimento personalizado, ágil e eficiente.\n\n3. Integridade: Agimos com ética, honestidade e transparência em todas as nossas relações comerciais.\n\n4. Inovação: Buscamos constantemente aprimorar nossos processos, produtos e serviços através da inovação.\n\n5. Responsabilidade social e ambiental: Comprometemo-nos em conduzir nossos negócios de forma responsável e sustentável.",
+  },
+];

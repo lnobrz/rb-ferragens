@@ -7,35 +7,16 @@ import MainTitle from "../ui/MainTitle";
 import { buttonsTexts } from "@/storage/data";
 import { buttonsLinks } from "@/storage/data";
 import Layout from "../ui/Layout";
+import { animationVariants } from "./animationVariants";
+import { props } from "./types";
 
-type CoverProps = {
-  className?: string;
-  device?: "desktop" | "mobile";
-};
-
-const paragraphContainerVariants = {
-  hidden: {
-    opacity: 0,
-  },
-  show: {
-    opacity: 1,
-    transition: {
-      type: "spring",
-      duration: 1,
-      bounce: 0,
-      stiffness: 50,
-      delayChildren: 0.3,
-    },
-  },
-};
-
-const Cover = ({ className = "", device = "mobile" }: CoverProps) => {
+const Cover = ({ className = "", device = "mobile" }: props) => {
   return (
     <CoverContainer device={device} className={className}>
       <Layout>
         <Header />
         <MainTitle />
-        <ParagraphContainer variants={paragraphContainerVariants}>
+        <ParagraphContainer variants={animationVariants}>
           <Paragraph textrole="main" content={paragraphs.indexCover} />
           <ArrowButton
             content={buttonsTexts.cover}

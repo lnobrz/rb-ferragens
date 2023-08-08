@@ -9,7 +9,7 @@ import Paragraph from "../ui/Paragraph";
 import FilledButton from "../ui/FilledButton";
 import sendMessage from "@/helpers/sendMessage";
 import { useState } from "react";
-import { buttonsLinks } from "@/storage/data";
+import { contactButtons } from "@/storage/data";
 
 const ContactSection = () => {
   const [clientName, setClientName] = useState("");
@@ -33,27 +33,18 @@ const ContactSection = () => {
             textrole="secondary"
             className="contactSectionParagraph"
           />
-          <FilledButton
-            content="Whatsapp"
-            background="transparent"
-            size="large"
-            url={buttonsLinks.budget}
-            className="contactButton"
-          />
-          <FilledButton
-            content="Email"
-            background="transparent"
-            size="large"
-            url={buttonsLinks.email}
-            className="contactButton"
-          />
-          <FilledButton
-            content="Telefone"
-            background="transparent"
-            size="large"
-            url={buttonsLinks.phone}
-            className="contactButton"
-          />
+          {contactButtons.map((contactButton) => {
+            return (
+              <FilledButton
+                key={contactButton.id}
+                content={contactButton.name}
+                background="transparent"
+                size="large"
+                url={contactButton.link}
+                className="contactButton"
+              />
+            );
+          })}
         </ButtonsContainer>
       </MainContent>
     </ContactSectionContainer>
