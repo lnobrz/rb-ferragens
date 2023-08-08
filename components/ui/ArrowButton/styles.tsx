@@ -54,6 +54,9 @@ export const ButtonTitle = styled.p<{ arrowDirection: "left" | "right" }>`
     background-image: ${(props) =>
       props.arrowDirection === "left" && "url('images/left-arrow.svg')"};
     background-size: 25px 18px;
+    @media (max-width: 392px) {
+      display: none;
+    }
   }
 
   &::after {
@@ -65,5 +68,8 @@ export const ButtonTitle = styled.p<{ arrowDirection: "left" | "right" }>`
     content: "";
     background-image: ${(props) =>
       props.arrowDirection === "right" && "url('images/right-arrow.svg')"};
+    @media (max-width: 392px) {
+      display: none;
+    }
   }
 `;
