@@ -11,6 +11,10 @@ export const NumDataContainer = styled(motion.li)`
   &:last-child {
     margin-right: 0;
   }
+
+  @media (max-width: 450px) {
+    margin: 0;
+  }
 `;
 
 export const NumContainer = styled.div`

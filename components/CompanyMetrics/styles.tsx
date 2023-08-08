@@ -7,4 +7,10 @@ export const MetricsContainer = styled(motion.ul)`
   align-items: center;
   justify-content: center;
   margin: 0 20px;
+
+  @media (max-width: 450px) {
+    flex-flow: column nowrap;
+    justify-content: center;
+    margin: 0;
+  }
 `;

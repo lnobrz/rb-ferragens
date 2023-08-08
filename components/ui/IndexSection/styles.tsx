@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 export const IndexSectionContainer = styled(motion.section)`
   display: flex;
   flex-flow: column wrap;
-  margin: 0 20px;
   margin-top: 68px;
 
   @media (min-width: 600px) {
@@ -12,7 +11,7 @@ export const IndexSectionContainer = styled(motion.section)`
   }
 
   @media (min-width: 800px) {
-    margin: 40px0;
+    margin: 40px 0;
   }
 
   @media (min-width: 900px) {
