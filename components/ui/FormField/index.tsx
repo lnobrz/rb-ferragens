@@ -4,15 +4,9 @@ import {
   TextareaContainer,
   InputLabel,
 } from "./styles";
-import { Dispatch, SetStateAction, useRef } from "react";
+import { Props } from "./types";
 
-type FormFieldTypes = {
-  inputName: string;
-  inputType: "email" | "text" | "tel" | "textarea";
-  textSetter: Dispatch<SetStateAction<string>>;
-};
-
-const FormField = ({ inputName, inputType, textSetter }: FormFieldTypes) => {
+const FormField = ({ inputName, inputType, textSetter }: Props) => {
   return (
     <FieldContainer>
       <InputLabel htmlFor={inputName}>{inputName}</InputLabel>
