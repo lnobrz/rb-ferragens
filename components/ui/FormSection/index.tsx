@@ -1,30 +1,7 @@
 import FormField from "../FormField";
+import { animationVariants } from "./animationVariants";
 import { FormContainer, SubmitButton } from "./styles";
-import { Dispatch, SetStateAction } from "react";
-
-const inputTypes = ["email", "text", "tel", "textarea"] as const;
-
-type FormSectionTypes = {
-  fieldName: string[];
-  fieldType: (typeof inputTypes)[number][];
-  submitButtonText: string;
-  fieldValue: string[];
-  fieldSetter: Dispatch<SetStateAction<string>>[];
-  submitAction: (clientName: string, text: string) => void;
-};
-
-const SubmitButtonVariants = {
-  hidden: {
-    opacity: 0,
-    y: 20,
-    transition: { duration: 0.7 },
-  },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { type: "spring", stiffness: 300, damping: 24 },
-  },
-};
+import { Props } from "./types";
 
 const FormSection = ({
   fieldName,
@@ -33,7 +10,7 @@ const FormSection = ({
   fieldValue,
   fieldSetter,
   submitAction,
-}: FormSectionTypes) => {
+}: Props) => {
   return (
     <FormContainer
       onSubmit={() => {
@@ -51,7 +28,7 @@ const FormSection = ({
       <SubmitButton
         type="submit"
         value={submitButtonText}
-        variants={SubmitButtonVariants}
+        variants={animationVariants}
         initial="hidden"
         whileInView="visible"
         whileTap={{ scale: 1.04 }}
