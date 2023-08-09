@@ -1,17 +1,8 @@
 import { ImageContainer } from "./styles";
 import Image from "next/image";
+import { Props } from "./types";
 
-type DecoratedImageTypes = {
-  imageUrl: string;
-  imageDescription: string;
-  className?: string;
-};
-
-const DecoratedImage = ({
-  imageUrl,
-  imageDescription,
-  className,
-}: DecoratedImageTypes) => {
+const DecoratedImage = ({ imageUrl, imageDescription, className }: Props) => {
   return (
     <ImageContainer className={className && className}>
       <Image
