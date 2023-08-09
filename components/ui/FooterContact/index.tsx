@@ -1,12 +1,8 @@
 import { ContactContainer } from "./styles";
 import Paragraph from "../Paragraph";
+import { Props } from "./types";
 
-type FooterContactTypes = {
-  contactType: string;
-  contact: string;
-};
-
-const FooterContact = ({ contactType, contact }: FooterContactTypes) => {
+const FooterContact = ({ contactType, contact }: Props) => {
   return (
     <ContactContainer>
       <Paragraph

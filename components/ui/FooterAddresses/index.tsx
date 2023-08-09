@@ -5,24 +5,17 @@ import { address } from "@/storage/data";
 const FooterAddresses = () => {
   return (
     <AddressesContainer>
-      <Paragraph
-        textrole="secondary"
-        disableAnimations={true}
-        content={address.street}
-        className="footerAddress"
-      />
-      <Paragraph
-        textrole="secondary"
-        disableAnimations={true}
-        content={address.neighborhoodCityState}
-        className="footerAddress"
-      />
-      <Paragraph
-        textrole="secondary"
-        disableAnimations={true}
-        content={address.zipCode}
-        className="footerAddress"
-      />
+      {Object.values(address).map((value, index) => {
+        return (
+          <Paragraph
+            key={index}
+            textrole="secondary"
+            disableAnimations={true}
+            content={value}
+            className="footerAddress"
+          />
+        );
+      })}
     </AddressesContainer>
   );
 };
