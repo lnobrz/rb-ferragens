@@ -1,26 +1,6 @@
+import { animationVariants } from "./animationVariants";
 import { ButtonContainer } from "./styles";
-
-type FilledButtonTypes = {
-  disableAnimations?: boolean;
-  content: string;
-  background: "yellow" | "transparent";
-  size: "small" | "large";
-  className?: string;
-  url: string;
-};
-
-const FilledButtonVariants = {
-  hidden: {
-    opacity: 0,
-    y: 20,
-    transition: { duration: 0.7 },
-  },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { type: "spring", stiffness: 300, damping: 24 },
-  },
-};
+import { Props } from "./types";
 
 const FilledButton = ({
   disableAnimations = false,
@@ -29,10 +9,10 @@ const FilledButton = ({
   size,
   className,
   url,
-}: FilledButtonTypes) => {
+}: Props) => {
   return (
     <ButtonContainer
-      variants={disableAnimations === true ? undefined : FilledButtonVariants}
+      variants={disableAnimations === true ? undefined : animationVariants}
       initial="hidden"
       whileInView="visible"
       whileTap={{ scale: 1.04 }}
@@ -44,7 +24,7 @@ const FilledButton = ({
       size={size}
       className={className}
       href={url}
-      viewport={{once: true}}
+      viewport={{ once: true }}
     >
       {content}
     </ButtonContainer>
