@@ -1,7 +1,11 @@
-/* RB Ferragens: mesma marca (amarelo do logo, grafite quase preto, Tomorrow + Kanit),
-   agora com base clara: papel off-white quente, cinza claro e seções escuras pontuais. */
+/* ==========================================================================
+   RB Ferragens: design system (tokens)
+   Every color, size, space, radius, shadow and timing used in the CSS comes
+   from here. Components never use loose rem/hex values; if a value is
+   missing, add a token here first. Full guide in README > Design system.
+   ========================================================================== */
 :root {
-  /* Marca */
+  /* ---------- Color: brand ---------- */
   --c-yellow: #efdf64;
   --c-yellow-strong: #e6d240;
   --c-yellow-soft: #f8f0b8;
@@ -9,7 +13,7 @@
   --c-ink-2: #1b1b18;
   --c-ink-deep: #0a0800;
 
-  /* Base clara */
+  /* ---------- Color: light base ---------- */
   --c-paper: #f4f2ec;
   --c-paper-2: #ebe8df;
   --c-white: #ffffff;
@@ -17,37 +21,82 @@
   --c-text: #3d3b34;
   --c-muted: #6f6b5f;
 
-  /* Sobre fundo escuro */
+  /* ---------- Color: on dark ---------- */
   --c-cream: #f9f3d7;
   --c-cream-text: #e5dfc3;
   --c-cream-muted: #b5ae8e;
   --c-line-dark: #34322a;
 
+  /* ---------- Color: status ---------- */
   --c-wa: #25d366;
+  --c-ok: #5fd38a;
 
+  /* RGB channels, for transparency: rgb(var(--rgb-ink-deep) / 0.8).
+     Photo scrims always use --rgb-ink-deep; light hairlines on dark use --rgb-cream. */
+  --rgb-ink-deep: 10 8 0;
+  --rgb-ink: 20 19 15;
+  --rgb-cream: 249 243 215;
+  --rgb-yellow: 239 223 100;
+  --rgb-white: 255 255 255;
+  --rgb-ok: 95 211 138;
+
+  /* ---------- Type ---------- */
   --f-title: var(--font-tomorrow), "Arial Narrow", Arial, sans-serif;
   --f-body: var(--font-kanit), Arial, Helvetica, sans-serif;
 
-  --fs-xs: 0.8125rem;
-  --fs-sm: 0.9375rem;
-  --fs-md: 1.0625rem;
-  --fs-lg: 1.25rem;
-  --fs-xl: clamp(1.4rem, 1.15rem + 1vw, 1.75rem);
-  --fs-2xl: clamp(2rem, 1.3rem + 2.8vw, 3.4rem);
-  --fs-3xl: clamp(2.5rem, 1.4rem + 4.6vw, 5.4rem);
-  --fs-giant: clamp(4rem, 1rem + 15vw, 17rem);
+  --fs-xs: 0.8125rem; /* labels, eyebrows, meta */
+  --fs-sm: 0.9375rem; /* secondary text, buttons */
+  --fs-md: 1.0625rem; /* body */
+  --fs-lg: 1.25rem; /* lead, hero sub */
+  --fs-xl: clamp(1.4rem, 1.15rem + 1vw, 1.75rem); /* h3, card titles */
+  --fs-2xl: clamp(1.5rem, 1.1rem + 1.6vw, 2.5rem); /* editorial lists, mobile menu, marquee */
+  --fs-3xl: clamp(2rem, 1.3rem + 2.8vw, 3.4rem); /* h2, section titles */
+  --fs-display: clamp(2.1rem, 1.3rem + 3vw, 4rem); /* h1, page heroes */
+  --fs-stat: clamp(3rem, 2rem + 4vw, 5.5rem); /* big numbers */
+  --fs-giant: clamp(2.2rem, 0.4rem + 8.4vw, 9.5rem); /* footer wordmark */
 
-  --space-section: clamp(3.5rem, 2.5rem + 3vw, 6rem);
-  --gutter: clamp(1rem, 0.4rem + 2.6vw, 2.5rem);
+  /* ---------- Space: 4px scale ---------- */
+  --space-1: 0.25rem; /* 4 */
+  --space-2: 0.5rem; /* 8 */
+  --space-3: 0.75rem; /* 12 */
+  --space-4: 1rem; /* 16 */
+  --space-5: 1.25rem; /* 20 */
+  --space-6: 1.5rem; /* 24 */
+  --space-7: 2rem; /* 32 */
+  --space-8: 2.5rem; /* 40 */
+  --space-9: 3rem; /* 48 */
+  --space-10: 4rem; /* 64 */
+  --space-11: 5rem; /* 80 */
+
+  /* ---------- Space: layout (fluid) ---------- */
+  --gutter: clamp(1rem, 0.4rem + 2.6vw, 2.5rem); /* container side padding */
+  --bleed: var(--space-4); /* edge-to-edge cards (heroes, photo bands, dark blocks): same as the mobile gutter */
+  --space-section: clamp(3.5rem, 2.5rem + 3vw, 6rem); /* vertical padding of a section */
+  --space-head: clamp(1.75rem, 1.25rem + 1.5vw, 2.75rem); /* section title block -> content */
+  --space-stack: clamp(2.5rem, 2rem + 2vw, 4rem); /* between groups inside a section */
+  --space-card: clamp(1.5rem, 1rem + 2vw, 2.5rem); /* inner padding of large cards */
+  --space-hero-x: clamp(1.25rem, 0.5rem + 4vw, 4.5rem); /* inner side padding of hero cards */
   --max: 1280px;
 
+  /* Header: pill padding. Hero cards start exactly --bleed below the pill. */
+  --header-pad: var(--space-3);
+  /* Full header height at the top of the page: 40px status line + 66px pill + 2 x --header-pad. */
+  --header-h: calc(106px + 2 * var(--header-pad));
+
+  /* Room kept at the page bottom so the floating WhatsApp button never covers text. */
+  --fab-clearance: 6rem;
+
+  /* ---------- Radius ---------- */
+  --r-xs: 4px;
   --r-sm: 12px;
   --r-md: 20px;
   --r-lg: 28px;
   --r-pill: 999px;
 
-  --shadow-1: 0 1px 2px rgba(20, 19, 15, 0.06), 0 8px 24px rgba(20, 19, 15, 0.06);
-  --shadow-2: 0 2px 4px rgba(20, 19, 15, 0.08), 0 20px 50px rgba(20, 19, 15, 0.14);
+  /* ---------- Elevation ---------- */
+  --shadow-1: 0 1px 2px rgb(var(--rgb-ink) / 0.06), 0 8px 24px rgb(var(--rgb-ink) / 0.06);
+  --shadow-2: 0 2px 4px rgb(var(--rgb-ink) / 0.08), 0 20px 50px rgb(var(--rgb-ink) / 0.14);
 
+  /* ---------- Motion ---------- */
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
 }

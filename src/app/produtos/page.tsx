@@ -31,7 +31,6 @@ export default function Produtos() {
       <Section texture="mesh">
         <h2 className="sr-only">Nossos produtos</h2>
         <ProductCards items={ALL_PRODUCTS} />
-        <div style={{ marginTop: "1.25rem" }} />
         <Band
           text="Não achou a peça que precisa? A gente corta e dobra na medida do seu projeto."
           href="/corte-e-dobra"

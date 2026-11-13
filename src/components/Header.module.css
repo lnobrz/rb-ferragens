@@ -21,13 +21,13 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem;
+  gap: var(--space-4);
   height: 40px;
 }
 
 .topbarRight {
   display: none;
-  gap: 0.6rem;
+  gap: var(--space-2);
 }
 
 .topbarRight a {
@@ -44,7 +44,7 @@
 .status {
   display: inline-flex;
   align-items: center;
-  gap: 0.45rem;
+  gap: var(--space-2);
   white-space: nowrap;
 }
 
@@ -56,41 +56,41 @@
 }
 
 .status[data-open="true"] [data-dot] {
-  background: #5fd38a;
-  box-shadow: 0 0 0 0 rgba(95, 211, 138, 0.6);
+  background: var(--c-ok);
+  box-shadow: 0 0 0 0 rgb(var(--rgb-ok) / 0.6);
   animation: pulse 2.4s infinite;
 }
 
 @keyframes pulse {
   0% {
-    box-shadow: 0 0 0 0 rgba(95, 211, 138, 0.55);
+    box-shadow: 0 0 0 0 rgb(var(--rgb-ok) / 0.55);
   }
   70% {
-    box-shadow: 0 0 0 8px rgba(95, 211, 138, 0);
+    box-shadow: 0 0 0 8px rgb(var(--rgb-ok) / 0);
   }
   100% {
-    box-shadow: 0 0 0 0 rgba(95, 211, 138, 0);
+    box-shadow: 0 0 0 0 rgb(var(--rgb-ok) / 0);
   }
 }
 
 /* Barra em pílula, flutuante, com vidro. */
 .wrap {
-  padding-top: 12px;
-  padding-bottom: 12px;
+  padding-top: var(--header-pad);
+  padding-bottom: var(--header-pad);
   transition: padding 0.4s var(--ease-out);
 }
 
 .bar {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: var(--space-4);
   padding: 6px 6px 6px 6px;
-  background: rgba(255, 255, 255, 0.78);
+  background: rgb(var(--rgb-white) / 0.78);
   backdrop-filter: saturate(1.4) blur(16px);
   -webkit-backdrop-filter: saturate(1.4) blur(16px);
-  border: 1px solid rgba(20, 19, 15, 0.08);
+  border: 1px solid rgb(var(--rgb-ink) / 0.08);
   border-radius: var(--r-pill);
-  box-shadow: 0 1px 2px rgba(20, 19, 15, 0.04);
+  box-shadow: 0 1px 2px rgb(var(--rgb-ink) / 0.04);
   transition: box-shadow 0.4s var(--ease-out);
 }
 
@@ -104,7 +104,7 @@
   display: grid;
   place-items: center;
   height: 52px;
-  padding: 0 1.1rem;
+  padding: 0 var(--space-4);
   background: var(--c-ink);
   border-radius: var(--r-pill);
 }
@@ -125,14 +125,14 @@
   padding: 0;
   display: flex;
   justify-content: center;
-  gap: 0.15rem;
+  gap: var(--space-1);
 }
 
 .desktopNav a {
   display: inline-flex;
   align-items: center;
   min-height: 44px;
-  padding: 0 0.85rem;
+  padding: 0 var(--space-3);
   border-radius: var(--r-pill);
   color: var(--c-text);
   text-decoration: none;
@@ -159,9 +159,9 @@
   margin-left: auto;
   display: inline-flex;
   align-items: center;
-  gap: 0.6rem;
+  gap: var(--space-2);
   min-height: 52px;
-  padding: 0 1.25rem 0 0.4rem;
+  padding: 0 var(--space-5) 0 var(--space-2);
   background: var(--c-yellow);
   color: var(--c-ink);
   font-weight: 500;
@@ -204,7 +204,7 @@
   display: block;
   width: 18px;
   height: 2px;
-  border-radius: 2px;
+  border-radius: var(--r-pill);
   background: var(--c-cream);
   position: relative;
   transition:
@@ -254,7 +254,7 @@
   inset: 0;
   top: 0;
   z-index: -1;
-  padding-top: 132px;
+  padding-top: calc(var(--header-h) + var(--space-1));
   background: var(--c-paper);
   overflow-y: auto;
 }
@@ -277,7 +277,7 @@
   justify-content: space-between;
   min-height: 64px;
   font-family: var(--f-title);
-  font-size: clamp(1.5rem, 1.2rem + 1.5vw, 2rem);
+  font-size: var(--fs-2xl);
   font-weight: 500;
   letter-spacing: -0.01em;
   color: var(--c-ink);
@@ -292,8 +292,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 1rem;
-  padding: 1.5rem 0 3rem;
+  gap: var(--space-4);
+  padding: var(--space-6) 0 var(--space-9);
   color: var(--c-muted);
   font-size: var(--fs-sm);
 }

@@ -1,5 +1,5 @@
 .footer {
-  padding-top: clamp(4rem, 3rem + 4vw, 6.5rem);
+  padding-top: var(--space-section);
   font-size: var(--fs-sm);
   border-radius: var(--r-lg) var(--r-lg) 0 0;
   overflow: hidden;
@@ -7,19 +7,19 @@
 
 .top {
   display: grid;
-  gap: 3rem;
+  gap: var(--space-9);
 }
 
 @media (min-width: 1000px) {
   .top {
     grid-template-columns: 1fr 2.2fr;
-    gap: 4rem;
+    gap: var(--space-10);
   }
 }
 
 .logo {
   width: 140px;
-  margin-bottom: 1.25rem;
+  margin-bottom: var(--space-5);
 }
 
 .tagline {
@@ -31,8 +31,8 @@
 .status {
   display: inline-flex;
   align-items: center;
-  gap: 0.45rem;
-  padding: 0.5rem 0.9rem;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-4);
   border: 1px solid var(--c-line-dark);
   border-radius: var(--r-pill);
   color: var(--c-cream-text);
@@ -48,12 +48,12 @@
 }
 
 .status[data-open="true"] [data-dot] {
-  background: #5fd38a;
+  background: var(--c-ok);
 }
 
 .cols {
   display: grid;
-  gap: 2.5rem;
+  gap: var(--space-8);
 }
 
 @media (min-width: 700px) {
@@ -69,7 +69,7 @@
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--c-cream-muted) !important;
-  margin-bottom: 1.25rem;
+  margin-bottom: var(--space-5);
 }
 
 .list,
@@ -80,16 +80,16 @@
 }
 
 .list li {
-  margin-bottom: 0.4rem;
+  margin-bottom: var(--space-2);
 }
 
 .list a,
 .hours {
   display: inline-flex;
   align-items: flex-start;
-  gap: 0.65rem;
+  gap: var(--space-3);
   min-height: 36px;
-  padding: 0.35rem 0;
+  padding: var(--space-1) 0;
   color: var(--c-cream-text) !important;
   text-decoration: none;
 }
@@ -122,16 +122,16 @@
 
 /* Palavra gigante no pé (Anamorph). */
 .giant {
-  margin: clamp(3rem, 2rem + 4vw, 6rem) 0 0;
+  margin: var(--space-section) 0 0;
   font-family: var(--f-title);
   font-weight: 500;
-  font-size: clamp(2.2rem, 0.4rem + 8.4vw, 9.5rem);
+  font-size: var(--fs-giant);
   line-height: 0.85;
   letter-spacing: -0.04em;
   text-transform: uppercase;
   white-space: nowrap;
   color: transparent;
-  -webkit-text-stroke: 1px rgba(239, 223, 100, 0.45);
+  -webkit-text-stroke: 1px rgb(var(--rgb-yellow) / 0.45);
   text-align: center;
   user-select: none;
 }
@@ -140,9 +140,9 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 0.5rem 1rem;
-  padding: 1.5rem 0 6rem;
-  margin-top: 1.5rem;
+  gap: var(--space-2) var(--space-4);
+  padding: var(--space-6) 0 var(--fab-clearance);
+  margin-top: var(--space-6);
   border-top: 1px solid var(--c-line-dark);
   color: var(--c-cream-muted);
   font-size: var(--fs-xs);
@@ -164,7 +164,7 @@
   place-items: center;
   background: var(--c-wa);
   color: var(--c-ink);
-  box-shadow: 0 10px 30px rgba(20, 19, 15, 0.3);
+  box-shadow: 0 10px 30px rgb(var(--rgb-ink) / 0.3);
   transition: transform 0.3s var(--ease-out);
 }
 

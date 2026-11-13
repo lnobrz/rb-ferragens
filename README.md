@@ -13,18 +13,42 @@ npm run build && npm start
 
 ## Estrutura
 
-- `src/styles/tokens.css`: cores, fontes, raios e sombras. Marca do site atual (amarelo #EFDF64, grafite
+- `src/styles/tokens.css`: o design system (veja abaixo). Marca do site atual (amarelo #EFDF64, grafite
   #0A0800/#1B1B18, creme #F9F3D7, Tomorrow + Kanit, os 3 quadradinhos) sobre base clara: papel #F4F2EC, branco
   e cinza claro, com seções escuras pontuais.
 - `src/components/Motion.tsx`: entrada ao rolar (`data-reveal`) e números que contam. Tudo desliga com "reduzir movimento" e o conteúdo aparece sem JS.
 - `src/components/OpenStatus.tsx`: "Aberto agora / Fechado agora" pelo horário de Fortaleza.
 - `src/content/site.ts`: endereço, telefones, horário, cidades atendidas e as mensagens prontas de cada botão
-  de WhatsApp. Só dados confirmados.
+  de WhatsApp (hoje todos abrem com "Olá, quero um orçamento"). Só dados confirmados.
 - `src/content/products.ts`: cards de produto e as tabelas (bitolas, treliças, malhas).
 - `src/content/guides.tsx`: os 6 guias da obra (`/guia/[slug]`).
 - `src/components/ui.tsx`: botões, hero, seções, tabela, FAQ (com JSON-LD FAQPage), chamada final.
 - `src/lib/seo.ts`: metatags de cada página (title, description, keywords, author "RB Ferragens", Open Graph,
   canonical). JSON-LD `HardwareStore` com NAP e horário no layout.
+
+## Design system
+
+Tudo que é visual sai de `src/styles/tokens.css`. Regra: **nenhum valor solto** (rem, px de espaçamento, hex,
+rgba) nos `.module.css`. Se faltar um valor, crie o token antes.
+
+| Grupo | Tokens | Uso |
+| --- | --- | --- |
+| Cor | `--c-*` | Marca (amarelo, grafite), base clara (papel, linha, texto), sobre escuro (creme), status (`--c-wa`, `--c-ok`) |
+| Transparência | `--rgb-*` | `rgb(var(--rgb-ink-deep) / 0.8)`. Véus de foto sempre em `--rgb-ink-deep`; filetes no escuro em `--rgb-cream` |
+| Tipo | `--fs-xs` … `--fs-3xl`, `--fs-display`, `--fs-stat`, `--fs-giant` | xs rótulos · sm secundário · md corpo · lg lead · xl h3 · 2xl listas editoriais e menu · 3xl h2 · display h1 e heroes |
+| Espaço | `--space-1` … `--space-11` | Escala de 4px: 4, 8, 12, 16, 20, 24, 32, 40, 48, 64, 80 |
+| Layout | `--gutter`, `--bleed`, `--space-section`, `--space-head`, `--space-stack`, `--space-card`, `--space-hero-x` | Laterais do container, cards de borda a borda, respiro de seção, título→conteúdo, entre grupos, padding de card grande, laterais da hero |
+| Header | `--header-pad`, `--header-h`, `--fab-clearance` | Respiro da pílula, altura total do header, sobra no rodapé pro botão do WhatsApp |
+| Raio | `--r-xs`, `--r-sm`, `--r-md`, `--r-lg`, `--r-pill` | 4, 12, 20, 28, pílula |
+| Sombra / movimento | `--shadow-1`, `--shadow-2`, `--ease-out` | |
+
+Regras de composição:
+
+- Cards de borda a borda (heroes, faixa de foto, bloco escuro) ficam a `--bleed` das laterais **e** a `--bleed`
+  da pílula do header. No celular isso é igual ao `--gutter`, então tudo se alinha com a pílula.
+- Toda seção depois da hero usa `--space-section` em cima e embaixo (`<Section>` ou `.section`; o artigo do guia segue o mesmo).
+- `.container` só controla as laterais (`padding-inline`); o padding vertical é de cada componente.
+- Exceção documentada: a hero da home usa valores em `svh` pra o botão caber na primeira dobra.
 
 ## Redirecionamentos do site antigo (src/proxy.ts)
 

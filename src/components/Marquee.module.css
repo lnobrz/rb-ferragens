@@ -3,10 +3,10 @@
   overflow: hidden;
   background: var(--c-yellow);
   color: var(--c-ink);
-  padding: 1.1rem 0;
+  padding: var(--space-4) 0;
   transform: rotate(-1.2deg);
   margin: 0 -2vw;
-  box-shadow: 0 12px 30px rgba(20, 19, 15, 0.12);
+  box-shadow: 0 12px 30px rgb(var(--rgb-ink) / 0.12);
 }
 
 .track {
@@ -31,7 +31,7 @@
   display: flex;
   align-items: center;
   font-family: var(--f-title);
-  font-size: clamp(1.25rem, 1rem + 1.2vw, 2rem);
+  font-size: var(--fs-2xl);
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: -0.01em;
@@ -42,7 +42,7 @@
   display: inline-block;
   width: 10px;
   height: 10px;
-  margin: 0 1.75rem;
+  margin: 0 var(--space-7);
   background: var(--c-ink);
 }
 

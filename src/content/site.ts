@@ -41,17 +41,20 @@ export function waLink(message: string) {
   return `https://wa.me/${SITE.whatsapp.number}?text=${encodeURIComponent(message)}`;
 }
 
+// Every WhatsApp button opens the chat with the same short message.
+const WA_MESSAGE = "Olá, quero um orçamento";
+
 export const MSG = {
-  geral: "Olá, quero um orçamento. Bairro da obra: __",
-  corteDobra: "Olá, quero orçamento de corte e dobra. Vou mandar o projeto/lista. Bairro da obra: __",
-  trelica: "Olá, quero orçamento de treliça. Modelo: __ Quantidade ou vão da laje: __ Bairro da obra: __",
-  vergalhao: "Olá, quero orçamento de vergalhão. Bitola: __ Quantidade de barras: __ Bairro da obra: __",
-  coluna: "Olá, quero orçamento de coluna/viga. Medida: __ Quantidade: __ Bairro da obra: __",
-  malha: "Olá, quero orçamento de malha/tela. Onde vai usar: __ Área: __ m² Bairro da obra: __",
-  tubo: "Olá, quero orçamento de tubo galvanizado. Medida: __ Quantidade: __ Bairro da obra: __",
-  arame: "Olá, quero orçamento de arame/prego. Quantidade: __ Bairro da obra: __",
-  entrega: "Olá, vocês entregam em __? O pedido é: __",
-  construtora: "Olá, sou de uma construtora/empreiteira e quero cadastrar a empresa pra pedidos. Empresa: __",
+  geral: WA_MESSAGE,
+  corteDobra: WA_MESSAGE,
+  trelica: WA_MESSAGE,
+  vergalhao: WA_MESSAGE,
+  coluna: WA_MESSAGE,
+  malha: WA_MESSAGE,
+  tubo: WA_MESSAGE,
+  arame: WA_MESSAGE,
+  entrega: WA_MESSAGE,
+  construtora: WA_MESSAGE,
 };
 
 export const NAV = [
