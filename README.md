@@ -16,8 +16,7 @@ npm run build && npm start
 - `src/styles/tokens.css`: cores, fontes, raios e sombras. Marca do site atual (amarelo #EFDF64, grafite
   #0A0800/#1B1B18, creme #F9F3D7, Tomorrow + Kanit, os 3 quadradinhos) sobre base clara: papel #F4F2EC, branco
   e cinza claro, com seções escuras pontuais.
-- `src/components/Motion.tsx`: entrada ao rolar (`data-reveal`), texto que acende palavra por palavra e números
-  que contam. Tudo desliga com "reduzir movimento" e o conteúdo aparece sem JS.
+- `src/components/Motion.tsx`: entrada ao rolar (`data-reveal`) e números que contam. Tudo desliga com "reduzir movimento" e o conteúdo aparece sem JS.
 - `src/components/OpenStatus.tsx`: "Aberto agora / Fechado agora" pelo horário de Fortaleza.
 - `src/content/site.ts`: endereço, telefones, horário, cidades atendidas e as mensagens prontas de cada botão
   de WhatsApp. Só dados confirmados.

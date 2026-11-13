@@ -9,7 +9,7 @@
   flex-direction: column;
   justify-content: flex-end;
   min-height: min(calc(100svh - 120px), 820px);
-  padding: clamp(5rem, 3rem + 8vw, 9rem) clamp(1.25rem, 0.5rem + 4vw, 4.5rem) 0;
+  padding: clamp(2.5rem, 7svh, 6rem) clamp(1.25rem, 0.5rem + 4vw, 4.5rem) 0;
   border-radius: var(--r-lg);
   overflow: hidden;
   isolation: isolate;
@@ -44,24 +44,34 @@
 
 .heroInner {
   max-width: 980px;
-  padding-bottom: 2.5rem;
+  padding-bottom: clamp(1.5rem, 4svh, 2.5rem);
+}
+
+.heroInner :global(.eyebrow) {
+  margin-bottom: clamp(0.75rem, 2svh, 1.25rem);
 }
 
 .heroEyebrow {
   color: var(--c-cream-text);
 }
 
+/* O título acompanha a largura E a altura da tela, pra o botão caber na primeira dobra. */
 .heroTitle {
   color: var(--c-cream);
-  font-size: clamp(2.4rem, 1.2rem + 4.4vw, 5rem);
-  line-height: 0.98;
+  font-size: clamp(2.1rem, min(1rem + 3.6vw, 7.4svh), 4.25rem);
+  line-height: 1;
   letter-spacing: -0.03em;
-  margin-bottom: 1.5rem;
-  max-width: 15ch;
+  margin-bottom: clamp(0.75rem, 2.2svh, 1.25rem);
+  max-width: 17ch;
+}
+
+/* Botões do hero: menos respiro acima em telas baixas. */
+.heroInner > div:last-child > div {
+  margin-top: clamp(1rem, 3.5svh, 2rem);
 }
 
 .heroSub {
-  font-size: var(--fs-lg);
+  font-size: clamp(1rem, min(0.9rem + 0.4vw, 2.6svh), 1.25rem);
   max-width: 46ch;
   color: var(--c-cream-text);
   margin: 0;
@@ -137,22 +147,6 @@
   margin-top: 1.5rem;
   padding: 1rem 0;
   overflow-x: clip;
-}
-
-/* ---------- Frase que acende ---------- */
-.statement {
-  padding-bottom: calc(var(--space-section) * 0.5);
-}
-
-.statementText {
-  font-family: var(--f-title);
-  font-weight: 500;
-  font-size: clamp(1.75rem, 1rem + 3.2vw, 3.6rem);
-  line-height: 1.12;
-  letter-spacing: -0.02em;
-  color: var(--c-ink);
-  max-width: 24ch;
-  margin: 0;
 }
 
 /* ---------- Corte e dobra (bento escuro) ---------- */

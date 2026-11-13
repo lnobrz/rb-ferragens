@@ -6,7 +6,7 @@ import { HOME_PRODUCTS } from "@/content/products";
 import { Actions, CtaBand, LinkButton, Section, WaButton } from "@/components/ui";
 import { ProductCards } from "@/components/ProductCards";
 import { Marquee } from "@/components/Marquee";
-import { CountUp, ScrollText } from "@/components/Motion";
+import { CountUp } from "@/components/Motion";
 import { Icon } from "@/components/Icon";
 import s from "./home.module.css";
 
@@ -99,17 +99,6 @@ export default function Home() {
         />
       </div>
 
-      <section className={`section ${s.statement}`}>
-        <div className="container">
-          <p className="eyebrow" data-reveal>
-            Fala a língua da obra
-          </p>
-          <ScrollText
-            className={s.statementText}
-            text="Se você pede “ferro 3/8” ou “vergalhão 10 mm”, a gente entende. Mande o projeto ou a lista do seu mestre e receba o ferro cortado, dobrado e entregue na obra."
-          />
-        </div>
-      </section>
 
       <Section
         eyebrow="Produtos"
