@@ -19,8 +19,8 @@ export default function Guia() {
     <>
       <PageHero
         crumbs={[{ label: "Guia da obra" }]}
-        image="/images/fotos/mestre-projeto.jpg"
-        imageAlt="Mestre de obras e dono da casa conferindo o projeto estrutural"
+        image="/images/fotos/trelicas-pilha.jpg"
+        imageAlt="Treliças e feixes de vergalhão empilhados no pátio da RB"
         chip="Respostas do nosso WhatsApp"
         title="Guia da obra"
         subtitle="Respostas diretas pras dúvidas que mais chegam no nosso WhatsApp. Elas ajudam a montar sua lista, mas não substituem o projeto estrutural."

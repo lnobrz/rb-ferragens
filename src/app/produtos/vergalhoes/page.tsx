@@ -16,8 +16,8 @@ export default function Vergalhoes() {
     <>
       <PageHero
         crumbs={[{ href: "/produtos", label: "Produtos" }, { label: "Vergalhões" }]}
-        image="/images/fotos/vergalhoes.jpg"
-        imageAlt="Feixe de vergalhões nervurados amarrado com arame"
+        image="/images/fotos/vergalhao-pontas.jpg"
+        imageAlt="Feixe de vergalhões amarrado e etiquetado no pátio da RB"
         chip="Barra de 12 m · CA-50 e CA-60"
         title="Vergalhão CA-50 e CA-60"
         subtitle="O ferro da estrutura da sua obra, em barra inteira ou já cortado e dobrado na medida, com entrega em Fortaleza e na região metropolitana."

@@ -16,8 +16,8 @@ export default function Trelicas() {
     <>
       <PageHero
         crumbs={[{ href: "/produtos", label: "Produtos" }, { label: "Treliças" }]}
-        image="/images/fotos/trelicas.jpg"
-        imageAlt="Treliças de aço para laje lado a lado no chão do galpão"
+        image="/images/fotos/trelica.jpg"
+        imageAlt="Treliça de aço no pátio da RB, com os feixes de vergalhão ao fundo"
         chip="TG8 e TG12 · aço CA-60"
         title="Treliça de ferro para laje"
         subtitle="Treliças TG8 e TG12 em aço CA-60 pra laje treliçada, com entrega na sua obra em Fortaleza e na região metropolitana."

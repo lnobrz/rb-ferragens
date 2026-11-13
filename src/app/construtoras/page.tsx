@@ -15,8 +15,8 @@ export default function Construtoras() {
     <>
       <PageHero
         crumbs={[{ label: "Para construtoras e empreiteiros" }]}
-        image="/images/fotos/predio-obra.jpg"
-        imageAlt="Prédio em construção em Fortaleza com pilares armados e grua"
+        image="/images/fotos/obra-colunas.jpg"
+        imageAlt="Obra de casa com colunas armadas e paredes de tijolo subindo"
         chip="Reposição sem burocracia"
         eyebrow="Para construtoras e empreiteiros"
         title="Ferro pra sua obra não parar"

@@ -28,9 +28,10 @@ npm run build && npm start
 
 ## Pendências com o cliente
 
-- **Fotos**: as 14 fotos em `public/images/fotos/` foram geradas com IA (Magnific, projeto "RB Ferragens") pra
-  ilustrar produtos e seções. O ideal é trocar pelas fotos reais da loja (pátio, feixes, máquina de dobra,
-  caminhão, fachada) mantendo os mesmos nomes de arquivo.
+- **Fotos**: as fotos em `public/images/fotos/` são reais da RB (pasta "Exemplos fotos Google"). Ficaram de fora
+  as que tinham um dedo no canto (fachada de lado, estribos de perto, peças de perto); a da laje foi recortada.
+  Ainda faltam fotos de pregos. Os 3 vídeos (máquina dobrando estribo, Saveiro descarregando, volta pelo pátio)
+  não estão no site.
 - **Frete grátis**: regra, prazo e pedido mínimo por região. Quando confirmar, trocar o parágrafo de
   `/entrega` por uma tabela.
 - **Prazo do corte e dobra, preços e marca do aço**: não informados; o texto manda pro orçamento.

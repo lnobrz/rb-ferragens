@@ -15,15 +15,15 @@ export default function Sobre() {
     <>
       <PageHero
         crumbs={[{ label: "Sobre" }]}
-        image="/images/fotos/patio-estoque.jpg"
-        imageAlt="Pátio com feixes de vergalhão organizados por bitola, treliças e telas"
+        image="/images/fotos/equipe-patio.jpg"
+        imageAlt="Equipe da RB Ferragens, de uniforme, no pátio da loja na Lagoa Redonda"
         chip="10 anos na Lagoa Redonda"
         title="10 anos fornecendo ferro pra obra na Lagoa Redonda"
         subtitle="A RB Ferragens nasceu no bairro e cresceu atendendo quem constrói em Fortaleza e na região metropolitana."
       />
 
       <Section>
-        <Split image="/images/fotos/mestre-projeto.jpg" alt="Mestre de obras e dono da casa conferindo o projeto estrutural sobre os vergalhões" reverse>
+        <Split image="/images/fotos/fachada.jpg" alt="Fachada da RB Ferragens na Travessa Precabura, 79, Lagoa Redonda" reverse>
           <h2>Nossa história</h2>
           <p className="lead">
             A RB Ferragens está há 10 anos na Lagoa Redonda vendendo ferro e aço pra obra. Além da venda, corta e dobra o

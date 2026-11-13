@@ -42,24 +42,26 @@ export default function Home() {
         <div className={s.hero}>
           <Image
             className={s.heroBg}
-            src="/images/fotos/obra-hero.jpg"
-            alt="Armador amarrando a ferragem de uma laje numa obra em Fortaleza"
+            src="/images/fotos/maquina-dobra.jpg"
+            alt="Funcionário da RB, de uniforme, cortando vergalhão na bancada do pátio da loja"
             fill
             priority
+            fetchPriority="high"
+            quality={60}
             sizes="100vw"
           />
           <div className={s.heroInner}>
-            <p className={`eyebrow ${s.heroEyebrow}`} data-reveal>
+            <p className={`eyebrow ${s.heroEyebrow}`}>
               RB Ferragens · Lagoa Redonda, Fortaleza
             </p>
-            <h1 className={s.heroTitle} data-reveal style={d(1)}>
+            <h1 className={s.heroTitle}>
               Ferro e aço para sua obra, cortado e dobrado do jeito do seu projeto
             </h1>
-            <p className={s.heroSub} data-reveal style={d(2)}>
+            <p className={s.heroSub}>
               Treliça, vergalhão, colunas e malhas com entrega na obra em Fortaleza e região metropolitana. Há 10 anos
               na Lagoa Redonda.
             </p>
-            <div data-reveal style={d(3)}>
+            <div>
               <Actions>
                 <WaButton message={MSG.geral}>Pedir orçamento no WhatsApp</WaButton>
                 <LinkButton href="/produtos" variant="light">
@@ -129,8 +131,8 @@ export default function Home() {
           </div>
           <div className={`${s.tile} ${s.tilePhoto}`} data-reveal="scale" style={d(1)}>
             <Image
-              src="/images/fotos/corte-dobra-maquina.jpg"
-              alt="Funcionário dobrando vergalhão na máquina de dobra, com estribos prontos ao lado"
+              src="/images/fotos/maquina-dobra-perto.jpg"
+              alt="Funcionário da RB dobrando um vergalhão na máquina de dobra"
               fill
               sizes="(min-width: 1000px) 40vw, 92vw"
               className={s.cover}
@@ -155,8 +157,8 @@ export default function Home() {
         <div className={s.delivery}>
           <div className={s.deliveryMedia} data-reveal="scale">
             <Image
-              src="/images/fotos/entrega-caminhao.jpg"
-              alt="Caminhão descarregando vergalhões numa obra de casa"
+              src="/images/fotos/entrega-obra.jpg"
+              alt="Equipe da RB carregando treliças da Saveiro pra dentro de uma obra"
               fill
               sizes="(min-width: 900px) 50vw, 92vw"
               className={s.cover}
@@ -192,8 +194,8 @@ export default function Home() {
         <div className={s.why}>
           <div className={`${s.whyCard} ${s.whyPhoto}`} data-reveal="scale">
             <Image
-              src="/images/fotos/mestre-projeto.jpg"
-              alt="Mestre de obras e dono da casa conferindo o projeto estrutural sobre os vergalhões"
+              src="/images/fotos/equipe-balcao.jpg"
+              alt="Equipe da RB Ferragens atrás do balcão da loja"
               fill
               sizes="(min-width: 1000px) 45vw, 92vw"
               className={s.cover}
@@ -275,7 +277,7 @@ export default function Home() {
         text="Mande a lista ou o projeto e o bairro da obra."
         message={MSG.geral}
         button="Pedir orçamento no WhatsApp"
-        image="/images/fotos/pecas-cortadas.jpg"
+        image="/images/fotos/pecas-separadas.jpg"
       />
     </>
   );

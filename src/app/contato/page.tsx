@@ -106,7 +106,7 @@ export default function Contato() {
 
       <CtaBand
         title="Vai passar aqui?"
-        image="/images/fotos/patio-estoque.jpg"
+        image="/images/fotos/fachada.jpg"
         text="Mande uma mensagem antes que a gente separa seu pedido."
         message={MSG.geral}
         button="Chamar no WhatsApp"

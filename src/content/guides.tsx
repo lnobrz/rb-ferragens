@@ -19,8 +19,8 @@ export type Guide = {
 export const GUIDES: Guide[] = [
   {
     slug: "qual-trelica-usar",
-    image: "/images/fotos/laje-trelicada.jpg",
-    imageAlt: "Laje treliçada sendo montada numa casa térrea, com vigotas e blocos de isopor",
+    image: "/images/fotos/obra-laje.jpg",
+    imageAlt: "Laje treliçada sendo montada com tijolos cerâmicos numa obra em Fortaleza",
     h1: "Qual treliça usar na laje: TG8 ou TG12?",
     card: "A diferença entre os modelos e quando cada um vai na laje treliçada.",
     title: "Qual Treliça Usar na Laje: TG8 ou TG12? | RB Ferragens",
@@ -56,8 +56,8 @@ export const GUIDES: Guide[] = [
   },
   {
     slug: "tabela-de-bitolas",
-    image: "/images/fotos/vergalhoes.jpg",
-    imageAlt: "Feixe de vergalhões nervurados amarrado com arame",
+    image: "/images/fotos/vergalhao-feixes.jpg",
+    imageAlt: "Feixes de vergalhão empilhados no pátio da RB",
     h1: "Tabela de bitolas de vergalhão e peso da barra",
     card: "Bitola em mm e em polegada, peso por metro e peso da barra de 12 m.",
     title: "Tabela de Bitolas de Vergalhão e Peso da Barra | RB Ferragens",
@@ -84,8 +84,8 @@ export const GUIDES: Guide[] = [
   },
   {
     slug: "ca-50-x-ca-60",
-    image: "/images/fotos/patio-estoque.jpg",
-    imageAlt: "Pátio com feixes de vergalhão organizados por bitola",
+    image: "/images/fotos/patio.jpg",
+    imageAlt: "Pátio da RB Ferragens com feixes de vergalhão, treliças e telas soldadas",
     h1: "CA-50 ou CA-60: onde usar cada um",
     card: "A diferença entre os dois aços e por que um não substitui o outro.",
     title: "CA-50 ou CA-60: Diferença e Onde Usar Cada Aço | RB Ferragens",
@@ -116,8 +116,8 @@ export const GUIDES: Guide[] = [
   },
   {
     slug: "malha-pop-x-tela-q92",
-    image: "/images/fotos/malhas.jpg",
-    imageAlt: "Painéis de malha soldada prontos para o contrapiso",
+    image: "/images/fotos/malha-pop.jpg",
+    imageAlt: "Painéis de malha soldada encostados no muro do pátio da RB",
     h1: "Malha POP ou tela Q92: qual usar no contrapiso?",
     card: "Tamanho dos painéis e qual tela vai no contrapiso, na calçada e na garagem.",
     title: "Malha POP ou Tela Q92: Qual Usar no Contrapiso? | RB Ferragens",
@@ -159,8 +159,8 @@ export const GUIDES: Guide[] = [
   },
   {
     slug: "corte-e-dobra-compensa",
-    image: "/images/fotos/corte-dobra-maquina.jpg",
-    imageAlt: "Funcionário dobrando vergalhão na máquina de dobra",
+    image: "/images/fotos/maquina-dobra-perto.jpg",
+    imageAlt: "Funcionário da RB dobrando um vergalhão na máquina de dobra",
     h1: "Corte e dobra compensa? Como mandar seu projeto pelo WhatsApp",
     card: "Quando o corte e dobra vale a pena e como pedir pelo WhatsApp.",
     title: "Corte e Dobra Compensa? Como Pedir pelo WhatsApp | RB Ferragens",
@@ -193,8 +193,8 @@ export const GUIDES: Guide[] = [
   },
   {
     slug: "quanto-ferro-casa-terrea",
-    image: "/images/fotos/obra-hero.jpg",
-    imageAlt: "Armador amarrando a ferragem de uma laje em obra",
+    image: "/images/fotos/obra-colunas.jpg",
+    imageAlt: "Obra de casa com colunas armadas e paredes de tijolo subindo",
     h1: "Quanto ferro vai numa casa térrea?",
     card: "O que costuma entrar na lista de uma casa e por que a conta vem do projeto.",
     title: "Quanto Ferro Vai numa Casa Térrea? | RB Ferragens",

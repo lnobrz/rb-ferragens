@@ -15,8 +15,8 @@ export default function CorteEDobra() {
     <>
       <PageHero
         crumbs={[{ label: "Corte e dobra" }]}
-        image="/images/fotos/pecas-cortadas.jpg"
-        imageAlt="Estribos e barras dobradas separados por peça, com etiquetas"
+        image="/images/fotos/pecas-separadas.jpg"
+        imageAlt="Peças de corte e dobra separadas por lote e etiquetadas no pátio da RB"
         chip="Separado por peça, pronto pra amarrar"
         title="Corte e dobra de ferro na medida da sua obra"
         subtitle="Você manda o projeto ou a lista do seu mestre. A gente corta, dobra, separa por peça e entrega na obra, em Fortaleza e na região metropolitana."
@@ -38,7 +38,7 @@ export default function CorteEDobra() {
       </Section>
 
       <Section tone="white">
-        <Split image="/images/fotos/corte-dobra-maquina.jpg" alt="Funcionário dobrando vergalhão na máquina de dobra, com estribos prontos ao lado">
+        <Split image="/images/fotos/maquina-dobra-perto.jpg" alt="Funcionário da RB dobrando um vergalhão na máquina de dobra">
           <h2>O que a gente faz</h2>
           <CheckList
             items={[

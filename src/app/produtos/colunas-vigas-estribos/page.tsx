@@ -15,8 +15,8 @@ export default function Colunas() {
     <>
       <PageHero
         crumbs={[{ href: "/produtos", label: "Produtos" }, { label: "Colunas, vigas e estribos" }]}
-        image="/images/fotos/colunas.jpg"
-        imageAlt="Colunas armadas com estribos empilhadas sobre paletes"
+        image="/images/fotos/coluna-armada.jpg"
+        imageAlt="Coluna armada pronta no pátio da RB, ao lado dos feixes de vergalhão e das telas"
         chip="Pronta ou sob medida"
         title="Colunas, vigas e estribos prontos pra montar"
         subtitle="Ferragem de coluna, viga e cinta já armada ou feita na medida do seu projeto. Chega na obra pronta pra concretar."

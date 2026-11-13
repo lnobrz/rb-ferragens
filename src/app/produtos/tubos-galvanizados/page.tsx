@@ -15,8 +15,8 @@ export default function Tubos() {
     <>
       <PageHero
         crumbs={[{ href: "/produtos", label: "Produtos" }, { label: "Tubos galvanizados" }]}
-        image="/images/fotos/tubos.jpg"
-        imageAlt="Tubos galvanizados empilhados"
+        image="/images/fotos/tubos-galvanizados.jpg"
+        imageAlt="Tubos galvanizados no galpão da RB"
         chip="Proteção de zinco contra a maresia"
         title="Tubo galvanizado"
         subtitle="Aço com proteção de zinco contra a ferrugem, ideal pro clima de Fortaleza. Entrega na obra junto com o resto do pedido."

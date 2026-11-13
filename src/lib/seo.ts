@@ -24,7 +24,7 @@ export function pageMeta({ title, description, keywords, path }: PageSeo): Metad
       url,
       title,
       description,
-      images: [{ url: "/images/fotos/obra-hero.jpg", width: 2000, height: 1116, alt: "Armador amarrando a ferragem de uma laje em obra de Fortaleza" }],
+      images: [{ url: "/images/fotos/maquina-dobra.jpg", width: 1200, height: 896, alt: "Funcionário da RB Ferragens cortando vergalhão no pátio da loja" }],
     },
   };
 }

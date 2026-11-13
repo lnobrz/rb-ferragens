@@ -113,7 +113,7 @@ export function PageHero({
         </div>
         {image && (
           <div className={s.heroMedia} data-reveal="scale" style={{ "--d": 2 } as React.CSSProperties}>
-            <Image src={image} alt={imageAlt} fill priority sizes="(min-width: 1000px) 46vw, 92vw" className={s.cover} />
+            <Image src={image} alt={imageAlt} fill priority fetchPriority="high" sizes="(min-width: 1000px) 46vw, 92vw" className={s.cover} />
             {chip && (
               <span className={s.chip}>
                 <span className={s.chipDot} aria-hidden="true" />
@@ -340,7 +340,7 @@ export function CtaBand({
   message,
   button,
   links,
-  image = "/images/fotos/mestre-projeto.jpg",
+  image = "/images/fotos/pecas-separadas.jpg",
 }: {
   title?: string;
   text?: string;

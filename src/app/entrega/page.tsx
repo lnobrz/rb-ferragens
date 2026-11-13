@@ -16,8 +16,8 @@ export default function Entrega() {
     <>
       <PageHero
         crumbs={[{ label: "Entrega" }]}
-        image="/images/fotos/entrega-caminhao.jpg"
-        imageAlt="Caminhão descarregando vergalhões numa obra de casa"
+        image="/images/fotos/saveiro-carregada.jpg"
+        imageAlt="Saveiro da RB carregada de treliças em frente à loja"
         chip="Fortaleza e região metropolitana"
         title="Entrega de ferro na sua obra"
         subtitle="Levamos o pedido até a obra em Fortaleza e na região metropolitana. Saindo da Lagoa Redonda, a zona leste, o Eusébio e Aquiraz ficam bem perto."
@@ -74,7 +74,12 @@ export default function Entrega() {
         ]}
       />
 
-      <CtaBand title="Sua obra fica onde?" message={MSG.entrega} button="Consultar entrega no meu bairro" />
+      <CtaBand
+        title="Sua obra fica onde?"
+        message={MSG.entrega}
+        button="Consultar entrega no meu bairro"
+        image="/images/fotos/entrega-obra-perto.jpg"
+      />
     </>
   );
 }

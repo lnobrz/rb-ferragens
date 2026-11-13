@@ -16,8 +16,8 @@ export default function Malhas() {
     <>
       <PageHero
         crumbs={[{ href: "/produtos", label: "Produtos" }, { label: "Telas, malhas e radier" }]}
-        image="/images/fotos/malhas.jpg"
-        imageAlt="Painéis de malha soldada prontos para o contrapiso"
+        image="/images/fotos/malha-pop.jpg"
+        imageAlt="Painéis de malha soldada encostados no muro do pátio da RB"
         chip="Malha POP · Q92 · Q138"
         title="Malha POP e tela soldada"
         subtitle="Pra contrapiso, calçada, piso de garagem e radier. Diga onde a tela vai que a gente indica o modelo."
