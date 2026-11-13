@@ -4,7 +4,7 @@ export const SITE = {
   url: "https://www.rbferragens.com.br",
   email: "rbferragens01@gmail.com",
   phone: { display: "(85) 4141-6030", tel: "+558541416030" },
-  whatsapp: { display: "(85) 99727-1762", number: "5585997271762" },
+  whatsapp: { display: "(85) 99162-6955", number: "5585991626955" },
   address: {
     street: "Travessa Precabura, 79",
     district: "Lagoa Redonda",

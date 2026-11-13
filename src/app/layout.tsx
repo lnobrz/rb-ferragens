@@ -6,13 +6,13 @@ import { SITE } from "@/content/site";
 import { MotionRoot } from "@/components/Motion";
 import "@/styles/globals.css";
 
-const kanit = Kanit({ subsets: ["latin"], weight: ["300", "400", "500"], variable: "--font-kanit", display: "swap" });
-const tomorrow = Tomorrow({ subsets: ["latin"], weight: ["400", "500"], variable: "--font-tomorrow", display: "swap" });
+// Kanit (texto corrido) sem preload: entra com fallback ajustado e não disputa banda com a foto do hero.
+const kanit = Kanit({ subsets: ["latin"], weight: ["300", "400", "500"], variable: "--font-kanit", display: "swap", preload: false });
+const tomorrow = Tomorrow({ subsets: ["latin"], weight: ["500"], variable: "--font-tomorrow", display: "swap" });
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
   applicationName: SITE.name,
-  icons: { icon: "/images/logo.png" },
 };
 
 export const viewport: Viewport = {

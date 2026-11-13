@@ -35,8 +35,10 @@ const nextConfig = {
   compress: true,
   images: {
     formats: ["image/webp"],
-    // 70 nas fotos em geral; 60 na foto do hero da Home (fica sob a camada escura).
-    qualities: [60, 70],
+    // As fotos originais têm no máximo 1200px: não gerar variações maiores que 1920.
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920],
+    // 70 nas fotos em geral; 60/40 na foto do hero da Home (desktop/celular), que fica sob a camada escura.
+    qualities: [40, 60, 70],
   },
   experimental: {
     // CSS embutido no HTML: tira o CSS do caminho crítico (ele é pequeno, ~10 KB).

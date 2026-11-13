@@ -49,6 +49,7 @@ export default function Colunas() {
 
       <Section title="Por que comprar pronta">
         <CheckList
+          columns={3}
           items={[
             "O pedreiro não perde tempo cortando, dobrando e amarrando estribo",
             "Menos sobra de ferro",

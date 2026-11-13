@@ -64,12 +64,7 @@ export default function CorteEDobra() {
         />
       </Section>
 
-      <Section title="Para obra pequena também" tone="white">
-        <p className="lead">
-          Não precisa ser construtora. Se você está levantando sua casa, um muro ou um puxadinho, a gente faz o corte e
-          dobra da mesma forma. Muita gente chega só com a lista do mestre, e está tudo bem.
-        </p>
-      </Section>
+      <Section title="Para obra pequena também" tone="white" split intro={<>Não precisa ser construtora. Se você está levantando sua casa, um muro ou um puxadinho, a gente faz o corte e dobra da mesma forma. Muita gente chega só com a lista do mestre, e está tudo bem.</>} />
 
       <Faq
         items={[

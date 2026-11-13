@@ -7,7 +7,7 @@ import s from "./contato.module.css";
 export const metadata = pageMeta({
   title: "Contato RB Ferragens | Endereço, WhatsApp e Horário",
   description:
-    "RB Ferragens na Travessa Precabura, 79, Lagoa Redonda, Fortaleza. WhatsApp (85) 99727-1762. Segunda a sexta das 7h às 18h, sábado das 7h às 12h.",
+    "RB Ferragens na Travessa Precabura, 79, Lagoa Redonda, Fortaleza. WhatsApp (85) 99162-6955. Segunda a sexta das 7h às 18h, sábado das 7h às 12h.",
   keywords: "RB Ferragens, RB Ferragens contato, RB Ferragens telefone, ferragens Lagoa Redonda",
   path: "/contato",
 });
@@ -18,6 +18,9 @@ export default function Contato() {
     <>
       <PageHero
         crumbs={[{ label: "Contato" }]}
+        image="/images/fotos/equipe-balcao.jpg"
+        imageAlt="Equipe da RB Ferragens atrás do balcão da loja"
+        chip="Atendimento no WhatsApp e no balcão"
         title="Fale com a RB Ferragens"
         subtitle="O jeito mais rápido de pedir orçamento é pelo WhatsApp. Mande a lista ou o projeto e o bairro da obra."
       >

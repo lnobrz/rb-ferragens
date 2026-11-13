@@ -20,7 +20,7 @@ export function Footer() {
       <div className={`container ${s.top}`}>
         <div className={s.brand}>
           <Image src="/images/logo.png" alt="RB Ferragens" width={1080} height={640} sizes="150px" className={s.logo} />
-          <p className={s.tagline}>Venda, corte e dobra de ferro e aço. Há 10 anos na Lagoa Redonda.</p>
+          <p className={s.tagline}>Venda, corte e dobra de ferro e aço. Há 8 anos na Lagoa Redonda.</p>
           <OpenStatus className={s.status} />
         </div>
 

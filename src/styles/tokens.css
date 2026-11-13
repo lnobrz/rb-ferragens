@@ -37,7 +37,7 @@
   --fs-3xl: clamp(2.5rem, 1.4rem + 4.6vw, 5.4rem);
   --fs-giant: clamp(4rem, 1rem + 15vw, 17rem);
 
-  --space-section: clamp(4.5rem, 3rem + 5vw, 8.5rem);
+  --space-section: clamp(3.5rem, 2.5rem + 3vw, 6rem);
   --gutter: clamp(1rem, 0.4rem + 2.6vw, 2.5rem);
   --max: 1280px;
 

@@ -5,7 +5,7 @@ import { CtaBand, FeatureGrid, PageHero, Section, Split } from "@/components/ui"
 export const metadata = pageMeta({
   title: "Sobre a RB Ferragens | Ferro e Aço na Lagoa Redonda, Fortaleza",
   description:
-    "Há 10 anos na Lagoa Redonda, a RB Ferragens vende, corta e dobra ferro e aço para obras em Fortaleza e na região metropolitana.",
+    "Há 8 anos na Lagoa Redonda, a RB Ferragens vende, corta e dobra ferro e aço para obras em Fortaleza e na região metropolitana.",
   keywords: "RB Ferragens, ferragens Lagoa Redonda, loja de ferro Fortaleza, distribuidora de ferro e aço",
   path: "/sobre",
 });
@@ -17,8 +17,8 @@ export default function Sobre() {
         crumbs={[{ label: "Sobre" }]}
         image="/images/fotos/equipe-patio.jpg"
         imageAlt="Equipe da RB Ferragens, de uniforme, no pátio da loja na Lagoa Redonda"
-        chip="10 anos na Lagoa Redonda"
-        title="10 anos fornecendo ferro pra obra na Lagoa Redonda"
+        chip="8 anos na Lagoa Redonda"
+        title="8 anos fornecendo ferro pra obra na Lagoa Redonda"
         subtitle="A RB Ferragens nasceu no bairro e cresceu atendendo quem constrói em Fortaleza e na região metropolitana."
       />
 
@@ -26,7 +26,7 @@ export default function Sobre() {
         <Split image="/images/fotos/fachada.jpg" alt="Fachada da RB Ferragens na Travessa Precabura, 79, Lagoa Redonda" reverse>
           <h2>Nossa história</h2>
           <p className="lead">
-            A RB Ferragens está há 10 anos na Lagoa Redonda vendendo ferro e aço pra obra. Além da venda, corta e dobra o
+            A RB Ferragens está há 8 anos na Lagoa Redonda vendendo ferro e aço pra obra. Além da venda, corta e dobra o
             ferro na medida de cada projeto e entrega direto na obra, em Fortaleza e na região metropolitana.
           </p>
           <p className="lead">

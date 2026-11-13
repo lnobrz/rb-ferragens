@@ -31,20 +31,9 @@ export default function Malhas() {
         <DataTable {...MALHAS} />
       </Section>
 
-      <Section title="Diga onde vai a tela" tone="white">
-        <p className="lead">
-          Não precisa saber o nome do modelo. Conte pra gente se é contrapiso, calçada, garagem ou laje e qual o tamanho da
-          área, que a gente indica a tela e calcula quantos painéis você precisa.
-        </p>
-      </Section>
+      <Section title="Diga onde vai a tela" tone="white" split intro={<>Não precisa saber o nome do modelo. Conte pra gente se é contrapiso, calçada, garagem ou laje e qual o tamanho da área, que a gente indica a tela e calcula quantos painéis você precisa.</>} />
 
-      <Section title="Radier">
-        <p className="lead">
-          O radier é uma fundação: uma laje de concreto armado direto no chão, que segura a casa toda. Por isso ele precisa
-          de projeto. A tela é só uma parte da armadura do radier. Com o projeto em mãos, a gente separa toda a ferragem,
-          inclusive o corte e dobra das bordas e reforços.
-        </p>
-      </Section>
+      <Section title="Radier" split intro={<>O radier é uma fundação: uma laje de concreto armado direto no chão, que segura a casa toda. Por isso ele precisa de projeto. A tela é só uma parte da armadura do radier. Com o projeto em mãos, a gente separa toda a ferragem, inclusive o corte e dobra das bordas e reforços.</>} />
 
       <Faq
         items={[

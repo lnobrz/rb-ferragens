@@ -51,7 +51,7 @@ export function Header() {
 
       <div className={`container ${s.wrap}`}>
         <div className={s.bar}>
-          <Link href="/" className={s.logo} aria-label="RB Ferragens, página inicial">
+          <Link href="/" prefetch={false} className={s.logo} aria-label="RB Ferragens, página inicial">
             <Image src="/images/logo.png" alt="" width={1080} height={640} priority sizes="96px" />
           </Link>
 
@@ -59,7 +59,7 @@ export function Header() {
             <ul>
               {NAV.map((item) => (
                 <li key={item.href}>
-                  <Link href={item.href} aria-current={isActive(item.href) ? "page" : undefined}>
+                  <Link href={item.href} prefetch={false} aria-current={isActive(item.href) ? "page" : undefined}>
                     {item.label}
                   </Link>
                 </li>
@@ -93,7 +93,7 @@ export function Header() {
           <ul>
             {NAV.map((item, i) => (
               <li key={item.href} style={{ "--i": i } as React.CSSProperties}>
-                <Link href={item.href} aria-current={isActive(item.href) ? "page" : undefined}>
+                <Link href={item.href} prefetch={false} aria-current={isActive(item.href) ? "page" : undefined}>
                   {item.label}
                   <Icon name="seta" size={22} />
                 </Link>

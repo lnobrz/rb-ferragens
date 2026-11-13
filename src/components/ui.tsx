@@ -1,5 +1,6 @@
 import Link from "next/link";
-import Image from "next/image";
+import Image, { getImageProps } from "next/image";
+import { HeroPhoto } from "./HeroPhoto";
 import { Icon } from "./Icon";
 import { waLink } from "@/content/site";
 import s from "./ui.module.css";
@@ -43,13 +44,15 @@ export function LinkButton({
   href,
   children,
   variant = "ghost",
+  prefetch,
 }: {
   href: string;
   children: React.ReactNode;
   variant?: BtnVariant;
+  prefetch?: boolean;
 }) {
   return (
-    <Link className={`${s.btn} ${s[variant]}`} href={href}>
+    <Link className={`${s.btn} ${s[variant]}`} href={href} prefetch={prefetch}>
       <BtnInner icon="seta">{children}</BtnInner>
     </Link>
   );
@@ -68,7 +71,11 @@ export function Actions({ children, center }: { children: React.ReactNode; cente
   return <div className={`${s.actions} ${center ? s.actionsCenter : ""}`}>{children}</div>;
 }
 
-/* ---------- Hero das páginas internas: texto + foto arredondada com etiqueta ---------- */
+/* ---------- Hero das páginas internas ----------
+   Com foto: card de foto arredondado com o título por cima (mesma linha da Home, refs Wave Wood e Mountain).
+   Sem foto: só o bloco de texto, compacto. */
+
+const pick = (p: { src: string; srcSet?: string; sizes?: string }) => ({ src: p.src, srcSet: p.srcSet, sizes: p.sizes });
 
 export function PageHero({
   title,
@@ -89,39 +96,47 @@ export function PageHero({
   chip?: string;
   crumbs?: { href?: string; label: string }[];
 }) {
-  return (
-    <section className={`${s.hero} ${image ? s.heroSplit : ""}`}>
-      <div className={`container ${s.heroGrid}`}>
-        <div className={s.heroText}>
+  if (!image) {
+    return (
+      <section className={s.hero}>
+        <div className="container">
           {crumbs && <Breadcrumb items={crumbs} />}
-          {eyebrow && (
-            <p className="eyebrow" data-reveal>
-              {eyebrow}
-            </p>
-          )}
-          <h1 className={s.heroTitle} data-reveal style={{ "--d": 1 } as React.CSSProperties}>
-            {title}
-          </h1>
-          <p className={s.heroSub} data-reveal style={{ "--d": 2 } as React.CSSProperties}>
-            {subtitle}
-          </p>
-          {children && (
-            <div data-reveal style={{ "--d": 3 } as React.CSSProperties}>
-              {children}
-            </div>
+          {eyebrow && <p className="eyebrow">{eyebrow}</p>}
+          <h1 className={s.heroTitle}>{title}</h1>
+          <p className={s.heroSub}>{subtitle}</p>
+          {children}
+        </div>
+      </section>
+    );
+  }
+  return (
+    <section className={s.heroWrap}>
+      <div className={s.heroCard}>
+        <HeroPhoto
+          alt={imageAlt}
+          desk={pick(getImageProps({ src: image, alt: imageAlt, fill: true, sizes: "100vw", quality: 60 }).props)}
+          className={s.heroImg}
+          shownClassName={s.heroImgShown}
+        />
+        <div className={s.heroCardTop}>
+          {crumbs && <Breadcrumb items={crumbs} light />}
+          {chip && (
+            <span className={s.chip}>
+              <span className={s.chipDot} aria-hidden="true" />
+              {chip}
+            </span>
           )}
         </div>
-        {image && (
-          <div className={s.heroMedia} data-reveal="scale" style={{ "--d": 2 } as React.CSSProperties}>
-            <Image src={image} alt={imageAlt} fill priority fetchPriority="high" sizes="(min-width: 1000px) 46vw, 92vw" className={s.cover} />
-            {chip && (
-              <span className={s.chip}>
-                <span className={s.chipDot} aria-hidden="true" />
-                {chip}
-              </span>
-            )}
+        <div className={s.heroCardBody}>
+          <div>
+            {eyebrow && <p className={`eyebrow ${s.heroEyebrowLight}`}>{eyebrow}</p>}
+            <h1 className={s.heroCardTitle}>{title}</h1>
           </div>
-        )}
+          <div className={s.heroCardSide}>
+            <p className={s.heroCardSub}>{subtitle}</p>
+            {children}
+          </div>
+        </div>
       </div>
     </section>
   );
@@ -203,9 +218,9 @@ export function FeatureGrid({
   );
 }
 
-export function CheckList({ items }: { items: string[] }) {
+export function CheckList({ items, columns = 1 }: { items: string[]; columns?: 1 | 2 | 3 }) {
   return (
-    <ul className={s.checks}>
+    <ul className={`${s.checks} ${s[`checkCols${columns}`]}`}>
       {items.map((it, i) => (
         <li key={it} data-reveal style={{ "--d": i } as React.CSSProperties}>
           <span className={s.checkIcon} aria-hidden="true">
@@ -425,9 +440,9 @@ export function Split({
   );
 }
 
-export function Breadcrumb({ items }: { items: { href?: string; label: string }[] }) {
+export function Breadcrumb({ items, light }: { items: { href?: string; label: string }[]; light?: boolean }) {
   return (
-    <nav aria-label="Você está em" className={s.crumbs}>
+    <nav aria-label="Você está em" className={`${s.crumbs} ${light ? s.crumbsLight : ""}`}>
       <ol>
         <li>
           <Link href="/">Início</Link>

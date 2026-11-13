@@ -42,12 +42,7 @@ export default function Entrega() {
         />
       </Section>
 
-      <Section title="Frete grátis" tone="white">
-        <p className="lead">
-          Tem frete grátis em condições especiais, de acordo com o valor do pedido e a região da obra. Pergunte se o seu
-          pedido se encaixa: a gente informa antes de você fechar, sem surpresa.
-        </p>
-      </Section>
+      <Section title="Frete grátis" tone="white" split intro={<>Tem frete grátis em condições especiais, de acordo com o valor do pedido e a região da obra. Pergunte se o seu pedido se encaixa: a gente informa antes de você fechar, sem surpresa.</>} />
 
       <Section title="Como funciona">
         <Steps
@@ -59,12 +54,7 @@ export default function Entrega() {
         />
       </Section>
 
-      <Section title="Prefere retirar?" tone="white">
-        <p className="lead">
-          Você também pode buscar na loja: {SITE.address.street}, {SITE.address.district}. Segunda a sexta, das 7h às 18h,
-          e sábado, das 7h às 12h.
-        </p>
-      </Section>
+      <Section title="Prefere retirar?" tone="white" split intro={<>Você também pode buscar na loja: {SITE.address.street}, {SITE.address.district}. Segunda a sexta, das 7h às 18h, e sábado, das 7h às 12h.</>} />
 
       <Faq
         items={[

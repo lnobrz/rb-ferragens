@@ -27,15 +27,10 @@ export default function Tubos() {
       </PageHero>
 
       <Section title="Onde usar">
-        <CheckList items={["Estruturas leves e coberturas", "Portões, grades e corrimãos", "Suportes e instalações"]} />
+        <CheckList columns={3} items={["Estruturas leves e coberturas", "Portões, grades e corrimãos", "Suportes e instalações"]} />
       </Section>
 
-      <Section title="Por que galvanizado" tone="white">
-        <p className="lead">
-          Perto do mar, a maresia acelera a ferrugem. A camada de zinco protege o aço por muito mais tempo do que o tubo
-          comum.
-        </p>
-      </Section>
+      <Section title="Por que galvanizado" tone="white" split intro={<>Perto do mar, a maresia acelera a ferrugem. A camada de zinco protege o aço por muito mais tempo do que o tubo comum.</>} />
 
       <Faq
         items={[

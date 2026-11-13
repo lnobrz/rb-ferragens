@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image, { getImageProps } from "next/image";
 import Link from "next/link";
 import { pageMeta } from "@/lib/seo";
 import { MSG, RMF_CITIES } from "@/content/site";
@@ -8,6 +8,7 @@ import { ProductCards } from "@/components/ProductCards";
 import { Marquee } from "@/components/Marquee";
 import { CountUp } from "@/components/Motion";
 import { Icon } from "@/components/Icon";
+import { HeroPhoto as HeroPhotoClient } from "@/components/HeroPhoto";
 import s from "./home.module.css";
 
 export const metadata = pageMeta({
@@ -19,7 +20,7 @@ export const metadata = pageMeta({
 });
 
 const TRUST = [
-  { icon: "calendario", strong: "10 anos", text: "na Lagoa Redonda" },
+  { icon: "calendario", strong: "8 anos", text: "na Lagoa Redonda" },
   { icon: "corte", strong: "Corte e dobra", text: "sob medida" },
   { icon: "caminhao", strong: "Entrega", text: "em Fortaleza e RMF" },
   { icon: "cartao", strong: "Pagamento", text: "no cartão" },
@@ -40,16 +41,7 @@ export default function Home() {
       {/* Hero: foto em card arredondado, texto por cima, números em vidro no pé. */}
       <section className={s.heroWrap}>
         <div className={s.hero}>
-          <Image
-            className={s.heroBg}
-            src="/images/fotos/maquina-dobra.jpg"
-            alt="Funcionário da RB, de uniforme, cortando vergalhão na bancada do pátio da loja"
-            fill
-            priority
-            fetchPriority="high"
-            quality={60}
-            sizes="100vw"
-          />
+          <HeroPhoto />
           <div className={s.heroInner}>
             <p className={`eyebrow ${s.heroEyebrow}`}>
               RB Ferragens · Lagoa Redonda, Fortaleza
@@ -58,13 +50,13 @@ export default function Home() {
               Ferro e aço para sua obra, cortado e dobrado do jeito do seu projeto
             </h1>
             <p className={s.heroSub}>
-              Treliça, vergalhão, colunas e malhas com entrega na obra em Fortaleza e região metropolitana. Há 10 anos
+              Treliça, vergalhão, colunas e malhas com entrega na obra em Fortaleza e região metropolitana. Há 8 anos
               na Lagoa Redonda.
             </p>
             <div>
               <Actions>
                 <WaButton message={MSG.geral}>Pedir orçamento no WhatsApp</WaButton>
-                <LinkButton href="/produtos" variant="light">
+                <LinkButton href="/produtos" variant="light" prefetch={false}>
                   Ver produtos
                 </LinkButton>
               </Actions>
@@ -190,7 +182,7 @@ export default function Home() {
         </div>
       </Section>
 
-      <Section eyebrow="Por que comprar na RB" title="Ferro na medida, com gente do outro lado" tone="white">
+      <Section eyebrow="Por que comprar na RB" title="Ferro na medida e atendimento direto" tone="white">
         <div className={s.why}>
           <div className={`${s.whyCard} ${s.whyPhoto}`} data-reveal="scale">
             <Image
@@ -201,7 +193,7 @@ export default function Home() {
               className={s.cover}
             />
             <div className={s.whyOverlay}>
-              <h3>Atendimento de gente</h3>
+              <h3>Atendimento direto</h3>
               <p>Você fala direto com quem entende de ferro, no WhatsApp ou no balcão.</p>
             </div>
           </div>
@@ -232,7 +224,7 @@ export default function Home() {
           <div data-reveal>
             <dt>Anos na Lagoa Redonda</dt>
             <dd>
-              <CountUp to={10} />
+              <CountUp to={8} />
             </dd>
           </div>
           <div data-reveal style={d(1)}>
@@ -280,6 +272,24 @@ export default function Home() {
         image="/images/fotos/pecas-separadas.jpg"
       />
     </>
+  );
+}
+
+/** Foto do hero com direção de arte: corte retrato e leve no celular (entra depois do carregamento), paisagem no desktop. */
+function HeroPhoto() {
+  const alt = "Funcionário da RB, de uniforme, cortando vergalhão na bancada do pátio da loja";
+  const common = { alt, fill: true, fetchPriority: "high" as const, loading: "eager" as const, sizes: "100vw" };
+  const { props: desk } = getImageProps({ ...common, quality: 60, src: "/images/fotos/maquina-dobra.jpg" });
+  // No celular a foto fica toda sob a camada escura: dá pra comprimir bem mais sem diferença visível.
+  const { props: mob } = getImageProps({ ...common, quality: 40, sizes: "85vw", src: "/images/fotos/maquina-dobra-mobile.jpg" });
+  return (
+    <HeroPhotoClient
+      alt={alt}
+      desk={{ src: desk.src, srcSet: desk.srcSet, sizes: desk.sizes }}
+      mob={{ src: mob.src, srcSet: mob.srcSet, sizes: mob.sizes }}
+      className={s.heroBg}
+      shownClassName={s.heroBgShown}
+    />
   );
 }
 
