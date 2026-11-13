@@ -25,7 +25,7 @@ export default function Guia() {
         title="Guia da obra"
         subtitle="Respostas diretas pras dúvidas que mais chegam no nosso WhatsApp. Elas ajudam a montar sua lista, mas não substituem o projeto estrutural."
       />
-      <Section tone="white">
+      <Section tone="white" texture="mesh">
         <h2 className="sr-only">Guias</h2>
         <ul className={s.cards}>
           {GUIDES.map((g, i) => (

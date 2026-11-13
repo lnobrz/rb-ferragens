@@ -120,6 +120,76 @@ ol {
   color: var(--c-cream-text);
 }
 
+/* ---------- Sistema de fundos ----------
+   Ritmo inspirado nas refs (GreenBird, Wave Wood, Anamorph, Forth, Scalable):
+   papel liso -> malha técnica -> concreto -> escuro com brilho -> faixa de foto.
+   Tudo em camadas ::before atrás do conteúdo, em opacidade baixa. */
+.section,
+.section-tight,
+.tx {
+  position: relative;
+  isolation: isolate;
+  overflow-x: clip;
+}
+
+.section > .container,
+.section-tight > .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Concreto claro: matéria discreta sobre o papel. */
+.tx-concrete::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: url("/images/texturas/concreto-claro.jpg") center / cover;
+  opacity: 0.32;
+  mix-blend-mode: multiply;
+  pointer-events: none;
+}
+
+/* Malha técnica 15x15 (a malha POP), fina e esmaecendo a partir de um canto. */
+.tx-mesh::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image:
+    linear-gradient(to right, rgba(20, 19, 15, 0.07) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(20, 19, 15, 0.07) 1px, transparent 1px);
+  background-size: 48px 48px;
+  background-position: -1px -1px;
+  -webkit-mask-image: radial-gradient(120% 90% at 100% 0%, #000 0%, rgba(0, 0, 0, 0.35) 45%, transparent 75%);
+  mask-image: radial-gradient(120% 90% at 100% 0%, #000 0%, rgba(0, 0, 0, 0.35) 45%, transparent 75%);
+  pointer-events: none;
+}
+
+.tx-mesh-left::before {
+  -webkit-mask-image: radial-gradient(120% 90% at 0% 100%, #000 0%, rgba(0, 0, 0, 0.35) 45%, transparent 75%);
+  mask-image: radial-gradient(120% 90% at 0% 100%, #000 0%, rgba(0, 0, 0, 0.35) 45%, transparent 75%);
+}
+
+/* Escuro com matéria e um brilho amarelo baixo no canto (Scalable). */
+.bg-dark {
+  position: relative;
+  isolation: isolate;
+}
+
+.bg-dark::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(45% 55% at 92% 8%, rgba(239, 223, 100, 0.1), transparent 70%),
+    url("/images/texturas/concreto-escuro.jpg") center / cover;
+  opacity: 0.9;
+  mix-blend-mode: screen;
+  pointer-events: none;
+}
+
 .bg-dark h1,
 .bg-dark h2,
 .bg-dark h3,

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image, { getImageProps } from "next/image";
 import { HeroPhoto } from "./HeroPhoto";
+import { Decor, type DecorName } from "./Decor";
 import { Icon } from "./Icon";
 import { waLink } from "@/content/site";
 import s from "./ui.module.css";
@@ -86,6 +87,7 @@ export function PageHero({
   imageAlt = "",
   chip,
   crumbs,
+  focus,
 }: {
   title: string;
   subtitle: string;
@@ -95,6 +97,8 @@ export function PageHero({
   imageAlt?: string;
   chip?: string;
   crumbs?: { href?: string; label: string }[];
+  /** Ponto focal da foto (object-position). Fotos com pessoas: suba o foco pra não cortar os rostos. */
+  focus?: string;
 }) {
   if (!image) {
     return (
@@ -111,7 +115,7 @@ export function PageHero({
   }
   return (
     <section className={s.heroWrap}>
-      <div className={s.heroCard}>
+      <div className={s.heroCard} style={focus ? ({ "--focus": focus } as React.CSSProperties) : undefined}>
         <HeroPhoto
           alt={imageAlt}
           desk={pick(getImageProps({ src: image, alt: imageAlt, fill: true, sizes: "100vw", quality: 60 }).props)}
@@ -148,6 +152,8 @@ export function Section({
   split,
   id,
   tight,
+  texture,
+  decor,
 }: {
   title?: React.ReactNode;
   eyebrow?: string;
@@ -157,10 +163,16 @@ export function Section({
   split?: boolean;
   id?: string;
   tight?: boolean;
+  /** Textura de fundo: concreto claro ou malha técnica (canto superior direito / inferior esquerdo). */
+  texture?: "concrete" | "mesh" | "mesh-left";
+  /** Grafismo técnico em traço fino, no canto da seção. */
+  decor?: DecorName;
 }) {
+  const tx = texture === "concrete" ? "tx-concrete" : texture === "mesh" ? "tx-mesh" : texture === "mesh-left" ? "tx-mesh tx-mesh-left" : "";
   return (
-    <section className={`${tight ? "section-tight" : "section"} ${toneClass[tone]}`} id={id}>
+    <section className={`${tight ? "section-tight" : "section"} ${toneClass[tone]} ${tx}`} id={id}>
       <div className="container">
+        {decor && <Decor name={decor} className={`${s.sectionDecor} ${split ? s.decorBottomLeft : s.decorTopRight}`} />}
         {(title || eyebrow || intro) && (
           <div className={`head ${split ? "head-split" : ""}`}>
             <div>
@@ -298,7 +310,7 @@ export type FaqItem = { q: string; a: string };
 
 export function Faq({ items, title = "Perguntas frequentes" }: { items: FaqItem[]; title?: string }) {
   return (
-    <section className="section bg-white">
+    <section className="section bg-white tx-concrete">
       <div className={`container ${s.faqGrid}`}>
         <div className={s.faqHead}>
           <p className="eyebrow" data-reveal>

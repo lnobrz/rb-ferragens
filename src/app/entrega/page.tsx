@@ -27,7 +27,7 @@ export default function Entrega() {
         </Actions>
       </PageHero>
 
-      <Section title="Onde entregamos">
+      <Section title="Onde entregamos" texture="mesh">
         <FeatureGrid
           columns={3}
           items={[
@@ -44,7 +44,7 @@ export default function Entrega() {
 
       <Section title="Frete grátis" tone="white" split intro={<>Tem frete grátis em condições especiais, de acordo com o valor do pedido e a região da obra. Pergunte se o seu pedido se encaixa: a gente informa antes de você fechar, sem surpresa.</>} />
 
-      <Section title="Como funciona">
+      <Section title="Como funciona" texture="concrete">
         <Steps
           items={[
             { text: "Mande o pedido e o endereço da obra pelo WhatsApp." },

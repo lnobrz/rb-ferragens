@@ -26,6 +26,21 @@ npm run build && npm start
 - `src/lib/seo.ts`: metatags de cada página (title, description, keywords, author "RB Ferragens", Open Graph,
   canonical). JSON-LD `HardwareStore` com NAP e horário no layout.
 
+## Redirecionamentos do site antigo (src/proxy.ts)
+
+As URLs do site de 2023 (sitemap, menu e links internos, inclusive com acento: `/produtos/treliças`,
+`/produtos/vergalhões`) fazem um 301 único direto pra URL nova em `https://www.rbferragens.com.br`, com e sem
+barra no final, com acento literal ou codificado (`%C3%A7` e `c%CC%A7`), preservando a query string (UTMs do
+Perfil da Empresa no Google). Qualquer outra `/produtos/<x>` desconhecida vai pra `/produtos`. Manter pelo menos
+até dez/2027 (postagens programadas no Google). O código do site antigo está na branch `site-antigo-2023`.
+
+## Dados estruturados
+
+Um único `HardwareStore` no `<head>` de todas as páginas (`src/app/layout.tsx`): NAP idêntico ao Perfil do Google,
+geo, horários, `areaServed` = Fortaleza + cidades da página de Entrega, `hasMap`. Sem preço, priceRange ou notas.
+Validado no validator.schema.org (0 erros, 0 avisos) e no Teste de pesquisa aprimorada (válido; único aviso:
+`priceRange` opcional, omitido de propósito).
+
 ## Pendências com o cliente
 
 - **Fotos**: as fotos em `public/images/fotos/` são reais da RB (pasta "Exemplos fotos Google"). Ficaram de fora

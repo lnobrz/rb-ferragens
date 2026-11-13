@@ -26,11 +26,11 @@ export default function Tubos() {
         </Actions>
       </PageHero>
 
-      <Section title="Onde usar">
+      <Section title="Onde usar" texture="concrete">
         <CheckList columns={3} items={["Estruturas leves e coberturas", "Portões, grades e corrimãos", "Suportes e instalações"]} />
       </Section>
 
-      <Section title="Por que galvanizado" tone="white" split intro={<>Perto do mar, a maresia acelera a ferrugem. A camada de zinco protege o aço por muito mais tempo do que o tubo comum.</>} />
+      <Section title="Por que galvanizado" texture="mesh-left" tone="white" split intro={<>Perto do mar, a maresia acelera a ferrugem. A camada de zinco protege o aço por muito mais tempo do que o tubo comum.</>} />
 
       <Faq
         items={[

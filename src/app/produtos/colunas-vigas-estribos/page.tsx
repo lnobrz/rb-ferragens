@@ -26,7 +26,7 @@ export default function Colunas() {
         </Actions>
       </PageHero>
 
-      <Section title="O que você encontra">
+      <Section title="O que você encontra" decor="estribo">
         <FeatureGrid
           columns={3}
           items={[
@@ -47,7 +47,7 @@ export default function Colunas() {
         </Actions>
       </Section>
 
-      <Section title="Por que comprar pronta">
+      <Section title="Por que comprar pronta" texture="mesh">
         <CheckList
           columns={3}
           items={[

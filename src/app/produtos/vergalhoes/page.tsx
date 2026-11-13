@@ -27,11 +27,11 @@ export default function Vergalhoes() {
         </Actions>
       </PageHero>
 
-      <Section title="Tabela de bitolas" intro="Barra de 12 m.">
+      <Section title="Tabela de bitolas" decor="vergalhao" intro="Barra de 12 m.">
         <DataTable {...BITOLAS} />
       </Section>
 
-      <Section title="CA-50 ou CA-60?" tone="white" split intro={<>O CA-50 é a barra das peças principais: colunas, vigas e sapatas. O CA-60 é mais fino e vai em estribos, telas e lajes. Um não substitui o outro: trocar CA-50 por CA-60 na estrutura muda o cálculo do projeto. Se ficou na dúvida, mande a lista que a gente confere com você.</>} />
+      <Section title="CA-50 ou CA-60?" texture="concrete" tone="white" split intro={<>O CA-50 é a barra das peças principais: colunas, vigas e sapatas. O CA-60 é mais fino e vai em estribos, telas e lajes. Um não substitui o outro: trocar CA-50 por CA-60 na estrutura muda o cálculo do projeto. Se ficou na dúvida, mande a lista que a gente confere com você.</>} />
 
       <Section title="Barra inteira ou cortada e dobrada">
         <p className="lead">

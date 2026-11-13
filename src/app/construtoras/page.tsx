@@ -27,7 +27,7 @@ export default function Construtoras() {
         </Actions>
       </PageHero>
 
-      <Section title="Onde a RB ajuda">
+      <Section title="Onde a RB ajuda" texture="mesh">
         <FeatureGrid
           columns={3}
           items={[
@@ -40,7 +40,7 @@ export default function Construtoras() {
         />
       </Section>
 
-      <Section title="Como começar" tone="white">
+      <Section title="Como começar" texture="concrete" tone="white">
         <Steps
           items={[
             { text: "Mande o nome da empresa e a obra pelo WhatsApp." },

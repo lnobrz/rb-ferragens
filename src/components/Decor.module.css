@@ -1,0 +1,31 @@
+.decor {
+  position: absolute;
+  z-index: 0;
+  pointer-events: none;
+  color: var(--c-ink);
+  opacity: 0.09;
+  font-family: var(--f-body);
+}
+
+:global(.bg-dark) .decor {
+  color: var(--c-yellow);
+  opacity: 0.14;
+}
+
+.trelica {
+  width: min(720px, 70vw);
+}
+
+.vergalhao {
+  width: min(420px, 60vw);
+}
+
+.estribo {
+  width: min(300px, 45vw);
+}
+
+@media (max-width: 699px) {
+  .decor {
+    opacity: 0.06;
+  }
+}

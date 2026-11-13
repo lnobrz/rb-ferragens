@@ -415,15 +415,45 @@
   color: var(--c-yellow);
 }
 
+/* ---------- Faixa de foto com os números (pausa entre seções) ---------- */
+.band {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  margin: clamp(0.5rem, 0.2rem + 1vw, 1rem);
+  padding: clamp(4rem, 3rem + 4vw, 7rem) 0 clamp(3rem, 2rem + 3vw, 5rem);
+  border-radius: var(--r-lg);
+  background: var(--c-ink-2);
+  color: var(--c-cream);
+}
+
+.bandImg {
+  z-index: -2;
+  object-fit: cover;
+  object-position: 50% 60%;
+}
+
+.band::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(180deg, rgba(10, 8, 0, 0.78) 0%, rgba(10, 8, 0, 0.86) 55%, rgba(10, 8, 0, 0.94) 100%);
+}
+
+.bandEyebrow {
+  color: var(--c-cream);
+}
+
 /* Números com régua (Anamorph). */
 .stats {
-  margin: clamp(3rem, 2rem + 3vw, 5rem) 0 0;
+  margin: clamp(2.5rem, 2rem + 2vw, 4rem) 0 0;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem 1rem;
   padding-top: 2rem;
-  background: repeating-linear-gradient(90deg, var(--c-line) 0 1px, transparent 1px 24px) top / 100% 10px no-repeat;
-  border-top: 1px solid var(--c-line);
+  background: repeating-linear-gradient(90deg, rgba(249, 243, 215, 0.35) 0 1px, transparent 1px 24px) top / 100% 10px no-repeat;
+  border-top: 1px solid rgba(249, 243, 215, 0.35);
 }
 
 @media (min-width: 900px) {
@@ -435,7 +465,7 @@
 .stats dt {
   order: 2;
   font-size: var(--fs-sm);
-  color: var(--c-muted);
+  color: var(--c-cream);
   text-transform: uppercase;
   letter-spacing: 0.08em;
 }
@@ -452,7 +482,13 @@
   font-size: clamp(3rem, 2rem + 4vw, 5.5rem);
   line-height: 1;
   letter-spacing: -0.04em;
-  color: var(--c-ink);
+  color: var(--c-yellow);
+}
+
+/* Treliça em traço técnico no canto do bloco escuro. */
+.corteDecor {
+  right: -2rem;
+  bottom: 1.5rem;
 }
 
 /* ---------- Guias ---------- */

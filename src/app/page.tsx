@@ -9,6 +9,7 @@ import { Marquee } from "@/components/Marquee";
 import { CountUp } from "@/components/Motion";
 import { Icon } from "@/components/Icon";
 import { HeroPhoto as HeroPhotoClient } from "@/components/HeroPhoto";
+import { Decor } from "@/components/Decor";
 import s from "./home.module.css";
 
 export const metadata = pageMeta({
@@ -99,12 +100,14 @@ export default function Home() {
         title="Tudo de ferro pra estrutura da sua obra"
         intro="Do vergalhão em barra à coluna pronta pra concretar. O que a sua obra precisa, num pedido só."
         split
+        texture="mesh"
       >
         <ProductCards items={HOME_PRODUCTS} featured />
       </Section>
 
       {/* Corte e dobra: seção escura, bento com foto. */}
       <section className={`section bg-dark ${s.corte}`}>
+        <Decor name="trelica" className={s.corteDecor} />
         <div className={`container ${s.bento}`}>
           <div className={s.bentoText} data-reveal>
             <p className="eyebrow">Corte e dobra</p>
@@ -145,7 +148,7 @@ export default function Home() {
         </div>
       </section>
 
-      <Section tone="paper">
+      <Section tone="paper" texture="concrete">
         <div className={s.delivery}>
           <div className={s.deliveryMedia} data-reveal="scale">
             <Image
@@ -178,7 +181,7 @@ export default function Home() {
         </div>
       </Section>
 
-      <Section eyebrow="Por que comprar na RB" title="Ferro na medida e atendimento direto" tone="white">
+      <Section eyebrow="Por que comprar na RB" title="Ferro na medida e atendimento direto" tone="white" decor="estribo">
         <div className={s.why}>
           <div className={`${s.whyCard} ${s.whyPhoto}`} data-reveal="scale">
             <Image
@@ -216,6 +219,19 @@ export default function Home() {
           </div>
         </div>
 
+      </Section>
+
+      {/* Faixa de foto do pátio com os números da loja (pausa entre seções, à la GreenBird / Anamorph). */}
+      <section className={s.band} aria-label="A RB em números">
+        <Image
+          src="/images/fotos/patio.jpg"
+          alt=""
+          fill
+          sizes="100vw"
+          className={s.bandImg}
+        />
+        <div className="container">
+          <p className={`eyebrow ${s.bandEyebrow}`}>Lagoa Redonda · Fortaleza</p>
         <dl className={s.stats}>
           <div data-reveal>
             <dt>Anos na Lagoa Redonda</dt>
@@ -242,9 +258,10 @@ export default function Home() {
             </dd>
           </div>
         </dl>
-      </Section>
+        </div>
+      </section>
 
-      <Section eyebrow="Guia da obra" title="Tire suas dúvidas antes de comprar" split intro={<TextLinkAll />}>
+      <Section eyebrow="Guia da obra" title="Tire suas dúvidas antes de comprar" split intro={<TextLinkAll />} texture="mesh-left">
         <ul className={s.guides}>
           {GUIDES.map((g, i) => (
             <li key={g.href} data-reveal style={d(i)}>

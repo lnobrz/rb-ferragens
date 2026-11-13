@@ -19,6 +19,7 @@ export default function Contato() {
       <PageHero
         crumbs={[{ label: "Contato" }]}
         image="/images/fotos/equipe-balcao.jpg"
+        focus="50% 18%"
         imageAlt="Equipe da RB Ferragens atrás do balcão da loja"
         chip="Atendimento no WhatsApp e no balcão"
         title="Fale com a RB Ferragens"
@@ -29,7 +30,7 @@ export default function Contato() {
         </Actions>
       </PageHero>
 
-      <Section>
+      <Section texture="mesh-left">
         <div className={s.grid}>
           <div className={s.panel} data-reveal>
             <p className="eyebrow">Dados</p>

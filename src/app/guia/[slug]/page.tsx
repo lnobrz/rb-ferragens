@@ -28,8 +28,8 @@ export default async function GuidePage({ params }: Props) {
     "@type": "Article",
     headline: g.h1,
     description: g.description,
-    author: { "@type": "Organization", name: SITE.name },
-    publisher: { "@type": "Organization", name: SITE.name, logo: { "@type": "ImageObject", url: `${SITE.url}/images/logo.png` } },
+    author: { "@id": "https://www.rbferragens.com.br/#loja" },
+    publisher: { "@id": "https://www.rbferragens.com.br/#loja" },
     mainEntityOfPage: `${SITE.url}/guia/${g.slug}`,
   };
 

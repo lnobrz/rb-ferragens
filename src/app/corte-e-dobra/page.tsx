@@ -26,7 +26,7 @@ export default function CorteEDobra() {
         </Actions>
       </PageHero>
 
-      <Section title="Como funciona">
+      <Section title="Como funciona" texture="mesh">
         <Steps
           items={[
             { title: "Mande o projeto ou a lista", text: "Pode ser o projeto estrutural, uma foto da lista do mestre de obras ou até a planta com as medidas." },
@@ -52,7 +52,7 @@ export default function CorteEDobra() {
         </Split>
       </Section>
 
-      <Section title="Por que vale a pena">
+      <Section title="Por que vale a pena" texture="concrete">
         <FeatureGrid
           columns={4}
           items={[

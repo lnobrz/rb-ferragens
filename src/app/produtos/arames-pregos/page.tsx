@@ -26,7 +26,7 @@ export default function Arames() {
         </Actions>
       </PageHero>
 
-      <Section>
+      <Section texture="concrete">
         <h2 className="sr-only">Arame e pregos</h2>
         <FeatureGrid
           items={[

@@ -28,7 +28,7 @@ export default function Produtos() {
         </Actions>
       </PageHero>
 
-      <Section>
+      <Section texture="mesh">
         <h2 className="sr-only">Nossos produtos</h2>
         <ProductCards items={ALL_PRODUCTS} />
         <div style={{ marginTop: "1.25rem" }} />

@@ -27,13 +27,13 @@ export default function Trelicas() {
         </Actions>
       </PageHero>
 
-      <Section title="O que é treliça" split intro={<>A treliça é uma armadura de aço soldada, com um fio em cima, dois embaixo e diagonais ligando tudo. Ela vai dentro das vigotas da laje treliçada e dá a resistência que a laje precisa. O número do modelo é a altura da treliça em centímetros: a TG8 tem 8 cm e a TG12 tem 12 cm. Muita gente chama de treliça H8 ou TR8, é a mesma coisa.</>} />
+      <Section title="O que é treliça" decor="trelica" split intro={<>A treliça é uma armadura de aço soldada, com um fio em cima, dois embaixo e diagonais ligando tudo. Ela vai dentro das vigotas da laje treliçada e dá a resistência que a laje precisa. O número do modelo é a altura da treliça em centímetros: a TG8 tem 8 cm e a TG12 tem 12 cm. Muita gente chama de treliça H8 ou TR8, é a mesma coisa.</>} />
 
       <Section title="Medidas dos modelos" tone="white">
         <DataTable {...TRELICAS} />
       </Section>
 
-      <Section title="TG8 ou TG12: qual usar?" split intro={<>A TG8 é a mais usada em casa, pra lajes de vão menor. A TG12 é mais alta e vai em lajes com vão maior ou mais carga. Quem define o modelo e o espaçamento é o projeto da laje. Se você tem o projeto e ficou em dúvida, mande pra gente que a gente ajuda a ler.</>} />
+      <Section title="TG8 ou TG12: qual usar?" texture="mesh-left" split intro={<>A TG8 é a mais usada em casa, pra lajes de vão menor. A TG12 é mais alta e vai em lajes com vão maior ou mais carga. Quem define o modelo e o espaçamento é o projeto da laje. Se você tem o projeto e ficou em dúvida, mande pra gente que a gente ajuda a ler.</>} />
 
       <Section title="Por que comprar treliça na RB" tone="white">
         <CheckList

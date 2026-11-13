@@ -214,7 +214,7 @@
   height: 100%;
   object-fit: cover;
   /* Enquadra mais o chão/obra e menos céu claro, que derruba o contraste do texto. */
-  object-position: 50% 70%;
+  object-position: var(--focus, 50% 70%);
 }
 
 /* Linha de topo do card (Anamorph / Wave Wood): caminho à esquerda, legenda à direita, fio fino embaixo. */
@@ -848,4 +848,28 @@
 
 .crumbsLight [aria-current] {
   color: var(--c-cream);
+}
+
+/* Grafismo técnico dentro do container, atrás do conteúdo, onde há espaço vazio:
+   nas seções divididas fica embaixo do título (coluna esquerda); nas outras, no canto do cabeçalho. */
+.sectionDecor {
+  z-index: -1;
+}
+
+.decorTopRight {
+  top: 0;
+  right: var(--gutter);
+  max-width: 34%;
+}
+
+.decorBottomLeft {
+  bottom: 0;
+  left: var(--gutter);
+  max-width: 40%;
+}
+
+@media (max-width: 899px) {
+  .sectionDecor {
+    display: none;
+  }
 }

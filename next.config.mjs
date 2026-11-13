@@ -32,6 +32,8 @@ const securityHeaders = [
 
 const nextConfig = {
   poweredByHeader: false,
+  // Barra no final é tratada em src/proxy.ts com um único 301 (o redirect padrão do Next daria um 308 extra).
+  skipTrailingSlashRedirect: true,
   compress: true,
   images: {
     formats: ["image/webp"],

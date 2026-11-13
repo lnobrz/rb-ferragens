@@ -16,6 +16,7 @@ export default function Sobre() {
       <PageHero
         crumbs={[{ label: "Sobre" }]}
         image="/images/fotos/equipe-patio.jpg"
+        focus="50% 22%"
         imageAlt="Equipe da RB Ferragens, de uniforme, no pátio da loja na Lagoa Redonda"
         chip="8 anos na Lagoa Redonda"
         title="8 anos fornecendo ferro pra obra na Lagoa Redonda"
@@ -36,7 +37,7 @@ export default function Sobre() {
         </Split>
       </Section>
 
-      <Section title="O que nos guia" tone="white">
+      <Section title="O que nos guia" texture="mesh" tone="white">
         <FeatureGrid
           columns={3}
           items={[
