@@ -22,8 +22,20 @@
   inset: 0;
   z-index: -1;
   background:
-    linear-gradient(180deg, rgba(10, 8, 0, 0.1) 0%, rgba(10, 8, 0, 0.35) 40%, rgba(10, 8, 0, 0.88) 100%),
-    linear-gradient(90deg, rgba(10, 8, 0, 0.55) 0%, rgba(10, 8, 0, 0) 65%);
+    linear-gradient(180deg, rgba(10, 8, 0, 0.18) 0%, rgba(10, 8, 0, 0.42) 40%, rgba(10, 8, 0, 0.9) 100%),
+    linear-gradient(90deg, rgba(10, 8, 0, 0.62) 0%, rgba(10, 8, 0, 0) 70%);
+}
+
+/* No celular o texto ocupa a foto inteira: um véu um pouco mais uniforme. */
+@media (max-width: 699px) {
+  .hero::after {
+    background: linear-gradient(180deg, rgba(10, 8, 0, 0.42) 0%, rgba(10, 8, 0, 0.58) 45%, rgba(10, 8, 0, 0.9) 100%);
+  }
+}
+
+.heroTitle,
+.heroSub {
+  text-shadow: 0 1px 18px rgba(10, 8, 0, 0.35);
 }
 
 .heroBg {
