@@ -1,0 +1,76 @@
+.grid {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 1.25rem;
+}
+
+@media (min-width: 640px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1000px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  background: var(--c-surface);
+  border: 1px solid var(--c-line);
+  transition: border-color 0.15s;
+}
+
+.card:hover,
+.card:focus-within {
+  border-color: var(--c-yellow);
+}
+
+.media {
+  display: grid;
+  place-items: center;
+  height: 120px;
+  margin-bottom: 1.25rem;
+  color: var(--c-yellow);
+  background:
+    linear-gradient(var(--c-line) 1px, transparent 1px) 0 0 / 24px 24px,
+    linear-gradient(90deg, var(--c-line) 1px, transparent 1px) 0 0 / 24px 24px,
+    var(--c-surface-2);
+  border-left: 2px solid var(--c-yellow);
+}
+
+.title {
+  font-size: var(--fs-lg);
+  margin-bottom: 0.4rem;
+}
+
+.text {
+  flex: 1;
+}
+
+/* O card inteiro é clicável, mas o texto do link é o que leitores de tela anunciam. */
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  min-height: 32px;
+  color: var(--c-yellow);
+  text-decoration: none;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: var(--fs-sm);
+  letter-spacing: 0.03em;
+}
+
+.link::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}

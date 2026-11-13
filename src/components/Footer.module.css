@@ -1,0 +1,105 @@
+.footer {
+  border-top: 1px solid var(--c-yellow);
+  background: var(--c-bg);
+  padding-top: 3.5rem;
+  font-size: var(--fs-sm);
+}
+
+.grid {
+  display: grid;
+  gap: 2.5rem;
+}
+
+@media (min-width: 700px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1000px) {
+  .grid {
+    grid-template-columns: 1fr 1.4fr 1fr 1fr;
+  }
+}
+
+.logo {
+  width: 130px;
+  margin-bottom: 1rem;
+}
+
+.brand p {
+  color: var(--c-muted);
+  max-width: 30ch;
+}
+
+.title {
+  font-size: var(--fs-md);
+  color: var(--c-yellow);
+  margin-bottom: 1rem;
+}
+
+.list,
+.links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.list li {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+  margin-bottom: 0.9rem;
+}
+
+.list svg {
+  flex: none;
+  color: var(--c-yellow);
+  margin-top: 0.15em;
+}
+
+.list a,
+.links a {
+  color: var(--c-text);
+}
+
+.list a:hover,
+.links a:hover {
+  color: var(--c-yellow);
+}
+
+.links li a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 32px;
+  text-decoration: none;
+}
+
+.bottom {
+  margin-top: 2.5rem;
+  padding-top: 1.25rem;
+  padding-bottom: 6rem;
+  border-top: 1px solid var(--c-line);
+  color: var(--c-muted);
+  font-size: var(--fs-xs);
+}
+
+.float {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 60;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: var(--c-wa);
+  color: var(--c-dark-text);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45);
+}
+
+.float:hover {
+  color: var(--c-dark-text);
+  filter: brightness(1.08);
+}

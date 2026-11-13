@@ -1,0 +1,92 @@
+.cards {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 1.25rem;
+}
+
+@media (min-width: 700px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1000px) {
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 1.75rem 1.5rem 1.5rem;
+  background: var(--c-surface);
+  border: 1px solid var(--c-line);
+  border-top: 2px solid var(--c-yellow);
+}
+
+.card:hover,
+.card:focus-within {
+  border-color: var(--c-yellow);
+}
+
+.card p {
+  flex: 1;
+}
+
+.num {
+  font-family: var(--f-title);
+  font-size: var(--fs-2xl);
+  color: var(--c-yellow);
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: var(--fs-lg);
+}
+
+.title a {
+  color: var(--c-cream);
+  text-decoration: none;
+}
+
+.title a::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+.card:hover .title a {
+  color: var(--c-yellow);
+}
+
+.more {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--c-yellow);
+  text-transform: uppercase;
+  font-size: var(--fs-sm);
+}
+
+.article {
+  padding: var(--space-section) 0;
+}
+
+.article :global(.prose) h2 {
+  font-size: var(--fs-xl);
+}
+
+.article :global(.prose) > * + div {
+  margin-top: 1.5rem;
+}
+
+.more2 {
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--c-line);
+}
