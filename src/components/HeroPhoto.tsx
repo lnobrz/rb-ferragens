@@ -35,7 +35,8 @@ export function HeroPhoto({
       setShown(true);
       return;
     }
-    const start = () => requestAnimationFrame(() => setMobileReady(true));
+    // Sem requestAnimationFrame: ele pausa em aba em segundo plano e a foto nunca entraria.
+    const start = () => setMobileReady(true);
     if (document.readyState === "complete") start();
     else window.addEventListener("load", start, { once: true });
     return () => window.removeEventListener("load", start);

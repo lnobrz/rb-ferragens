@@ -186,8 +186,24 @@
   position: absolute;
   inset: 0;
   z-index: -1;
+  /* Linha do topo e todo o terço de baixo (título, subtítulo, botão) ficam sobre pelo menos ~65% de escuro. */
   background:
-    linear-gradient(180deg, rgba(10, 8, 0, 0.45) 0%, rgba(10, 8, 0, 0.05) 30%, rgba(10, 8, 0, 0.35) 55%, rgba(10, 8, 0, 0.88) 100%);
+    linear-gradient(180deg, rgba(10, 8, 0, 0.9) 0%, rgba(10, 8, 0, 0.84) 13%, rgba(10, 8, 0, 0.25) 27%, rgba(10, 8, 0, 0.3) 36%, rgba(10, 8, 0, 0.86) 55%, rgba(10, 8, 0, 0.95) 100%),
+    linear-gradient(90deg, rgba(10, 8, 0, 0.4) 0%, rgba(10, 8, 0, 0) 55%);
+}
+
+/* Celular: o texto ocupa o card inteiro, véu uniforme. */
+@media (max-width: 699px) {
+  .heroCard::after {
+    background: linear-gradient(180deg, rgba(10, 8, 0, 0.92) 0%, rgba(10, 8, 0, 0.86) 22%, rgba(10, 8, 0, 0.84) 45%, rgba(10, 8, 0, 0.94) 100%);
+  }
+}
+
+/* A <picture> não pode contar como item do flex do card (empurraria a linha do topo pro meio). */
+.heroCard > picture {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
 }
 
 .heroImg {
@@ -197,18 +213,38 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  /* Enquadra mais o chão/obra e menos céu claro, que derruba o contraste do texto. */
+  object-position: 50% 70%;
 }
 
+/* Linha de topo do card (Anamorph / Wave Wood): caminho à esquerda, legenda à direita, fio fino embaixo. */
 .heroCardTop {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  gap: 0.75rem;
+  gap: 0.5rem 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(249, 243, 215, 0.22);
 }
 
-.heroCardTop .chip {
-  position: static;
+.heroMeta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: var(--fs-xs);
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--c-cream);
+  text-shadow: 0 1px 10px rgba(10, 8, 0, 0.5);
+}
+
+.heroMeta::before {
+  content: "";
+  width: 5px;
+  height: 21px;
+  background: url("/images/eyebrow-decoration.svg") center / 5px 21px no-repeat;
 }
 
 .heroCardBody {
@@ -225,7 +261,7 @@
 }
 
 .heroEyebrowLight {
-  color: var(--c-cream-text);
+  color: var(--c-cream);
 }
 
 .heroCardTitle {
@@ -245,7 +281,7 @@
 .heroCardSub {
   margin: 0;
   font-size: var(--fs-lg);
-  color: var(--c-cream-text);
+  color: var(--c-cream);
   text-shadow: 0 1px 14px rgba(10, 8, 0, 0.4);
 }
 
@@ -272,33 +308,6 @@
   }
 }
 
-/* Etiqueta flutuante sobre a foto (Forth / Hamza). */
-.chip {
-  position: absolute;
-  left: 1rem;
-  bottom: 1rem;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.55rem;
-  max-width: calc(100% - 2rem);
-  padding: 0.6rem 1rem;
-  font-size: var(--fs-sm);
-  font-weight: 400;
-  color: var(--c-ink);
-  background: rgba(255, 255, 255, 0.88);
-  backdrop-filter: blur(12px);
-  border-radius: var(--r-pill);
-  box-shadow: var(--shadow-1);
-}
-
-.chipDot {
-  flex: none;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: var(--c-yellow-strong);
-  box-shadow: 0 0 0 4px rgba(239, 223, 100, 0.35);
-}
 
 /* ---------- Features ---------- */
 .features {
@@ -821,11 +830,12 @@
 
 .crumbsLight ol {
   margin: 0;
-  color: var(--c-cream-muted);
+  color: var(--c-cream);
+  text-shadow: 0 1px 10px rgba(10, 8, 0, 0.5);
 }
 
 .crumbsLight a {
-  color: var(--c-cream-text);
+  color: var(--c-cream);
 }
 
 .crumbsLight a:hover {
@@ -833,7 +843,7 @@
 }
 
 .crumbsLight li + li::before {
-  color: var(--c-cream-muted);
+  color: var(--c-cream-text);
 }
 
 .crumbsLight [aria-current] {

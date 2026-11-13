@@ -155,10 +155,6 @@ export default function Home() {
               sizes="(min-width: 900px) 50vw, 92vw"
               className={s.cover}
             />
-            <span className={s.floatChip}>
-              <span className={s.chipDot} aria-hidden="true" />
-              Saindo da Lagoa Redonda
-            </span>
           </div>
           <div data-reveal style={d(1)}>
             <p className="eyebrow">Entrega</p>

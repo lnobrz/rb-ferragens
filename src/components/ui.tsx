@@ -120,12 +120,7 @@ export function PageHero({
         />
         <div className={s.heroCardTop}>
           {crumbs && <Breadcrumb items={crumbs} light />}
-          {chip && (
-            <span className={s.chip}>
-              <span className={s.chipDot} aria-hidden="true" />
-              {chip}
-            </span>
-          )}
+          {chip && <span className={s.heroMeta}>{chip}</span>}
         </div>
         <div className={s.heroCardBody}>
           <div>
@@ -414,13 +409,11 @@ export function Split({
   image,
   alt,
   reverse,
-  chip,
 }: {
   children: React.ReactNode;
   image: string;
   alt: string;
   reverse?: boolean;
-  chip?: string;
 }) {
   return (
     <div className={`${s.split} ${reverse ? s.splitReverse : ""}`}>
@@ -429,12 +422,6 @@ export function Split({
       </div>
       <div className={s.splitMedia} data-reveal="scale" style={{ "--d": 1 } as React.CSSProperties}>
         <Image src={image} alt={alt} fill sizes="(min-width: 900px) 46vw, 92vw" className={s.cover} />
-        {chip && (
-          <span className={s.chip}>
-            <span className={s.chipDot} aria-hidden="true" />
-            {chip}
-          </span>
-        )}
       </div>
     </div>
   );

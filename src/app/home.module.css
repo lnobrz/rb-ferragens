@@ -22,14 +22,14 @@
   inset: 0;
   z-index: -1;
   background:
-    linear-gradient(180deg, rgba(10, 8, 0, 0.18) 0%, rgba(10, 8, 0, 0.42) 40%, rgba(10, 8, 0, 0.9) 100%),
-    linear-gradient(90deg, rgba(10, 8, 0, 0.62) 0%, rgba(10, 8, 0, 0) 70%);
+    linear-gradient(180deg, rgba(10, 8, 0, 0.22) 0%, rgba(10, 8, 0, 0.45) 40%, rgba(10, 8, 0, 0.92) 100%),
+    linear-gradient(90deg, rgba(10, 8, 0, 0.78) 0%, rgba(10, 8, 0, 0.58) 45%, rgba(10, 8, 0, 0) 82%);
 }
 
 /* No celular o texto ocupa a foto inteira: um véu um pouco mais uniforme. */
 @media (max-width: 699px) {
   .hero::after {
-    background: linear-gradient(180deg, rgba(10, 8, 0, 0.42) 0%, rgba(10, 8, 0, 0.58) 45%, rgba(10, 8, 0, 0.9) 100%);
+    background: linear-gradient(180deg, rgba(10, 8, 0, 0.8) 0%, rgba(10, 8, 0, 0.82) 50%, rgba(10, 8, 0, 0.94) 100%);
   }
 }
 
@@ -88,7 +88,7 @@
 }
 
 .heroEyebrow {
-  color: var(--c-cream-text);
+  color: var(--c-cream);
 }
 
 /* O título acompanha a largura E a altura da tela, pra o botão caber na primeira dobra. */
@@ -295,36 +295,6 @@
   overflow: hidden;
 }
 
-.floatChip {
-  position: absolute;
-  top: 1rem;
-  left: 1rem;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.55rem;
-  padding: 0.6rem 1rem;
-  background: rgba(255, 255, 255, 0.9);
-  backdrop-filter: blur(12px);
-  border-radius: var(--r-pill);
-  font-size: var(--fs-sm);
-  color: var(--c-ink);
-  box-shadow: var(--shadow-1);
-  animation: float 5s ease-in-out infinite;
-}
-
-@keyframes float {
-  50% {
-    transform: translateY(-6px);
-  }
-}
-
-.chipDot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: var(--c-yellow-strong);
-  box-shadow: 0 0 0 4px rgba(239, 223, 100, 0.4);
-}
 
 .cities {
   list-style: none;
@@ -399,14 +369,14 @@
 .whyPhoto {
   min-height: 420px;
   justify-content: flex-end;
-  color: var(--c-cream-text);
+  color: var(--c-cream);
 }
 
 .whyPhoto::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(10, 8, 0, 0) 40%, rgba(10, 8, 0, 0.85) 100%);
+  background: linear-gradient(180deg, rgba(10, 8, 0, 0.1) 20%, rgba(10, 8, 0, 0.78) 52%, rgba(10, 8, 0, 0.95) 100%);
 }
 
 .whyOverlay {
