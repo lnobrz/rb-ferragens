@@ -15,6 +15,9 @@ export default function Colunas() {
     <>
       <PageHero
         crumbs={[{ href: "/produtos", label: "Produtos" }, { label: "Colunas, vigas e estribos" }]}
+        image="/images/fotos/colunas.jpg"
+        imageAlt="Colunas armadas com estribos empilhadas sobre paletes"
+        chip="Pronta ou sob medida"
         title="Colunas, vigas e estribos prontos pra montar"
         subtitle="Ferragem de coluna, viga e cinta já armada ou feita na medida do seu projeto. Chega na obra pronta pra concretar."
       >
@@ -34,7 +37,7 @@ export default function Colunas() {
         />
       </Section>
 
-      <Section title="Pronta ou sob medida" alt>
+      <Section title="Pronta ou sob medida" tone="white">
         <p className="lead">
           Pra obra de casa, as medidas padrão resolvem a maior parte dos casos. Se o seu projeto pede outra medida, outra
           bitola ou outro espaçamento de estribo, a gente faz no corte e dobra.

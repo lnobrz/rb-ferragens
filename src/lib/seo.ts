@@ -24,7 +24,7 @@ export function pageMeta({ title, description, keywords, path }: PageSeo): Metad
       url,
       title,
       description,
-      images: [{ url: "/images/ferragem-armada-obra.jpg", width: 2200, height: 1350, alt: "Ferragem armada em obra" }],
+      images: [{ url: "/images/fotos/obra-hero.jpg", width: 2000, height: 1116, alt: "Armador amarrando a ferragem de uma laje em obra de Fortaleza" }],
     },
   };
 }

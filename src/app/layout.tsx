@@ -3,6 +3,7 @@ import { Kanit, Tomorrow } from "next/font/google";
 import { Header } from "@/components/Header";
 import { Footer, FloatingWa } from "@/components/Footer";
 import { SITE } from "@/content/site";
+import { MotionRoot } from "@/components/Motion";
 import "@/styles/globals.css";
 
 const kanit = Kanit({ subsets: ["latin"], weight: ["300", "400", "500"], variable: "--font-kanit", display: "swap" });
@@ -15,7 +16,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#0a0800",
+  themeColor: "#f4f2ec",
 };
 
 const localBusiness = {
@@ -24,7 +25,7 @@ const localBusiness = {
   name: SITE.name,
   url: SITE.url,
   logo: `${SITE.url}/images/logo.png`,
-  image: `${SITE.url}/images/ferragem-armada-obra.jpg`,
+  image: `${SITE.url}/images/fotos/obra-hero.jpg`,
   email: SITE.email,
   telephone: SITE.phone.tel,
   address: {
@@ -59,6 +60,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main id="conteudo">{children}</main>
         <Footer />
         <FloatingWa />
+        <MotionRoot />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusiness) }} />
       </body>
     </html>

@@ -16,6 +16,9 @@ export default function Trelicas() {
     <>
       <PageHero
         crumbs={[{ href: "/produtos", label: "Produtos" }, { label: "Treliças" }]}
+        image="/images/fotos/trelicas.jpg"
+        imageAlt="Treliças de aço para laje lado a lado no chão do galpão"
+        chip="TG8 e TG12 · aço CA-60"
         title="Treliça de ferro para laje"
         subtitle="Treliças TG8 e TG12 em aço CA-60 pra laje treliçada, com entrega na sua obra em Fortaleza e na região metropolitana."
       >
@@ -33,7 +36,7 @@ export default function Trelicas() {
         </p>
       </Section>
 
-      <Section title="Medidas dos modelos" alt>
+      <Section title="Medidas dos modelos" tone="white">
         <DataTable {...TRELICAS} />
       </Section>
 
@@ -45,7 +48,7 @@ export default function Trelicas() {
         </p>
       </Section>
 
-      <Section title="Por que comprar treliça na RB" alt>
+      <Section title="Por que comprar treliça na RB" tone="white">
         <CheckList
           items={[
             "Aço CA-60 nervurado",

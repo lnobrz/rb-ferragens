@@ -8,19 +8,19 @@
 
 html {
   -webkit-text-size-adjust: 100%;
-  scroll-behavior: smooth;
+  interpolate-size: allow-keywords;
 }
 
 body {
   margin: 0;
-  background: radial-gradient(60% 60% at 50% 40%, var(--c-bg-soft) 0%, var(--c-bg) 100%) fixed;
-  background-color: var(--c-bg);
+  background: var(--c-paper);
   color: var(--c-text);
   font-family: var(--f-body);
   font-size: var(--fs-md);
   font-weight: 300;
   line-height: 1.6;
-  overflow-x: hidden;
+  overflow-x: clip;
+  -webkit-font-smoothing: antialiased;
 }
 
 h1,
@@ -29,11 +29,11 @@ h3,
 h4 {
   font-family: var(--f-title);
   font-weight: 500;
-  text-transform: uppercase;
-  color: var(--c-cream);
-  line-height: 1.15;
-  margin: 0 0 0.6em;
-  letter-spacing: 0.01em;
+  color: var(--c-ink);
+  line-height: 1.04;
+  letter-spacing: -0.02em;
+  margin: 0 0 0.5em;
+  text-wrap: balance;
 }
 
 h1 {
@@ -44,6 +44,8 @@ h2 {
 }
 h3 {
   font-size: var(--fs-xl);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
 }
 h4 {
   font-size: var(--fs-lg);
@@ -51,25 +53,23 @@ h4 {
 
 p {
   margin: 0 0 1em;
+  text-wrap: pretty;
 }
 
 strong {
-  color: var(--c-cream);
+  color: var(--c-ink);
   font-weight: 500;
 }
 
 a {
-  color: var(--c-yellow);
+  color: var(--c-ink);
   text-underline-offset: 3px;
 }
 
-a:hover {
-  color: var(--c-yellow-strong);
-}
-
 :focus-visible {
-  outline: 2px solid var(--c-yellow);
+  outline: 2px solid var(--c-ink);
   outline-offset: 3px;
+  border-radius: 4px;
 }
 
 img {
@@ -95,36 +95,111 @@ ol {
   padding: var(--space-section) 0;
 }
 
-.section-alt {
-  background: rgba(239, 223, 100, 0.03);
-  border-top: 1px solid var(--c-line);
-  border-bottom: 1px solid var(--c-line);
+.section-tight {
+  padding: calc(var(--space-section) * 0.6) 0;
 }
 
-/* Os 3 quadradinhos amarelos do site original, antes dos títulos de seção. */
-.deco-title {
-  display: flex;
-  align-items: flex-start;
-  gap: 1rem;
+.bg-white {
+  background: var(--c-white);
 }
 
-.deco-title::before {
-  content: "";
-  flex: 0 0 5px;
-  width: 5px;
-  height: 35px;
-  margin-top: 0.15em;
-  background: url("/images/vertical-decoration.svg") no-repeat;
+.bg-gray {
+  background: var(--c-paper-2);
+}
+
+/* Seções escuras: a cara do site antigo, usada como pontuação. */
+.bg-dark {
+  background: radial-gradient(70% 90% at 50% 0%, var(--c-ink-2) 0%, var(--c-ink-deep) 100%);
+  color: var(--c-cream-text);
+}
+
+.bg-dark h1,
+.bg-dark h2,
+.bg-dark h3,
+.bg-dark strong {
+  color: var(--c-cream);
+}
+
+.bg-dark a:not([class]) {
+  color: var(--c-yellow);
+}
+
+.bg-dark :focus-visible {
+  outline-color: var(--c-yellow);
 }
 
 .lead {
   font-size: var(--fs-lg);
+  line-height: 1.55;
   color: var(--c-text);
-  max-width: 62ch;
+  max-width: 58ch;
+}
+
+.bg-dark .lead {
+  color: var(--c-cream-text);
 }
 
 .muted {
   color: var(--c-muted);
+}
+
+/* Etiqueta acima dos títulos, com os 3 quadradinhos amarelos do logo/site antigo. */
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--f-body);
+  font-size: var(--fs-xs);
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--c-muted);
+  margin: 0 0 1.25rem;
+}
+
+.eyebrow::before {
+  content: "";
+  width: 5px;
+  height: 21px;
+  background: url("/images/eyebrow-decoration.svg") center / 5px 21px no-repeat;
+}
+
+.bg-dark .eyebrow {
+  color: var(--c-cream-muted);
+}
+
+.head {
+  display: grid;
+  gap: 1.5rem;
+  margin-bottom: clamp(2.5rem, 2rem + 2vw, 4rem);
+}
+
+@media (min-width: 900px) {
+  .head-split {
+    grid-template-columns: 1.2fr 1fr;
+    align-items: end;
+  }
+  .head-split .lead {
+    justify-self: end;
+    margin: 0;
+  }
+}
+
+.head h2 {
+  margin: 0;
+  max-width: 18ch;
+}
+
+/* Destaque amarelo em palavras do título (marca-texto). */
+.mark {
+  background: linear-gradient(transparent 58%, var(--c-yellow) 58%, var(--c-yellow) 92%, transparent 92%);
+  padding: 0 0.08em;
+}
+
+.bg-dark .mark {
+  background: none;
+  color: var(--c-yellow);
+  padding: 0;
 }
 
 .sr-only {
@@ -145,9 +220,10 @@ ol {
   top: 0;
   z-index: 100;
   background: var(--c-yellow);
-  color: var(--c-dark-text);
+  color: var(--c-ink);
   padding: 0.75rem 1rem;
   font-weight: 500;
+  border-radius: var(--r-sm);
 }
 
 .skip-link:focus {
@@ -156,23 +232,56 @@ ol {
 }
 
 .prose {
-  max-width: 70ch;
+  max-width: 68ch;
+  font-size: var(--fs-lg);
+  line-height: 1.65;
 }
 
 .prose h2 {
-  margin-top: 2rem;
+  font-size: var(--fs-xl);
+  margin-top: 2.5rem;
 }
 
 .prose li {
   margin-bottom: 0.5em;
 }
 
+/* ---------- Movimento: aparece ao rolar ----------
+   O conteúdo só fica escondido quando o JS marcou <html class="motion">; sem JS, tudo aparece. */
+.motion [data-reveal] {
+  opacity: 0;
+  transform: translateY(28px);
+  filter: blur(6px);
+  transition:
+    opacity 0.9s var(--ease-out),
+    transform 0.9s var(--ease-out),
+    filter 0.9s var(--ease-out);
+  transition-delay: calc(var(--d, 0) * 90ms);
+}
+
+.motion [data-reveal="scale"] {
+  transform: scale(0.96);
+}
+
+.motion [data-reveal].is-in {
+  opacity: 1;
+  transform: none;
+  filter: none;
+}
+
 @media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
+  .motion [data-reveal] {
+    opacity: 1;
+    transform: none;
+    filter: none;
+    transition: none;
   }
-  * {
-    transition: none !important;
-    animation: none !important;
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }

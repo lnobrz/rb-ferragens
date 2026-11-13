@@ -36,7 +36,9 @@ export default async function GuidePage({ params }: Props) {
   return (
     <>
       <PageHero
-        image={false}
+        image={g.image}
+        imageAlt={g.imageAlt}
+        chip="Guia da obra RB"
         crumbs={[{ href: "/guia", label: "Guia da obra" }, { label: g.h1 }]}
         title={g.h1}
         subtitle={g.description}

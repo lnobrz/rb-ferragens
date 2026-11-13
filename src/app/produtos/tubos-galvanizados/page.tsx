@@ -15,6 +15,9 @@ export default function Tubos() {
     <>
       <PageHero
         crumbs={[{ href: "/produtos", label: "Produtos" }, { label: "Tubos galvanizados" }]}
+        image="/images/fotos/tubos.jpg"
+        imageAlt="Tubos galvanizados empilhados"
+        chip="Proteção de zinco contra a maresia"
         title="Tubo galvanizado"
         subtitle="Aço com proteção de zinco contra a ferrugem, ideal pro clima de Fortaleza. Entrega na obra junto com o resto do pedido."
       >
@@ -27,7 +30,7 @@ export default function Tubos() {
         <CheckList items={["Estruturas leves e coberturas", "Portões, grades e corrimãos", "Suportes e instalações"]} />
       </Section>
 
-      <Section title="Por que galvanizado" alt>
+      <Section title="Por que galvanizado" tone="white">
         <p className="lead">
           Perto do mar, a maresia acelera a ferrugem. A camada de zinco protege o aço por muito mais tempo do que o tubo
           comum.

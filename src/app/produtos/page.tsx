@@ -17,6 +17,9 @@ export default function Produtos() {
     <>
       <PageHero
         crumbs={[{ label: "Produtos" }]}
+        image="/images/fotos/patio-estoque.jpg"
+        imageAlt="Pátio com feixes de vergalhão organizados por bitola, treliças e telas"
+        chip="Entrega em Fortaleza e RMF"
         title="Ferragens para construção"
         subtitle="Tudo de ferro e aço pra estrutura da sua obra, com corte e dobra na medida e entrega em Fortaleza e na região metropolitana."
       >

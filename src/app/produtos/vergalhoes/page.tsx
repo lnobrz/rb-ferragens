@@ -16,6 +16,9 @@ export default function Vergalhoes() {
     <>
       <PageHero
         crumbs={[{ href: "/produtos", label: "Produtos" }, { label: "Vergalhões" }]}
+        image="/images/fotos/vergalhoes.jpg"
+        imageAlt="Feixe de vergalhões nervurados amarrado com arame"
+        chip="Barra de 12 m · CA-50 e CA-60"
         title="Vergalhão CA-50 e CA-60"
         subtitle="O ferro da estrutura da sua obra, em barra inteira ou já cortado e dobrado na medida, com entrega em Fortaleza e na região metropolitana."
       >
@@ -28,7 +31,7 @@ export default function Vergalhoes() {
         <DataTable {...BITOLAS} />
       </Section>
 
-      <Section title="CA-50 ou CA-60?" alt>
+      <Section title="CA-50 ou CA-60?" tone="white">
         <p className="lead">
           O CA-50 é a barra das peças principais: colunas, vigas e sapatas. O CA-60 é mais fino e vai em estribos, telas e
           lajes. Um não substitui o outro: trocar CA-50 por CA-60 na estrutura muda o cálculo do projeto. Se ficou na

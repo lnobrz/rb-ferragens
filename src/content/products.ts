@@ -1,22 +1,22 @@
-export type ProductCard = { href: string; title: string; text: string; link: string; icon: string };
+export type ProductCard = { href: string; title: string; text: string; link: string; icon: string; image: string; alt: string };
 
 /** Cards da Home ("O que você encontra aqui"). */
 export const HOME_PRODUCTS: ProductCard[] = [
-  { href: "/produtos/trelicas", icon: "trelica", title: "Treliças", text: "Pra laje treliçada, nos modelos mais usados em casa.", link: "Ver treliças" },
-  { href: "/produtos/vergalhoes", icon: "vergalhao", title: "Vergalhões", text: "CA-50 e CA-60 nas bitolas mais usadas em obra.", link: "Ver vergalhões" },
-  { href: "/produtos/colunas-vigas-estribos", icon: "coluna", title: "Colunas, vigas e estribos", text: "Prontos ou feitos na medida do seu projeto.", link: "Ver colunas e vigas" },
-  { href: "/produtos/telas-malhas-radier", icon: "malha", title: "Telas, malhas e radier", text: "Malha POP e tela soldada pra contrapiso, calçada e fundação.", link: "Ver telas e malhas" },
-  { href: "/produtos", icon: "tubo", title: "Tubos galvanizados, arames e pregos", text: "O que falta pra fechar o pedido.", link: "Ver todos os produtos" },
+  { href: "/produtos/trelicas", icon: "trelica", title: "Treliças", text: "Pra laje treliçada, nos modelos mais usados em casa.", link: "Ver treliças" , image: "/images/fotos/trelicas.jpg", alt: "Treliças de aço para laje lado a lado no chão do galpão" },
+  { href: "/produtos/vergalhoes", icon: "vergalhao", title: "Vergalhões", text: "CA-50 e CA-60 nas bitolas mais usadas em obra.", link: "Ver vergalhões" , image: "/images/fotos/vergalhoes.jpg", alt: "Feixe de vergalhões nervurados amarrado com arame" },
+  { href: "/produtos/colunas-vigas-estribos", icon: "coluna", title: "Colunas, vigas e estribos", text: "Prontos ou feitos na medida do seu projeto.", link: "Ver colunas e vigas" , image: "/images/fotos/colunas.jpg", alt: "Colunas armadas com estribos empilhadas sobre paletes" },
+  { href: "/produtos/telas-malhas-radier", icon: "malha", title: "Telas, malhas e radier", text: "Malha POP e tela soldada pra contrapiso, calçada e fundação.", link: "Ver telas e malhas" , image: "/images/fotos/malhas.jpg", alt: "Painéis de malha soldada prontos para o contrapiso" },
+  { href: "/produtos", icon: "tubo", title: "Tubos galvanizados, arames e pregos", text: "O que falta pra fechar o pedido.", link: "Ver todos os produtos" , image: "/images/fotos/tubos.jpg", alt: "Tubos galvanizados empilhados" },
 ];
 
 /** Cards da página Produtos. */
 export const ALL_PRODUCTS: ProductCard[] = [
-  { href: "/produtos/trelicas", icon: "trelica", title: "Treliças", text: "Pra laje treliçada, nos modelos TG8 e TG12.", link: "Ver treliças" },
-  { href: "/produtos/vergalhoes", icon: "vergalhao", title: "Vergalhões", text: "CA-50 e CA-60, do jeito que você pede: ferro 3/8, 5/16, 1/4.", link: "Ver vergalhões" },
-  { href: "/produtos/colunas-vigas-estribos", icon: "coluna", title: "Colunas, vigas e estribos", text: "Prontos ou feitos na medida do projeto.", link: "Ver colunas e vigas" },
-  { href: "/produtos/telas-malhas-radier", icon: "malha", title: "Telas, malhas e radier", text: "Malha POP e tela soldada pra contrapiso, calçada e fundação.", link: "Ver telas e malhas" },
-  { href: "/produtos/tubos-galvanizados", icon: "tubo", title: "Tubos galvanizados", text: "Pra estruturas, portões, coberturas e instalações.", link: "Ver tubos" },
-  { href: "/produtos/arames-pregos", icon: "arame", title: "Arames e pregos", text: "Arame recozido pra amarração e pregos pra forma e madeiramento.", link: "Ver arames e pregos" },
+  { href: "/produtos/trelicas", icon: "trelica", title: "Treliças", text: "Pra laje treliçada, nos modelos TG8 e TG12.", link: "Ver treliças" , image: "/images/fotos/trelicas.jpg", alt: "Treliças de aço para laje lado a lado no chão do galpão" },
+  { href: "/produtos/vergalhoes", icon: "vergalhao", title: "Vergalhões", text: "CA-50 e CA-60, do jeito que você pede: ferro 3/8, 5/16, 1/4.", link: "Ver vergalhões" , image: "/images/fotos/vergalhoes.jpg", alt: "Feixe de vergalhões nervurados amarrado com arame" },
+  { href: "/produtos/colunas-vigas-estribos", icon: "coluna", title: "Colunas, vigas e estribos", text: "Prontos ou feitos na medida do projeto.", link: "Ver colunas e vigas" , image: "/images/fotos/colunas.jpg", alt: "Colunas armadas com estribos empilhadas sobre paletes" },
+  { href: "/produtos/telas-malhas-radier", icon: "malha", title: "Telas, malhas e radier", text: "Malha POP e tela soldada pra contrapiso, calçada e fundação.", link: "Ver telas e malhas" , image: "/images/fotos/malhas.jpg", alt: "Painéis de malha soldada prontos para o contrapiso" },
+  { href: "/produtos/tubos-galvanizados", icon: "tubo", title: "Tubos galvanizados", text: "Pra estruturas, portões, coberturas e instalações.", link: "Ver tubos" , image: "/images/fotos/tubos.jpg", alt: "Tubos galvanizados empilhados" },
+  { href: "/produtos/arames-pregos", icon: "arame", title: "Arames e pregos", text: "Arame recozido pra amarração e pregos pra forma e madeiramento.", link: "Ver arames e pregos" , image: "/images/fotos/arames-pregos.jpg", alt: "Rolos de arame recozido, pregos e torquesa sobre a bancada" },
 ];
 
 /** Tabela de bitolas (NBR 7480), usada em Vergalhões e no Guia 2. Conferir com as bitolas que a RB trabalha. */

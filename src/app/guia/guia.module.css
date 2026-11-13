@@ -22,35 +22,69 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  padding: 1.75rem 1.5rem 1.5rem;
-  background: var(--c-surface);
-  border: 1px solid var(--c-line);
-  border-top: 2px solid var(--c-yellow);
+  padding: 8px;
+  background: var(--c-paper);
+  border-radius: var(--r-lg);
+  transition:
+    transform 0.5s var(--ease-out),
+    box-shadow 0.5s var(--ease-out);
 }
 
 .card:hover,
 .card:focus-within {
-  border-color: var(--c-yellow);
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-2);
 }
 
-.card p {
-  flex: 1;
+.media {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  border-radius: calc(var(--r-lg) - 8px);
+  overflow: hidden;
+}
+
+.img {
+  object-fit: cover;
+  transition: transform 0.9s var(--ease-out);
+}
+
+.card:hover .img {
+  transform: scale(1.06);
 }
 
 .num {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--c-yellow);
+  color: var(--c-ink);
   font-family: var(--f-title);
-  font-size: var(--fs-2xl);
-  color: var(--c-yellow);
-  line-height: 1;
-  margin-bottom: 1rem;
+  font-size: var(--fs-sm);
+  font-weight: 500;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 1.25rem 1rem 1rem;
+}
+
+.body p {
+  flex: 1;
 }
 
 .title {
-  font-size: var(--fs-lg);
+  font-size: var(--fs-xl);
 }
 
 .title a {
-  color: var(--c-cream);
+  color: var(--c-ink);
   text-decoration: none;
 }
 
@@ -58,35 +92,24 @@
   content: "";
   position: absolute;
   inset: 0;
-}
-
-.card:hover .title a {
-  color: var(--c-yellow);
+  border-radius: var(--r-lg);
 }
 
 .more {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
-  color: var(--c-yellow);
-  text-transform: uppercase;
+  font-weight: 500;
   font-size: var(--fs-sm);
+  color: var(--c-ink);
 }
 
 .article {
-  padding: var(--space-section) 0;
-}
-
-.article :global(.prose) h2 {
-  font-size: var(--fs-xl);
-}
-
-.article :global(.prose) > * + div {
-  margin-top: 1.5rem;
+  padding: 0 0 var(--space-section);
 }
 
 .more2 {
-  margin-top: 2.5rem;
+  margin-top: 3rem;
   padding-top: 1.5rem;
   border-top: 1px solid var(--c-line);
 }

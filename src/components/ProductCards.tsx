@@ -1,22 +1,34 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Icon } from "./Icon";
 import type { ProductCard } from "@/content/products";
 import s from "./ProductCards.module.css";
 
-export function ProductCards({ items }: { items: ProductCard[] }) {
+/** Card de produto com foto e botão "encaixado" no canto (recorte côncavo, à la Wave Wood). */
+export function ProductCards({ items, featured }: { items: ProductCard[]; featured?: boolean }) {
   return (
-    <ul className={s.grid}>
-      {items.map((p) => (
-        <li key={p.title} className={s.card}>
-          <div className={s.media} aria-hidden="true">
-            <Icon name={p.icon} size={56} />
+    <ul className={`${s.grid} ${featured ? s.featured : ""}`}>
+      {items.map((p, i) => (
+        <li key={p.title} className={s.card} data-reveal style={{ "--d": i % 3 } as React.CSSProperties}>
+          <div className={s.media}>
+            <Image src={p.image} alt={p.alt} fill sizes="(min-width: 1000px) 33vw, (min-width: 640px) 50vw, 92vw" className={s.img} />
+            <span className={s.notch} aria-hidden="true">
+              <span className={s.notchBtn}>
+                <Icon name="seta" size={20} />
+              </span>
+            </span>
           </div>
-          <h3 className={s.title}>{p.title}</h3>
-          <p className={s.text}>{p.text}</p>
-          <Link href={p.href} className={s.link}>
-            {p.link}
-            <Icon name="seta" size={18} />
-          </Link>
+          <div className={s.body}>
+            <h3 className={s.title}>
+              <Link href={p.href} className={s.link}>
+                {p.title}
+              </Link>
+            </h3>
+            <p className={s.text}>{p.text}</p>
+            <span className={s.more} aria-hidden="true">
+              {p.link}
+            </span>
+          </div>
         </li>
       ))}
     </ul>

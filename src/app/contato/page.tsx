@@ -28,8 +28,9 @@ export default function Contato() {
 
       <Section>
         <div className={s.grid}>
-          <div>
-            <h2 className="deco-title">Dados</h2>
+          <div className={s.panel} data-reveal>
+            <p className="eyebrow">Dados</p>
+            <h2 className="sr-only">Dados de contato</h2>
             <dl className={s.data}>
               <div>
                 <dt>
@@ -80,30 +81,33 @@ export default function Contato() {
             </dl>
           </div>
 
-          <div>
-            <h2 className="deco-title">Mapa</h2>
-            <div className={s.map}>
-              <iframe
-                title="Mapa com a localização da RB Ferragens na Lagoa Redonda"
-                src={`https://www.google.com/maps?q=${q}&output=embed`}
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              />
-            </div>
+          <div className={s.mapCard} data-reveal="scale" style={{ "--d": 1 } as React.CSSProperties}>
+            <h2 className="sr-only">Mapa</h2>
+            <iframe
+              title="Mapa com a localização da RB Ferragens na Lagoa Redonda"
+              src={`https://www.google.com/maps?q=${q}&output=embed`}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
             <a
               className={s.directions}
               href={`https://www.google.com/maps/dir/?api=1&destination=${q}`}
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Icon name="pin" size={20} /> Como chegar
+              <span className={s.directionsIcon} aria-hidden="true">
+                <Icon name="pin" size={20} />
+              </span>
+              Como chegar
             </a>
           </div>
         </div>
       </Section>
 
       <CtaBand
-        text="Vai passar aqui? Mande uma mensagem antes que a gente separa seu pedido."
+        title="Vai passar aqui?"
+        image="/images/fotos/patio-estoque.jpg"
+        text="Mande uma mensagem antes que a gente separa seu pedido."
         message={MSG.geral}
         button="Chamar no WhatsApp"
       />

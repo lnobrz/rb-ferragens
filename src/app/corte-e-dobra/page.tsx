@@ -15,6 +15,9 @@ export default function CorteEDobra() {
     <>
       <PageHero
         crumbs={[{ label: "Corte e dobra" }]}
+        image="/images/fotos/pecas-cortadas.jpg"
+        imageAlt="Estribos e barras dobradas separados por peça, com etiquetas"
+        chip="Separado por peça, pronto pra amarrar"
         title="Corte e dobra de ferro na medida da sua obra"
         subtitle="Você manda o projeto ou a lista do seu mestre. A gente corta, dobra, separa por peça e entrega na obra, em Fortaleza e na região metropolitana."
       >
@@ -34,9 +37,9 @@ export default function CorteEDobra() {
         />
       </Section>
 
-      <Section alt>
-        <Split image="/images/ferro-e-aco.png" alt="Colagem de fotos: ferragem armada de coluna, estrutura metálica e barras de aço">
-          <h2 className="deco-title">O que a gente faz</h2>
+      <Section tone="white">
+        <Split image="/images/fotos/corte-dobra-maquina.jpg" alt="Funcionário dobrando vergalhão na máquina de dobra, com estribos prontos ao lado">
+          <h2>O que a gente faz</h2>
           <CheckList
             items={[
               "Estribos de coluna e de viga",
@@ -61,7 +64,7 @@ export default function CorteEDobra() {
         />
       </Section>
 
-      <Section title="Para obra pequena também" alt>
+      <Section title="Para obra pequena também" tone="white">
         <p className="lead">
           Não precisa ser construtora. Se você está levantando sua casa, um muro ou um puxadinho, a gente faz o corte e
           dobra da mesma forma. Muita gente chega só com a lista do mestre, e está tudo bem.

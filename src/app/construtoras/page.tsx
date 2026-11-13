@@ -15,6 +15,9 @@ export default function Construtoras() {
     <>
       <PageHero
         crumbs={[{ label: "Para construtoras e empreiteiros" }]}
+        image="/images/fotos/predio-obra.jpg"
+        imageAlt="Prédio em construção em Fortaleza com pilares armados e grua"
+        chip="Reposição sem burocracia"
         eyebrow="Para construtoras e empreiteiros"
         title="Ferro pra sua obra não parar"
         subtitle="Pra construtoras e empreiteiros que precisam de reposição rápida, pedido do tamanho da etapa e alguém que atende no WhatsApp."
@@ -37,7 +40,7 @@ export default function Construtoras() {
         />
       </Section>
 
-      <Section title="Como começar" alt>
+      <Section title="Como começar" tone="white">
         <Steps
           items={[
             { text: "Mande o nome da empresa e a obra pelo WhatsApp." },

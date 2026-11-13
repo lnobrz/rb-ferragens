@@ -15,6 +15,9 @@ export default function Arames() {
     <>
       <PageHero
         crumbs={[{ href: "/produtos", label: "Produtos" }, { label: "Arames e pregos" }]}
+        image="/images/fotos/arames-pregos.jpg"
+        imageAlt="Rolos de arame recozido, pregos e torquesa sobre a bancada"
+        chip="Vai junto com o ferro"
         title="Arame recozido e pregos"
         subtitle="O que falta pra fechar o pedido da obra. Vai junto com o ferro, na mesma entrega."
       >

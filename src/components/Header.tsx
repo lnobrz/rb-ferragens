@@ -4,57 +4,106 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { NAV, MSG, waLink } from "@/content/site";
+import { NAV, MSG, SITE, waLink } from "@/content/site";
 import { Icon } from "./Icon";
+import { OpenStatus } from "./OpenStatus";
 import s from "./Header.module.css";
 
 export function Header() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => setOpen(false), [pathname]);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 24);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   useEffect(() => {
     if (!open) return;
     const onKey = (e: KeyboardEvent) => e.key === "Escape" && setOpen(false);
     document.addEventListener("keydown", onKey);
-    return () => document.removeEventListener("keydown", onKey);
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.removeEventListener("keydown", onKey);
+      document.body.style.overflow = "";
+    };
   }, [open]);
 
   const isActive = (href: string) => pathname === href || pathname.startsWith(`${href}/`);
 
   return (
-    <header className={s.header}>
-      <div className={`container ${s.bar}`}>
-        <Link href="/" className={s.logo} aria-label="RB Ferragens, página inicial">
-          <Image src="/images/logo.png" alt="RB Ferragens" width={1080} height={640} priority sizes="120px" />
-        </Link>
+    <header className={s.header} data-scrolled={scrolled} data-open={open}>
+      <div className={s.topbar}>
+        <div className={`container ${s.topbarInner}`}>
+          <OpenStatus className={s.status} />
+          <span className={s.topbarRight}>
+            <a href={`tel:${SITE.phone.tel}`}>{SITE.phone.display}</a>
+            <span aria-hidden="true">·</span>
+            <span>Entrega em Fortaleza e região metropolitana</span>
+          </span>
+        </div>
+      </div>
 
-        <button
-          type="button"
-          className={s.toggle}
-          aria-expanded={open}
-          aria-controls="menu-principal"
-          onClick={() => setOpen((v) => !v)}
-        >
-          <span className={s.burger} aria-hidden="true" data-open={open} />
-          <span>{open ? "Fechar" : "Menu"}</span>
-        </button>
+      <div className={`container ${s.wrap}`}>
+        <div className={s.bar}>
+          <Link href="/" className={s.logo} aria-label="RB Ferragens, página inicial">
+            <Image src="/images/logo.png" alt="" width={1080} height={640} priority sizes="96px" />
+          </Link>
 
-        <nav id="menu-principal" aria-label="Menu principal" className={s.nav} data-open={open}>
+          <nav aria-label="Menu principal" className={s.desktopNav}>
+            <ul>
+              {NAV.map((item) => (
+                <li key={item.href}>
+                  <Link href={item.href} aria-current={isActive(item.href) ? "page" : undefined}>
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
+
+          <a className={s.cta} href={waLink(MSG.geral)} target="_blank" rel="noopener noreferrer">
+            <span className={s.ctaIcon} aria-hidden="true">
+              <Icon name="whatsapp" size={18} />
+            </span>
+            <span className={s.ctaLabel}>Pedir orçamento</span>
+            <span className="sr-only"> no WhatsApp (abre o WhatsApp)</span>
+          </a>
+
+          <button
+            type="button"
+            className={s.toggle}
+            aria-expanded={open}
+            aria-controls="menu-celular"
+            onClick={() => setOpen((v) => !v)}
+          >
+            <span className="sr-only">{open ? "Fechar menu" : "Abrir menu"}</span>
+            <span className={s.burger} aria-hidden="true" />
+          </button>
+        </div>
+      </div>
+
+      <div id="menu-celular" className={s.sheet} hidden={!open}>
+        <nav aria-label="Menu principal no celular" className="container">
           <ul>
-            {NAV.map((item) => (
-              <li key={item.href}>
+            {NAV.map((item, i) => (
+              <li key={item.href} style={{ "--i": i } as React.CSSProperties}>
                 <Link href={item.href} aria-current={isActive(item.href) ? "page" : undefined}>
                   {item.label}
+                  <Icon name="seta" size={22} />
                 </Link>
               </li>
             ))}
           </ul>
-          <a className={s.wa} href={waLink(MSG.geral)} target="_blank" rel="noopener noreferrer">
-            <Icon name="whatsapp" size={20} />
-            Orçamento no WhatsApp
-          </a>
+          <div className={s.sheetFoot}>
+            <OpenStatus className={s.status} />
+            <a href={`tel:${SITE.phone.tel}`}>{SITE.phone.display}</a>
+          </div>
         </nav>
       </div>
     </header>

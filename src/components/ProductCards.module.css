@@ -16,61 +16,150 @@
   .grid {
     grid-template-columns: repeat(3, 1fr);
   }
+  /* Home: o primeiro card ocupa duas colunas (bento). */
+  .featured .card:first-child {
+    grid-column: span 2;
+  }
+  .featured .card:first-child .media {
+    aspect-ratio: auto;
+    height: 100%;
+    min-height: 320px;
+  }
+  .featured .card:first-child {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+  }
+  .featured .card:first-child .body {
+    align-self: end;
+  }
 }
 
 .card {
   position: relative;
   display: flex;
   flex-direction: column;
-  padding: 1.5rem;
-  background: var(--c-surface);
-  border: 1px solid var(--c-line);
-  transition: border-color 0.15s;
+  background: var(--c-white);
+  border-radius: var(--r-lg);
+  padding: 8px;
+  transition:
+    transform 0.5s var(--ease-out),
+    box-shadow 0.5s var(--ease-out);
+}
+
+:global(.bg-white) .card {
+  background: var(--c-paper);
 }
 
 .card:hover,
 .card:focus-within {
-  border-color: var(--c-yellow);
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-2);
 }
 
 .media {
+  --notch-bg: var(--c-white);
+  position: relative;
+  aspect-ratio: 4 / 3;
+  border-radius: calc(var(--r-lg) - 8px);
+  overflow: hidden;
+  background: var(--c-paper-2);
+}
+
+:global(.bg-white) .media {
+  --notch-bg: var(--c-paper);
+}
+
+.img {
+  object-fit: cover;
+  transition: transform 0.9s var(--ease-out);
+}
+
+.card:hover .img,
+.card:focus-within .img {
+  transform: scale(1.06);
+}
+
+/* Recorte côncavo no canto inferior direito, com o botão dentro. */
+.notch {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: 10px 0 0 10px;
+  background: var(--notch-bg);
+  border-top-left-radius: 22px;
+}
+
+.notch::before,
+.notch::after {
+  content: "";
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  background: radial-gradient(circle at 0 0, transparent 21.5px, var(--notch-bg) 22px);
+}
+
+.notch::before {
+  right: 0;
+  top: -22px;
+}
+
+.notch::after {
+  left: -22px;
+  bottom: 0;
+}
+
+.notchBtn {
   display: grid;
   place-items: center;
-  height: 120px;
-  margin-bottom: 1.25rem;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--c-ink);
   color: var(--c-yellow);
-  background:
-    linear-gradient(var(--c-line) 1px, transparent 1px) 0 0 / 24px 24px,
-    linear-gradient(90deg, var(--c-line) 1px, transparent 1px) 0 0 / 24px 24px,
-    var(--c-surface-2);
-  border-left: 2px solid var(--c-yellow);
+  transition:
+    transform 0.5s var(--ease-out),
+    background-color 0.3s;
+}
+
+.card:hover .notchBtn,
+.card:focus-within .notchBtn {
+  transform: rotate(-45deg);
+  background: var(--c-yellow);
+  color: var(--c-ink);
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 1.25rem 1rem 1rem;
 }
 
 .title {
-  font-size: var(--fs-lg);
+  font-size: var(--fs-xl);
   margin-bottom: 0.4rem;
 }
 
-.text {
-  flex: 1;
-}
-
-/* O card inteiro é clicável, mas o texto do link é o que leitores de tela anunciam. */
 .link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  min-height: 32px;
-  color: var(--c-yellow);
+  color: var(--c-ink);
   text-decoration: none;
-  font-weight: 400;
-  text-transform: uppercase;
-  font-size: var(--fs-sm);
-  letter-spacing: 0.03em;
 }
 
+/* O card inteiro é clicável; leitores de tela anunciam só o título. */
 .link::after {
   content: "";
   position: absolute;
   inset: 0;
+  border-radius: var(--r-lg);
+}
+
+.text {
+  flex: 1;
+  margin-bottom: 1rem;
+}
+
+.more {
+  font-size: var(--fs-sm);
+  font-weight: 500;
+  color: var(--c-muted);
 }

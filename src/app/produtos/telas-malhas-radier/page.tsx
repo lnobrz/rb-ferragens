@@ -16,6 +16,9 @@ export default function Malhas() {
     <>
       <PageHero
         crumbs={[{ href: "/produtos", label: "Produtos" }, { label: "Telas, malhas e radier" }]}
+        image="/images/fotos/malhas.jpg"
+        imageAlt="Painéis de malha soldada prontos para o contrapiso"
+        chip="Malha POP · Q92 · Q138"
         title="Malha POP e tela soldada"
         subtitle="Pra contrapiso, calçada, piso de garagem e radier. Diga onde a tela vai que a gente indica o modelo."
       >
@@ -28,7 +31,7 @@ export default function Malhas() {
         <DataTable {...MALHAS} />
       </Section>
 
-      <Section title="Diga onde vai a tela" alt>
+      <Section title="Diga onde vai a tela" tone="white">
         <p className="lead">
           Não precisa saber o nome do modelo. Conte pra gente se é contrapiso, calçada, garagem ou laje e qual o tamanho da
           área, que a gente indica a tela e calcula quantos painéis você precisa.

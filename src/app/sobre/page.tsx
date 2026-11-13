@@ -15,13 +15,16 @@ export default function Sobre() {
     <>
       <PageHero
         crumbs={[{ label: "Sobre" }]}
+        image="/images/fotos/patio-estoque.jpg"
+        imageAlt="Pátio com feixes de vergalhão organizados por bitola, treliças e telas"
+        chip="10 anos na Lagoa Redonda"
         title="10 anos fornecendo ferro pra obra na Lagoa Redonda"
         subtitle="A RB Ferragens nasceu no bairro e cresceu atendendo quem constrói em Fortaleza e na região metropolitana."
       />
 
       <Section>
-        <Split image="/images/ferro-e-aco.png" alt="Colagem de fotos: ferragem armada de coluna, estrutura metálica e barras de aço">
-          <h2 className="deco-title">Nossa história</h2>
+        <Split image="/images/fotos/mestre-projeto.jpg" alt="Mestre de obras e dono da casa conferindo o projeto estrutural sobre os vergalhões" reverse>
+          <h2>Nossa história</h2>
           <p className="lead">
             A RB Ferragens está há 10 anos na Lagoa Redonda vendendo ferro e aço pra obra. Além da venda, corta e dobra o
             ferro na medida de cada projeto e entrega direto na obra, em Fortaleza e na região metropolitana.
@@ -33,7 +36,7 @@ export default function Sobre() {
         </Split>
       </Section>
 
-      <Section title="O que nos guia" alt>
+      <Section title="O que nos guia" tone="white">
         <FeatureGrid
           columns={3}
           items={[

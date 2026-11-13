@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { pageMeta } from "@/lib/seo";
 import { GUIDES } from "@/content/guides";
 import { PageHero, Section } from "@/components/ui";
@@ -18,24 +19,32 @@ export default function Guia() {
     <>
       <PageHero
         crumbs={[{ label: "Guia da obra" }]}
+        image="/images/fotos/mestre-projeto.jpg"
+        imageAlt="Mestre de obras e dono da casa conferindo o projeto estrutural"
+        chip="Respostas do nosso WhatsApp"
         title="Guia da obra"
         subtitle="Respostas diretas pras dúvidas que mais chegam no nosso WhatsApp. Elas ajudam a montar sua lista, mas não substituem o projeto estrutural."
       />
-      <Section>
+      <Section tone="white">
         <h2 className="sr-only">Guias</h2>
         <ul className={s.cards}>
           {GUIDES.map((g, i) => (
-            <li key={g.slug} className={s.card}>
-              <span className={s.num} aria-hidden="true">
-                {String(i + 1).padStart(2, "0")}
-              </span>
-              <h3 className={s.title}>
-                <Link href={`/guia/${g.slug}`}>{g.h1}</Link>
-              </h3>
-              <p>{g.card}</p>
-              <span className={s.more} aria-hidden="true">
-                Ler o guia <Icon name="seta" size={18} />
-              </span>
+            <li key={g.slug} className={s.card} data-reveal style={{ "--d": i % 3 } as React.CSSProperties}>
+              <div className={s.media}>
+                <Image src={g.image} alt="" fill sizes="(min-width: 1000px) 33vw, (min-width: 700px) 50vw, 92vw" className={s.img} />
+                <span className={s.num} aria-hidden="true">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+              </div>
+              <div className={s.body}>
+                <h3 className={s.title}>
+                  <Link href={`/guia/${g.slug}`}>{g.h1}</Link>
+                </h3>
+                <p>{g.card}</p>
+                <span className={s.more} aria-hidden="true">
+                  Ler o guia <Icon name="seta" size={16} />
+                </span>
+              </div>
             </li>
           ))}
         </ul>
