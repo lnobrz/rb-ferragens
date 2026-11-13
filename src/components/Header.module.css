@@ -122,9 +122,9 @@
 .desktopNav ul {
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 0 var(--space-2) 0 0;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   gap: var(--space-1);
 }
 
@@ -154,40 +154,10 @@
   font-weight: 500;
 }
 
-.cta {
-  flex: none;
-  margin-left: auto;
-  display: inline-flex;
-  align-items: center;
-  gap: var(--space-2);
-  min-height: 52px;
-  padding: 0 var(--space-5) 0 var(--space-2);
-  background: var(--c-yellow);
-  color: var(--c-ink);
-  font-weight: 500;
-  font-size: var(--fs-sm);
-  text-decoration: none;
-  border-radius: var(--r-pill);
-  transition: background-color 0.25s;
-}
-
-.cta:hover {
-  background: var(--c-yellow-strong);
-  color: var(--c-ink);
-}
-
-.ctaIcon {
-  display: grid;
-  place-items: center;
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
-  background: var(--c-ink);
-  color: var(--c-yellow);
-}
 
 .toggle {
   flex: none;
+  margin-left: auto;
   display: grid;
   place-items: center;
   width: 52px;
@@ -239,14 +209,6 @@
   transform: rotate(-45deg);
 }
 
-@media (max-width: 520px) {
-  .ctaLabel {
-    display: none;
-  }
-  .cta {
-    padding: 0 5px;
-  }
-}
 
 /* Menu do celular: folha em tela cheia, itens entrando em sequência. */
 .sheet {
@@ -320,8 +282,5 @@
   .toggle,
   .sheet {
     display: none !important;
-  }
-  .cta {
-    margin-left: 0;
   }
 }

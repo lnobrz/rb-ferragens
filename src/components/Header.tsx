@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { NAV, MSG, SITE, waLink } from "@/content/site";
+import { NAV, SITE } from "@/content/site";
 import { Icon } from "./Icon";
 import { OpenStatus } from "./OpenStatus";
 import s from "./Header.module.css";
@@ -67,13 +67,6 @@ export function Header() {
             </ul>
           </nav>
 
-          <a className={s.cta} href={waLink(MSG.geral)} target="_blank" rel="noopener noreferrer">
-            <span className={s.ctaIcon} aria-hidden="true">
-              <Icon name="whatsapp" size={18} />
-            </span>
-            <span className={s.ctaLabel}>Pedir orçamento</span>
-            <span className="sr-only"> no WhatsApp (abre o WhatsApp)</span>
-          </a>
 
           <button
             type="button"

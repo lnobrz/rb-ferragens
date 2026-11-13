@@ -18,6 +18,8 @@ export const SITE = {
     { label: "Domingo", value: "fechado" },
   ],
   mapsQuery: "RB Ferragens, Travessa Precabura, 79, Lagoa Redonda, Fortaleza, CE, 60831-372",
+  // Permanent link to the Google Business Profile listing (cid = listing id).
+  mapsUrl: "https://maps.google.com/?cid=10079908912978380342",
 } as const;
 
 export const FULL_ADDRESS = `${SITE.address.street}, ${SITE.address.district}, ${SITE.address.city}, ${SITE.address.state}, CEP ${SITE.address.zip}`;

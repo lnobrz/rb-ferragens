@@ -25,8 +25,6 @@ export const viewport: Viewport = {
  * Nome, endereço e telefone idênticos ao Perfil da Empresa no Google. Sem preço, priceRange, nota ou avaliações.
  * areaServed = Fortaleza + as mesmas cidades da página de Entrega (RMF_CITIES).
  */
-const MAPS_URL = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(SITE.mapsQuery)}`;
-
 const localBusiness = {
   "@context": "https://schema.org",
   "@type": "HardwareStore",
@@ -61,7 +59,14 @@ const localBusiness = {
     { "@type": "OpeningHoursSpecification", dayOfWeek: "Sunday", opens: "00:00", closes: "00:00" },
   ],
   areaServed: ["Fortaleza", ...RMF_CITIES].map((name) => ({ "@type": "City", name })),
-  hasMap: MAPS_URL,
+  hasMap: SITE.mapsUrl,
+  contactPoint: {
+    "@type": "ContactPoint",
+    telephone: "+55 85 99162-6955",
+    contactType: "sales",
+    areaServed: "BR",
+    availableLanguage: "Portuguese",
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

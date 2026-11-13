@@ -45,7 +45,7 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(SITE.mapsQuery)}`}
+                  href={SITE.mapsUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
