@@ -33,8 +33,6 @@ export const RMF_CITIES = [
   "Pacatuba",
   "Caucaia",
   "Maranguape",
-  "Horizonte",
-  "Pacajus",
   "Guaiúba",
 ];
 
